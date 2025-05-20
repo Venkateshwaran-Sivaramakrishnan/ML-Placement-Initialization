@@ -104,8 +104,7 @@ class DesignParser:
         print(f"Core size: {self.design_info.get('core_width')} x {self.design_info.get('core_height')} DBU")
         print(f"IO Pins: {len(self.io_pins)} | Instances: {len(self.instances)} | Nets: {len(self.hypergraph)}")
     
-    def save_design_as_pickle(self, output_dir="."):
-        design_name = self.design_info.get("design_name", "design")
+    def save_design_as_pickle(self, design_name, output_dir="."):
         filename = os.path.join(output_dir, f"{design_name}.pkl")
 
         with open(filename, "wb") as f:
@@ -118,8 +117,7 @@ class DesignParser:
 
         print(f"[✓] Pickle file saved to {filename}")
 
-    def save_design_as_json(self, output_dir="."):
-        design_name = self.design_info.get("design_name", "design")
+    def save_design_as_json(self, design_name, output_dir="."):
         filename = os.path.join(output_dir, f"{design_name}.json")
 
         json_data = {
@@ -203,5 +201,5 @@ if __name__ == "__main__":
     print(f"\nSample Net {sample_net}: {parser.hypergraph[sample_net]}")
     print(f"Sample I/O Pin {sample_pin}: {parser.io_pins[sample_pin]}")
     parser.plot_layout()
-    parser.save_design_as_pickle()
-    parser.save_design_as_json()
+    parser.save_design_as_pickle(args.design)
+    parser.save_design_as_json(args.design)
