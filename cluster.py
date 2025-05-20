@@ -7,7 +7,7 @@ from scipy.sparse import csr_matrix
 import math
 import json
 import networkx as nx
-
+import argparse
 
 def load_pickle(filepath):
     with open(filepath, "rb") as f:
@@ -101,7 +101,8 @@ def hierarchical_spectral_clustering(H, N, cluster_stop_length, instance_ids):
     return hierarchy
 
 
-def export_hierarchy(hierarchy, out_file="hierarchy.json"):
+def export_hierarchy(hierarchy, args):
+    out_file=f"{args.design}_hierarchy.json"
     hierarchy_data = []
     for level, (labels, _, node_ids, _) in enumerate(hierarchy):
         if len(labels) != len(node_ids):
@@ -113,7 +114,8 @@ def export_hierarchy(hierarchy, out_file="hierarchy.json"):
     print(f"Exported hierarchy structure to {out_file}")
 
 
-def plot_hierarchy_tree(hierarchy, out_file="hierarchy_tree.svg"):
+def plot_hierarchy_tree(hierarchy, args):
+    out_file=f"{args.design}_hierarchy_tree.svg"
     G = nx.DiGraph()
     pos = {}
     y_gap = 10
@@ -171,18 +173,20 @@ def plot_hierarchy_tree(hierarchy, out_file="hierarchy_tree.svg"):
     print(f"Saved hierarchy tree to {out_file}")
 
 
-def main(filepath, N=5, cluster_stop_length=10):
+def main(filepath, args):
+    N = args.N
+    cluster_stop_length = args.cluster_stop_length
     data = load_pickle(filepath)
     H, instance_ids = build_incidence_matrix(data["io_pins"], data["instances"], data["hypergraph"])
     hierarchy = hierarchical_spectral_clustering(H, N, cluster_stop_length, instance_ids)
 
     labels, _, _, _ = hierarchy[0]
     instance_labels = {instance_ids[i]: int(labels[i]) for i in range(len(labels))}
-    with open("instance_cluster_map.json", "w") as f:
+    with open(f"{args.design}_instance_cluster_map.json", "w") as f:
         json.dump(instance_labels, f, indent=2)
-    print("Exported instance-to-cluster mapping to instance_cluster_map.json")
+    print(f"Exported instance-to-cluster mapping to {args.design}_instance_cluster_map.json")
 
-    export_hierarchy(hierarchy)
+    export_hierarchy(hierarchy, args)
 
     plt.figure(figsize=(10, 6))
     scatter_x = np.arange(len(labels))
@@ -193,11 +197,22 @@ def main(filepath, N=5, cluster_stop_length=10):
     plt.ylabel("Cluster ID")
     plt.grid(True, linestyle='--', alpha=0.4)
     plt.tight_layout()
-    plt.savefig("instance_cluster_plot.svg")
-    print("Saved cluster visualization to instance_cluster_plot.svg")
+    plt.savefig(f"{args.design}_instance_cluster_plot.svg")
+    print(f"Saved cluster visualization to {args.design}_instance_cluster_plot.svg")
 
-    plot_hierarchy_tree(hierarchy, out_file="hierarchy_tree.svg")
+    plot_hierarchy_tree(hierarchy, args)
 
+def parse_arguments():
+    parser = argparse.ArgumentParser(description="Hierarchical clustering for a design.")
+    parser.add_argument("--design", required=True, help="Name of the design (e.g., ibex)")
+    parser.add_argument("--N", type=int, default=5, help="Max cluster size per round (default: 5)")
+    parser.add_argument("--cluster_stop_length", type=int, default=8, help="Cluster stop threshold (default: 8)")
+    return parser.parse_args()
 
 if __name__ == "__main__":
-    main("ibex_core.pkl", N=5, cluster_stop_length=10)
+    args = parse_arguments()
+
+    # Construct the filepath
+    filepath = f"{args.design}.pkl"
+
+    main(f"{filepath}", args)
