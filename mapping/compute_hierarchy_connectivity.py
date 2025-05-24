@@ -133,6 +133,11 @@ for level, level_cluster in enumerate(level_cluster_map):
 
                 # Normalized scores
                 area_score = area / max_area if max_area else 0
+                # Bin area_score into 30 bins (1 to 29)
+                if area_score >= 1.0:
+                    S = 29
+                else:
+                    S = int(area_score * 30)
                 internal_conn_score = internal_conn / max_internal_conn if max_internal_conn else 0
                 ca_score = (area_score + internal_conn_score) / 2
 
@@ -143,6 +148,7 @@ for level, level_cluster in enumerate(level_cluster_map):
                         "connection_count": len(connections),
                         "internal_connections": internal_conns,
                         "area_score": area_score,
+                        "S": S,
                         "internal_conn_score": internal_conn_score,
                         "ca_score": ca_score
                     })
@@ -173,6 +179,10 @@ for level, level_cluster in enumerate(level_cluster_map):
             area = cluster_area[level].get(int(cluster_id), None)
             internal_conn = len(internal_conns)
             area_score = area / max_area if max_area else 0
+            if area_score >= 1.0:
+                S = 29
+            else:
+                S = int(area_score * 30)
             internal_conn_score = internal_conn / max_internal_conn if max_internal_conn else 0
             ca_score = (area_score + internal_conn_score) / 2
 
@@ -182,6 +192,7 @@ for level, level_cluster in enumerate(level_cluster_map):
                 "connection_count": len(cluster_connections),
                 "internal_connections": sorted(internal_conns),
                 "area_score": area_score,
+                "S": S,
                 "internal_conn_score": internal_conn_score,
                 "ca_score": ca_score
             })
@@ -189,9 +200,37 @@ for level, level_cluster in enumerate(level_cluster_map):
         # Sort by ca_score descending
         enriched_nodes = sorted(enriched_nodes, key=lambda x: x["ca_score"], reverse=True)
 
-        # Assign rank (1 = highest ca_score)
+        # Assign rank (1 = highest ca_score) and T value
+        T_Dict = [1, 6, 4, 5, 7, 2, 3]
         for idx, node in enumerate(enriched_nodes):
             node["rank"] = idx + 1
+            # Assign T based on rank, if rank exceeds T_Dict length, use last value
+            node["T"] = T_Dict[idx] if idx < len(T_Dict) else T_Dict[-1]
+
+        # --- Add one-hot connectivity encoding 'A' ---
+        # Build node id list in current order
+        node_ids = [n["node"] for n in enriched_nodes]
+        node_id_to_index = {nid: i for i, nid in enumerate(node_ids)}
+        n = len(node_ids)
+        # Build adjacency matrix A: A[i][j] = 1 if node i connects to node j, else 0
+        A = []
+        for i, n1 in enumerate(node_ids):
+            row = []
+            # For level 0, use connectivity_map; for higher, use internal_connections
+            if level == 0:
+                connected = set(connectivity_map.get(n1, []))
+                for j, n2 in enumerate(node_ids):
+                    row.append(1 if n2 in connected else 0)
+            else:
+                # For clusters, use internal_connections field if available
+                this_node = enriched_nodes[i]
+                connected = set(this_node.get("internal_connections", []))
+                for j, n2 in enumerate(node_ids):
+                    row.append(1 if n2 in connected else 0)
+            A.append(row)
+        # Attach A to each node as its row
+        for i, node in enumerate(enriched_nodes):
+            node["A"] = A[i]
 
         level_connectivity[level][str(cluster_id)] = enriched_nodes
 
