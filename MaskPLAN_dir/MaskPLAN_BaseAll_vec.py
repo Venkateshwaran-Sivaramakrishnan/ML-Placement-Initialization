@@ -2,7 +2,6 @@ import tensorflow as tf
 import numpy as np
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Concatenate, Embedding, Flatten, Activation, RepeatVector, Dense, Reshape, Cropping1D, Dropout, BatchNormalization
-from .MaskPLAN import *
 np.random.seed(42)
 tf.random.set_seed(42)
 

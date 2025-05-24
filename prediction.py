@@ -1,11 +1,8 @@
 import os
-import cv2
 from utils import mask_ada
 import argparse
-from shapely.geometry import Polygon, MultiPolygon, LinearRing, MultiPoint, LineString
-from shapely.ops import unary_union
-
-from MaskPLAN.MaskPLAN_BaseAll_vec import *
+import numpy as np
+from MaskPLAN import MASKPLAN
 
 ## Global Para ##
 
@@ -42,7 +39,7 @@ def parse_args():
     parser.add_argument('--model', default='Large', type=str, help='Tiny, Base, Large')
     parser.add_argument('--test_cases', default=1000, type=int)  # test layouts
     parser.add_argument('--par_T', default=0.25, type=float)  # partial input Type
-    parser.add_argument('--par_L', default=0.25, type=float)  # partial input Location
+    parser.add_argument('--par_L', default=0., type=float)  # partial input Location
     parser.add_argument('--par_A', default=0.25, type=float)  # partial input Adjacency
     parser.add_argument('--par_S', default=0.25, type=float)  # partial input Size
     parser.add_argument('--par_R', default=0.25, type=float)  # partial input Region
@@ -88,7 +85,7 @@ def main(args):
         enc_layers = 1
         dec_layers = 1
 
-    # load MaskPLAN
+    # load MaskPLAN_dir
 
     MaskPLAN = MASKPLAN(embed_dim, latent_dim, num_heads, enc_layers, dec_layers)
     MaskPLAN.load_weights('MaskPLAN_Trained/All_%s_Single_vec/All' % (args.model))
@@ -180,26 +177,10 @@ def main(args):
 
             # get boudnary
 
-            pts = []
-            types = []
-            unioned_rooms = None
-
-            boundary_pt = np.ndarray([[0, 0], [0, 479], [639, 479], [639, 0]]) # Square bounding box
-            if boundary_pt.ndim == 1:
-                boundary_pt = [[0, 0], [0, 127], [127, 127], [127, 0]]
-            boundary_pt = [[16, 16], [16, 122], [122, 122], [122, 16]]
-            boundary_line = LinearRing(boundary_pt)
-            boundary_outside = Polygon([[0, 0], [0, 127], [127, 127], [127, 0]]).difference(Polygon(boundary_line))
-
-            # fill boundary in img
-
-            reconstructed = np.zeros((128, 128, 4))
-            cv2.fillPoly(reconstructed,
-                         [np.array(boundary_line.buffer(2).exterior.coords[:-1])[:, np.newaxis, :].astype(np.int32)],
-                         color=[255] * 4)
-            cv2.fillPoly(reconstructed, [np.array(boundary_line.coords[:-1])[:, np.newaxis, :].astype(np.int32)],
-                         color=[0] * 4)
-            reconst_post = reconstructed.copy()
+            # boundary_pt = np.array([[0, 0], [0, 479], [639, 479], [639, 0]]) # Square bounding box
+            # if boundary_pt.ndim == 1:
+            #     boundary_pt = [[0, 0], [0, 127], [127, 127], [127, 0]]
+            # boundary_pt = [[16, 16], [16, 122], [122, 122], [122, 16]]
 
             # Inference, skip all [start] token and defined token
 
@@ -286,6 +267,6 @@ if __name__ == "__main__":
     for num, site in enumerate(Testset_ids[:args.test_cases]):
         model.reset(site)
         model.partial_input(site)
-        model.inference_interation(site)
+        print(model.inference_interation(site))
         if num % 100 == 0: print(num)
 
