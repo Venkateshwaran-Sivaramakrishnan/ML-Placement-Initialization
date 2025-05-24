@@ -73,9 +73,15 @@ for level, level_cluster in enumerate(level_cluster_map):
             except IndexError as e:
                 raise IndexError(f"[Level {level}] Index error while accessing cluster_area.") from e
 
-        # Sort by area descending
-        children_with_areas.sort(key=lambda x: x["area"], reverse=True)
-        sorted_cluster_children[level][cluster_id] = children_with_areas
+            # Sort by area descending
+            children_with_areas.sort(key=lambda x: x["area"], reverse=True)
+
+            # Add area_index after sorting
+            for idx, item in enumerate(children_with_areas):
+                item["area_index"] = idx
+
+            sorted_cluster_children[level][cluster_id] = children_with_areas
+
 
 with open("level_cluster_map_sorted.json", "w") as f:
     json.dump(sorted_cluster_children, f, indent=2)
