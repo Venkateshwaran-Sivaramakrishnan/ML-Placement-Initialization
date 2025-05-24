@@ -10,10 +10,13 @@ To get all the dependencies, please run the following in order:
 ```bash
 conda create -n MLPlacement python=3.9
 conda activate MLPlacement
-conda install cudatoolkit==11.8 cudnn==8.2.1.32
+conda install -c conda-forge cudatoolkit==11.8 cudnn==8.2.1.32
 
 # Run only this if you have CUDA installed already
-uv sync
+uv sync --no-managed-python
+
+# You do not need to activate the environment again after running uv sync.
+conda deactivate MLPlacement
 ```
 
 ## MaskPLAN Inference
