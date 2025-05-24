@@ -1,0 +1,14 @@
+[project]
+name = "maskplan"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "keras==2.6.0",
+    "opencv-python>=4.5.3.56",
+    "protobuf==3.20",
+    "shapely==2.0.2",
+    "tensorflow==2.6.0",
+    "tensorflow-gpu==2.6.0",
+]
