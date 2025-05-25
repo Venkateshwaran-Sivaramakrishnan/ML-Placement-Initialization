@@ -17,6 +17,9 @@ uv sync --no-managed-python
 
 # You do not need to activate the environment again after running uv sync.
 conda deactivate MLPlacement
+
+# Source OpenROAD variables
+source OpenROAD-flow-scripts/env.sh
 ```
 
 ## MaskPLAN Inference
