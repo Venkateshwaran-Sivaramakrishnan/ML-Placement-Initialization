@@ -228,14 +228,14 @@ def load_init_placement(file_name):
     inst.setLocation(x, y)
 
 
-def run_incremental_placement(design):
+def run_incremental_placement(design, path):
   # Configure and run global placement
   print("###run global placement###")
   design.evalTclString("global_placement -routability_driven -timing_driven -skip_initial_place -incremental")
 
   print("Please use the generated 3_3_place_gp.def and 3_3_place_gp.odb files for remaining flows.")
-  design.writeDef("3_3_place_gp.def")
-  design.writeDb("3_3_place_gp.odb")
+  design.writeDef(f"{path}/3_3_place_gp.def")
+  design.writeDb(f"{path}/3_3_place_gp.odb")
 
   # Run initial detailed placement
   site = design.getBlock().getRows()[0].getSite()
@@ -245,8 +245,8 @@ def run_incremental_placement(design):
   print("###run legalization###")
   design.getOpendp().detailedPlacement(max_disp_x, max_disp_y, "")
   
-  design.writeDef("3_5_place_dp.def")
-  design.writeDb("3_5_place_dp.odb")
+  design.writeDef(f"{path}/3_5_place_dp.def")
+  design.writeDb(f"{path}/3_5_place_dp.odb")
 
 def get_IO_pins(IO_map, file_name):
   f = open(file_name, "a")
@@ -312,11 +312,11 @@ if __name__ == "__main__":
     tech_node = args.t
     design = args.d
     large_net_threshold = int(args.large_net_threshold)
-    hg_file_name = str(design) + "_" + str(tech_node) + ".txt"
+    hg_file_name = "./results/" + tech_node + "/" + design + "/base/" + str(design) + "_" + str(tech_node) + ".txt"
+    path = "./results/" + tech_node + "/" + design + "/base"
     f = open(hg_file_name, "w")
     f.close()
 
-    path = "./results/" + tech_node + "/" + design + "/base"
     floorplan_odb_file = path + "/3_2_place_iop.odb"
     sdc_file = path + "/2_floorplan.sdc"
     # Load the design
@@ -343,11 +343,11 @@ if __name__ == "__main__":
     #generate_init_placement(design, init_placement_file)
 
     # Load the initial placement and run incremental placement    
-    #load_init_placement("init_placement_test.txt")
+    # load_init_placement("init_placement_test.txt")
 
-    design.writeDb("3_3_place_gp_temp.odb")
+    design.writeDb(f"{path}/3_3_place_gp_temp.odb")
 
-    run_incremental_placement(design)
+    run_incremental_placement(design, path)
     print("Finished running global placement and detailed placement.")
     print("\n")
     print("*************************************************************************************************")
