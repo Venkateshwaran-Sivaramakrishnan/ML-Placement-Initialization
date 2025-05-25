@@ -49,149 +49,139 @@ level_connectivity = {}
 for level, level_cluster in enumerate(level_cluster_map):
     level_connectivity[level] = {}
     for cluster_id, node_list in level_cluster.items():
-        enriched_nodes = []
+        node_info = []
 
-        # Gather area and internal connectivity for normalization
+        # For level 0, node_list contains node IDs
+        # For level > 0, node_list contains cluster IDs from previous level
+
+        # --- Gather area for normalization ---
         area_list = []
-        internal_conn_list = []
         for node in node_list:
-            try:
-                node_id = int(node.split("N")[-1]) if isinstance(node, str) else node
-                area = cluster_area[level].get(node_id, None)
+            node_id = int(node.split("N")[-1]) if isinstance(node, str) else node
+            if level == 0:
+                area = cluster_area[level].get(node_id, 0)
+            else:
+                area = cluster_area[level-1].get(node_id, 0)
+            area_list.append(area)
+        max_area = max(area_list) if area_list else 1
+
+        # --- Build child-to-members map for level > 0 ---
+        if level > 0:
+            prev_level_map = level_cluster_map[level-1]
+            child_to_members = {}
+            for child in node_list:
+                members = prev_level_map.get(str(child), []) if isinstance(prev_level_map, dict) else prev_level_map.get(child, [])
+                child_to_members[child] = [int(m.split("N")[-1]) if isinstance(m, str) else m for m in members]
+
+        # --- Compute internal connectivity for each node/cluster ---
+        internal_conn_list = []
+        for idx, node in enumerate(node_list):
+            node_id = int(node.split("N")[-1]) if isinstance(node, str) else node
+            if level == 0:
+                # Internal connections: how many other nodes in this cluster is this node connected to
                 connections = connectivity_map.get(node_id, [])
                 internal_conns = [
                     other for other in node_list
                     if (int(other.split("N")[-1]) if isinstance(other, str) else other) in connections
                     and other != node
                 ]
-                internal_conns = sorted(
-                    [int(x.split("N")[-1]) if isinstance(x, str) else x for x in internal_conns]
-                )
-                area_list.append(area if area is not None else 0)
                 internal_conn_list.append(len(internal_conns))
-            except Exception as e:
-                print(f"[Error] Level {level} - Cluster {cluster_id} - Node {node}: {e}")
-                area_list.append(0)
-                internal_conn_list.append(0)
+            else:
+                # For clusters: sum of connections between members of this child cluster and members of other child clusters in this cluster
+                members = set(child_to_members[node])
+                conn_count = 0
+                for other_idx, other in enumerate(node_list):
+                    if other == node:
+                        continue
+                    other_members = set(child_to_members[other])
+                    for m in members:
+                        conn_count += len(set(connectivity_map.get(m, [])) & other_members)
+                internal_conn_list.append(conn_count)
 
-        max_area = max(area_list) if area_list else 1
         max_internal_conn = max(internal_conn_list) if internal_conn_list else 1
 
-        # --- Node info ---
-        node_info = []
+        # --- Compose node_info ---
         for idx, node in enumerate(node_list):
-            try:
-                node_id = int(node.split("N")[-1]) if isinstance(node, str) else node
-                area = area_list[idx]
-                connections = connectivity_map.get(node_id, [])
-                internal_conns = [
-                    other for other in node_list
-                    if (int(other.split("N")[-1]) if isinstance(other, str) else other) in connections
-                    and other != node
-                ]
-                internal_conns = sorted(
-                    [int(x.split("N")[-1]) if isinstance(x, str) else x for x in internal_conns]
-                )
-                internal_conn = len(internal_conns)
-
-                # Normalized scores
-                area_score = area / max_area if max_area else 0
-                if area_score >= 1.0:
-                    S = 29
-                else:
-                    S = int(area_score * 30)
-                internal_conn_score = internal_conn / max_internal_conn if max_internal_conn else 0
-                ca_score = (area_score + internal_conn_score) / 2
-
-                if level == 0:
-                    node_info.append({
-                        "node": node_id,
-                        "area": area,
-                        "connection_count": len(connections),
-                        "internal_connections": internal_conns,
-                        "area_score": area_score,
-                        "S": S,
-                        "internal_conn_score": internal_conn_score,
-                        "ca_score": ca_score
-                    })
-
-            except Exception as e:
-                print(f"[Error] Level {level} - Cluster {cluster_id} - Node {node}: {e}")
-
-        # For level > 0 (cluster-level)
-        cluster_info = {}
-        if level > 0:
-            cluster_connections = set()
-            internal_conns = set()
-            for node in node_list:
-                node_id = int(node.split("N")[-1])
-                connected_nodes = connectivity_map.get(node_id, [])
-                for other_cluster, others in level_cluster.items():
-                    if other_cluster == cluster_id:
-                        for other in others:
-                            other_id = int(other.split("N")[-1])
-                            if other_id in connected_nodes and other_id != node_id:
-                                internal_conns.add(other_cluster)
-                    else:
-                        if any(
-                            int(x.split("N")[-1]) == other_id if isinstance(x, str) else x == other_id
-                            for x in others for other_id in connected_nodes
-                        ):
-                            cluster_connections.add(other_cluster)
-
-            area = cluster_area[level].get(int(cluster_id), None)
-            internal_conn = len(internal_conns)
+            node_id = int(node.split("N")[-1]) if isinstance(node, str) else node
+            area = area_list[idx]
             area_score = area / max_area if max_area else 0
-            if area_score >= 1.0:
-                S = 29
-            else:
-                S = int(area_score * 30)
+            S = 29 if area_score >= 1.0 else int(area_score * 30)
+            internal_conn = internal_conn_list[idx]
             internal_conn_score = internal_conn / max_internal_conn if max_internal_conn else 0
             ca_score = (area_score + internal_conn_score) / 2
 
-            cluster_info = {
-                "node": cluster_id,
-                "area": area,
-                "connection_count": len(cluster_connections),
-                "internal_connections": sorted(internal_conns),
-                "area_score": area_score,
-                "S": S,
-                "internal_conn_score": internal_conn_score,
-                "ca_score": ca_score
-            }
+            if level == 0:
+                connections = connectivity_map.get(node_id, [])
+                internal_conns = [
+                    other for other in node_list
+                    if (int(other.split("N")[-1]) if isinstance(other, str) else other) in connections
+                    and other != node
+                ]
+                internal_conns = sorted(
+                    [int(x.split("N")[-1]) if isinstance(x, str) else x for x in internal_conns]
+                )
+                node_info.append({
+                    "node": node_id,
+                    "area": area,
+                    "connection_count": len(connections),
+                    "internal_connections": internal_conns,
+                    "area_score": area_score,
+                    "S": S,
+                    "internal_conn_score": internal_conn_score,
+                    "ca_score": ca_score
+                })
+            else:
+                # For clusters, we can optionally store which other clusters this cluster is connected to
+                # (i.e., if any member of this cluster is connected to any member of another cluster)
+                members = set(child_to_members[node])
+                connected_clusters = []
+                for other in node_list:
+                    if other == node:
+                        continue
+                    other_members = set(child_to_members[other])
+                    found = False
+                    for m in members:
+                        if set(connectivity_map.get(m, [])) & other_members:
+                            found = True
+                            break
+                    if found:
+                        connected_clusters.append(int(other.split("N")[-1]) if isinstance(other, str) else other)
+                node_info.append({
+                    "node": node_id,
+                    "area": area,
+                    "connection_count": len(connected_clusters),
+                    "internal_connections": sorted(connected_clusters),
+                    "area_score": area_score,
+                    "S": S,
+                    "internal_conn_score": internal_conn_score,
+                    "ca_score": ca_score
+                })
 
-        # Sort node_info by ca_score descending
+        # --- Sort node_info by ca_score descending ---
         node_info = sorted(node_info, key=lambda x: x["ca_score"], reverse=True)
 
-        # Assign rank and T value
+        # --- Assign rank and T value ---
         T_Dict = [1, 6, 4, 5, 7, 2, 3]
         for idx, node in enumerate(node_info):
             node["rank"] = idx + 1
             node["T"] = T_Dict[idx] if idx < len(T_Dict) else T_Dict[-1]
 
-        # Build node id list in current order
+        # --- Build adjacency matrix A ---
         node_ids = [n["node"] for n in node_info]
         n = len(node_ids)
-        # Build adjacency matrix A: A[i][j] = 1 if node i connects to node j, else 0
         A = []
         for i, n1 in enumerate(node_ids):
             row = []
-            if level == 0:
-                connected = set(connectivity_map.get(n1, []))
-                for j, n2 in enumerate(node_ids):
-                    row.append(1 if n2 in connected else 0)
-            else:
-                this_node = node_info[i]
-                connected = set(this_node.get("internal_connections", []))
-                for j, n2 in enumerate(node_ids):
-                    row.append(1 if n2 in connected else 0)
+            this_node = node_info[i]
+            connected = set(this_node.get("internal_connections", []))
+            for j, n2 in enumerate(node_ids):
+                row.append(1 if n2 in connected else 0)
             A.append(row)
         for i, node in enumerate(node_info):
             node["A"] = A[i]
 
-        # Cluster-level T, S, A as tensors with start/end token and padding for T and S and A
+        # --- Cluster-level T, S, A as tensors with start/end token and padding ---
         cluster_T_raw = [node["T"] for node in node_info]
-        # T: Start token = 9, End token = 8, pad with 0 to length 10
         T_padded = [9] + cluster_T_raw[:8]
         T_padded.append(8)
         while len(T_padded) < 10:
@@ -199,29 +189,22 @@ for level, level_cluster in enumerate(level_cluster_map):
         cluster_T = np.array(T_padded)
 
         cluster_S_raw = [node["S"] for node in node_info]
-        # S: Start token = 31, End token = 30, pad with 0 to length 10
         S_padded = [31] + cluster_S_raw[:8]
         S_padded.append(30)
         while len(S_padded) < 10:
             S_padded.append(0)
         cluster_S = np.array(S_padded)
 
-        # A: Start token = [1 1 1 1 1 1 1 1], End token = [0 1 0 1 0 1 0 1], pad with [0 0 0 0 0 0 0 0]
         cluster_A_raw = [node["A"] for node in node_info]
-        # Pad each A row to length 8
         cluster_A_rows = []
         for a_row in cluster_A_raw[:8]:
             padded_row = list(a_row[:8]) + [0] * (8 - len(a_row))
             cluster_A_rows.append(padded_row)
-
-        # Add start and end tokens
         start_token = [1,1,1,1,1,1,1,1]
         end_token = [0,1,0,1,0,1,0,1]
         cluster_A = [start_token] + cluster_A_rows + [end_token]
-        # If less than 10 rows, pad with [0]*8 AFTER the end token
         while len(cluster_A) < 10:
             cluster_A.append([0]*8)
-        # If more than 10 rows (shouldn't happen), truncate
         cluster_A = cluster_A[:10]
         cluster_A = np.array(cluster_A)
 
@@ -230,7 +213,7 @@ for level, level_cluster in enumerate(level_cluster_map):
         cluster_S = cluster_S.tolist()
         cluster_A = cluster_A.tolist()
 
-        # Compose final cluster representation
+        # --- Compose final cluster representation ---
         level_connectivity[level][str(cluster_id)] = {
             "node_info": node_info,
             "cluster_info": {
