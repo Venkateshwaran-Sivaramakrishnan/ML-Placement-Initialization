@@ -343,7 +343,7 @@ if __name__ == "__main__":
     #generate_init_placement(design, init_placement_file)
 
     # Load the initial placement and run incremental placement    
-    load_init_placement("init_placement_test.txt")
+    #load_init_placement("init_placement_test.txt")
 
     design.writeDb("3_3_place_gp_temp.odb")
 
