@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=OpenROAD
+Exec=openroad -gui
+Icon=/home/venkat/cse291/ML-Placement-Initialization/OpenROAD-flow-scripts/tools/install/OpenROAD/share/openroad/gui/icon.png
+Categories=Development;Electronics
