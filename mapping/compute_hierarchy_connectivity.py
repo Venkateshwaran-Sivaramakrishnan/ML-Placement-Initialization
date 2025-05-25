@@ -1,3 +1,4 @@
+import argparse
 import json
 from collections import defaultdict
 from extractor import DesignParser
@@ -13,8 +14,18 @@ with open("cluster_area.json", "r") as f:
     raw_area = json.load(f)
     cluster_area = {int(k): {int(kk): vv for kk, vv in v.items()} for k, v in raw_area.items()}
 
-design = DesignParser("ibex_nangate45.txt")
+# Initialize design parser
+def parse_args():
+    parser = argparse.ArgumentParser(description="Compute area for hierarchy clusters")
+    parser.add_argument("--design", type=str, required=True, help="Design name (e.g., ibex_nangate45)")
+    parser.add_argument("--tech", type=str, required=True, help="Technology name (e.g., nangate45)")
+    args = parser.parse_args()
+    return args
 
+args = parse_args()
+
+filepath = args.design + "_" + args.tech + ".txt"
+design = DesignParser(filepath)
 # ----------------------------
 # Build node-level connectivity map
 # ----------------------------
@@ -236,7 +247,7 @@ for level, level_cluster in enumerate(level_cluster_map):
 with open("hierarchy_connectivity.json", "w") as f:
     json.dump(level_connectivity, f, indent=2)
 
-print("✅ Saved connectivity to hierarchy_connectivity.json")
+print("Saved connectivity to hierarchy_connectivity.json")
 
 # ----------------------------
 # Save output as .npy for each cluster
@@ -264,6 +275,6 @@ for level, clusters in level_connectivity.items():
 # Save as npy (list of dicts)
 np.save("cluster_tensor_data.npy", cluster_tensor_data, allow_pickle=True)
 
-print("✅ Saved cluster tensor data to cluster_tensor_data.npy")
+print("Saved cluster tensor data to cluster_tensor_data.npy")
 
 

@@ -1,5 +1,6 @@
 import json
 from collections import defaultdict
+import argparse
 from mapping import get_node_geometry
 from extractor import DesignParser
 
@@ -8,7 +9,17 @@ with open("hierarchy.json", "r") as f:
     hierarchy = json.load(f)
 
 # Initialize design parser
-design = DesignParser("ibex_nangate45.txt")
+def parse_args():
+    parser = argparse.ArgumentParser(description="Compute area for hierarchy clusters")
+    parser.add_argument("--design", type=str, required=True, help="Design name (e.g., ibex_nangate45)")
+    parser.add_argument("--tech", type=str, required=True, help="Technology name (e.g., nangate45)")
+    args = parser.parse_args()
+    return args
+
+args = parse_args()
+
+filepath = args.design + "_" + args.tech + ".txt"
+design = DesignParser(filepath)
 
 # Step 1: Build level-wise cluster-to-nodes map
 level_cluster_map = []
@@ -85,3 +96,5 @@ for level, level_cluster in enumerate(level_cluster_map):
 
 with open("level_cluster_map_sorted.json", "w") as f:
     json.dump(sorted_cluster_children, f, indent=2)
+
+print("Cluster area and sorted cluster children computed successfully.")
