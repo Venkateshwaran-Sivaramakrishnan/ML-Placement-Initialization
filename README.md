@@ -114,7 +114,7 @@ uv run python -m Inference.MaskPLAN_Inference_iterate_vec_Single --model Large -
 ```
 
 ### Sample Inference
-![image](https://github.com/user-attachments/assets/978e778f-a05d-4978-baf3-c579526cc356)
+![image](https://github.com/user-attachments/assets/80f9eb62-fd44-4ab6-837e-f6c6d5adc625) --> ![image](https://github.com/user-attachments/assets/978e778f-a05d-4978-baf3-c579526cc356)
 
 ### extractor.py
 ```bash
