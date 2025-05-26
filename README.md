@@ -46,7 +46,7 @@ MaskPLAN employs a **Graph-structured Dynamic Masked Autoencoder (GDMAE)** archi
 
 | Challenge | Resolution |
 |----------|------------|
-| Only 7 rooms can be generated | Limit layout prediction to **7 nodes (max) by clustering**|
+| Upto 8 rooms (7 types) can be generated | Limit layout prediction to **8 nodes (max) by clustering**|
 | Architectural ≠ Placement Initialization constraints | Perform **domain-specific feature mapping** |
 | Room Location unknown in Placement Initialization | Use **partial inputs** (omit L) |
 
@@ -61,7 +61,7 @@ MaskPLAN employs a **Graph-structured Dynamic Masked Autoencoder (GDMAE)** archi
 To convert the flat VLSI netlist into higher-order layout entities:
 
 - **Hierarchical clustering** is applied over the hypergraph.
-- **Maximum cluster size** is limited to **7**, aligning with MaskPLAN's capacity to generate up to 7 rooms.
+- **Maximum cluster size** is limited to **8**, aligning with MaskPLAN's capacity to generate up to 8 rooms.
 - The clustering process groups instances (cells) based on **netlist connectivity** to maintain spatial locality and logical grouping.
 
 
