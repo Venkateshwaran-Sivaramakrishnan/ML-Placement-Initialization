@@ -105,21 +105,22 @@ conda deactivate MLPlacement
 source OpenROAD-flow-scripts/env.sh
 ```
 
-## MaskPLAN Inference
+## Inference
 
-To run inference, please run:
+The MaskPLAN Inference is taylored to meet placement requirements.
+
+To run inference:
 
 ```bash
 uv run python -m Inference.MaskPLAN_Inference_iterate_vec_Single --model Large --par_L 0 --par_R 0
 ```
 
-### Sample Inference
-### Input
+#### Input
 <p align="center">
   <img src="https://github.com/user-attachments/assets/80f9eb62-fd44-4ab6-837e-f6c6d5adc625" width="200"/>
 </p>
 
-### Output
+#### Output
 <p align="center">
   <img src="https://github.com/user-attachments/assets/978e778f-a05d-4978-baf3-c579526cc356" width="400"/>
 </p>
