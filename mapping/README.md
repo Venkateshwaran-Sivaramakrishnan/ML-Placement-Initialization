@@ -5,9 +5,8 @@
 2.   Area of super clusters and sorting
 
 #### Input Files:
-> Hypergraph text file - eg.: `ibex_nangate.txt`
-
-> Cluster Hierarchy json file - `hierarchy.json`
+1. Hypergraph text file - eg.: `ibex_nangate.txt`
+2. Cluster Hierarchy json file - `hierarchy.json`
 
 #### Output Files:
 
