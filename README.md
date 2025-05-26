@@ -1,5 +1,84 @@
-# ML-Placement-Initialization
-ML-based placement initialization.
+# ML-Based Placement Initialization
+
+This project presents an adaptation of **ML-based architectural layout generation** techniques to the problem of **VLSI placement initialization**, using principles of **transfer learning**. Specifically, we explore and build upon prior work in architectural layout generation to inform the development of effective placement initialization strategies for the OpenROAD placement flow. 
+
+---
+
+## Explrored Works: 
+
+We evaluated the following works which addresses floorplan generation using machine learning:
+
+| Model | Description |
+|-------|-------------|
+| **[MaskPLAN](https://github.com/HangZhangZ/MaskPLAN)** | Masked generative layout planning using graph-structured dynamic masked autoencoders (CVPR 2024) [[paper](https://openaccess.thecvf.com/content/CVPR2024/html/Zhang_MaskPLAN_Masked_Generative_Layout_Planning_from_Partial_Input_CVPR_2024_paper.html)] |
+| **[Graph2Plan](https://github.com/HanHan55/Graph2plan)** | Floorplan generation from layout graphs using GCN-based message passing [[paper](https://arxiv.org/abs/2004.13204)] |
+| **[iPLAN](https://github.com/realcrane/iPLAN-Interactive-and-Procedural-Layout-Planning)** | Interactive layout design framework leveraging procedural generation [[paper](https://arxiv.org/pdf/2203.14412)] |
+| **[GPLAN](https://arxiv.org/pdf/2008.01803)** | Constraint-based dimensioned floorplan generation for adjacency-constrained spaces |
+| **[HouseGAN](https://github.com/ennauata/housegan)** | GAN-based architectural layout generation |
+| **[GNN-FP](https://github.com/mo7amed7assan1911/Floor_Plan_Generation_using_GNNs)** | Floorplan prediction using graph neural networks |
+
+
+**MaskPLAN** emerged as the most suitable foundation for our placement initialization problem.
+
+---
+
+## Why MaskPLAN? 
+
+Among the models evaluated, **MaskPLAN** was selected for adaptation to VLSI due to its capability to infer complete layouts from **partial or masked inputs**, a valuable feature when some placement details are not predefined.
+
+---
+
+## MaskPLAN: Overview
+
+MaskPLAN employs a **Graph-structured Dynamic Masked Autoencoder (GDMAE)** architecture. It includes five parallel transformer modules, each responsible for learning different layout attributes:
+
+- **T** — Room Type  
+- **L** — Room Location  
+- **S** — Room Size  
+- **A** — Adjacency  
+- **R** — Room Region  
+- Boundary Image  
+- Front Door Position  
+
+---
+## Challenges and Solutions: 
+
+
+| Challenge | Resolution |
+|----------|------------|
+| Only 7 rooms can be generated | Limit layout prediction to **7 nodes (max) by clustering**|
+| Architectural ≠ Placement Initialization constraints | Perform **domain-specific feature mapping** |
+| Room Location unknown in Placement Initialization | Use **partial inputs** (omit L) |
+
+
+---
+
+## Adapting MaskPLAN to VLSI Placement
+
+
+### 1. Clustering Strategy
+
+To convert the flat VLSI netlist into higher-order layout entities:
+
+- **Hierarchical clustering** is applied over the hypergraph.
+- **Maximum cluster size** is limited to **7**, aligning with MaskPLAN's capacity to generate up to 7 rooms.
+- The clustering process groups instances (cells) based on **netlist connectivity** to maintain spatial locality and logical grouping.
+
+
+### 2. Feature Mapping Between Domains
+
+| Architectural Feature (MaskPLAN) | VLSI Equivalent |
+|----------------------------------|-----------------|
+| **T** (Type) | Clustered node or sub-cluster, categorized by area and connectivity |
+| **S** (Size) | Area of a cell or sum of areas in a sub-cluster |
+| **A** (Adjacency) | Connectivity between nodes/clusters from netlist (hypergraph) |
+| **R** (Region) | Estimated based on proximity to I/O pins |
+| **L** (Location) | *Unavailable* in placement initialization (replaced by partial input handling) |
+
+> Note: **L** is intentionally omitted, leveraging MaskPLAN’s partial input capability.
+
+---
+
 
 ## Dependencies
 Ensure you have [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) and [uv](https://docs.astral.sh/uv/getting-started/installation/) installed.
