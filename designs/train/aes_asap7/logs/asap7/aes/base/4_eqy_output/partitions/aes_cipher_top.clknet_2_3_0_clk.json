@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1758,
+    "name": "aes_cipher_top.clknet_2_3_0_clk",
+    "inbits": {
+      "clknet_2_2_0_clk": [
+        0
+      ]
+    },
+    "outbits": {
+      "clknet_2_3_0_clk": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.clknet_2_3_0_clk",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.clknet_2_3_0_clk",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

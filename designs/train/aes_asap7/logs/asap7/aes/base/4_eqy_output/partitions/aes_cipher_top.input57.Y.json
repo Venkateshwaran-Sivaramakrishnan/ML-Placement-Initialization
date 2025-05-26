@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1292,
+    "name": "aes_cipher_top.input57.Y",
+    "inbits": {
+      "input57.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "input57.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.input57.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.input57.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

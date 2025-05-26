@@ -1,0 +1,11 @@
+plugin -i /opt/oss-cad-suite/libexec/../share/yosys/plugins/eqy_combine.so
+read_rtlil ./logs/asap7/aes/base/4_eqy_output/gold.il
+uniquify
+hierarchy
+design -stash gold
+read_rtlil ./logs/asap7/aes/base/4_eqy_output/gate_recoded.il
+uniquify
+hierarchy
+design -stash gate
+eqy_combine -gold_ids ./logs/asap7/aes/base/4_eqy_output/gold.ids -gate_ids ./logs/asap7/aes/base/4_eqy_output/gate_recoded.ids
+write_rtlil ./logs/asap7/aes/base/4_eqy_output/combined.il

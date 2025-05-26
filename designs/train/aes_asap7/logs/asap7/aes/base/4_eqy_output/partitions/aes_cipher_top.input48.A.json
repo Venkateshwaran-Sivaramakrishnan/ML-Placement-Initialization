@@ -1,0 +1,45 @@
+{
+  "partition": {
+    "index": 1313,
+    "name": "aes_cipher_top.input48.A",
+    "inbits": {
+      "key": [
+        27
+      ]
+    },
+    "outbits": {
+      "input48.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.input48.A",
+    "internal": {
+      "_16395_.B": [
+        0
+      ],
+      "_18383_.A": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 3,
+    "bitcount": 4
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.input48.A",
+    "internal": {
+      "_16395_.B": [
+        0
+      ],
+      "_18383_.A": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 3,
+    "bitcount": 4
+  }
+}

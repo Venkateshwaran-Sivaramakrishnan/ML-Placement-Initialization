@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1776,
+    "name": "aes_cipher_top.clkload27.A",
+    "inbits": {
+      "clkload26.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "clkload27.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.clkload27.A",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.clkload27.A",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

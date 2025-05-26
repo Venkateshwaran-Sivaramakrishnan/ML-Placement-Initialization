@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1332,
+    "name": "aes_cipher_top.input39.Y",
+    "inbits": {
+      "input39.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "input39.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.input39.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.input39.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

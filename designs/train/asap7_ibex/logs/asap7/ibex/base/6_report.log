@@ -1,0 +1,71 @@
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 22 thread(s).
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /work/practice0/flow/platforms/asap7/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation ibex_core (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 174398 rc segments
+[INFO RCX-0439] Coupling Cap extraction ibex_core ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 20% of 182688 wires extracted
+[INFO RCX-0442] 53% of 182688 wires extracted
+[INFO RCX-0442] 73% of 182688 wires extracted
+[INFO RCX-0442] 100% of 182688 wires extracted
+[INFO RCX-0045] Extract 21537 nets, 195875 rsegs, 195875 caps, 284210 ccs
+[INFO RCX-0443] 21537 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Supply voltage   : 7.70e-01 V
+Worstcase voltage: 5.73e-01 V
+Average voltage  : 7.13e-01 V
+Average IR drop  : 5.70e-02 V
+Worstcase IR drop: 1.97e-01 V
+Percentage drop  : 25.55 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 1.84e-01 V
+Average voltage  : 5.27e-02 V
+Average IR drop  : 5.27e-02 V
+Worstcase IR drop: 1.84e-01 V
+Percentage drop  : 23.91 %
+######################################
+Cell type report:                       Count       Area
+  Fill cell                             26996    3083.38
+  Tap cell                                986      28.75
+  Tie cell                               1664      72.78
+  Buffer                                 1748     243.79
+  Clock buffer                            137      52.23
+  Timing Repair Buffer                    364      34.02
+  Inverter                               1713      82.13
+  Clock inverter                           58      10.26
+  Sequential cell                        1932     712.36
+  Multi-Input combinational cell        13276    1444.75
+  Total                                 48874    5764.45
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 2652 u^2 46% utilization.
+[WARNING GUI-0076] QStandardPaths: runtime directory '/mnt/wslg/runtime-dir' is not owned by UID 0, but a directory permissions 0777 owned by UID 1000 GID 1000
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/ibex/base/final_all.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/ibex/base/final_routing.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/ibex/base/final_placement.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/ibex/base/final_ir_drop.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/ibex/base/final_clocks.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/ibex/base/cts_core_clock.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/ibex/base/cts_core_clock_layout.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/ibex/base/final_resizer.webp.png
+Elapsed time: 2:20.82[h:]min:sec. CPU time: user 138.49 sys 1.14 (99%). Peak memory: 841144KB.

@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 966,
+    "name": "aes_cipher_top.output374.Y",
+    "inbits": {
+      "output374.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "output374.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.output374.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.output374.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1722,
+    "name": "aes_cipher_top.dcnt.1_SDFFE_PN0P_.CLK",
+    "inbits": {
+      "dcnt[0]$_SDFFE_PN0P_.CLK": [
+        0
+      ]
+    },
+    "outbits": {
+      "dcnt[1]$_SDFFE_PN0P_.CLK": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.dcnt.1_SDFFE_PN0P_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.dcnt.1_SDFFE_PN0P_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

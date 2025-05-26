@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1100,
+    "name": "aes_cipher_top.output307.Y",
+    "inbits": {
+      "output307.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "output307.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.output307.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.output307.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

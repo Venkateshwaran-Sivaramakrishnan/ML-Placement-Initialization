@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1476,
+    "name": "aes_cipher_top.input206.Y",
+    "inbits": {
+      "input206.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "input206.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.input206.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.input206.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

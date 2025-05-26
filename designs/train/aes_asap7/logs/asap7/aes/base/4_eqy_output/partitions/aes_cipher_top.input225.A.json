@@ -1,0 +1,39 @@
+{
+  "partition": {
+    "index": 1435,
+    "name": "aes_cipher_top.input225.A",
+    "inbits": {
+      "text_in": [
+        6
+      ]
+    },
+    "outbits": {
+      "input225.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.input225.A",
+    "internal": {
+      "_31074_.A2": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 3
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.input225.A",
+    "internal": {
+      "_31074_.A2": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 3
+  }
+}

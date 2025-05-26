@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1178,
+    "name": "aes_cipher_top.output268.Y",
+    "inbits": {
+      "output268.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "output268.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.output268.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.output268.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

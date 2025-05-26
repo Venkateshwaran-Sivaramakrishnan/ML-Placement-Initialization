@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1785,
+    "name": "aes_cipher_top.clkload19.A",
+    "inbits": {
+      "clkload18.Y": [
+        0
+      ]
+    },
+    "outbits": {
+      "clkload19.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.clkload19.A",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.clkload19.A",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

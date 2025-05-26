@@ -1,0 +1,39 @@
+{
+  "partition": {
+    "index": 1233,
+    "name": "aes_cipher_top.input84.A",
+    "inbits": {
+      "key": [
+        5
+      ]
+    },
+    "outbits": {
+      "input84.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.input84.A",
+    "internal": {
+      "_16232_.A": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 3
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.input84.A",
+    "internal": {
+      "_16232_.A": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 3
+  }
+}

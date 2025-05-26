@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1741,
+    "name": "aes_cipher_top.clknet_leaf_24_clk",
+    "inbits": {
+      "clknet_leaf_23_clk": [
+        0
+      ]
+    },
+    "outbits": {
+      "clknet_leaf_24_clk": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.clknet_leaf_24_clk",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.clknet_leaf_24_clk",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 252,
+    "name": "aes_cipher_top.text_out.76_DFF_P_.CLK",
+    "inbits": {
+      "text_out[75]$_DFF_P_.CLK": [
+        0
+      ]
+    },
+    "outbits": {
+      "text_out[76]$_DFF_P_.CLK": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.text_out.76_DFF_P_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.text_out.76_DFF_P_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

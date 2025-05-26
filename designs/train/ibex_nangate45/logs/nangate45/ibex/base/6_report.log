@@ -1,0 +1,68 @@
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 22 thread(s).
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /work/practice0/flow/platforms/nangate45/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation ibex_core (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 76260 rc segments
+[INFO RCX-0439] Coupling Cap extraction ibex_core ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 48% of 136408 wires extracted
+[INFO RCX-0442] 100% of 136408 wires extracted
+[INFO RCX-0045] Extract 19468 nets, 94921 rsegs, 94921 caps, 224077 ccs
+[INFO RCX-0443] 19468 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Supply voltage   : 1.10e+00 V
+Worstcase voltage: 1.54e-01 V
+Average voltage  : 6.50e-01 V
+Average IR drop  : 4.50e-01 V
+Worstcase IR drop: 9.46e-01 V
+Percentage drop  : 86.02 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 6.74e-01 V
+Average voltage  : 2.87e-01 V
+Average IR drop  : 2.87e-01 V
+Worstcase IR drop: 6.74e-01 V
+Percentage drop  : 61.32 %
+######################################
+Cell type report:                       Count       Area
+  Fill cell                             16189   22711.61
+  Tap cell                                428     113.85
+  Buffer                                 1416    2592.97
+  Clock buffer                            447     529.34
+  Timing Repair Buffer                    383     497.42
+  Inverter                               1050     612.07
+  Clock inverter                          124      97.62
+  Sequential cell                        1932   10158.27
+  Multi-Input combinational cell        11704   20044.70
+  Total                                 33673   57357.85
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 34532 u^2 60% utilization.
+[WARNING GUI-0076] QStandardPaths: runtime directory '/mnt/wslg/runtime-dir' is not owned by UID 0, but a directory permissions 0777 owned by UID 1000 GID 1000
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/ibex/base/final_all.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/ibex/base/final_routing.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/ibex/base/final_placement.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/ibex/base/final_ir_drop.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/ibex/base/final_clocks.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/ibex/base/cts_core_clock.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/ibex/base/cts_core_clock_layout.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/ibex/base/final_resizer.webp.png
+Elapsed time: 0:52.05[h:]min:sec. CPU time: user 51.51 sys 0.61 (100%). Peak memory: 641164KB.

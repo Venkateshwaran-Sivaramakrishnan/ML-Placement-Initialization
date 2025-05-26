@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1004,
+    "name": "aes_cipher_top.output355.Y",
+    "inbits": {
+      "output355.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "output355.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.output355.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.output355.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

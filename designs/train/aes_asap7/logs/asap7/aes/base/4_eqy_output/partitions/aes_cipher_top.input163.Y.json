@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1572,
+    "name": "aes_cipher_top.input163.Y",
+    "inbits": {
+      "input163.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "input163.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.input163.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.input163.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

@@ -1,0 +1,544 @@
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 22 thread(s).
+clock_tree_synthesis -sink_clustering_enable -balance_levels
+[INFO CTS-0050] Root buffer is BUFx16f_ASAP7_75t_R.
+[INFO CTS-0051] Sink buffer is BUFx24_ASAP7_75t_R.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    BUFx16f_ASAP7_75t_R
+                    BUFx24_ASAP7_75t_R
+[INFO CTS-0049] Characterization buffer is BUFx24_ASAP7_75t_R.
+[INFO CTS-0007] Net "clk_i" found for clock "core_clock".
+[INFO CTS-0011]  Clock net "clk_i" for macros has 1 sinks.
+[INFO CTS-0011]  Clock net "clk_i_regs" for registers has 995 sinks.
+[INFO CTS-0010]  Clock net "clk" has 937 sinks.
+[INFO CTS-0008] TritonCTS found 3 clock nets.
+[INFO CTS-0097] Characterization used 2 buffer(s) types.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 0 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk_i.
+[INFO CTS-0028]  Total number of sinks: 1.
+[INFO CTS-0090]  Sinks will be clustered based on buffer max cap.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 1350  dbu (1 um).
+[INFO CTS-0023]  Original sink region: [(43821, 71685), (43821, 71685)].
+[INFO CTS-0024]  Normalized sink region: [(32.46, 53.1), (32.46, 53.1)].
+[INFO CTS-0025]     Width:  0.0000.
+[INFO CTS-0026]     Height: 0.0000.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 1
+    Sub-region size: 0.0000 X 0.0000
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 1.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 0 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk_i_regs.
+[INFO CTS-0028]  Total number of sinks: 995.
+[INFO CTS-0090]  Sinks will be clustered based on buffer max cap.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 1350  dbu (1 um).
+[INFO CTS-0206] Best clustering solution was found from clustering size of 30 and clustering diameter of 50.
+[INFO CTS-0019]  Total number of sinks after clustering: 45.
+[INFO CTS-0024]  Normalized sink region: [(2.45778, 8.58424), (29.7235, 48.6268)].
+[INFO CTS-0025]     Width:  27.2658.
+[INFO CTS-0026]     Height: 40.0425.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 23
+    Sub-region size: 27.2658 X 20.0213
+[INFO CTS-0034]     Segment length (rounded): 10.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 12
+    Sub-region size: 13.6329 X 20.0213
+[INFO CTS-0034]     Segment length (rounded): 6.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 45.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 0 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 937.
+[INFO CTS-0090]  Sinks will be clustered based on buffer max cap.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 1350  dbu (1 um).
+[INFO CTS-0206] Best clustering solution was found from clustering size of 30 and clustering diameter of 50.
+[INFO CTS-0019]  Total number of sinks after clustering: 47.
+[INFO CTS-0024]  Normalized sink region: [(16.4174, 12.2724), (56.8279, 56.5083)].
+[INFO CTS-0025]     Width:  40.4105.
+[INFO CTS-0026]     Height: 44.2360.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 24
+    Sub-region size: 40.4105 X 22.1180
+[INFO CTS-0034]     Segment length (rounded): 12.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 12
+    Sub-region size: 20.2052 X 22.1180
+[INFO CTS-0034]     Segment length (rounded): 10.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 47.
+[INFO CTS-0018]     Created 2 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 2 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 1:1..
+[INFO CTS-0017]     Max level of the clock tree: 1.
+[INFO CTS-0018]     Created 50 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 3.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 3.
+[INFO CTS-0015]     Created 50 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 10:2, 11:2, 12:2, 13:1, 16:2, 17:2, 18:1, 19:3, 20:1, 21:4, 22:3, 23:4, 24:7, 25:5, 26:5, 27:5..
+[INFO CTS-0017]     Max level of the clock tree: 2.
+[INFO CTS-0018]     Created 52 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 3.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 3.
+[INFO CTS-0015]     Created 52 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 8:1, 10:1, 11:1, 13:1, 14:3, 16:4, 17:2, 18:5, 19:6, 20:3, 21:8, 22:5, 23:8, 24:1, 25:1, 27:1..
+[INFO CTS-0017]     Max level of the clock tree: 2.
+[INFO CTS-0124] Clock net "clk_i"
+[INFO CTS-0125]  Sinks 1
+[INFO CTS-0098] Clock net "clk_i_regs"
+[INFO CTS-0099]  Sinks 1037
+[INFO CTS-0100]  Leaf buffers 45
+[INFO CTS-0101]  Average sink wire length 41.20 um
+[INFO CTS-0102]  Path depth 2 - 3
+[INFO CTS-0207]  Leaf load cells 87
+[INFO CTS-0098] Clock net "clk"
+[INFO CTS-0099]  Sinks 982
+[INFO CTS-0100]  Leaf buffers 47
+[INFO CTS-0101]  Average sink wire length 72.84 um
+[INFO CTS-0102]  Path depth 2 - 3
+[INFO CTS-0207]  Leaf load cells 87
+Took 5 seconds: clock_tree_synthesis -sink_clustering_enable -balance_levels
+[INFO RSZ-0058] Using max wire length 162um.
+Placement Analysis
+---------------------------------
+total displacement        314.7 u
+average displacement        0.0 u
+max displacement            1.6 u
+original HPWL           99133.7 u
+legalized HPWL         101158.1 u
+delta HPWL                    2 %
+
+repair_timing -verbose -setup_margin 0 -hold_margin 0 -repair_tns 100
+[INFO RSZ-0094] Found 342 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 342 out of 342 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   TNS      |  Viol  | Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpt
+--------------------------------------------------------------------------------------------------------------
+        0 |       0 |       0 |        0 |      0 |     0 |    +0.0% | -258.631 |   -53288.4 |    342 | gen_regfile_ff.register_file_i.rf_reg_q\[223\]$_DFFE_PN0P_/D
+       10 |       0 |       0 |       20 |      0 |     5 |    +0.0% |  -99.689 |    -6526.5 |    342 | instr_addr_o[31]
+       20 |       0 |       0 |       37 |      0 |    10 |    +0.1% |  -76.145 |    -6256.4 |    342 | instr_addr_o[31]
+       30 |       0 |       0 |       52 |      0 |    16 |    +0.1% |  -47.687 |     -751.7 |    342 | instr_addr_o[31]
+       40 |       0 |       5 |       54 |      2 |    18 |    +0.1% |  -25.165 |     -675.0 |    342 | instr_addr_o[31]
+       50 |       1 |       7 |       56 |      4 |    22 |    +0.1% |  -15.996 |     -660.2 |    342 | gen_regfile_ff.register_file_i.rf_reg_q\[155\]$_DFFE_PN0P_/D
+       54 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    340 | instr_addr_o[31]
+       55 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    339 | instr_addr_o[31]
+       56 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    338 | instr_addr_o[31]
+       57 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    337 | instr_addr_o[31]
+       58 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    336 | instr_addr_o[31]
+       59 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    335 | instr_addr_o[31]
+       60 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    335 | instr_addr_o[31]
+       60 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    334 | instr_addr_o[31]
+       61 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    333 | instr_addr_o[31]
+       62 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    332 | instr_addr_o[31]
+       63 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    331 | instr_addr_o[31]
+       64 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    330 | instr_addr_o[31]
+       65 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    329 | instr_addr_o[31]
+       66 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    328 | instr_addr_o[31]
+       67 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    327 | instr_addr_o[31]
+       68 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    326 | instr_addr_o[31]
+       69 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    325 | instr_addr_o[31]
+       70 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    325 | instr_addr_o[31]
+       70 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    324 | instr_addr_o[31]
+       71 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    323 | instr_addr_o[31]
+       72 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    322 | instr_addr_o[31]
+       73 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    321 | instr_addr_o[31]
+       74 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    320 | instr_addr_o[31]
+       75 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    319 | instr_addr_o[31]
+       76 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    318 | instr_addr_o[31]
+       77 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    317 | instr_addr_o[31]
+       78 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    316 | instr_addr_o[31]
+       79 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    315 | instr_addr_o[31]
+       80 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    315 | instr_addr_o[31]
+       80 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    314 | instr_addr_o[31]
+       81 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    313 | instr_addr_o[31]
+       82 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    312 | instr_addr_o[31]
+       83 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    311 | instr_addr_o[31]
+       84 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    310 | instr_addr_o[31]
+       85 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    309 | instr_addr_o[31]
+       86 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    308 | instr_addr_o[31]
+       87 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    307 | instr_addr_o[31]
+       88 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    306 | instr_addr_o[31]
+       89 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    305 | instr_addr_o[31]
+       90 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    305 | instr_addr_o[31]
+       90 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    304 | instr_addr_o[31]
+       91 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    303 | instr_addr_o[31]
+       92 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    302 | instr_addr_o[31]
+       93 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    301 | instr_addr_o[31]
+       94 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    300 | instr_addr_o[31]
+       95 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    299 | instr_addr_o[31]
+       96 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    298 | instr_addr_o[31]
+       97 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    297 | instr_addr_o[31]
+       98 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    296 | instr_addr_o[31]
+       99 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    295 | instr_addr_o[31]
+      100 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    295 | instr_addr_o[31]
+      100 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    294 | instr_addr_o[31]
+      101 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    293 | instr_addr_o[31]
+      102 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    292 | instr_addr_o[31]
+      103 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    291 | instr_addr_o[31]
+      104 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    290 | instr_addr_o[31]
+      105 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    289 | instr_addr_o[31]
+      106 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    288 | instr_addr_o[31]
+      107 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    287 | instr_addr_o[31]
+      108 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    286 | instr_addr_o[31]
+      109 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    285 | instr_addr_o[31]
+      110 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    285 | instr_addr_o[31]
+      110 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    284 | instr_addr_o[31]
+      111 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    283 | instr_addr_o[31]
+      112 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    282 | instr_addr_o[31]
+      113 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    281 | instr_addr_o[31]
+      114 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    280 | instr_addr_o[31]
+      115 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    279 | instr_addr_o[31]
+      116 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    278 | instr_addr_o[31]
+      117 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    277 | instr_addr_o[31]
+      118 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    276 | instr_addr_o[31]
+      119 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    275 | instr_addr_o[31]
+      120 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    275 | instr_addr_o[31]
+      120 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    274 | instr_addr_o[31]
+      121 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    273 | instr_addr_o[31]
+      122 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    272 | instr_addr_o[31]
+      123 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    271 | instr_addr_o[31]
+      124 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    270 | instr_addr_o[31]
+      125 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    269 | instr_addr_o[31]
+      126 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    268 | instr_addr_o[31]
+      127 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    267 | instr_addr_o[31]
+      128 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    266 | instr_addr_o[31]
+      129 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    265 | instr_addr_o[31]
+      130 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    265 | instr_addr_o[31]
+      130 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    264 | instr_addr_o[31]
+      131 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    263 | instr_addr_o[31]
+      132 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    262 | instr_addr_o[31]
+      133 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    261 | instr_addr_o[31]
+      134 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    260 | instr_addr_o[31]
+      135 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    259 | instr_addr_o[31]
+      136 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    258 | instr_addr_o[31]
+      137 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    257 | instr_addr_o[31]
+      138 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    256 | instr_addr_o[31]
+      139 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    255 | instr_addr_o[31]
+      140 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    255 | instr_addr_o[31]
+      140 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    254 | instr_addr_o[31]
+      141 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    253 | instr_addr_o[31]
+      142 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    252 | instr_addr_o[31]
+      143 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    251 | instr_addr_o[31]
+      144 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    250 | instr_addr_o[31]
+      145 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    249 | instr_addr_o[31]
+      146 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    248 | instr_addr_o[31]
+      147 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    247 | instr_addr_o[31]
+      148 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    246 | instr_addr_o[31]
+      149 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    245 | instr_addr_o[31]
+      150 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    245 | instr_addr_o[31]
+      150 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    244 | instr_addr_o[31]
+      151 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    243 | instr_addr_o[31]
+      152 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    242 | instr_addr_o[31]
+      153 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    241 | instr_addr_o[31]
+      154 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    240 | instr_addr_o[31]
+      155 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    239 | instr_addr_o[31]
+      156 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    238 | instr_addr_o[31]
+      157 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    237 | instr_addr_o[31]
+      158 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    236 | instr_addr_o[31]
+      159 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    235 | instr_addr_o[31]
+      160 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    235 | instr_addr_o[31]
+      160 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    234 | instr_addr_o[31]
+      161 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    233 | instr_addr_o[31]
+      162 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    232 | instr_addr_o[31]
+      163 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    231 | instr_addr_o[31]
+      164 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    230 | instr_addr_o[31]
+      165 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    229 | instr_addr_o[31]
+      166 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    228 | instr_addr_o[31]
+      167 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    227 | instr_addr_o[31]
+      168 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    226 | instr_addr_o[31]
+      169 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    225 | instr_addr_o[31]
+      170 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    225 | instr_addr_o[31]
+      170 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    224 | instr_addr_o[31]
+      171 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    223 | instr_addr_o[31]
+      172 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    222 | instr_addr_o[31]
+      173 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    221 | instr_addr_o[31]
+      174 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    220 | instr_addr_o[31]
+      175 |       1 |       8 |       63 |      4 |    23 |    +0.2% |  -11.894 |      -12.2 |    219 | instr_addr_o[31]
+      177 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    217 | instr_addr_o[31]
+      178 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    216 | instr_addr_o[31]
+      179 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    215 | instr_addr_o[31]
+      180 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    215 | instr_addr_o[31]
+      180 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    214 | instr_addr_o[31]
+      181 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    213 | instr_addr_o[31]
+      182 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    212 | instr_addr_o[31]
+      183 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    211 | instr_addr_o[31]
+      184 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    210 | instr_addr_o[31]
+      185 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    209 | instr_addr_o[31]
+      186 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    208 | instr_addr_o[31]
+      187 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    207 | instr_addr_o[31]
+      188 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    206 | instr_addr_o[31]
+      189 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    205 | instr_addr_o[31]
+      190 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    205 | instr_addr_o[31]
+      190 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    204 | instr_addr_o[31]
+      191 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    203 | instr_addr_o[31]
+      192 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    202 | instr_addr_o[31]
+      193 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    201 | instr_addr_o[31]
+      194 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    200 | instr_addr_o[31]
+      195 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    199 | instr_addr_o[31]
+      196 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    198 | instr_addr_o[31]
+      197 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    197 | instr_addr_o[31]
+      198 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    196 | instr_addr_o[31]
+      199 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    195 | instr_addr_o[31]
+      200 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    195 | instr_addr_o[31]
+      200 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    194 | instr_addr_o[31]
+      201 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    193 | instr_addr_o[31]
+      202 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    192 | instr_addr_o[31]
+      203 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    191 | instr_addr_o[31]
+      204 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    190 | instr_addr_o[31]
+      205 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    189 | instr_addr_o[31]
+      206 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    188 | instr_addr_o[31]
+      207 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    187 | instr_addr_o[31]
+      208 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    186 | instr_addr_o[31]
+      209 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    185 | instr_addr_o[31]
+      210 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    185 | instr_addr_o[31]
+      210 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    184 | instr_addr_o[31]
+      211 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    183 | instr_addr_o[31]
+      212 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    182 | instr_addr_o[31]
+      213 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    181 | instr_addr_o[31]
+      214 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    180 | instr_addr_o[31]
+      215 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    179 | instr_addr_o[31]
+      216 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    178 | instr_addr_o[31]
+      217 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    177 | instr_addr_o[31]
+      218 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    176 | instr_addr_o[31]
+      219 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    175 | instr_addr_o[31]
+      220 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    175 | instr_addr_o[31]
+      220 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    174 | instr_addr_o[31]
+      221 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    173 | instr_addr_o[31]
+      222 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    172 | instr_addr_o[31]
+      223 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    171 | instr_addr_o[31]
+      224 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    170 | instr_addr_o[31]
+      225 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    169 | instr_addr_o[31]
+      226 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    168 | instr_addr_o[31]
+      227 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    167 | instr_addr_o[31]
+      228 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    166 | instr_addr_o[31]
+      229 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    165 | instr_addr_o[31]
+      230 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    165 | instr_addr_o[31]
+      230 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    164 | instr_addr_o[31]
+      231 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    163 | instr_addr_o[31]
+      232 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    162 | instr_addr_o[31]
+      233 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    161 | instr_addr_o[31]
+      234 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    160 | instr_addr_o[31]
+      235 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    159 | instr_addr_o[31]
+      236 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    158 | instr_addr_o[31]
+      237 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    157 | instr_addr_o[31]
+      238 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    156 | instr_addr_o[31]
+      239 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    155 | instr_addr_o[31]
+      240 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    155 | instr_addr_o[31]
+      240 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    154 | instr_addr_o[31]
+      241 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    153 | instr_addr_o[31]
+      242 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    152 | instr_addr_o[31]
+      243 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    151 | instr_addr_o[31]
+      244 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    150 | instr_addr_o[31]
+      245 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    149 | instr_addr_o[31]
+      246 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    148 | instr_addr_o[31]
+      247 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    147 | instr_addr_o[31]
+      248 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    146 | instr_addr_o[31]
+      249 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    145 | instr_addr_o[31]
+      250 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    145 | instr_addr_o[31]
+      250 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    144 | instr_addr_o[31]
+      251 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    143 | instr_addr_o[31]
+      252 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    142 | instr_addr_o[31]
+      253 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    141 | instr_addr_o[31]
+      254 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    140 | instr_addr_o[31]
+      255 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    139 | instr_addr_o[31]
+      256 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    138 | instr_addr_o[31]
+      257 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    137 | instr_addr_o[31]
+      258 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    136 | instr_addr_o[31]
+      259 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    135 | instr_addr_o[31]
+      260 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    135 | instr_addr_o[31]
+      260 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    134 | instr_addr_o[31]
+      261 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    133 | instr_addr_o[31]
+      262 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    132 | instr_addr_o[31]
+      263 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    131 | instr_addr_o[31]
+      264 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    130 | instr_addr_o[31]
+      265 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    129 | instr_addr_o[31]
+      266 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    128 | instr_addr_o[31]
+      267 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    127 | instr_addr_o[31]
+      268 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    126 | instr_addr_o[31]
+      269 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    125 | instr_addr_o[31]
+      270 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    125 | instr_addr_o[31]
+      270 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    124 | instr_addr_o[31]
+      271 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    123 | instr_addr_o[31]
+      272 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    122 | instr_addr_o[31]
+      273 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    121 | instr_addr_o[31]
+      274 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    120 | instr_addr_o[31]
+      275 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    119 | instr_addr_o[31]
+      276 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    118 | instr_addr_o[31]
+      277 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    117 | instr_addr_o[31]
+      278 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    116 | instr_addr_o[31]
+      279 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    115 | instr_addr_o[31]
+      280 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    115 | instr_addr_o[31]
+      280 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    114 | instr_addr_o[31]
+      281 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    113 | instr_addr_o[31]
+      282 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    112 | instr_addr_o[31]
+      283 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    111 | instr_addr_o[31]
+      284 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    110 | instr_addr_o[31]
+      285 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    109 | instr_addr_o[31]
+      286 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    108 | instr_addr_o[31]
+      287 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    107 | instr_addr_o[31]
+      288 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    106 | instr_addr_o[31]
+      289 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    105 | instr_addr_o[31]
+      290 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    105 | instr_addr_o[31]
+      290 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    104 | instr_addr_o[31]
+      291 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    103 | instr_addr_o[31]
+      292 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    102 | instr_addr_o[31]
+      293 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    101 | instr_addr_o[31]
+      294 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |    100 | instr_addr_o[31]
+      295 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |     99 | instr_addr_o[31]
+      296 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |     98 | instr_addr_o[31]
+      297 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |     97 | instr_addr_o[31]
+      298 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |     96 | instr_addr_o[31]
+      299 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |     95 | instr_addr_o[31]
+      300 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |     95 | instr_addr_o[31]
+      300 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |     94 | instr_addr_o[31]
+      301 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |     93 | instr_addr_o[31]
+      302 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |     92 | instr_addr_o[31]
+      303 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |     91 | instr_addr_o[31]
+      304 |       1 |       8 |       63 |      4 |    24 |    +0.2% |  -11.894 |      -11.9 |     90 | instr_addr_o[31]
+      310 |       2 |      11 |       63 |      4 |    25 |    +0.2% |   -8.871 |       -8.9 |     90 | instr_addr_o[31]
+      320 |       2 |      12 |       70 |      6 |    30 |    +0.2% |   -5.557 |       -5.6 |     90 | instr_addr_o[31]
+      324 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     90 | instr_addr_o[31]
+      325 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     89 | instr_addr_o[31]
+      326 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     88 | instr_addr_o[31]
+      327 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     87 | instr_addr_o[31]
+      328 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     86 | instr_addr_o[31]
+      329 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     85 | instr_addr_o[31]
+      330 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     85 | instr_addr_o[31]
+      330 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     84 | instr_addr_o[31]
+      331 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     83 | instr_addr_o[31]
+      332 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     82 | instr_addr_o[31]
+      333 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     81 | instr_addr_o[31]
+      334 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     80 | instr_addr_o[31]
+      335 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     79 | instr_addr_o[31]
+      336 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     78 | instr_addr_o[31]
+      337 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     77 | instr_addr_o[31]
+      338 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     76 | instr_addr_o[31]
+      339 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     75 | instr_addr_o[31]
+      340 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     75 | instr_addr_o[31]
+      340 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     74 | instr_addr_o[31]
+      341 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     73 | instr_addr_o[31]
+      342 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     72 | instr_addr_o[31]
+      343 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     71 | instr_addr_o[31]
+      344 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     70 | instr_addr_o[31]
+      345 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     69 | instr_addr_o[31]
+      346 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     68 | instr_addr_o[31]
+      347 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     67 | instr_addr_o[31]
+      348 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     66 | instr_addr_o[31]
+      349 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     65 | instr_addr_o[31]
+      350 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     65 | instr_addr_o[31]
+      350 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     64 | instr_addr_o[31]
+      351 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     63 | instr_addr_o[31]
+      352 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     62 | instr_addr_o[31]
+      353 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     61 | instr_addr_o[31]
+      354 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     60 | instr_addr_o[31]
+      355 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     59 | instr_addr_o[31]
+      356 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     58 | instr_addr_o[31]
+      357 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     57 | instr_addr_o[31]
+      358 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     56 | instr_addr_o[31]
+      359 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     55 | instr_addr_o[31]
+      360 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     55 | instr_addr_o[31]
+      360 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     54 | instr_addr_o[31]
+      361 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     53 | instr_addr_o[31]
+      362 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     52 | instr_addr_o[31]
+      363 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     51 | instr_addr_o[31]
+      364 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     50 | instr_addr_o[31]
+      365 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     49 | instr_addr_o[31]
+      366 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     48 | instr_addr_o[31]
+      367 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     47 | instr_addr_o[31]
+      368 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     46 | instr_addr_o[31]
+      369 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     45 | instr_addr_o[31]
+      370 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     45 | instr_addr_o[31]
+      370 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     44 | instr_addr_o[31]
+      371 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     43 | instr_addr_o[31]
+      372 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     42 | instr_addr_o[31]
+      373 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     41 | instr_addr_o[31]
+      374 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     40 | instr_addr_o[31]
+      375 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     39 | instr_addr_o[31]
+      376 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     38 | instr_addr_o[31]
+      377 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     37 | instr_addr_o[31]
+      378 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     36 | instr_addr_o[31]
+      379 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     35 | instr_addr_o[31]
+      380 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     35 | instr_addr_o[31]
+      380 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     34 | instr_addr_o[31]
+      381 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     33 | instr_addr_o[31]
+      382 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     32 | instr_addr_o[31]
+      383 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     31 | instr_addr_o[31]
+      384 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     30 | instr_addr_o[31]
+      385 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     29 | instr_addr_o[31]
+      386 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     28 | instr_addr_o[31]
+      387 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     27 | instr_addr_o[31]
+      388 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     26 | instr_addr_o[31]
+      389 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     25 | instr_addr_o[31]
+      390 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     25 | instr_addr_o[31]
+      390 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     24 | instr_addr_o[31]
+      391 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     23 | instr_addr_o[31]
+      392 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     22 | instr_addr_o[31]
+      393 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     21 | instr_addr_o[31]
+      394 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     20 | instr_addr_o[31]
+      395 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     19 | instr_addr_o[31]
+      396 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     18 | instr_addr_o[31]
+      397 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     17 | instr_addr_o[31]
+      398 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     16 | instr_addr_o[31]
+      399 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     15 | instr_addr_o[31]
+      400 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     15 | instr_addr_o[31]
+      400 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     14 | instr_addr_o[31]
+      401 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     13 | instr_addr_o[31]
+      402 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     12 | instr_addr_o[31]
+      403 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     11 | instr_addr_o[31]
+      404 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |     10 | instr_addr_o[31]
+      405 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |      9 | instr_addr_o[31]
+      406 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |      8 | instr_addr_o[31]
+      407 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |      7 | instr_addr_o[31]
+      408 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |      6 | instr_addr_o[31]
+      409 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |      5 | instr_addr_o[31]
+      410 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |      5 | instr_addr_o[31]
+      410 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |      4 | instr_addr_o[31]
+      411 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |      3 | instr_addr_o[31]
+      412 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |      2 | instr_addr_o[31]
+      413 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |      1 | instr_addr_o[31]
+      414 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |      0 | instr_addr_o[31]
+      415 |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |      0 | instr_addr_o[31]
+     416* |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |      1 | instr_addr_o[31]
+    final |       2 |      13 |       70 |      7 |    32 |    +0.2% |   -4.317 |       -4.3 |      1 | instr_addr_o[31]
+--------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0059] Removed 2 buffers.
+[INFO RSZ-0040] Inserted 51 buffers.
+[INFO RSZ-0041] Resized 13 instances.
+[INFO RSZ-0043] Swapped pins on 32 instances.
+[INFO RSZ-0049] Cloned 7 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0033] No hold violations found.
+Took 13 seconds: repair_timing -verbose -setup_margin 0 -hold_margin 0 -repair_tns 100
+Placement Analysis
+---------------------------------
+total displacement         26.1 u
+average displacement        0.0 u
+max displacement            0.8 u
+original HPWL          101228.2 u
+legalized HPWL         101244.3 u
+delta HPWL                    0 %
+
+Report metrics stage 4, cts final...
+
+==========================================================================
+cts final report_design_area
+--------------------------------------------------------------------------
+Design area 2651 u^2 46% utilization.
+Elapsed time: 1:30.58[h:]min:sec. CPU time: user 89.88 sys 0.66 (99%). Peak memory: 715940KB.

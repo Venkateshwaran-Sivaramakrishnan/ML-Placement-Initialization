@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 759,
+    "name": "aes_cipher_top.text_in_r.31_DFFE_PP_.CLK",
+    "inbits": {
+      "text_in_r[30]$_DFFE_PP_.CLK": [
+        0
+      ]
+    },
+    "outbits": {
+      "text_in_r[31]$_DFFE_PP_.CLK": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.text_in_r.31_DFFE_PP_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.text_in_r.31_DFFE_PP_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

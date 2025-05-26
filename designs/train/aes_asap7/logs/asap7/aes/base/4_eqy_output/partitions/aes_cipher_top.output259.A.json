@@ -1,0 +1,45 @@
+{
+  "partition": {
+    "index": 1197,
+    "name": "aes_cipher_top.output259.A",
+    "inbits": {
+      "done": [
+        0
+      ]
+    },
+    "outbits": {
+      "output259.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.output259.A",
+    "internal": {
+      "_30737_.Y": [
+        0
+      ],
+      "net325": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 3,
+    "bitcount": 4
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.output259.A",
+    "internal": {
+      "_30737_.Y": [
+        0
+      ],
+      "net325": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 3,
+    "bitcount": 4
+  }
+}

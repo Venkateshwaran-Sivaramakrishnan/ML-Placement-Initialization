@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1867,
+    "name": "aes_cipher_top.clkbuf_2_3_0_clk.Y",
+    "inbits": {
+      "clkbuf_2_3_0_clk.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "clkbuf_2_3_0_clk.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.clkbuf_2_3_0_clk.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.clkbuf_2_3_0_clk.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

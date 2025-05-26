@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1184,
+    "name": "aes_cipher_top.output265.Y",
+    "inbits": {
+      "output265.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "output265.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.output265.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.output265.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

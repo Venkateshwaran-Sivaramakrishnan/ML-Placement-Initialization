@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 958,
+    "name": "aes_cipher_top.output378.Y",
+    "inbits": {
+      "output378.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "output378.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.output378.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.output378.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

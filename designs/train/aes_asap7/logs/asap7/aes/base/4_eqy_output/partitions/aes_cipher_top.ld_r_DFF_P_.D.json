@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1198,
+    "name": "aes_cipher_top.ld_r_DFF_P_.D",
+    "inbits": {
+      "input129.Y": [
+        0
+      ]
+    },
+    "outbits": {
+      "ld_r$_DFF_P_.D": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.ld_r_DFF_P_.D",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.ld_r_DFF_P_.D",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

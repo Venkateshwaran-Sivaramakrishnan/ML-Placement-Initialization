@@ -1,0 +1,45 @@
+{
+  "partition": {
+    "index": 1137,
+    "name": "aes_cipher_top.output289.A",
+    "inbits": {
+      "text_out[126]$_DFF_P_.int_fwire_IQN": [
+        0
+      ]
+    },
+    "outbits": {
+      "output289.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.output289.A",
+    "internal": {
+      "_30767_.Y": [
+        0
+      ],
+      "net355": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 3,
+    "bitcount": 4
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.output289.A",
+    "internal": {
+      "_30767_.Y": [
+        0
+      ],
+      "net355": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 3,
+    "bitcount": 4
+  }
+}

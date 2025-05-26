@@ -1,0 +1,7 @@
+read_verilog -sv ./results/asap7/aes/base/4_before_rsz.v /work/practice0/flow/platforms/asap7/work_around_yosys/asap7sc7p5t_AO_RVT_TT_201020.v /work/practice0/flow/platforms/asap7/work_around_yosys/asap7sc7p5t_OA_RVT_TT_201020.v /work/practice0/flow/platforms/asap7/work_around_yosys/asap7sc7p5t_SIMPLE_RVT_TT_201020.v /work/practice0/flow/platforms/asap7/work_around_yosys/asap7sc6t_INVBUF_RVT_FF_210930.v /work/practice0/flow/platforms/asap7/work_around_yosys/asap7sc7p5t_SEQ_RVT_TT_220101.v /work/practice0/flow/platforms/asap7/work_around_yosys/asap7sc7p5t_INVBUF_RVT_TT_201020.v
+prep -top aes_cipher_top -flatten
+memory_map
+opt_clean
+check -initdrv
+setundef -undriven -undef
+write_rtlil ./logs/asap7/aes/base/4_eqy_output/gold.il

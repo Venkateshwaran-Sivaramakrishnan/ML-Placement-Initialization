@@ -1,0 +1,39 @@
+{
+  "partition": {
+    "index": 1557,
+    "name": "aes_cipher_top.input170.A",
+    "inbits": {
+      "text_in": [
+        1
+      ]
+    },
+    "outbits": {
+      "input170.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.input170.A",
+    "internal": {
+      "_30953_.A2": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 3
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.input170.A",
+    "internal": {
+      "_30953_.A2": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 3
+  }
+}

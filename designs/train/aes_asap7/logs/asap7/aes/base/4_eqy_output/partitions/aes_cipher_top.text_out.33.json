@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 650,
+    "name": "aes_cipher_top.text_out.33",
+    "inbits": {
+      "output314.Y": [
+        0
+      ]
+    },
+    "outbits": {
+      "text_out": [
+        33
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.text_out.33",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.text_out.33",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

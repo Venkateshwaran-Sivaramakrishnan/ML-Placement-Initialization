@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 168,
+    "name": "aes_cipher_top.u0.r0.out.27_SDFF_PP0_.CLK",
+    "inbits": {
+      "u0.r0.out[26]$_SDFF_PP0_.CLK": [
+        0
+      ]
+    },
+    "outbits": {
+      "u0.r0.out[27]$_SDFF_PP0_.CLK": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.u0.r0.out.27_SDFF_PP0_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.u0.r0.out.27_SDFF_PP0_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}
