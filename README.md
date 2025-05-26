@@ -83,7 +83,6 @@ To convert the flat VLSI netlist into higher-order layout entities:
 
 ---
 
-
 ## Dependencies
 Ensure you have [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) and [uv](https://docs.astral.sh/uv/getting-started/installation/) installed.
 Conda is used solely to install CUDA 11 and CUDNN 8.
@@ -104,6 +103,8 @@ conda deactivate MLPlacement
 # Source OpenROAD variables
 source OpenROAD-flow-scripts/env.sh
 ```
+
+---
 
 ## Inference
 
@@ -141,6 +142,8 @@ uv run python -m Inference.MaskPLAN_Inference_iterate_vec_Single --model Large -
 <p align="center">
   <img src="https://github.com/user-attachments/assets/978e778f-a05d-4978-baf3-c579526cc356" width="400"/>
 </p>
+
+---
 
 ## Citation
 ```
