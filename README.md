@@ -141,3 +141,14 @@ uv run python -m Inference.MaskPLAN_Inference_iterate_vec_Single --model Large -
 <p align="center">
   <img src="https://github.com/user-attachments/assets/978e778f-a05d-4978-baf3-c579526cc356" width="400"/>
 </p>
+
+## Citation
+```
+@inproceedings{zhang2024maskplan,
+  title={MaskPLAN: Masked Generative Layout Planning from Partial Input},
+  author={Zhang, Hang and Savov, Anton and Dillenburger, Benjamin},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={8964--8973},
+  year={2024}
+}
+```
