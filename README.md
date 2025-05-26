@@ -110,7 +110,7 @@ source OpenROAD-flow-scripts/env.sh
 To run inference, please run:
 
 ```bash
-uv run python -m Inference.MaskPLAN_Inference_iterate_vec_Single
+uv run python -m Inference.MaskPLAN_Inference_iterate_vec_Single --model Large --par_L 0 --par_R 0
 ```
 
 ### extractor.py
