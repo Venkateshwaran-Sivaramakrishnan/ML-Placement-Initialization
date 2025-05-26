@@ -145,6 +145,11 @@ uv run python -m Inference.MaskPLAN_Inference_iterate_vec_Single --model Large -
 
 ---
 
+## Improvements
+1. Currently developing a stitching flow to assemble cluster-level results into a unified floorplan.
+2. Simultaneously exploring advanced mapping techniques to enhance overall QoR.
+---
+
 ## Citation
 ```
 @inproceedings{zhang2024maskplan,
