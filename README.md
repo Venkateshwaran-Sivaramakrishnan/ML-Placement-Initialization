@@ -109,9 +109,21 @@ source OpenROAD-flow-scripts/env.sh
 
 The MaskPLAN Inference is taylored to meet placement requirements.
 
-To run inference:
+To run complete OpenROAD flow:
+
+Run OpenROAD upto 3_2_place_iop -->  Generate Hypergraph using python_read_design.py --> Run extractor.py --> Run cluster.py --> Model Inference 
 
 ```bash
+python run.py -d {design} -t {tech} -N {cluster_size}
+
+Example:
+python run.py -d ibex -t nangate45 -N 8
+```
+
+To run single inference:
+
+```bash
+cd Inference
 uv run python -m Inference.MaskPLAN_Inference_iterate_vec_Single --model Large --par_L 0 --par_R 0
 ```
 
