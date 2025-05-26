@@ -113,6 +113,9 @@ To run inference, please run:
 uv run python -m Inference.MaskPLAN_Inference_iterate_vec_Single --model Large --par_L 0 --par_R 0
 ```
 
+### Sample Inference
+![image](https://github.com/user-attachments/assets/978e778f-a05d-4978-baf3-c579526cc356)
+
 ### extractor.py
 ```bash
 python extractor.py --design {design_name} --tech {tech_node}
