@@ -114,13 +114,12 @@ uv run python -m Inference.MaskPLAN_Inference_iterate_vec_Single --model Large -
 ```
 
 ### Sample Inference
-<table>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/80f9eb62-fd44-4ab6-837e-f6c6d5adc62" width="200"/></td>
-    <td align="center" valign="middle" style="font-size: 24px;">→</td>
-    <td><img src="https://github.com/user-attachments/assets/978e778f-a05d-4978-baf3-c579526cc35" width="200"/></td>
-  </tr>
-</table>
+<p align="center">
+  <img src="[before.png](https://github.com/user-attachments/assets/80f9eb62-fd44-4ab6-837e-f6c6d5adc625)" width="200"/>
+  <img src="https://github.com/user-attachments/assets/80f9eb62-fd44-4ab6-837e-f6c6d5adc625" width="200"/>
+  <span style="display: inline-block; vertical-align: middle; font-size: 32px; margin: 0 10px;">→</span>
+  <img src="https://github.com/user-attachments/assets/978e778f-a05d-4978-baf3-c579526cc356" width="200"/>
+</p>
 
 ### extractor.py
 ```bash
