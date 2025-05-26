@@ -4,7 +4,7 @@ This project presents an adaptation of **ML-based architectural layout generatio
 
 ---
 
-## Explrored Works: 
+## Explored Works: 
 
 We evaluated the following works which addresses floorplan generation using machine learning:
 
