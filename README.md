@@ -60,9 +60,13 @@ MaskPLAN employs a **Graph-structured Dynamic Masked Autoencoder (GDMAE)** archi
 
 To convert the flat VLSI netlist into higher-order layout entities:
 
-- **Hierarchical clustering** is applied over the hypergraph.
-- **Maximum cluster size** is limited to **8**, aligning with MaskPLAN's capacity to generate up to 8 rooms.
+- Builds a weighted graph from instance-level net connectivity, filtering high-fanout nets.
 - The clustering process groups instances (cells) based on **netlist connectivity** to maintain spatial locality and logical grouping.
+- **Hierarchical clustering**: Applies spectral clustering recursively to limit cluster size to ≤ N nodes.
+- Forms supergraphs where each node represents a cluster from the previous level.
+- Clusters supergraphs hierarchically to build a multi-level cluster hierarchy.
+- Generates connectivity explanations and flat mappings for interpretability and debugging
+- **Maximum cluster size** is limited to **8**, aligning with MaskPLAN's capacity to generate up to 8 rooms.
 
 
 ### 2. Feature Mapping Between Domains
