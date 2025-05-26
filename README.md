@@ -53,7 +53,7 @@ MaskPLAN employs a **Graph-structured Dynamic Masked Autoencoder (GDMAE)** archi
 
 ---
 
-## Adapting MaskPLAN to VLSI Placement
+## Adapting MaskPLAN to Initial Placement
 
 
 ### 1. Clustering Strategy
