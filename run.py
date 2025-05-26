@@ -43,7 +43,7 @@ def main():
     # Step 4: Run openroad with python_read_design.py using the same env
     subprocess.run(
         [
-            "openroad", "-python", "python_read_design.py",
+            "openroad", "-python", "../../scripts/hypergraph/python_read_design.py",
             "-d", design,
             "-t", tech
         ],
