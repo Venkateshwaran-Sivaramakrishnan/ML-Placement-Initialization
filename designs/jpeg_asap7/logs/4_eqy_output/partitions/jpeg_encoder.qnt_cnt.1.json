@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 354,
+    "name": "jpeg_encoder.qnt_cnt.1",
+    "inbits": {
+      "output32.Y": [
+        0
+      ]
+    },
+    "outbits": {
+      "qnt_cnt": [
+        1
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.qnt_cnt.1",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.qnt_cnt.1",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

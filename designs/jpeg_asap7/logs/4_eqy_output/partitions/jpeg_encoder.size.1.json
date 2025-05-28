@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 10,
+    "name": "jpeg_encoder.size.1",
+    "inbits": {
+      "output42.Y": [
+        0
+      ]
+    },
+    "outbits": {
+      "size": [
+        1
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.size.1",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.size.1",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

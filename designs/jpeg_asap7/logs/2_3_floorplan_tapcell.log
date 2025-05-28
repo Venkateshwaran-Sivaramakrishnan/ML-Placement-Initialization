@@ -1,0 +1,15 @@
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 32 thread(s).
+source /ml_placer/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+Tap and End Cap cell insertion
+  TAP Cell          : TAPCELL_ASAP7_75t_R
+  ENDCAP Cell       : TAPCELL_ASAP7_75t_R
+  Halo Around Macro : 2 2
+  TAP Cell Distance : 25
+[INFO TAP-0004] Inserted 1062 endcaps.
+[INFO TAP-0005] Inserted 1332 tapcells.
+Elapsed time: 0:00.96[h:]min:sec. CPU time: user 0.88 sys 0.07 (99%). Peak memory: 265596KB.

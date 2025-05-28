@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 4910,
+    "name": "jpeg_encoder.clknet_leaf_47_clk",
+    "inbits": {
+      "clknet_leaf_46_clk": [
+        0
+      ]
+    },
+    "outbits": {
+      "clknet_leaf_47_clk": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.clknet_leaf_47_clk",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.clknet_leaf_47_clk",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

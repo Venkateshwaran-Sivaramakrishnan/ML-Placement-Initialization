@@ -1,0 +1,27 @@
+{
+  "partition": {
+    "index": 1890,
+    "name": "jpeg_encoder.fdct_zigzag.dct_mod.ddin.3_DFFE_PN0P_.RESETN",
+    "inbits": {},
+    "outbits": {
+      "fdct_zigzag.dct_mod.ddin[3]$_DFFE_PN0P_.RESETN": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.fdct_zigzag.dct_mod.ddin.3_DFFE_PN0P_.RESETN",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 1
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.fdct_zigzag.dct_mod.ddin.3_DFFE_PN0P_.RESETN",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 1
+  }
+}

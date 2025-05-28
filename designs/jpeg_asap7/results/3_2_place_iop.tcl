@@ -1,0 +1,51 @@
+#Edge: BOTTOM
+#Edge: RIGHT
+place_pin -pin_name amp[11] -layer M4 -location {147.725 136.524} -force_to_die_boundary
+#Edge: TOP
+place_pin -pin_name amp[0] -layer M5 -location {70.86 147.725} -force_to_die_boundary
+place_pin -pin_name amp[10] -layer M5 -location {70.956 147.725} -force_to_die_boundary
+place_pin -pin_name amp[1] -layer M5 -location {72.3 147.725} -force_to_die_boundary
+place_pin -pin_name amp[2] -layer M5 -location {71.916 147.725} -force_to_die_boundary
+place_pin -pin_name amp[3] -layer M5 -location {72.204 147.725} -force_to_die_boundary
+place_pin -pin_name amp[4] -layer M5 -location {71.724 147.725} -force_to_die_boundary
+place_pin -pin_name amp[5] -layer M5 -location {73.26 147.725} -force_to_die_boundary
+place_pin -pin_name amp[6] -layer M5 -location {72.492 147.725} -force_to_die_boundary
+place_pin -pin_name amp[7] -layer M5 -location {72.396 147.725} -force_to_die_boundary
+place_pin -pin_name amp[8] -layer M5 -location {73.452 147.725} -force_to_die_boundary
+place_pin -pin_name amp[9] -layer M5 -location {72.78 147.725} -force_to_die_boundary
+place_pin -pin_name clk -layer M5 -location {124.14 147.725} -force_to_die_boundary
+place_pin -pin_name din[0] -layer M5 -location {57.708 147.725} -force_to_die_boundary
+place_pin -pin_name din[7] -layer M5 -location {44.94 147.725} -force_to_die_boundary
+place_pin -pin_name douten -layer M5 -location {74.22 147.725} -force_to_die_boundary
+place_pin -pin_name qnt_cnt[0] -layer M5 -location {82.668 147.725} -force_to_die_boundary
+place_pin -pin_name qnt_cnt[1] -layer M5 -location {82.86 147.725} -force_to_die_boundary
+place_pin -pin_name qnt_cnt[2] -layer M5 -location {82.956 147.725} -force_to_die_boundary
+place_pin -pin_name qnt_cnt[3] -layer M5 -location {83.436 147.725} -force_to_die_boundary
+place_pin -pin_name qnt_cnt[4] -layer M5 -location {83.724 147.725} -force_to_die_boundary
+place_pin -pin_name qnt_cnt[5] -layer M5 -location {84.012 147.725} -force_to_die_boundary
+place_pin -pin_name qnt_val[0] -layer M5 -location {29.58 147.725} -force_to_die_boundary
+place_pin -pin_name qnt_val[1] -layer M5 -location {29.964 147.725} -force_to_die_boundary
+place_pin -pin_name qnt_val[2] -layer M5 -location {29.484 147.725} -force_to_die_boundary
+place_pin -pin_name qnt_val[3] -layer M5 -location {29.676 147.725} -force_to_die_boundary
+place_pin -pin_name qnt_val[4] -layer M5 -location {31.02 147.725} -force_to_die_boundary
+place_pin -pin_name qnt_val[5] -layer M5 -location {29.292 147.725} -force_to_die_boundary
+place_pin -pin_name qnt_val[6] -layer M5 -location {29.772 147.725} -force_to_die_boundary
+place_pin -pin_name qnt_val[7] -layer M5 -location {29.388 147.725} -force_to_die_boundary
+place_pin -pin_name rlen[0] -layer M5 -location {74.796 147.725} -force_to_die_boundary
+place_pin -pin_name rlen[1] -layer M5 -location {74.412 147.725} -force_to_die_boundary
+place_pin -pin_name rlen[2] -layer M5 -location {74.508 147.725} -force_to_die_boundary
+place_pin -pin_name rlen[3] -layer M5 -location {74.028 147.725} -force_to_die_boundary
+place_pin -pin_name rst -layer M5 -location {83.628 147.725} -force_to_die_boundary
+place_pin -pin_name size[0] -layer M5 -location {74.316 147.725} -force_to_die_boundary
+place_pin -pin_name size[1] -layer M5 -location {74.124 147.725} -force_to_die_boundary
+place_pin -pin_name size[2] -layer M5 -location {73.356 147.725} -force_to_die_boundary
+place_pin -pin_name size[3] -layer M5 -location {73.164 147.725} -force_to_die_boundary
+#Edge: LEFT
+place_pin -pin_name din[1] -layer M4 -location {0 75.372} -force_to_die_boundary
+place_pin -pin_name din[2] -layer M4 -location {0 75.084} -force_to_die_boundary
+place_pin -pin_name din[3] -layer M4 -location {0 79.692} -force_to_die_boundary
+place_pin -pin_name din[4] -layer M4 -location {0 76.524} -force_to_die_boundary
+place_pin -pin_name din[5] -layer M4 -location {0 75.276} -force_to_die_boundary
+place_pin -pin_name din[6] -layer M4 -location {0 92.556} -force_to_die_boundary
+place_pin -pin_name dstrb -layer M4 -location {0 74.124} -force_to_die_boundary
+place_pin -pin_name ena -layer M4 -location {0 96.876} -force_to_die_boundary

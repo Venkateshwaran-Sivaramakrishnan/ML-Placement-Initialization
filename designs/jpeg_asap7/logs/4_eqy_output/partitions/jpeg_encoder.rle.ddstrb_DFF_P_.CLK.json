@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 349,
+    "name": "jpeg_encoder.rle.ddstrb_DFF_P_.CLK",
+    "inbits": {
+      "qnr.rq[9]$_DFFE_PP_.CLK": [
+        0
+      ]
+    },
+    "outbits": {
+      "rle.ddstrb$_DFF_P_.CLK": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.rle.ddstrb_DFF_P_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.rle.ddstrb_DFF_P_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

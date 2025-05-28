@@ -1,0 +1,99 @@
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 32 thread(s).
+source /ml_placer/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+clock_tree_synthesis -sink_clustering_enable -balance_levels -sink_clustering_size 50 -sink_clustering_max_diameter 20
+[INFO CTS-0050] Root buffer is BUFx24_ASAP7_75t_R.
+[INFO CTS-0051] Sink buffer is BUFx24_ASAP7_75t_R.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    BUFx24_ASAP7_75t_R
+[INFO CTS-0049] Characterization buffer is BUFx24_ASAP7_75t_R.
+[INFO CTS-0007] Net "clk" found for clock "clk".
+[INFO CTS-0010]  Clock net "clk" has 4383 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 1 buffer(s) types.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 0 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 4383.
+[INFO CTS-0029]  Sinks will be clustered in groups of up to 50 and with maximum cluster diameter of 20.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 1350  dbu (1 um).
+[INFO CTS-0204] A clustering solution was found from clustering size of 50 and clustering diameter of 20.
+[INFO CTS-0205] Better solution may be possible if either -sink_clustering_size, -sink_clustering_max_diameter, or both options are omitted to enable automatic clustering.
+[INFO CTS-0019]  Total number of sinks after clustering: 110.
+[INFO CTS-0024]  Normalized sink region: [(8.20489, 31.308), (99.3641, 103.512)].
+[INFO CTS-0025]     Width:  91.1592.
+[INFO CTS-0026]     Height: 72.2040.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 55
+    Sub-region size: 45.5796 X 72.2040
+[INFO CTS-0034]     Segment length (rounded): 22.
+ Level 2
+    Direction: Vertical
+    Sinks per sub-region: 28
+    Sub-region size: 45.5796 X 36.1020
+[INFO CTS-0034]     Segment length (rounded): 18.
+ Level 3
+    Direction: Horizontal
+    Sinks per sub-region: 14
+    Sub-region size: 22.7898 X 36.1020
+[INFO CTS-0034]     Segment length (rounded): 12.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 110.
+[INFO CTS-0018]     Created 122 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 3.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 4.
+[INFO CTS-0015]     Created 122 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 4:1, 6:1, 8:1, 9:1, 11:2, 12:3, 13:4, 14:2, 15:3, 16:2, 19:3, 20:2, 21:1, 23:3, 24:2, 25:2, 27:1, 29:3, 32:2, 33:1, 39:1, 40:2, 41:2, 44:2, 45:3, 46:3, 47:2, 48:1, 50:61..
+[INFO CTS-0017]     Max level of the clock tree: 3.
+[INFO CTS-0098] Clock net "clk"
+[INFO CTS-0099]  Sinks 4488
+[INFO CTS-0100]  Leaf buffers 109
+[INFO CTS-0101]  Average sink wire length 198.67 um
+[INFO CTS-0102]  Path depth 3 - 4
+[INFO CTS-0207]  Leaf load cells 105
+[INFO RSZ-0058] Using max wire length 162um.
+Placement Analysis
+---------------------------------
+total displacement        434.0 u
+average displacement        0.0 u
+max displacement            1.6 u
+original HPWL          231692.1 u
+legalized HPWL         235996.5 u
+delta HPWL                    2 %
+
+repair_timing -verbose -setup_margin 0 -hold_margin 0 -repair_tns 100
+[INFO RSZ-0094] Found 1 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 1 out of 1 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   TNS      |  Viol  | Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpt
+--------------------------------------------------------------------------------------------------------------
+        0 |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -9.060 |       -9.1 |      1 | fdct_zigzag.dct_mod.dct_block_4.dct_unit_6.macu.mult_res\[18\]$_DFFE_PP_/D
+        3 |       0 |       0 |        4 |      0 |     1 |    +0.0% |   25.286 |        0.0 |      0 | fdct_zigzag.dct_mod.dct_block_4.dct_unit_5.macu.mult_res\[18\]$_DFFE_PP_/D
+    final |       0 |       0 |        4 |      0 |     1 |    +0.0% |   25.286 |        0.0 |      0 | fdct_zigzag.dct_mod.dct_block_4.dct_unit_5.macu.mult_res\[18\]$_DFFE_PP_/D
+--------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0040] Inserted 3 buffers.
+[INFO RSZ-0043] Swapped pins on 1 instances.
+[INFO RSZ-0033] No hold violations found.
+Repair timing output passed equivalence test
+Placement Analysis
+---------------------------------
+total displacement          2.3 u
+average displacement        0.0 u
+max displacement            0.6 u
+original HPWL          235997.5 u
+legalized HPWL         235999.1 u
+delta HPWL                    0 %
+
+Report metrics stage 4, cts final...
+
+==========================================================================
+cts final report_design_area
+--------------------------------------------------------------------------
+Design area 6785 u^2 33% utilization.
+Elapsed time: 1:05.91[h:]min:sec. CPU time: user 156.54 sys 91.78 (376%). Peak memory: 1327828KB.

@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 5029,
+    "name": "jpeg_encoder.clkload53.A",
+    "inbits": {
+      "clkload52.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "clkload53.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.clkload53.A",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.clkload53.A",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

@@ -1,0 +1,210 @@
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 32 thread(s).
+[INFO GPL-0002] DBU: 2000
+[INFO GPL-0003] SiteSize: (  0.190  1.400 ) um
+[INFO GPL-0004] CoreBBox: (  1.140  1.400 ) ( 447.450 446.600 ) um
+[WARNING GPL-0001] amp[0] toplevel port is not placed!
+       Replace will regard amp[0] is placed in (0, 0)
+[WARNING GPL-0001] amp[10] toplevel port is not placed!
+       Replace will regard amp[10] is placed in (0, 0)
+[WARNING GPL-0001] amp[11] toplevel port is not placed!
+       Replace will regard amp[11] is placed in (0, 0)
+[WARNING GPL-0001] amp[1] toplevel port is not placed!
+       Replace will regard amp[1] is placed in (0, 0)
+[WARNING GPL-0001] amp[2] toplevel port is not placed!
+       Replace will regard amp[2] is placed in (0, 0)
+[WARNING GPL-0001] amp[3] toplevel port is not placed!
+       Replace will regard amp[3] is placed in (0, 0)
+[WARNING GPL-0001] amp[4] toplevel port is not placed!
+       Replace will regard amp[4] is placed in (0, 0)
+[WARNING GPL-0001] amp[5] toplevel port is not placed!
+       Replace will regard amp[5] is placed in (0, 0)
+[WARNING GPL-0001] amp[6] toplevel port is not placed!
+       Replace will regard amp[6] is placed in (0, 0)
+[WARNING GPL-0001] amp[7] toplevel port is not placed!
+       Replace will regard amp[7] is placed in (0, 0)
+[WARNING GPL-0001] amp[8] toplevel port is not placed!
+       Replace will regard amp[8] is placed in (0, 0)
+[WARNING GPL-0001] amp[9] toplevel port is not placed!
+       Replace will regard amp[9] is placed in (0, 0)
+[WARNING GPL-0001] clk toplevel port is not placed!
+       Replace will regard clk is placed in (0, 0)
+[WARNING GPL-0001] din[0] toplevel port is not placed!
+       Replace will regard din[0] is placed in (0, 0)
+[WARNING GPL-0001] din[1] toplevel port is not placed!
+       Replace will regard din[1] is placed in (0, 0)
+[WARNING GPL-0001] din[2] toplevel port is not placed!
+       Replace will regard din[2] is placed in (0, 0)
+[WARNING GPL-0001] din[3] toplevel port is not placed!
+       Replace will regard din[3] is placed in (0, 0)
+[WARNING GPL-0001] din[4] toplevel port is not placed!
+       Replace will regard din[4] is placed in (0, 0)
+[WARNING GPL-0001] din[5] toplevel port is not placed!
+       Replace will regard din[5] is placed in (0, 0)
+[WARNING GPL-0001] din[6] toplevel port is not placed!
+       Replace will regard din[6] is placed in (0, 0)
+[WARNING GPL-0001] din[7] toplevel port is not placed!
+       Replace will regard din[7] is placed in (0, 0)
+[WARNING GPL-0001] douten toplevel port is not placed!
+       Replace will regard douten is placed in (0, 0)
+[WARNING GPL-0001] dstrb toplevel port is not placed!
+       Replace will regard dstrb is placed in (0, 0)
+[WARNING GPL-0001] ena toplevel port is not placed!
+       Replace will regard ena is placed in (0, 0)
+[WARNING GPL-0001] qnt_cnt[0] toplevel port is not placed!
+       Replace will regard qnt_cnt[0] is placed in (0, 0)
+[WARNING GPL-0001] qnt_cnt[1] toplevel port is not placed!
+       Replace will regard qnt_cnt[1] is placed in (0, 0)
+[WARNING GPL-0001] qnt_cnt[2] toplevel port is not placed!
+       Replace will regard qnt_cnt[2] is placed in (0, 0)
+[WARNING GPL-0001] qnt_cnt[3] toplevel port is not placed!
+       Replace will regard qnt_cnt[3] is placed in (0, 0)
+[WARNING GPL-0001] qnt_cnt[4] toplevel port is not placed!
+       Replace will regard qnt_cnt[4] is placed in (0, 0)
+[WARNING GPL-0001] qnt_cnt[5] toplevel port is not placed!
+       Replace will regard qnt_cnt[5] is placed in (0, 0)
+[WARNING GPL-0001] qnt_val[0] toplevel port is not placed!
+       Replace will regard qnt_val[0] is placed in (0, 0)
+[WARNING GPL-0001] qnt_val[1] toplevel port is not placed!
+       Replace will regard qnt_val[1] is placed in (0, 0)
+[WARNING GPL-0001] qnt_val[2] toplevel port is not placed!
+       Replace will regard qnt_val[2] is placed in (0, 0)
+[WARNING GPL-0001] qnt_val[3] toplevel port is not placed!
+       Replace will regard qnt_val[3] is placed in (0, 0)
+[WARNING GPL-0001] qnt_val[4] toplevel port is not placed!
+       Replace will regard qnt_val[4] is placed in (0, 0)
+[WARNING GPL-0001] qnt_val[5] toplevel port is not placed!
+       Replace will regard qnt_val[5] is placed in (0, 0)
+[WARNING GPL-0001] qnt_val[6] toplevel port is not placed!
+       Replace will regard qnt_val[6] is placed in (0, 0)
+[WARNING GPL-0001] qnt_val[7] toplevel port is not placed!
+       Replace will regard qnt_val[7] is placed in (0, 0)
+[WARNING GPL-0001] rlen[0] toplevel port is not placed!
+       Replace will regard rlen[0] is placed in (0, 0)
+[WARNING GPL-0001] rlen[1] toplevel port is not placed!
+       Replace will regard rlen[1] is placed in (0, 0)
+[WARNING GPL-0001] rlen[2] toplevel port is not placed!
+       Replace will regard rlen[2] is placed in (0, 0)
+[WARNING GPL-0001] rlen[3] toplevel port is not placed!
+       Replace will regard rlen[3] is placed in (0, 0)
+[WARNING GPL-0001] rst toplevel port is not placed!
+       Replace will regard rst is placed in (0, 0)
+[WARNING GPL-0001] size[0] toplevel port is not placed!
+       Replace will regard size[0] is placed in (0, 0)
+[WARNING GPL-0001] size[1] toplevel port is not placed!
+       Replace will regard size[1] is placed in (0, 0)
+[WARNING GPL-0001] size[2] toplevel port is not placed!
+       Replace will regard size[2] is placed in (0, 0)
+[WARNING GPL-0001] size[3] toplevel port is not placed!
+       Replace will regard size[3] is placed in (0, 0)
+[INFO GPL-0006] NumInstances:             61882
+[INFO GPL-0007] NumPlaceInstances:        60766
+[INFO GPL-0008] NumFixedInstances:         1116
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                  73123
+[INFO GPL-0011] NumPins:                 197518
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 448.550 448.550 ) um
+[INFO GPL-0013] CoreBBox: (  1.140  1.400 ) ( 447.450 446.600 ) um
+[INFO GPL-0016] CoreArea:            198697.212 um^2
+[INFO GPL-0017] NonPlaceInstsArea:      296.856 um^2
+[INFO GPL-0018] PlaceInstsArea:       89739.622 um^2
+[INFO GPL-0019] Util:                    45.232 %
+[INFO GPL-0020] StdInstsArea:         89739.622 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[INFO GPL-0031] FillerInit:NumGCells:    140740
+[INFO GPL-0032] FillerInit:NumGNets:      73123
+[INFO GPL-0033] FillerInit:NumGPins:     197518
+[INFO GPL-0023] TargetDensity:            1.000
+[INFO GPL-0024] AvrgPlaceInstArea:        1.477 um^2
+[INFO GPL-0025] IdealBinArea:             1.477 um^2
+[INFO GPL-0026] IdealBinCnt:             134545
+[INFO GPL-0027] TotalBinArea:        198697.212 um^2
+[INFO GPL-0028] BinCnt:       256    256
+[INFO GPL-0029] BinSize: (  1.744  1.740 )
+[INFO GPL-0030] NumBins: 65536
+Placement density is 0.5718526697158813, computed from PLACE_DENSITY_LB_ADDON 0.20 and lower bound 0.4523158371448517
+global_placement -skip_io -density 0.5718526697158813 -pad_left 0 -pad_right 0
+[INFO GPL-0002] DBU: 2000
+[INFO GPL-0003] SiteSize: (  0.190  1.400 ) um
+[INFO GPL-0004] CoreBBox: (  1.140  1.400 ) ( 447.450 446.600 ) um
+[INFO GPL-0006] NumInstances:             61882
+[INFO GPL-0007] NumPlaceInstances:        60766
+[INFO GPL-0008] NumFixedInstances:         1116
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                  73123
+[INFO GPL-0011] NumPins:                 197471
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 448.550 448.550 ) um
+[INFO GPL-0013] CoreBBox: (  1.140  1.400 ) ( 447.450 446.600 ) um
+[INFO GPL-0016] CoreArea:            198697.212 um^2
+[INFO GPL-0017] NonPlaceInstsArea:      296.856 um^2
+[INFO GPL-0018] PlaceInstsArea:       89739.622 um^2
+[INFO GPL-0019] Util:                    45.232 %
+[INFO GPL-0020] StdInstsArea:         89739.622 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[INFO GPL-0031] FillerInit:NumGCells:     78221
+[INFO GPL-0032] FillerInit:NumGNets:      73123
+[INFO GPL-0033] FillerInit:NumGPins:     197471
+[INFO GPL-0023] TargetDensity:            0.572
+[INFO GPL-0024] AvrgPlaceInstArea:        1.477 um^2
+[INFO GPL-0025] IdealBinArea:             2.582 um^2
+[INFO GPL-0026] IdealBinCnt:              76940
+[INFO GPL-0027] TotalBinArea:        198697.212 um^2
+[INFO GPL-0028] BinCnt:       256    256
+[INFO GPL-0029] BinSize: (  1.744  1.740 )
+[INFO GPL-0030] NumBins: 65536
+[NesterovSolve] Iter:    1 overflow: 0.999 HPWL: 134864990
+[NesterovSolve] Iter:   10 overflow: 1.000 HPWL: 82397202
+[NesterovSolve] Iter:   20 overflow: 1.000 HPWL: 81226889
+[NesterovSolve] Iter:   30 overflow: 1.000 HPWL: 80977977
+[NesterovSolve] Iter:   40 overflow: 1.000 HPWL: 80849327
+[NesterovSolve] Iter:   50 overflow: 1.000 HPWL: 80757095
+[NesterovSolve] Iter:   60 overflow: 1.000 HPWL: 80769280
+[NesterovSolve] Iter:   70 overflow: 1.000 HPWL: 80870391
+[NesterovSolve] Iter:   80 overflow: 1.000 HPWL: 81028486
+[NesterovSolve] Iter:   90 overflow: 0.999 HPWL: 81338555
+[NesterovSolve] Iter:  100 overflow: 0.999 HPWL: 82126059
+[NesterovSolve] Iter:  110 overflow: 0.999 HPWL: 84195752
+[NesterovSolve] Iter:  120 overflow: 0.999 HPWL: 89239526
+[NesterovSolve] Iter:  130 overflow: 0.999 HPWL: 99904646
+[NesterovSolve] Iter:  140 overflow: 0.998 HPWL: 117913931
+[NesterovSolve] Iter:  150 overflow: 0.997 HPWL: 142749384
+[NesterovSolve] Iter:  160 overflow: 0.996 HPWL: 171215113
+[NesterovSolve] Iter:  170 overflow: 0.994 HPWL: 203561883
+[NesterovSolve] Iter:  180 overflow: 0.991 HPWL: 245839215
+[NesterovSolve] Iter:  190 overflow: 0.986 HPWL: 300388033
+[NesterovSolve] Iter:  200 overflow: 0.980 HPWL: 365958610
+[NesterovSolve] Iter:  210 overflow: 0.970 HPWL: 445267978
+[NesterovSolve] Iter:  220 overflow: 0.955 HPWL: 540738566
+[NesterovSolve] Iter:  230 overflow: 0.934 HPWL: 650148948
+[NesterovSolve] Iter:  240 overflow: 0.907 HPWL: 767342381
+[NesterovSolve] Iter:  250 overflow: 0.876 HPWL: 879594991
+[NesterovSolve] Iter:  260 overflow: 0.839 HPWL: 985468750
+[NesterovSolve] Iter:  270 overflow: 0.797 HPWL: 1089501846
+[NesterovSolve] Iter:  280 overflow: 0.749 HPWL: 1198298272
+[NesterovSolve] Iter:  290 overflow: 0.703 HPWL: 1311138429
+[NesterovSolve] Iter:  300 overflow: 0.655 HPWL: 1420783075
+[NesterovSolve] Iter:  310 overflow: 0.616 HPWL: 1534365800
+[NesterovSolve] Iter:  320 overflow: 0.573 HPWL: 1636346910
+[NesterovSolve] Iter:  330 overflow: 0.549 HPWL: 1686278999
+[NesterovSolve] Iter:  340 overflow: 0.522 HPWL: 1701544276
+[NesterovSolve] Iter:  350 overflow: 0.490 HPWL: 1682466040
+[NesterovSolve] Iter:  360 overflow: 0.455 HPWL: 1667483902
+[NesterovSolve] Iter:  370 overflow: 0.410 HPWL: 1698819628
+[NesterovSolve] Iter:  380 overflow: 0.374 HPWL: 1699132773
+[NesterovSolve] Iter:  390 overflow: 0.337 HPWL: 1682474367
+[NesterovSolve] Iter:  400 overflow: 0.307 HPWL: 1685493481
+[NesterovSolve] Iter:  410 overflow: 0.277 HPWL: 1678706621
+[NesterovSolve] Iter:  420 overflow: 0.249 HPWL: 1677243682
+[NesterovSolve] Iter:  430 overflow: 0.223 HPWL: 1675788511
+[NesterovSolve] Iter:  440 overflow: 0.199 HPWL: 1676245347
+[NesterovSolve] Iter:  450 overflow: 0.177 HPWL: 1676622401
+[NesterovSolve] Iter:  460 overflow: 0.157 HPWL: 1677643038
+[NesterovSolve] Iter:  470 overflow: 0.139 HPWL: 1679141234
+[NesterovSolve] Iter:  480 overflow: 0.123 HPWL: 1681173066
+[NesterovSolve] Iter:  490 overflow: 0.108 HPWL: 1683456808
+[NesterovSolve] Finished with Overflow: 0.099615
+Took 25 seconds: global_placement -skip_io -density 0.5718526697158813 -pad_left 0 -pad_right 0
+Elapsed time: 0:25.91[h:]min:sec. CPU time: user 652.93 sys 0.46 (2521%). Peak memory: 328692KB.

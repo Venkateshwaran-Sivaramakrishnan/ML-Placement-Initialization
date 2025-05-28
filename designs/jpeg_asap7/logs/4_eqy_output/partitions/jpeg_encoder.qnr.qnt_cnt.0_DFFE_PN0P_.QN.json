@@ -1,0 +1,53 @@
+{
+  "partition": {
+    "index": 413,
+    "name": "jpeg_encoder.qnr.qnt_cnt.0_DFFE_PN0P_.QN",
+    "inbits": {},
+    "outbits": {
+      "qnr.qnt_cnt[0]$_DFFE_PN0P_.QN": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.qnr.qnt_cnt.0_DFFE_PN0P_.QN",
+    "internal": {
+      "_062925_.A": [
+        0
+      ],
+      "_098520_.C": [
+        0
+      ],
+      "_098529_.A": [
+        0
+      ],
+      "_110064_.A__bar": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 5,
+    "bitcount": 5
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.qnr.qnt_cnt.0_DFFE_PN0P_.QN",
+    "internal": {
+      "_062925_.A": [
+        0
+      ],
+      "_098520_.C": [
+        0
+      ],
+      "_098529_.A": [
+        0
+      ],
+      "_110064_.A__bar": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 5,
+    "bitcount": 5
+  }
+}

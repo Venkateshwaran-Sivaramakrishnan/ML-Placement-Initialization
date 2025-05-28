@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 317,
+    "name": "jpeg_encoder.rle.rle.rlen.1_DFFE_PN0P_.SETN",
+    "inbits": {
+      "rle.rle.rlen[0]$_DFFE_PN0P_.adacond0": [
+        0
+      ]
+    },
+    "outbits": {
+      "rle.rle.rlen[1]$_DFFE_PN0P_.SETN": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.rle.rle.rlen.1_DFFE_PN0P_.SETN",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.rle.rle.rlen.1_DFFE_PN0P_.SETN",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

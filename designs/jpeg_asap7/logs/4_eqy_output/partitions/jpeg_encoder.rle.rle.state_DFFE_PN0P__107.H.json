@@ -1,0 +1,27 @@
+{
+  "partition": {
+    "index": 266,
+    "name": "jpeg_encoder.rle.rle.state_DFFE_PN0P__107.H",
+    "inbits": {},
+    "outbits": {
+      "rle.rle.state$_DFFE_PN0P__107.H": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.rle.rle.state_DFFE_PN0P__107.H",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 1
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.rle.rle.state_DFFE_PN0P__107.H",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 1
+  }
+}

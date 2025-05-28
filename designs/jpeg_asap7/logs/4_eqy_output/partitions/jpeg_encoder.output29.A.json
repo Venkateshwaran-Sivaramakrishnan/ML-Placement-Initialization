@@ -1,0 +1,39 @@
+{
+  "partition": {
+    "index": 976,
+    "name": "jpeg_encoder.output29.A",
+    "inbits": {
+      "amp": [
+        9
+      ]
+    },
+    "outbits": {
+      "output29.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.output29.A",
+    "internal": {
+      "net44": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 3
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.output29.A",
+    "internal": {
+      "net44": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 3
+  }
+}

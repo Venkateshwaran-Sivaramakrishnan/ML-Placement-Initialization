@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 0,
+    "name": "jpeg_encoder.wire9.Y",
+    "inbits": {
+      "wire9.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "wire9.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.wire9.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.wire9.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 251,
+    "name": "jpeg_encoder.rle.rz1.amp.9_DFFE_PP_.CLK",
+    "inbits": {
+      "rle.rz1.amp[8]$_DFFE_PP_.CLK": [
+        0
+      ]
+    },
+    "outbits": {
+      "rle.rz1.amp[9]$_DFFE_PP_.CLK": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.rle.rz1.amp.9_DFFE_PP_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.rle.rz1.amp.9_DFFE_PP_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

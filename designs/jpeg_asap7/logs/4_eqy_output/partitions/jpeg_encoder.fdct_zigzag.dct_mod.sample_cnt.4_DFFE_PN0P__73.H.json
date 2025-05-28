@@ -1,0 +1,27 @@
+{
+  "partition": {
+    "index": 1814,
+    "name": "jpeg_encoder.fdct_zigzag.dct_mod.sample_cnt.4_DFFE_PN0P__73.H",
+    "inbits": {},
+    "outbits": {
+      "fdct_zigzag.dct_mod.sample_cnt[4]$_DFFE_PN0P__73.H": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.fdct_zigzag.dct_mod.sample_cnt.4_DFFE_PN0P__73.H",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 1
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.fdct_zigzag.dct_mod.sample_cnt.4_DFFE_PN0P__73.H",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 1
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 820,
+    "name": "aes_cipher_top.sa32_sr.7_DFF_P_.CLK",
+    "inbits": {
+      "sa32_sr[6]$_DFF_P_.CLK": [
+        0
+      ]
+    },
+    "outbits": {
+      "sa32_sr[7]$_DFF_P_.CLK": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.sa32_sr.7_DFF_P_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.sa32_sr.7_DFF_P_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

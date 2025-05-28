@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 981,
+    "name": "jpeg_encoder.output26.Y",
+    "inbits": {
+      "output26.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "output26.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.output26.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.output26.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

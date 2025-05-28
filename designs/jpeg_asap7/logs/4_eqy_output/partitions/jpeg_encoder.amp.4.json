@@ -1,0 +1,39 @@
+{
+  "partition": {
+    "index": 5338,
+    "name": "jpeg_encoder.amp.4",
+    "inbits": {
+      "rle.rz4.ampo[4]$_DFFE_PP_.int_fwire_IQN": [
+        0
+      ]
+    },
+    "outbits": {
+      "amp": [
+        4
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.amp.4",
+    "internal": {
+      "_066474_.Y": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 3
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.amp.4",
+    "internal": {
+      "_066474_.Y": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 3
+  }
+}

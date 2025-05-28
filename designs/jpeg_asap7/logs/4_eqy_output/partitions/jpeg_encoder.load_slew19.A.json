@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1002,
+    "name": "jpeg_encoder.load_slew19.A",
+    "inbits": {
+      "input18.Y": [
+        0
+      ]
+    },
+    "outbits": {
+      "load_slew19.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.load_slew19.A",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.load_slew19.A",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 472,
+    "name": "aes_cipher_top.text_out.124_DFF_P_.int_fwire_IQN",
+    "inbits": {
+      "text_out[124]$_DFF_P_.QN": [
+        0
+      ]
+    },
+    "outbits": {
+      "text_out[124]$_DFF_P_.int_fwire_IQN": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.text_out.124_DFF_P_.int_fwire_IQN",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.text_out.124_DFF_P_.int_fwire_IQN",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

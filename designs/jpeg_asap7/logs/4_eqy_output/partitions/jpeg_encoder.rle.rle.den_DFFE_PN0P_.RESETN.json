@@ -1,0 +1,27 @@
+{
+  "partition": {
+    "index": 330,
+    "name": "jpeg_encoder.rle.rle.den_DFFE_PN0P_.RESETN",
+    "inbits": {},
+    "outbits": {
+      "rle.rle.den$_DFFE_PN0P_.RESETN": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.rle.rle.den_DFFE_PN0P_.RESETN",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 1
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.rle.rle.den_DFFE_PN0P_.RESETN",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 1
+  }
+}

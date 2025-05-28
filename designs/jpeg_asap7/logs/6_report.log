@@ -1,0 +1,79 @@
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 32 thread(s).
+source /ml_placer/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /ml_placer/flow/platforms/asap7/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation jpeg_encoder (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 381443 rc segments
+[INFO RCX-0439] Coupling Cap extraction jpeg_encoder ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 16% of 397346 wires extracted
+[INFO RCX-0442] 40% of 397346 wires extracted
+[INFO RCX-0442] 55% of 397346 wires extracted
+[INFO RCX-0442] 63% of 397346 wires extracted
+[INFO RCX-0442] 78% of 397346 wires extracted
+[INFO RCX-0442] 92% of 397346 wires extracted
+[INFO RCX-0442] 100% of 397346 wires extracted
+[INFO RCX-0045] Extract 64008 nets, 445417 rsegs, 445417 caps, 586542 ccs
+[INFO RCX-0443] 64008 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Supply voltage   : 7.70e-01 V
+Worstcase voltage: 6.49e-01 V
+Average voltage  : 7.37e-01 V
+Average IR drop  : 3.28e-02 V
+Worstcase IR drop: 1.21e-01 V
+Percentage drop  : 15.73 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 1.22e-01 V
+Average voltage  : 3.27e-02 V
+Average IR drop  : 3.27e-02 V
+Worstcase IR drop: 1.22e-01 V
+Percentage drop  : 15.87 %
+######################################
+Cell type report:                       Count       Area
+  Fill cell                             88769   13738.60
+  Tap cell                               2394      69.81
+  Tie cell                                 66       2.89
+  Buffer                                 2061     396.28
+  Clock buffer                            129      55.70
+  Timing Repair Buffer                     74      10.10
+  Inverter                              13848     659.63
+  Clock inverter                           98      21.33
+  Sequential cell                        4383    1352.98
+  Multi-Input combinational cell        35480    4286.35
+  Total                                147302   20593.67
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 6785 u^2 33% utilization.
+[WARNING GUI-0076] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+[WARNING GUI-0076] This plugin does not support propagateSizeHints()
+[WARNING GUI-0076] This plugin does not support propagateSizeHints()
+[WARNING GUI-0076] This plugin does not support propagateSizeHints()
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/jpeg/base/final_all.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/jpeg/base/final_routing.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/jpeg/base/final_placement.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/jpeg/base/final_ir_drop.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/jpeg/base/final_clocks.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/jpeg/base/cts_clk.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/jpeg/base/cts_clk_layout.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/asap7/jpeg/base/final_resizer.webp.png
+Elapsed time: 1:08.98[h:]min:sec. CPU time: user 85.11 sys 24.31 (158%). Peak memory: 1937860KB.

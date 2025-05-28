@@ -1,0 +1,27 @@
+{
+  "partition": {
+    "index": 1919,
+    "name": "jpeg_encoder.fdct_zigzag.dct_mod.dddcnt_DFFE_PN1P_.SETN",
+    "inbits": {},
+    "outbits": {
+      "fdct_zigzag.dct_mod.dddcnt$_DFFE_PN1P_.SETN": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.fdct_zigzag.dct_mod.dddcnt_DFFE_PN1P_.SETN",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 1
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.fdct_zigzag.dct_mod.dddcnt_DFFE_PN1P_.SETN",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 1
+  }
+}

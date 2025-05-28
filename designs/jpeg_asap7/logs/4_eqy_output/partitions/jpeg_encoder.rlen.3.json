@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 12,
+    "name": "jpeg_encoder.rlen.3",
+    "inbits": {
+      "output40.Y": [
+        0
+      ]
+    },
+    "outbits": {
+      "rlen": [
+        3
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.rlen.3",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.rlen.3",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

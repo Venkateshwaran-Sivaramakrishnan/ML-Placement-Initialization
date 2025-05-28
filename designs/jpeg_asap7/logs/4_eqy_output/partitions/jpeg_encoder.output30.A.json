@@ -1,0 +1,51 @@
+{
+  "partition": {
+    "index": 974,
+    "name": "jpeg_encoder.output30.A",
+    "inbits": {
+      "douten": [
+        0
+      ]
+    },
+    "outbits": {
+      "output30.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.output30.A",
+    "internal": {
+      "_066468_.Y": [
+        0
+      ],
+      "_099249_.A2": [
+        0
+      ],
+      "net45": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 4,
+    "bitcount": 5
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.output30.A",
+    "internal": {
+      "_066468_.Y": [
+        0
+      ],
+      "_099249_.A2": [
+        0
+      ],
+      "net45": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 4,
+    "bitcount": 5
+  }
+}

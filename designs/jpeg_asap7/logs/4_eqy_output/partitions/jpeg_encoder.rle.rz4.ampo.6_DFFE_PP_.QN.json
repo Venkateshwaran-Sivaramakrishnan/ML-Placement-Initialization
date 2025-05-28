@@ -1,0 +1,41 @@
+{
+  "partition": {
+    "index": 72,
+    "name": "jpeg_encoder.rle.rz4.ampo.6_DFFE_PP_.QN",
+    "inbits": {},
+    "outbits": {
+      "rle.rz4.ampo[6]$_DFFE_PP_.QN": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.rle.rz4.ampo.6_DFFE_PP_.QN",
+    "internal": {
+      "_066472_.A": [
+        0
+      ],
+      "_099235_.B": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 3,
+    "bitcount": 3
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.rle.rz4.ampo.6_DFFE_PP_.QN",
+    "internal": {
+      "_066472_.A": [
+        0
+      ],
+      "_099235_.B": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 3,
+    "bitcount": 3
+  }
+}

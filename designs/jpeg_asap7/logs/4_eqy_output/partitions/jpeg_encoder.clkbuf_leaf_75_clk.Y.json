@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 5139,
+    "name": "jpeg_encoder.clkbuf_leaf_75_clk.Y",
+    "inbits": {
+      "clkbuf_leaf_75_clk.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "clkbuf_leaf_75_clk.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.clkbuf_leaf_75_clk.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.clkbuf_leaf_75_clk.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

@@ -1,0 +1,69 @@
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 22 thread(s).
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /work/practice0/flow/platforms/nangate45/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation aes_cipher_top (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 73105 rc segments
+[INFO RCX-0439] Coupling Cap extraction aes_cipher_top ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 47% of 149547 wires extracted
+[INFO RCX-0442] 100% of 149547 wires extracted
+[INFO RCX-0045] Extract 17155 nets, 89544 rsegs, 89544 caps, 245310 ccs
+[INFO RCX-0443] 17155 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Supply voltage   : 1.10e+00 V
+Worstcase voltage: -1.48e+00 V
+Average voltage  : -1.89e-01 V
+Average IR drop  : 1.29e+00 V
+Worstcase IR drop: 2.58e+00 V
+Percentage drop  : 234.45 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 1.74e+00 V
+Average voltage  : 7.95e-01 V
+Average IR drop  : 7.95e-01 V
+Worstcase IR drop: 1.74e+00 V
+Percentage drop  : 158.03 %
+######################################
+Cell type report:                       Count       Area
+  Fill cell                             14712   24739.86
+  Tap cell                                411     109.33
+  Buffer                                 1670    3890.25
+  Clock buffer                            136     165.45
+  Timing Repair Buffer                    990    1249.40
+  Inverter                                385     388.36
+  Clock inverter                           63      49.21
+  Timing Repair inverter                   18      23.14
+  Sequential cell                         562    2596.16
+  Multi-Input combinational cell        12325   19573.88
+  Total                                 31272   52785.04
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 27936 u^2 53% utilization.
+[WARNING GUI-0076] QStandardPaths: runtime directory '/mnt/wslg/runtime-dir' is not owned by UID 0, but a directory permissions 0777 owned by UID 1000 GID 1000
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/aes/base/final_all.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/aes/base/final_routing.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/aes/base/final_placement.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/aes/base/final_ir_drop.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/aes/base/final_clocks.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/aes/base/cts_clk.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/aes/base/cts_clk_layout.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45/aes/base/final_resizer.webp.png
+Elapsed time: 0:31.01[h:]min:sec. CPU time: user 30.50 sys 0.59 (100%). Peak memory: 671072KB.

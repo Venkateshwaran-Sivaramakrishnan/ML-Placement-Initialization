@@ -1,0 +1,81 @@
+{
+  "partition": {
+    "index": 5330,
+    "name": "jpeg_encoder.clkbuf_0_clk.A",
+    "inbits": {
+      "clk": [
+        0
+      ]
+    },
+    "outbits": {
+      "clkbuf_0_clk.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.clkbuf_0_clk.A",
+    "internal": {
+      "_112412_.CLK": [
+        0
+      ],
+      "_112412_.adacond5": [
+        0
+      ],
+      "_112413_.CLK": [
+        0
+      ],
+      "_112413_.adacond5": [
+        0
+      ],
+      "_112414_.CLK": [
+        0
+      ],
+      "_112414_.adacond5": [
+        0
+      ],
+      "_112415_.CLK": [
+        0
+      ],
+      "_112415_.adacond5": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 9,
+    "bitcount": 10
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.clkbuf_0_clk.A",
+    "internal": {
+      "_112412_.CLK": [
+        0
+      ],
+      "_112412_.adacond5": [
+        0
+      ],
+      "_112413_.CLK": [
+        0
+      ],
+      "_112413_.adacond5": [
+        0
+      ],
+      "_112414_.CLK": [
+        0
+      ],
+      "_112414_.adacond5": [
+        0
+      ],
+      "_112415_.CLK": [
+        0
+      ],
+      "_112415_.adacond5": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 9,
+    "bitcount": 10
+  }
+}

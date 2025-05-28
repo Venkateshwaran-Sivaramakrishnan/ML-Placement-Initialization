@@ -1,0 +1,81 @@
+{
+  "partition": {
+    "index": 1926,
+    "name": "jpeg_encoder.fdct_zigzag.dct_mod.ddcnt_DFFE_PN1P_.RESETN",
+    "inbits": {
+      "rst": [
+        0
+      ]
+    },
+    "outbits": {
+      "fdct_zigzag.dct_mod.ddcnt$_DFFE_PN1P_.RESETN": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.fdct_zigzag.dct_mod.ddcnt_DFFE_PN1P_.RESETN",
+    "internal": {
+      "_112412_.SETN": [
+        0
+      ],
+      "_112412_.adacond0": [
+        0
+      ],
+      "_112413_.SETN": [
+        0
+      ],
+      "_112413_.adacond0": [
+        0
+      ],
+      "_112414_.SETN": [
+        0
+      ],
+      "_112414_.adacond0": [
+        0
+      ],
+      "_112415_.SETN": [
+        0
+      ],
+      "_112415_.adacond0": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 9,
+    "bitcount": 10
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.fdct_zigzag.dct_mod.ddcnt_DFFE_PN1P_.RESETN",
+    "internal": {
+      "_112412_.SETN": [
+        0
+      ],
+      "_112412_.adacond0": [
+        0
+      ],
+      "_112413_.SETN": [
+        0
+      ],
+      "_112413_.adacond0": [
+        0
+      ],
+      "_112414_.SETN": [
+        0
+      ],
+      "_112414_.adacond0": [
+        0
+      ],
+      "_112415_.SETN": [
+        0
+      ],
+      "_112415_.adacond0": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 9,
+    "bitcount": 10
+  }
+}

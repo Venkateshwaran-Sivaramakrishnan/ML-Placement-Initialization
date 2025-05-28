@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 49,
+    "name": "jpeg_encoder.rle.rz4.deno_DFFE_PN0P_.int_fwire_IQN",
+    "inbits": {
+      "rle.rz4.deno$_DFFE_PN0P_.QN": [
+        0
+      ]
+    },
+    "outbits": {
+      "rle.rz4.deno$_DFFE_PN0P_.int_fwire_IQN": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.rle.rz4.deno_DFFE_PN0P_.int_fwire_IQN",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.rle.rz4.deno_DFFE_PN0P_.int_fwire_IQN",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

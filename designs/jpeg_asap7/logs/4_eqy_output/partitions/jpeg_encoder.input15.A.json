@@ -1,0 +1,39 @@
+{
+  "partition": {
+    "index": 1026,
+    "name": "jpeg_encoder.input15.A",
+    "inbits": {
+      "qnt_val": [
+        5
+      ]
+    },
+    "outbits": {
+      "input15.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.input15.A",
+    "internal": {
+      "_098343_.A2": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 3
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.input15.A",
+    "internal": {
+      "_098343_.A2": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 3
+  }
+}

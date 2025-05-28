@@ -1,0 +1,27 @@
+{
+  "partition": {
+    "index": 5331,
+    "name": "jpeg_encoder.amp.11",
+    "inbits": {},
+    "outbits": {
+      "amp": [
+        11
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.amp.11",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 1
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.amp.11",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 1
+  }
+}

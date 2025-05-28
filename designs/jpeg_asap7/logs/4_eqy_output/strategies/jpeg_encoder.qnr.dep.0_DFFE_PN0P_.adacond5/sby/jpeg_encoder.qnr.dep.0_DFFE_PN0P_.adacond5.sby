@@ -1,0 +1,21 @@
+[options]
+mode prove
+depth 10
+expect pass,fail,unknown,timeout
+
+
+[engines]
+smtbmc bitwuzla
+
+[script]
+verilog_defaults -add -D CHECK_OUTPUTS
+read_verilog -sv ../../../../../partitions/jpeg_encoder.qnr.dep.0_DFFE_PN0P_.adacond5.sv
+read_rtlil ../../../../../partitions/jpeg_encoder.qnr.dep.0_DFFE_PN0P_.adacond5.il
+hierarchy -top miter; proc
+
+async2sync
+formalff -clk2ff -ff2anyinit gate.jpeg_encoder.qnr.dep.0_DFFE_PN0P_.adacond5
+setundef -anyseq gate.jpeg_encoder.qnr.dep.0_DFFE_PN0P_.adacond5
+flatten -wb; dffunmap; opt_expr -keepdc -undriven; opt_clean
+xprop -formal -split-ports -assume-def-inputs miter
+

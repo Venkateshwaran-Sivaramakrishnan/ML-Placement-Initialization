@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 2929,
+    "name": "jpeg_encoder.fdct_zigzag.dct_mod.dct_block_5.dct_unit_1.macu.result.5_DFFE_PP_.CLK",
+    "inbits": {
+      "fdct_zigzag.dct_mod.dct_block_5.dct_unit_1.macu.result[4]$_DFFE_PP_.CLK": [
+        0
+      ]
+    },
+    "outbits": {
+      "fdct_zigzag.dct_mod.dct_block_5.dct_unit_1.macu.result[5]$_DFFE_PP_.CLK": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.fdct_zigzag.dct_mod.dct_block_5.dct_unit_1.macu.result.5_DFFE_PP_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.fdct_zigzag.dct_mod.dct_block_5.dct_unit_1.macu.result.5_DFFE_PP_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

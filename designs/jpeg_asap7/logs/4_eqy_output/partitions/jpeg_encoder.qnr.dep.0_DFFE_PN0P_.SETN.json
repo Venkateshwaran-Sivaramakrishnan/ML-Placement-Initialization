@@ -1,0 +1,45 @@
+{
+  "partition": {
+    "index": 942,
+    "name": "jpeg_encoder.qnr.dep.0_DFFE_PN0P_.SETN",
+    "inbits": {
+      "load_slew19.Y": [
+        0
+      ]
+    },
+    "outbits": {
+      "qnr.dep[0]$_DFFE_PN0P_.SETN": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.qnr.dep.0_DFFE_PN0P_.SETN",
+    "internal": {
+      "net19": [
+        0
+      ],
+      "net33": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 3,
+    "bitcount": 4
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.qnr.dep.0_DFFE_PN0P_.SETN",
+    "internal": {
+      "net19": [
+        0
+      ],
+      "net33": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 3,
+    "bitcount": 4
+  }
+}

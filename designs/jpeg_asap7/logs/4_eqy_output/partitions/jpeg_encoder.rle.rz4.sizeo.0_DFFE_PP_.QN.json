@@ -1,0 +1,35 @@
+{
+  "partition": {
+    "index": 26,
+    "name": "jpeg_encoder.rle.rz4.sizeo.0_DFFE_PP_.QN",
+    "inbits": {},
+    "outbits": {
+      "rle.rz4.sizeo[0]$_DFFE_PP_.QN": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.rle.rz4.sizeo.0_DFFE_PP_.QN",
+    "internal": {
+      "_066463_.A": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.rle.rz4.sizeo.0_DFFE_PP_.QN",
+    "internal": {
+      "_066463_.A": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 2
+  }
+}

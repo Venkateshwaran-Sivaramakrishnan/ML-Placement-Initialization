@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 1020,
+    "name": "jpeg_encoder.input18.A",
+    "inbits": {
+      "fdct_zigzag.dct_mod.sample_cnt[5]$_DFFE_PN0P_.adacond0": [
+        0
+      ]
+    },
+    "outbits": {
+      "input18.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.input18.A",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.input18.A",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

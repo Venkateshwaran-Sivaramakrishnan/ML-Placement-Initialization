@@ -1,0 +1,51 @@
+{
+  "partition": {
+    "index": 950,
+    "name": "jpeg_encoder.output42.A",
+    "inbits": {
+      "rle.rz4.sizeo[1]$_DFFE_PP_.int_fwire_IQN": [
+        0
+      ]
+    },
+    "outbits": {
+      "output42.A": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.output42.A",
+    "internal": {
+      "_066462_.Y": [
+        0
+      ],
+      "_099280_.A2": [
+        0
+      ],
+      "net57": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 4,
+    "bitcount": 5
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.output42.A",
+    "internal": {
+      "_066462_.Y": [
+        0
+      ],
+      "_099280_.A2": [
+        0
+      ],
+      "net57": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 4,
+    "bitcount": 5
+  }
+}

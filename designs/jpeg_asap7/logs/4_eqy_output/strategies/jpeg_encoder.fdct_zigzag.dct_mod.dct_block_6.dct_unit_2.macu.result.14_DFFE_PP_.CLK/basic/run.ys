@@ -1,0 +1,9 @@
+verilog_defaults -add -D CHECK_OUTPUTS
+read_verilog -sv ../../../partitions/jpeg_encoder.fdct_zigzag.dct_mod.dct_block_6.dct_unit_2.macu.result.14_DFFE_PP_.CLK.sv
+read_rtlil ../../../partitions/jpeg_encoder.fdct_zigzag.dct_mod.dct_block_6.dct_unit_2.macu.result.14_DFFE_PP_.CLK.il
+hierarchy -top miter; proc; chformal -cover -remove
+async2sync
+formalff -clk2ff -ff2anyinit gate.jpeg_encoder.fdct_zigzag.dct_mod.dct_block_6.dct_unit_2.macu.result.14_DFFE_PP_.CLK
+setundef -anyseq gate.jpeg_encoder.fdct_zigzag.dct_mod.dct_block_6.dct_unit_2.macu.result.14_DFFE_PP_.CLK
+flatten -wb; dffunmap; opt_expr -keepdc -undriven; opt_clean
+sat -tempinduct -set-init-undef -set-def-formal -set-def-inputs -maxsteps 10 -set-assumes -prove-asserts -show-public -dump_vcd trace.vcd miter

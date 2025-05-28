@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 862,
+    "name": "aes_cipher_top.sa21_sr.5_DFF_P_.CLK",
+    "inbits": {
+      "sa21_sr[4]$_DFF_P_.CLK": [
+        0
+      ]
+    },
+    "outbits": {
+      "sa21_sr[5]$_DFF_P_.CLK": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.sa21_sr.5_DFF_P_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.sa21_sr.5_DFF_P_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 997,
+    "name": "jpeg_encoder.max_length12.Y",
+    "inbits": {
+      "max_length12.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "max_length12.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.max_length12.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.max_length12.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

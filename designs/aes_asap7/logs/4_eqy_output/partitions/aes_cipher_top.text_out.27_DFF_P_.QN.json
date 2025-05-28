@@ -1,0 +1,35 @@
+{
+  "partition": {
+    "index": 413,
+    "name": "aes_cipher_top.text_out.27_DFF_P_.QN",
+    "inbits": {},
+    "outbits": {
+      "text_out[27]$_DFF_P_.QN": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.aes_cipher_top.text_out.27_DFF_P_.QN",
+    "internal": {
+      "_30785_.A": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.aes_cipher_top.text_out.27_DFF_P_.QN",
+    "internal": {
+      "_30785_.A": [
+        0
+      ]
+    },
+    "unused": {},
+    "cellcount": 2,
+    "bitcount": 2
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 297,
+    "name": "jpeg_encoder.rle.rle.sample_cnt.4_SDFFCE_PP0P_.CLK",
+    "inbits": {
+      "rle.rle.sample_cnt[3]$_SDFFCE_PP0P_.CLK": [
+        0
+      ]
+    },
+    "outbits": {
+      "rle.rle.sample_cnt[4]$_SDFFCE_PP0P_.CLK": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.rle.rle.sample_cnt.4_SDFFCE_PP0P_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.rle.rle.sample_cnt.4_SDFFCE_PP0P_.CLK",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

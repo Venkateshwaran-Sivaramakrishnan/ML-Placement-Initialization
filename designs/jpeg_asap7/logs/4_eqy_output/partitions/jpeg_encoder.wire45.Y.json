@@ -1,0 +1,31 @@
+{
+  "partition": {
+    "index": 4,
+    "name": "jpeg_encoder.wire45.Y",
+    "inbits": {
+      "wire45.A": [
+        0
+      ]
+    },
+    "outbits": {
+      "wire45.Y": [
+        0
+      ]
+    },
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.jpeg_encoder.wire45.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  },
+  "gate_module": {
+    "name": "gold.jpeg_encoder.wire45.Y",
+    "internal": {},
+    "unused": {},
+    "cellcount": 1,
+    "bitcount": 2
+  }
+}

@@ -1,0 +1,9 @@
+verilog_defaults -add -D CHECK_OUTPUTS
+read_verilog -sv ../../../partitions/jpeg_encoder.clkbuf_leaf_1_clk.Y.sv
+read_rtlil ../../../partitions/jpeg_encoder.clkbuf_leaf_1_clk.Y.il
+hierarchy -top miter; proc; chformal -cover -remove
+async2sync
+formalff -clk2ff -ff2anyinit gate.jpeg_encoder.clkbuf_leaf_1_clk.Y
+setundef -anyseq gate.jpeg_encoder.clkbuf_leaf_1_clk.Y
+flatten -wb; dffunmap; opt_expr -keepdc -undriven; opt_clean
+sat -tempinduct -set-init-undef -set-def-formal -set-def-inputs -maxsteps 10 -set-assumes -prove-asserts -show-public -dump_vcd trace.vcd miter
