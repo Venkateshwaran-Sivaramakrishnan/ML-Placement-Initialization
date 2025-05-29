@@ -1,0 +1,71 @@
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 32 thread(s).
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /ml_placer/flow/platforms/ihp-sg13g2/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation gcd (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 1917 rc segments
+[INFO RCX-0439] Coupling Cap extraction gcd ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 51% of 3209 wires extracted
+[INFO RCX-0442] 100% of 3209 wires extracted
+[INFO RCX-0045] Extract 519 nets, 2402 rsegs, 2402 caps, 3414 ccs
+[INFO RCX-0443] 519 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Supply voltage   : 1.20e+00 V
+Worstcase voltage: 1.20e+00 V
+Average voltage  : 1.20e+00 V
+Average IR drop  : 3.10e-04 V
+Worstcase IR drop: 3.66e-04 V
+Percentage drop  : 0.03 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 8.24e-04 V
+Average voltage  : 7.41e-04 V
+Average IR drop  : 7.41e-04 V
+Worstcase IR drop: 8.24e-04 V
+Percentage drop  : 0.07 %
+######################################
+Cell type report:                       Count       Area
+  Fill cell                               212     529.80
+  Other                                  1452   18044.21
+  Buffer                                   13     110.68
+  Clock buffer                              9      65.32
+  Timing Repair Buffer                     67     517.10
+  Inverter                                 27     152.41
+  Clock inverter                            5      27.22
+  Sequential cell                          35    1651.10
+  Multi-Input combinational cell          297    3227.82
+  Total                                  2117   24325.66
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 23796 u^2 98% utilization.
+[WARNING GUI-0076] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+[WARNING GUI-0076] This plugin does not support propagateSizeHints()
+[WARNING GUI-0076] This plugin does not support propagateSizeHints()
+[WARNING GUI-0076] This plugin does not support propagateSizeHints()
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/ihp-sg13g2/gcd/base/final_all.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/ihp-sg13g2/gcd/base/final_routing.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/ihp-sg13g2/gcd/base/final_placement.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/ihp-sg13g2/gcd/base/final_ir_drop.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/ihp-sg13g2/gcd/base/final_clocks.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/ihp-sg13g2/gcd/base/cts_core_clock.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/ihp-sg13g2/gcd/base/cts_core_clock_layout.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/ihp-sg13g2/gcd/base/final_resizer.webp.png
+Elapsed time: 0:01.45[h:]min:sec. CPU time: user 1.59 sys 0.71 (158%). Peak memory: 194664KB.

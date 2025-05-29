@@ -1,0 +1,76 @@
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 32 thread(s).
+Perform port buffering...
+[INFO RSZ-0027] Inserted 35 input buffers.
+[INFO RSZ-0028] Inserted 18 output buffers.
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+[INFO RSZ-0058] Using max wire length 16273um.
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       476
+       10 |     +0.0% |       0 |       0 |             0 |       466
+       20 |     +0.0% |       0 |       0 |             0 |       456
+       30 |     +0.0% |       0 |       0 |             0 |       446
+       40 |     +0.0% |       0 |       0 |             0 |       436
+       50 |     +0.0% |       0 |       0 |             0 |       426
+       60 |     +0.0% |       0 |       0 |             0 |       416
+       70 |     +0.0% |       0 |       0 |             0 |       406
+       80 |     +0.0% |       0 |       0 |             0 |       396
+       90 |     +0.0% |       0 |       0 |             0 |       386
+      100 |     +0.0% |       0 |       0 |             0 |       376
+      110 |     +0.0% |       0 |       0 |             0 |       366
+      120 |     +0.0% |       0 |       0 |             0 |       356
+      130 |     +0.0% |       0 |       0 |             0 |       346
+      140 |     +0.0% |       0 |       0 |             0 |       336
+      150 |     +0.0% |       0 |       0 |             0 |       326
+      160 |     +0.0% |       0 |       0 |             0 |       316
+      170 |     +0.0% |       0 |       0 |             0 |       306
+      180 |     +0.0% |       0 |       0 |             0 |       296
+      190 |     +0.0% |       0 |       0 |             0 |       286
+      200 |     +0.0% |       0 |       0 |             0 |       276
+      210 |     +0.0% |       0 |       0 |             0 |       266
+      220 |     +0.0% |       0 |       0 |             0 |       256
+      230 |     +0.0% |       0 |       0 |             0 |       246
+      240 |     +0.0% |       0 |       0 |             0 |       236
+      250 |     +0.0% |       0 |       0 |             0 |       226
+      260 |     +0.0% |       0 |       0 |             0 |       216
+      270 |     +0.0% |       0 |       0 |             0 |       206
+      280 |     +0.0% |       0 |       0 |             0 |       196
+      290 |     +0.0% |       0 |       0 |             0 |       186
+      300 |     +0.0% |       0 |       0 |             0 |       176
+      310 |     +0.0% |       0 |       0 |             0 |       166
+      320 |     +0.0% |       0 |       0 |             0 |       156
+      330 |     +0.0% |       0 |       0 |             0 |       146
+      340 |     +0.0% |       0 |       0 |             0 |       136
+      350 |     +0.0% |       0 |       0 |             0 |       126
+      360 |     +0.0% |       0 |       0 |             0 |       116
+      370 |     +0.0% |       0 |       0 |             0 |       106
+      380 |     +0.0% |       0 |       0 |             0 |        96
+      390 |     +0.0% |       0 |       0 |             0 |        86
+      400 |     +0.0% |       0 |       0 |             0 |        76
+      410 |     +0.0% |       0 |       0 |             0 |        66
+      420 |     +0.0% |       0 |       0 |             0 |        56
+      430 |     +0.0% |       0 |       0 |             0 |        46
+      440 |     +0.0% |       0 |       0 |             0 |        36
+      450 |     +0.0% |       0 |       0 |             0 |        26
+      460 |     +0.0% |       0 |       0 |             0 |        16
+      470 |     +0.0% |       0 |       0 |             0 |         6
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+Repair tie lo fanout...
+Repair tie hi fanout...
+[INFO RSZ-0042] Inserted 35 tie sg13g2_tiehi instances.
+Floating nets: 
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 5659 u^2 23% utilization.
+Instance count before 352, after 439
+Pin count before 1262, after 1402
+Elapsed time: 0:00.36[h:]min:sec. CPU time: user 0.45 sys 1.02 (401%). Peak memory: 296068KB.
