@@ -1,0 +1,783 @@
+*********************************************************************************************
+Basic information of the design:
+Design name: gcd
+UNITS DISTANCE MICRONS : 1000 (We use DBU to store the layout information)
+Die width: 190690 DBU
+Die height: 190690 DBU
+Core width: 156960 DBU
+Core height: 154980 DBU
+Core region:  lx = 16800, ly = 18900, ux = 173760, uy = 173880
+*********************************************************************************************
+Input/Output Pin information (Each line represents one fixed pin: vertex_id, IO_name, IO_type, x_center, y_center):
+0 clk INPUT 360 129780
+1 req_msg[0] INPUT 360 95340
+2 req_msg[10] INPUT 190330 86940
+3 req_msg[11] INPUT 119520 190330
+4 req_msg[12] INPUT 114720 190330
+5 req_msg[13] INPUT 91680 190330
+6 req_msg[14] INPUT 360 120540
+7 req_msg[15] INPUT 77280 190330
+8 req_msg[16] INPUT 360 99540
+9 req_msg[17] INPUT 360 90300
+10 req_msg[18] INPUT 63840 360
+11 req_msg[19] INPUT 360 71820
+12 req_msg[1] INPUT 360 83580
+13 req_msg[20] INPUT 87840 360
+14 req_msg[21] INPUT 89760 360
+15 req_msg[22] INPUT 110880 360
+16 req_msg[23] INPUT 190330 80220
+17 req_msg[24] INPUT 190330 88620
+18 req_msg[25] INPUT 190330 91980
+19 req_msg[26] INPUT 190330 96180
+20 req_msg[27] INPUT 190330 110460
+21 req_msg[28] INPUT 109920 190330
+22 req_msg[29] INPUT 92640 190330
+23 req_msg[2] INPUT 66720 360
+24 req_msg[30] INPUT 360 116340
+25 req_msg[31] INPUT 82080 190330
+26 req_msg[3] INPUT 360 77700
+27 req_msg[4] INPUT 90720 360
+28 req_msg[5] INPUT 94560 360
+29 req_msg[6] INPUT 96480 360
+30 req_msg[7] INPUT 190330 76020
+31 req_msg[8] INPUT 95520 360
+32 req_msg[9] INPUT 190330 84420
+33 req_rdy OUTPUT 360 105420
+34 req_val INPUT 360 102060
+35 reset INPUT 360 104580
+36 resp_msg[0] OUTPUT 360 91140
+37 resp_msg[10] OUTPUT 190330 98700
+38 resp_msg[11] OUTPUT 190330 111300
+39 resp_msg[12] OUTPUT 108960 190330
+40 resp_msg[13] OUTPUT 101280 190330
+41 resp_msg[14] OUTPUT 360 113820
+42 resp_msg[15] OUTPUT 80160 190330
+43 resp_msg[1] OUTPUT 360 89460
+44 resp_msg[2] OUTPUT 75360 360
+45 resp_msg[3] OUTPUT 69600 360
+46 resp_msg[4] OUTPUT 84000 360
+47 resp_msg[5] OUTPUT 85920 360
+48 resp_msg[6] OUTPUT 106080 360
+49 resp_msg[7] OUTPUT 107040 360
+50 resp_msg[8] OUTPUT 190330 97020
+51 resp_msg[9] OUTPUT 190330 97860
+52 resp_rdy INPUT 360 107100
+53 resp_val OUTPUT 360 106260
+*********************************************************************************************
+Instance information (Each line represents one instance: vertex_id, instance_name, cell_name, isMacro, isSeq, isFixed, x_center, y_center, width, height):
+54 _321_ sg13g2_buf_1 False False False -1 -1 1920 3780 
+55 _322_ sg13g2_buf_1 False False False -1 -1 1920 3780 
+56 _323_ sg13g2_buf_1 False False False -1 -1 1920 3780 
+57 _324_ sg13g2_buf_4 False False False -1 -1 3840 3780 
+58 _325_ sg13g2_nor4_1 False False False -1 -1 2880 3780 
+59 _326_ sg13g2_nor4_1 False False False -1 -1 2880 3780 
+60 _327_ sg13g2_nor4_1 False False False -1 -1 2880 3780 
+61 _328_ sg13g2_buf_8 False False False -1 -1 6240 3780 
+62 _329_ sg13g2_nor4_1 False False False -1 -1 2880 3780 
+63 _330_ sg13g2_nand4_1 False False False -1 -1 2880 3780 
+64 _331_ sg13g2_a22oi_1 False False False -1 -1 2880 3780 
+65 _332_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+66 _333_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+67 _334_ sg13g2_and3_1 False False False -1 -1 3360 3780 
+68 _335_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+69 _336_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+70 _337_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+71 _338_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+72 _339_ sg13g2_buf_1 False False False -1 -1 1920 3780 
+73 _340_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+74 _341_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+75 _342_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+76 _343_ sg13g2_xor2_1 False False False -1 -1 3840 3780 
+77 _344_ sg13g2_nand3b_1 False False False -1 -1 3360 3780 
+78 _345_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+79 _346_ sg13g2_xor2_1 False False False -1 -1 3840 3780 
+80 _347_ sg13g2_xor2_1 False False False -1 -1 3840 3780 
+81 _348_ sg13g2_nor2_2 False False False -1 -1 2880 3780 
+82 _349_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+83 _350_ sg13g2_nor2b_2 False False False -1 -1 3360 3780 
+84 _351_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+85 _352_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+86 _353_ sg13g2_xor2_1 False False False -1 -1 3840 3780 
+87 _354_ sg13g2_xor2_1 False False False -1 -1 3840 3780 
+88 _355_ sg13g2_nor2_2 False False False -1 -1 2880 3780 
+89 _356_ sg13g2_nand4_1 False False False -1 -1 2880 3780 
+90 _357_ sg13g2_nor2b_1 False False False -1 -1 2400 3780 
+91 _358_ sg13g2_or2_1 False False False -1 -1 2400 3780 
+92 _359_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+93 _360_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+94 _361_ sg13g2_nand3_1 False False False -1 -1 2400 3780 
+95 _362_ sg13g2_nor2b_1 False False False -1 -1 2400 3780 
+96 _363_ sg13g2_inv_4 False False False -1 -1 2880 3780 
+97 _364_ sg13g2_nand2b_2 False False False -1 -1 3840 3780 
+98 _365_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+99 _366_ sg13g2_a21oi_2 False False False -1 -1 3840 3780 
+100 _367_ sg13g2_nor4_1 False False False -1 -1 2880 3780 
+101 _368_ sg13g2_nand3_1 False False False -1 -1 2400 3780 
+102 _369_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+103 _370_ sg13g2_nor4_1 False False False -1 -1 2880 3780 
+104 _371_ sg13g2_nand3_1 False False False -1 -1 2400 3780 
+105 _372_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+106 _373_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+107 _374_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+108 _375_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+109 _376_ sg13g2_and3_2 False False False -1 -1 3360 3780 
+110 _377_ sg13g2_nand2b_2 False False False -1 -1 3840 3780 
+111 _378_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+112 _379_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+113 _380_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+114 _381_ sg13g2_buf_8 False False False -1 -1 6240 3780 
+115 _382_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+116 _383_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+117 _384_ sg13g2_nand3_1 False False False -1 -1 2400 3780 
+118 _385_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+119 _386_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+120 _387_ sg13g2_and2_1 False False False -1 -1 2400 3780 
+121 _388_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+122 _389_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+123 _390_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+124 _391_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+125 _392_ sg13g2_nor3_2 False False False -1 -1 4320 3780 
+126 _393_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+127 _394_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+128 _395_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+129 _396_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+130 _397_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+131 _398_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+132 _399_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+133 _400_ sg13g2_a221oi_1 False False False -1 -1 3840 3780 
+134 _401_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+135 _402_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+136 _403_ sg13g2_a21oi_2 False False False -1 -1 3840 3780 
+137 _404_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+138 _405_ sg13g2_a221oi_1 False False False -1 -1 3840 3780 
+139 _406_ sg13g2_a22oi_1 False False False -1 -1 2880 3780 
+140 _407_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+141 _408_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+142 _409_ sg13g2_a22oi_1 False False False -1 -1 2880 3780 
+143 _410_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+144 _411_ sg13g2_nand3b_1 False False False -1 -1 3360 3780 
+145 _412_ sg13g2_a221oi_1 False False False -1 -1 3840 3780 
+146 _413_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+147 _414_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+148 _415_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+149 _416_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+150 _417_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+151 _418_ sg13g2_nor3_1 False False False -1 -1 2400 3780 
+152 _419_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+153 _420_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+154 _421_ sg13g2_a22oi_1 False False False -1 -1 2880 3780 
+155 _422_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+156 _423_ sg13g2_nand4_1 False False False -1 -1 2880 3780 
+157 _424_ sg13g2_nand3_1 False False False -1 -1 2400 3780 
+158 _425_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+159 _426_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+160 _427_ sg13g2_xor2_1 False False False -1 -1 3840 3780 
+161 _428_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+162 _429_ sg13g2_nor3_1 False False False -1 -1 2400 3780 
+163 _430_ sg13g2_nor2_2 False False False -1 -1 2880 3780 
+164 _431_ sg13g2_buf_4 False False False -1 -1 3840 3780 
+165 _432_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+166 _433_ sg13g2_buf_1 False False False -1 -1 1920 3780 
+167 _434_ sg13g2_or2_2 False False False -1 -1 2880 3780 
+168 _435_ sg13g2_and2_1 False False False -1 -1 2400 3780 
+169 _436_ sg13g2_buf_1 False False False -1 -1 1920 3780 
+170 _437_ sg13g2_nor3_1 False False False -1 -1 2400 3780 
+171 _438_ sg13g2_a221oi_1 False False False -1 -1 3840 3780 
+172 _439_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+173 _440_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+174 _441_ sg13g2_nor2b_1 False False False -1 -1 2400 3780 
+175 _442_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+176 _443_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+177 _444_ sg13g2_a221oi_1 False False False -1 -1 3840 3780 
+178 _445_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+179 _446_ sg13g2_or4_1 False False False -1 -1 3840 3780 
+180 _447_ sg13g2_nor3_1 False False False -1 -1 2400 3780 
+181 _448_ sg13g2_nand3_1 False False False -1 -1 2400 3780 
+182 _449_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+183 _450_ sg13g2_a22oi_1 False False False -1 -1 2880 3780 
+184 _451_ sg13g2_nor3_1 False False False -1 -1 2400 3780 
+185 _452_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+186 _453_ sg13g2_nand3_1 False False False -1 -1 2400 3780 
+187 _454_ sg13g2_or3_1 False False False -1 -1 3360 3780 
+188 _455_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+189 _456_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+190 _457_ sg13g2_and4_1 False False False -1 -1 3840 3780 
+191 _458_ sg13g2_nand3_1 False False False -1 -1 2400 3780 
+192 _459_ sg13g2_buf_1 False False False -1 -1 1920 3780 
+193 _460_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+194 _461_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+195 _462_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+196 _463_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+197 _464_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+198 _465_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+199 _466_ sg13g2_buf_1 False False False -1 -1 1920 3780 
+200 _467_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+201 _468_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+202 _469_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+203 _470_ sg13g2_and2_1 False False False -1 -1 2400 3780 
+204 _471_ sg13g2_or3_1 False False False -1 -1 3360 3780 
+205 _472_ sg13g2_nor3_1 False False False -1 -1 2400 3780 
+206 _473_ sg13g2_or3_1 False False False -1 -1 3360 3780 
+207 _474_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+208 _475_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+209 _476_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+210 _477_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+211 _478_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+212 _479_ sg13g2_and4_1 False False False -1 -1 3840 3780 
+213 _480_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+214 _481_ sg13g2_nor3_1 False False False -1 -1 2400 3780 
+215 _482_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+216 _483_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+217 _484_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+218 _485_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+219 _486_ sg13g2_and2_1 False False False -1 -1 2400 3780 
+220 _487_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+221 _488_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+222 _489_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+223 _490_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+224 _491_ sg13g2_a221oi_1 False False False -1 -1 3840 3780 
+225 _492_ sg13g2_or4_1 False False False -1 -1 3840 3780 
+226 _493_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+227 _494_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+228 _495_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+229 _496_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+230 _497_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+231 _498_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+232 _499_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+233 _500_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+234 _501_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+235 _502_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+236 _503_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+237 _504_ sg13g2_nor2b_1 False False False -1 -1 2400 3780 
+238 _505_ sg13g2_nor3_1 False False False -1 -1 2400 3780 
+239 _506_ sg13g2_a221oi_1 False False False -1 -1 3840 3780 
+240 _507_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+241 _508_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+242 _509_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+243 _510_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+244 _511_ sg13g2_nor3_1 False False False -1 -1 2400 3780 
+245 _512_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+246 _513_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+247 _514_ sg13g2_and2_1 False False False -1 -1 2400 3780 
+248 _515_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+249 _516_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+250 _517_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+251 _518_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+252 _519_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+253 _520_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+254 _521_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+255 _522_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+256 _523_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+257 _524_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+258 _525_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+259 _526_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+260 _527_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+261 _528_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+262 _529_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+263 _530_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+264 _531_ sg13g2_a22oi_1 False False False -1 -1 2880 3780 
+265 _532_ sg13g2_xor2_1 False False False -1 -1 3840 3780 
+266 _533_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+267 _534_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+268 _535_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+269 _536_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+270 _537_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+271 _538_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+272 _539_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+273 _540_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+274 _541_ sg13g2_xor2_1 False False False -1 -1 3840 3780 
+275 _542_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+276 _543_ sg13g2_nor3_1 False False False -1 -1 2400 3780 
+277 _544_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+278 _545_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+279 _546_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+280 _547_ sg13g2_and3_1 False False False -1 -1 3360 3780 
+281 _548_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+282 _549_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+283 _550_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+284 _551_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+285 _552_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+286 _553_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+287 _554_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+288 _555_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+289 _556_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+290 _557_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+291 _558_ sg13g2_nand2b_1 False False False -1 -1 2400 3780 
+292 _559_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+293 _560_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+294 _561_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+295 _562_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+296 _563_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+297 _564_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+298 _565_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+299 _566_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+300 _567_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+301 _568_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+302 _569_ sg13g2_a21oi_1 False False False -1 -1 2400 3780 
+303 _570_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+304 _571_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+305 _572_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+306 _573_ sg13g2_nor3_1 False False False -1 -1 2400 3780 
+307 _574_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+308 _575_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+309 _576_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+310 _577_ sg13g2_a21oi_2 False False False -1 -1 3840 3780 
+311 _578_ sg13g2_buf_8 False False False -1 -1 6240 3780 
+312 _579_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+313 _580_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+314 _581_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+315 _582_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+316 _583_ sg13g2_a21o_1 False False False -1 -1 3360 3780 
+317 _584_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+318 _585_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+319 _586_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+320 _587_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+321 _588_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+322 _589_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+323 _590_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+324 _591_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+325 _592_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+326 _593_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+327 _594_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+328 _595_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+329 _596_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+330 _597_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+331 _598_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+332 _599_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+333 _600_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+334 _601_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+335 _602_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+336 _603_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+337 _604_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+338 _605_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+339 _606_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+340 _607_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+341 _608_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+342 _609_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+343 _610_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+344 _611_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+345 _612_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+346 _613_ sg13g2_nand2_1 False False False -1 -1 1920 3780 
+347 _614_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+348 _615_ sg13g2_mux2_1 False False False -1 -1 4800 3780 
+349 _616_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+350 _617_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+351 _618_ sg13g2_inv_1 False False False -1 -1 1440 3780 
+352 _619_ sg13g2_o21ai_1 False False False -1 -1 2400 3780 
+353 _620_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+354 _621_ sg13g2_nor2_1 False False False -1 -1 1920 3780 
+355 _622_ sg13g2_xnor2_1 False False False -1 -1 3840 3780 
+356 _623_ sg13g2_tiehi False False False -1 -1 1920 3780 
+357 ctrl.state.out\[0\]$_DFF_P_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+358 ctrl.state.out\[1\]$_DFF_P_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+359 ctrl.state.out\[2\]$_DFF_P_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+360 dpath.a_reg.out\[0\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+361 dpath.a_reg.out\[10\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+362 dpath.a_reg.out\[11\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+363 dpath.a_reg.out\[12\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+364 dpath.a_reg.out\[13\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+365 dpath.a_reg.out\[14\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+366 dpath.a_reg.out\[15\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+367 dpath.a_reg.out\[1\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+368 dpath.a_reg.out\[2\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+369 dpath.a_reg.out\[3\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+370 dpath.a_reg.out\[4\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+371 dpath.a_reg.out\[5\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+372 dpath.a_reg.out\[6\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+373 dpath.a_reg.out\[7\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+374 dpath.a_reg.out\[8\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+375 dpath.a_reg.out\[9\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+376 dpath.b_reg.out\[0\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+377 dpath.b_reg.out\[10\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+378 dpath.b_reg.out\[11\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+379 dpath.b_reg.out\[12\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+380 dpath.b_reg.out\[13\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+381 dpath.b_reg.out\[14\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+382 dpath.b_reg.out\[15\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+383 dpath.b_reg.out\[1\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+384 dpath.b_reg.out\[2\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+385 dpath.b_reg.out\[3\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+386 dpath.b_reg.out\[4\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+387 dpath.b_reg.out\[5\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+388 dpath.b_reg.out\[6\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+389 dpath.b_reg.out\[7\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+390 dpath.b_reg.out\[8\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+391 dpath.b_reg.out\[9\]$_DFFE_PP_ sg13g2_dfrbp_1 False True False -1 -1 12480 3780 
+*********************************************************************************************
+Nets information (Each line represents one net. The first element in each line is the driver pin.):
+71 357 
+75 358 
+65 359 
+357 161 77 67 
+155 360 
+172 361 
+191 362 
+202 363 
+225 364 
+233 365 
+240 366 
+246 367 
+253 368 
+263 369 
+270 370 
+278 371 
+287 372 
+297 373 
+303 374 
+308 375 
+312 376 
+315 377 
+317 378 
+319 379 
+322 380 
+324 381 
+327 382 
+330 383 
+332 384 
+334 385 
+336 386 
+339 387 
+341 388 
+343 389 
+345 390 
+348 391 
+54 306 276 209 199 183 182 169 166 153 55 
+55 344 342 340 335 333 331 323 244 210 56 
+56 296 286 269 262 252 232 201 154 70 64 
+57 310 306 276 244 238 211 170 77 66 64 
+58 63 
+59 63 
+60 63 
+61 348 305 177 175 158 157 130 113 62 
+62 63 
+63 73 64 
+64 65 
+66 183 162 72 67 
+68 74 71 
+69 70 
+70 71 
+72 301 295 285 268 261 251 231 200 154 73 
+73 74 
+74 75 
+77 205 188 184 180 179 155 
+78 153 151 
+79 265 81 
+80 274 81 
+81 94 89 
+82 329 244 85 84 
+83 242 85 84 
+84 247 89 
+85 247 89 
+86 248 88 
+87 258 88 
+88 264 89 
+89 280 104 101 
+90 93 91 
+91 264 94 
+92 93 
+93 264 94 
+94 280 104 101 
+95 291 107 103 100 
+96 338 276 99 98 
+97 99 98 
+98 279 103 100 
+99 279 103 100 
+100 101 
+101 212 156 109 
+102 103 
+103 104 
+104 212 156 109 
+105 107 
+106 291 107 
+107 108 
+108 212 156 109 
+109 298 195 145 
+110 203 177 158 157 138 133 130 112 
+111 156 112 
+112 298 193 125 
+113 304 117 
+114 217 216 186 184 180 173 139 132 115 
+115 350 117 
+116 160 117 
+117 193 121 
+118 218 143 120 
+119 219 120 
+120 196 121 
+121 352 221 206 204 125 
+122 204 144 124 
+123 143 141 140 124 
+124 353 222 220 125 
+125 212 145 
+126 224 128 127 
+127 145 
+128 145 
+129 347 306 177 138 133 130 
+130 139 136 
+131 314 170 138 133 
+132 182 135 133 
+133 136 
+134 176 135 
+135 136 
+136 194 142 
+137 216 188 184 173 139 
+138 139 
+139 194 142 
+140 142 
+141 142 
+142 144 
+143 144 
+144 226 214 213 145 
+145 189 167 163 151 
+146 326 238 149 147 
+147 354 234 150 
+148 150 
+149 223 150 
+150 189 167 163 151 
+151 152 
+152 155 
+153 309 154 
+154 155 
+156 203 177 158 157 
+157 159 
+158 159 
+159 160 
+160 349 172 
+161 310 162 
+162 308 239 235 234 223 207 192 186 168 165 
+163 305 299 293 283 164 
+164 275 266 259 249 243 229 208 197 181 165 
+165 172 
+166 347 338 329 326 314 302 277 245 239 171 
+167 310 205 179 171 
+168 171 
+169 346 337 328 325 318 313 301 295 238 170 
+170 171 
+171 172 
+173 179 
+174 177 176 
+175 176 
+176 217 216 187 185 178 
+177 187 185 178 
+178 350 181 179 
+179 191 
+180 181 
+181 191 
+182 316 183 
+183 190 
+184 185 
+185 190 
+186 187 
+187 190 
+188 189 
+189 190 
+190 191 
+192 303 297 287 278 270 263 253 246 233 202 
+193 195 
+194 195 
+195 196 
+197 202 
+198 201 
+199 320 316 309 307 285 268 261 251 231 200 
+200 201 
+201 202 
+203 352 304 221 206 204 
+204 205 
+205 225 
+206 208 
+207 208 
+208 225 
+209 321 211 
+210 211 
+211 225 
+212 226 214 213 
+213 215 
+214 215 
+215 355 236 224 
+216 218 
+217 218 
+218 219 
+219 351 222 220 
+220 221 
+221 224 
+222 224 
+223 224 
+224 225 
+226 228 
+227 228 
+229 233 
+230 232 
+231 232 
+232 233 
+234 236 
+235 236 
+236 240 
+237 354 239 
+238 239 
+239 240 
+241 242 
+243 246 
+244 245 
+245 246 
+247 264 256 254 248 
+249 253 
+250 252 
+251 252 
+252 253 
+254 257 
+255 256 
+256 257 
+257 258 
+259 263 
+260 262 
+261 262 
+262 263 
+264 272 271 265 
+266 270 
+267 269 
+268 269 
+269 270 
+271 273 
+272 273 
+273 274 
+275 278 
+276 277 
+277 278 
+279 280 
+280 290 289 282 
+281 282 
+283 287 
+284 286 
+285 286 
+286 287 
+288 290 289 
+289 290 
+290 292 
+291 292 
+293 297 
+294 296 
+295 296 
+296 297 
+299 303 
+300 302 
+301 302 
+302 303 
+305 308 
+306 307 
+307 308 
+309 312 
+310 348 345 343 341 339 336 311 
+311 334 332 330 327 324 322 319 317 315 312 
+313 314 
+314 315 
+316 317 
+318 319 
+320 321 
+321 322 
+323 324 
+325 326 
+326 327 
+328 329 
+329 330 
+331 332 
+333 334 
+335 336 
+337 338 
+338 339 
+340 341 
+342 343 
+344 345 
+346 347 
+347 348 
+351 352 
+352 353 
+354 355 
+356 391 390 389 388 387 386 385 384 383 382 381 380 379 378 377 376 375 374 373 372 371 370 369 368 367 366 365 364 363 362 361 360 359 358 357 
+0 391 390 389 388 387 386 385 384 383 382 381 380 379 378 377 376 375 374 373 372 371 370 369 368 367 366 365 364 363 362 361 360 359 358 357 
+358 74 67 
+359 57 
+360 83 78 76 
+361 174 134 131 116 
+362 114 
+363 318 200 140 119 118 
+364 209 206 123 122 
+365 323 231 227 214 213 148 127 
+366 237 146 126 
+367 241 82 
+368 331 256 251 90 86 
+369 333 261 93 91 87 
+370 335 273 268 97 79 
+371 96 80 
+372 340 288 285 281 105 100 
+373 342 295 106 95 
+374 344 301 111 110 
+375 175 159 129 113 
+376 312 152 83 76 58 
+377 315 174 168 138 134 133 116 62 
+378 317 186 180 138 137 135 115 62 
+379 319 197 141 119 118 62 
+380 322 207 123 122 60 
+381 324 229 227 215 148 128 60 
+382 327 237 235 149 147 126 60 
+383 330 243 241 85 59 
+384 332 257 255 249 90 86 59 
+385 334 259 92 87 59 
+386 336 272 271 266 97 79 59 
+387 339 275 99 80 58 
+388 341 289 283 281 105 102 58 
+389 343 293 106 95 58 
+390 345 299 111 110 60 
+391 61 
+1 309 
+2 313 
+3 316 
+4 318 
+5 320 
+6 323 
+7 325 
+8 154 
+9 245 
+10 250 
+11 260 
+12 328 
+13 267 
+14 277 
+15 284 
+16 294 
+17 300 
+18 307 
+19 171 
+20 183 
+21 198 
+22 210 
+23 331 
+24 230 
+25 239 
+26 333 
+27 335 
+28 337 
+29 340 
+30 342 
+31 344 
+32 346 
+357 162 77 54 33 
+34 69 64 
+35 75 70 65 
+76 36 
+349 37 
+350 38 
+196 197 39 
+353 40 
+228 229 41 
+355 42 
+242 243 43 
+248 249 44 
+258 259 45 
+265 266 46 
+274 275 47 
+282 283 48 
+292 293 49 
+298 299 50 
+304 305 51 
+52 68 
+67 68 53 
+*********************************************************************************************
