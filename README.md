@@ -84,21 +84,15 @@ To convert the flat VLSI netlist into higher-order layout entities:
 ---
 
 ## Dependencies
-Ensure you have [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) and [uv](https://docs.astral.sh/uv/getting-started/installation/) installed.
-Conda is used solely to install CUDA 11 and CUDNN 8.
-If you have CUDA 11 and CUDNN 8 installed on the system you can safely ignore the `conda` commands.
-To get all the dependencies, please run the following in order:
+Ensure you have [pixi](https://pixi.sh/v0.47.0/) installed.
+This will allow you to install the dependencies for the design.
 
 ```bash
-conda create -n MLPlacement python=3.9
-conda activate MLPlacement
-conda install -c conda-forge cudatoolkit==11.8 cudnn==8.2.1.32
+# Installs python3.9 environment, all dependencies, CUDA support
+pixi install
 
-# Run only this if you have CUDA installed already
-uv sync --no-managed-python
-
-# You do not need to activate the environment again after running uv sync.
-conda deactivate MLPlacement
+# Run this to enter the environment installed above
+pixi shell
 
 # Source OpenROAD variables
 source OpenROAD-flow-scripts/env.sh

@@ -1,3 +1,7 @@
 **/__pycache__
 .venv
 MaskPLAN_Trained/
+
+# pixi environments
+.pixi
+*.egg-info
