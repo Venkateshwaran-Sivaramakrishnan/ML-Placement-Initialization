@@ -1,6 +1,7 @@
 import json
 from extractor import DesignParser
 import numpy as np
+import argparse
 
 # Mapping from boundary to boxes
 BOUNDARY_BOXES = {
@@ -36,7 +37,8 @@ def get_boundary(x, y, core):
     else:
         return "INTERNAL"
 
-def main(design_txt):
+def build_instance_pin_boundary_and_boxes(design = "gcd", tech = "ihp-sg13g2"):
+    design_txt = f"{design}_{tech}.txt"
     parser = DesignParser(design_txt)
     core = parser.design_info["core_region"]
 
@@ -169,5 +171,17 @@ def main(design_txt):
         json.dump(cluster_boxes, f, indent=2)
     print("✅ Saved cluster_boxes_map.json")
 
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Compute area for hierarchy clusters")
+    parser.add_argument("--design", type=str, required=True, help="Design name (e.g., ibex_nangate45)")
+    parser.add_argument("--tech", type=str, required=True, help="Technology name (e.g., nangate45)")
+    args = parser.parse_args()
+    return args
+
+
 if __name__ == "__main__":
-    main("gcd_ihp-sg13g2.txt")
+    args = parse_args()
+    design = args.design
+    tech = args.tech
+    build_instance_pin_boundary_and_boxes(design, tech)

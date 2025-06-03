@@ -1,4 +1,4 @@
-import re
+import re, pickle, json, os, argparse
 from collections import defaultdict
 import matplotlib.pyplot as plt
 
@@ -104,6 +104,34 @@ class DesignParser:
         print(f"Core size: {self.design_info.get('core_width')} x {self.design_info.get('core_height')} DBU")
         print(f"IO Pins: {len(self.io_pins)} | Instances: {len(self.instances)} | Nets: {len(self.hypergraph)}")
     
+    def save_design_as_pickle(self, design_name, output_dir="."):
+        filename = os.path.join(output_dir, f"{design_name}.pkl")
+
+        with open(filename, "wb") as f:
+            pickle.dump({
+                "design_info": self.design_info,
+                "io_pins": self.io_pins,
+                "instances": self.instances,
+                "hypergraph": self.hypergraph
+            }, f)
+
+        print(f"[✓] Pickle file saved to {filename}")
+
+    def save_design_as_json(self, design_name, output_dir="."):
+        filename = os.path.join(output_dir, f"{design_name}.json")
+
+        json_data = {
+            "design_info": self.design_info,
+            "io_pins": self.io_pins,
+            "instances": self.instances,
+            "hypergraph": dict(self.hypergraph)  # convert defaultdict to dict
+        }
+
+        with open(filename, "w") as f:
+            json.dump(json_data, f, indent=2)
+
+        print(f"[✓] Design saved to {filename}")
+
     #When run, it prints the summary and shows the floorplan:
     #Red = input pins
     #Blue = output pins
@@ -149,11 +177,21 @@ class DesignParser:
         plt.tight_layout()
         plt.show()
 
+def parse_arguments():
+    parser = argparse.ArgumentParser(description="Parse a design file.")
+    parser.add_argument("--design", required=True, help="Name of the design (e.g., ibex)")
+    parser.add_argument("--tech", required=True, help="Technology node (e.g., nangate45)")
+    return parser.parse_args()
+
 # -----------------------------
 # Main Execution Block
 # -----------------------------
 if __name__ == "__main__":
-    filepath = "ibex_nangate45.txt"
+    args = parse_arguments()
+
+    # Construct the filepath
+    filepath = f"{args.design}_{args.tech}.txt"
+    
     parser = DesignParser(filepath)
     parser.summary()
     
@@ -162,5 +200,6 @@ if __name__ == "__main__":
     sample_pin = next(iter(parser.io_pins))
     print(f"\nSample Net {sample_net}: {parser.hypergraph[sample_net]}")
     print(f"Sample I/O Pin {sample_pin}: {parser.io_pins[sample_pin]}")
-    print(parser.hypergraph)
     parser.plot_layout()
+    parser.save_design_as_pickle(args.design)
+    parser.save_design_as_json(args.design)
