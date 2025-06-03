@@ -1,0 +1,2681 @@
+[
+  {
+    "level": 0,
+    "clusters": [
+      {
+        "node": 54,
+        "cluster": 0
+      },
+      {
+        "node": 56,
+        "cluster": 0
+      },
+      {
+        "node": 163,
+        "cluster": 0
+      },
+      {
+        "node": 173,
+        "cluster": 0
+      },
+      {
+        "node": 467,
+        "cluster": 0
+      },
+      {
+        "node": 519,
+        "cluster": 0
+      },
+      {
+        "node": 55,
+        "cluster": 1
+      },
+      {
+        "node": 60,
+        "cluster": 1
+      },
+      {
+        "node": 155,
+        "cluster": 1
+      },
+      {
+        "node": 167,
+        "cluster": 1
+      },
+      {
+        "node": 218,
+        "cluster": 1
+      },
+      {
+        "node": 463,
+        "cluster": 1
+      },
+      {
+        "node": 481,
+        "cluster": 1
+      },
+      {
+        "node": 59,
+        "cluster": 2
+      },
+      {
+        "node": 238,
+        "cluster": 2
+      },
+      {
+        "node": 287,
+        "cluster": 2
+      },
+      {
+        "node": 307,
+        "cluster": 2
+      },
+      {
+        "node": 335,
+        "cluster": 2
+      },
+      {
+        "node": 356,
+        "cluster": 2
+      },
+      {
+        "node": 440,
+        "cluster": 2
+      },
+      {
+        "node": 68,
+        "cluster": 3
+      },
+      {
+        "node": 76,
+        "cluster": 3
+      },
+      {
+        "node": 202,
+        "cluster": 3
+      },
+      {
+        "node": 204,
+        "cluster": 3
+      },
+      {
+        "node": 206,
+        "cluster": 3
+      },
+      {
+        "node": 211,
+        "cluster": 3
+      },
+      {
+        "node": 216,
+        "cluster": 3
+      },
+      {
+        "node": 231,
+        "cluster": 3
+      },
+      {
+        "node": 78,
+        "cluster": 4
+      },
+      {
+        "node": 83,
+        "cluster": 4
+      },
+      {
+        "node": 203,
+        "cluster": 4
+      },
+      {
+        "node": 62,
+        "cluster": 5
+      },
+      {
+        "node": 149,
+        "cluster": 5
+      },
+      {
+        "node": 472,
+        "cluster": 5
+      },
+      {
+        "node": 58,
+        "cluster": 6
+      },
+      {
+        "node": 171,
+        "cluster": 6
+      },
+      {
+        "node": 176,
+        "cluster": 6
+      },
+      {
+        "node": 435,
+        "cluster": 6
+      },
+      {
+        "node": 517,
+        "cluster": 6
+      },
+      {
+        "node": 521,
+        "cluster": 6
+      },
+      {
+        "node": 63,
+        "cluster": 7
+      },
+      {
+        "node": 158,
+        "cluster": 7
+      },
+      {
+        "node": 196,
+        "cluster": 7
+      },
+      {
+        "node": 373,
+        "cluster": 7
+      },
+      {
+        "node": 479,
+        "cluster": 7
+      },
+      {
+        "node": 484,
+        "cluster": 7
+      },
+      {
+        "node": 486,
+        "cluster": 7
+      },
+      {
+        "node": 66,
+        "cluster": 8
+      },
+      {
+        "node": 95,
+        "cluster": 8
+      },
+      {
+        "node": 97,
+        "cluster": 8
+      },
+      {
+        "node": 240,
+        "cluster": 8
+      },
+      {
+        "node": 379,
+        "cluster": 8
+      },
+      {
+        "node": 381,
+        "cluster": 8
+      },
+      {
+        "node": 487,
+        "cluster": 8
+      },
+      {
+        "node": 489,
+        "cluster": 8
+      },
+      {
+        "node": 79,
+        "cluster": 9
+      },
+      {
+        "node": 84,
+        "cluster": 9
+      },
+      {
+        "node": 86,
+        "cluster": 9
+      },
+      {
+        "node": 208,
+        "cluster": 9
+      },
+      {
+        "node": 93,
+        "cluster": 10
+      },
+      {
+        "node": 96,
+        "cluster": 10
+      },
+      {
+        "node": 207,
+        "cluster": 10
+      },
+      {
+        "node": 213,
+        "cluster": 10
+      },
+      {
+        "node": 458,
+        "cluster": 10
+      },
+      {
+        "node": 461,
+        "cluster": 10
+      },
+      {
+        "node": 99,
+        "cluster": 11
+      },
+      {
+        "node": 100,
+        "cluster": 11
+      },
+      {
+        "node": 109,
+        "cluster": 11
+      },
+      {
+        "node": 393,
+        "cluster": 11
+      },
+      {
+        "node": 395,
+        "cluster": 11
+      },
+      {
+        "node": 497,
+        "cluster": 11
+      },
+      {
+        "node": 103,
+        "cluster": 12
+      },
+      {
+        "node": 104,
+        "cluster": 12
+      },
+      {
+        "node": 243,
+        "cluster": 12
+      },
+      {
+        "node": 386,
+        "cluster": 12
+      },
+      {
+        "node": 388,
+        "cluster": 12
+      },
+      {
+        "node": 493,
+        "cluster": 12
+      },
+      {
+        "node": 121,
+        "cluster": 13
+      },
+      {
+        "node": 226,
+        "cluster": 13
+      },
+      {
+        "node": 264,
+        "cluster": 13
+      },
+      {
+        "node": 338,
+        "cluster": 13
+      },
+      {
+        "node": 415,
+        "cluster": 13
+      },
+      {
+        "node": 422,
+        "cluster": 13
+      },
+      {
+        "node": 130,
+        "cluster": 14
+      },
+      {
+        "node": 247,
+        "cluster": 14
+      },
+      {
+        "node": 249,
+        "cluster": 14
+      },
+      {
+        "node": 294,
+        "cluster": 14
+      },
+      {
+        "node": 315,
+        "cluster": 14
+      },
+      {
+        "node": 398,
+        "cluster": 14
+      },
+      {
+        "node": 405,
+        "cluster": 14
+      },
+      {
+        "node": 406,
+        "cluster": 14
+      },
+      {
+        "node": 140,
+        "cluster": 15
+      },
+      {
+        "node": 141,
+        "cluster": 15
+      },
+      {
+        "node": 181,
+        "cluster": 15
+      },
+      {
+        "node": 224,
+        "cluster": 15
+      },
+      {
+        "node": 262,
+        "cluster": 15
+      },
+      {
+        "node": 265,
+        "cluster": 15
+      },
+      {
+        "node": 288,
+        "cluster": 15
+      },
+      {
+        "node": 432,
+        "cluster": 15
+      },
+      {
+        "node": 152,
+        "cluster": 16
+      },
+      {
+        "node": 170,
+        "cluster": 16
+      },
+      {
+        "node": 188,
+        "cluster": 16
+      },
+      {
+        "node": 297,
+        "cluster": 16
+      },
+      {
+        "node": 298,
+        "cluster": 16
+      },
+      {
+        "node": 325,
+        "cluster": 16
+      },
+      {
+        "node": 327,
+        "cluster": 16
+      },
+      {
+        "node": 336,
+        "cluster": 16
+      },
+      {
+        "node": 159,
+        "cluster": 17
+      },
+      {
+        "node": 197,
+        "cluster": 17
+      },
+      {
+        "node": 339,
+        "cluster": 17
+      },
+      {
+        "node": 348,
+        "cluster": 17
+      },
+      {
+        "node": 366,
+        "cluster": 17
+      },
+      {
+        "node": 368,
+        "cluster": 17
+      },
+      {
+        "node": 232,
+        "cluster": 18
+      },
+      {
+        "node": 281,
+        "cluster": 18
+      },
+      {
+        "node": 301,
+        "cluster": 18
+      },
+      {
+        "node": 329,
+        "cluster": 18
+      },
+      {
+        "node": 350,
+        "cluster": 18
+      },
+      {
+        "node": 370,
+        "cluster": 18
+      },
+      {
+        "node": 450,
+        "cluster": 18
+      },
+      {
+        "node": 260,
+        "cluster": 19
+      },
+      {
+        "node": 423,
+        "cluster": 19
+      },
+      {
+        "node": 276,
+        "cluster": 20
+      },
+      {
+        "node": 279,
+        "cluster": 20
+      },
+      {
+        "node": 57,
+        "cluster": 21
+      },
+      {
+        "node": 178,
+        "cluster": 21
+      },
+      {
+        "node": 515,
+        "cluster": 21
+      },
+      {
+        "node": 61,
+        "cluster": 22
+      },
+      {
+        "node": 143,
+        "cluster": 22
+      },
+      {
+        "node": 145,
+        "cluster": 22
+      },
+      {
+        "node": 477,
+        "cluster": 22
+      },
+      {
+        "node": 64,
+        "cluster": 23
+      },
+      {
+        "node": 101,
+        "cluster": 23
+      },
+      {
+        "node": 495,
+        "cluster": 23
+      },
+      {
+        "node": 65,
+        "cluster": 24
+      },
+      {
+        "node": 105,
+        "cluster": 24
+      },
+      {
+        "node": 491,
+        "cluster": 24
+      },
+      {
+        "node": 69,
+        "cluster": 25
+      },
+      {
+        "node": 114,
+        "cluster": 25
+      },
+      {
+        "node": 511,
+        "cluster": 25
+      },
+      {
+        "node": 70,
+        "cluster": 26
+      },
+      {
+        "node": 119,
+        "cluster": 26
+      },
+      {
+        "node": 507,
+        "cluster": 26
+      },
+      {
+        "node": 71,
+        "cluster": 27
+      },
+      {
+        "node": 124,
+        "cluster": 27
+      },
+      {
+        "node": 503,
+        "cluster": 27
+      },
+      {
+        "node": 72,
+        "cluster": 28
+      },
+      {
+        "node": 128,
+        "cluster": 28
+      },
+      {
+        "node": 137,
+        "cluster": 28
+      },
+      {
+        "node": 499,
+        "cluster": 28
+      },
+      {
+        "node": 73,
+        "cluster": 29
+      },
+      {
+        "node": 117,
+        "cluster": 29
+      },
+      {
+        "node": 126,
+        "cluster": 29
+      },
+      {
+        "node": 400,
+        "cluster": 29
+      },
+      {
+        "node": 417,
+        "cluster": 29
+      },
+      {
+        "node": 501,
+        "cluster": 29
+      },
+      {
+        "node": 509,
+        "cluster": 29
+      },
+      {
+        "node": 122,
+        "cluster": 30
+      },
+      {
+        "node": 410,
+        "cluster": 30
+      },
+      {
+        "node": 505,
+        "cluster": 30
+      },
+      {
+        "node": 115,
+        "cluster": 31
+      },
+      {
+        "node": 426,
+        "cluster": 31
+      },
+      {
+        "node": 513,
+        "cluster": 31
+      },
+      {
+        "node": 113,
+        "cluster": 32
+      },
+      {
+        "node": 123,
+        "cluster": 32
+      },
+      {
+        "node": 212,
+        "cluster": 32
+      },
+      {
+        "node": 402,
+        "cluster": 32
+      },
+      {
+        "node": 412,
+        "cluster": 32
+      },
+      {
+        "node": 419,
+        "cluster": 32
+      },
+      {
+        "node": 428,
+        "cluster": 32
+      },
+      {
+        "node": 177,
+        "cluster": 33
+      },
+      {
+        "node": 437,
+        "cluster": 33
+      },
+      {
+        "node": 118,
+        "cluster": 34
+      },
+      {
+        "node": 172,
+        "cluster": 34
+      },
+      {
+        "node": 453,
+        "cluster": 34
+      },
+      {
+        "node": 127,
+        "cluster": 35
+      },
+      {
+        "node": 242,
+        "cluster": 36
+      },
+      {
+        "node": 376,
+        "cluster": 36
+      },
+      {
+        "node": 441,
+        "cluster": 36
+      },
+      {
+        "node": 443,
+        "cluster": 36
+      },
+      {
+        "node": 447,
+        "cluster": 36
+      },
+      {
+        "node": 457,
+        "cluster": 37
+      },
+      {
+        "node": 460,
+        "cluster": 37
+      },
+      {
+        "node": 475,
+        "cluster": 37
+      },
+      {
+        "node": 516,
+        "cluster": 37
+      },
+      {
+        "node": 520,
+        "cluster": 37
+      },
+      {
+        "node": 77,
+        "cluster": 38
+      },
+      {
+        "node": 82,
+        "cluster": 38
+      },
+      {
+        "node": 85,
+        "cluster": 38
+      },
+      {
+        "node": 91,
+        "cluster": 38
+      },
+      {
+        "node": 92,
+        "cluster": 38
+      },
+      {
+        "node": 81,
+        "cluster": 39
+      },
+      {
+        "node": 89,
+        "cluster": 39
+      },
+      {
+        "node": 90,
+        "cluster": 39
+      },
+      {
+        "node": 98,
+        "cluster": 40
+      },
+      {
+        "node": 102,
+        "cluster": 40
+      },
+      {
+        "node": 106,
+        "cluster": 40
+      },
+      {
+        "node": 110,
+        "cluster": 40
+      },
+      {
+        "node": 241,
+        "cluster": 40
+      },
+      {
+        "node": 244,
+        "cluster": 40
+      },
+      {
+        "node": 256,
+        "cluster": 40
+      },
+      {
+        "node": 107,
+        "cluster": 41
+      },
+      {
+        "node": 108,
+        "cluster": 41
+      },
+      {
+        "node": 111,
+        "cluster": 41
+      },
+      {
+        "node": 131,
+        "cluster": 41
+      },
+      {
+        "node": 219,
+        "cluster": 41
+      },
+      {
+        "node": 222,
+        "cluster": 41
+      },
+      {
+        "node": 239,
+        "cluster": 41
+      },
+      {
+        "node": 384,
+        "cluster": 41
+      },
+      {
+        "node": 116,
+        "cluster": 42
+      },
+      {
+        "node": 133,
+        "cluster": 42
+      },
+      {
+        "node": 134,
+        "cluster": 42
+      },
+      {
+        "node": 272,
+        "cluster": 42
+      },
+      {
+        "node": 120,
+        "cluster": 43
+      },
+      {
+        "node": 125,
+        "cluster": 43
+      },
+      {
+        "node": 136,
+        "cluster": 43
+      },
+      {
+        "node": 253,
+        "cluster": 43
+      },
+      {
+        "node": 254,
+        "cluster": 43
+      },
+      {
+        "node": 129,
+        "cluster": 44
+      },
+      {
+        "node": 138,
+        "cluster": 44
+      },
+      {
+        "node": 257,
+        "cluster": 44
+      },
+      {
+        "node": 132,
+        "cluster": 45
+      },
+      {
+        "node": 183,
+        "cluster": 45
+      },
+      {
+        "node": 193,
+        "cluster": 45
+      },
+      {
+        "node": 290,
+        "cluster": 45
+      },
+      {
+        "node": 291,
+        "cluster": 45
+      },
+      {
+        "node": 293,
+        "cluster": 45
+      },
+      {
+        "node": 135,
+        "cluster": 46
+      },
+      {
+        "node": 139,
+        "cluster": 46
+      },
+      {
+        "node": 182,
+        "cluster": 46
+      },
+      {
+        "node": 187,
+        "cluster": 46
+      },
+      {
+        "node": 220,
+        "cluster": 46
+      },
+      {
+        "node": 227,
+        "cluster": 46
+      },
+      {
+        "node": 289,
+        "cluster": 46
+      },
+      {
+        "node": 142,
+        "cluster": 47
+      },
+      {
+        "node": 332,
+        "cluster": 47
+      },
+      {
+        "node": 144,
+        "cluster": 48
+      },
+      {
+        "node": 146,
+        "cluster": 48
+      },
+      {
+        "node": 151,
+        "cluster": 48
+      },
+      {
+        "node": 194,
+        "cluster": 48
+      },
+      {
+        "node": 318,
+        "cluster": 48
+      },
+      {
+        "node": 319,
+        "cluster": 48
+      },
+      {
+        "node": 147,
+        "cluster": 49
+      },
+      {
+        "node": 157,
+        "cluster": 49
+      },
+      {
+        "node": 326,
+        "cluster": 49
+      },
+      {
+        "node": 346,
+        "cluster": 49
+      },
+      {
+        "node": 347,
+        "cluster": 49
+      },
+      {
+        "node": 357,
+        "cluster": 49
+      },
+      {
+        "node": 362,
+        "cluster": 49
+      },
+      {
+        "node": 156,
+        "cluster": 50
+      },
+      {
+        "node": 198,
+        "cluster": 50
+      },
+      {
+        "node": 367,
+        "cluster": 50
+      },
+      {
+        "node": 148,
+        "cluster": 51
+      },
+      {
+        "node": 150,
+        "cluster": 51
+      },
+      {
+        "node": 304,
+        "cluster": 51
+      },
+      {
+        "node": 474,
+        "cluster": 51
+      },
+      {
+        "node": 153,
+        "cluster": 52
+      },
+      {
+        "node": 154,
+        "cluster": 52
+      },
+      {
+        "node": 353,
+        "cluster": 52
+      },
+      {
+        "node": 483,
+        "cluster": 52
+      },
+      {
+        "node": 160,
+        "cluster": 53
+      },
+      {
+        "node": 192,
+        "cluster": 53
+      },
+      {
+        "node": 195,
+        "cluster": 53
+      },
+      {
+        "node": 342,
+        "cluster": 53
+      },
+      {
+        "node": 343,
+        "cluster": 53
+      },
+      {
+        "node": 161,
+        "cluster": 54
+      },
+      {
+        "node": 162,
+        "cluster": 54
+      },
+      {
+        "node": 284,
+        "cluster": 54
+      },
+      {
+        "node": 469,
+        "cluster": 54
+      },
+      {
+        "node": 164,
+        "cluster": 55
+      },
+      {
+        "node": 168,
+        "cluster": 55
+      },
+      {
+        "node": 189,
+        "cluster": 55
+      },
+      {
+        "node": 190,
+        "cluster": 55
+      },
+      {
+        "node": 191,
+        "cluster": 55
+      },
+      {
+        "node": 271,
+        "cluster": 55
+      },
+      {
+        "node": 165,
+        "cluster": 56
+      },
+      {
+        "node": 166,
+        "cluster": 56
+      },
+      {
+        "node": 235,
+        "cluster": 56
+      },
+      {
+        "node": 465,
+        "cluster": 56
+      },
+      {
+        "node": 169,
+        "cluster": 57
+      },
+      {
+        "node": 230,
+        "cluster": 57
+      },
+      {
+        "node": 261,
+        "cluster": 57
+      },
+      {
+        "node": 277,
+        "cluster": 57
+      },
+      {
+        "node": 278,
+        "cluster": 57
+      },
+      {
+        "node": 296,
+        "cluster": 57
+      },
+      {
+        "node": 299,
+        "cluster": 57
+      },
+      {
+        "node": 308,
+        "cluster": 57
+      },
+      {
+        "node": 174,
+        "cluster": 58
+      },
+      {
+        "node": 179,
+        "cluster": 58
+      },
+      {
+        "node": 185,
+        "cluster": 58
+      },
+      {
+        "node": 186,
+        "cluster": 58
+      },
+      {
+        "node": 270,
+        "cluster": 58
+      },
+      {
+        "node": 273,
+        "cluster": 58
+      },
+      {
+        "node": 175,
+        "cluster": 59
+      },
+      {
+        "node": 449,
+        "cluster": 59
+      },
+      {
+        "node": 180,
+        "cluster": 60
+      },
+      {
+        "node": 184,
+        "cluster": 60
+      },
+      {
+        "node": 431,
+        "cluster": 60
+      },
+      {
+        "node": 209,
+        "cluster": 61
+      },
+      {
+        "node": 401,
+        "cluster": 61
+      },
+      {
+        "node": 411,
+        "cluster": 61
+      },
+      {
+        "node": 418,
+        "cluster": 61
+      },
+      {
+        "node": 427,
+        "cluster": 61
+      },
+      {
+        "node": 436,
+        "cluster": 61
+      },
+      {
+        "node": 452,
+        "cluster": 61
+      },
+      {
+        "node": 217,
+        "cluster": 62
+      },
+      {
+        "node": 456,
+        "cluster": 62
+      },
+      {
+        "node": 225,
+        "cluster": 63
+      },
+      {
+        "node": 337,
+        "cluster": 63
+      },
+      {
+        "node": 340,
+        "cluster": 63
+      },
+      {
+        "node": 228,
+        "cluster": 64
+      },
+      {
+        "node": 341,
+        "cluster": 64
+      },
+      {
+        "node": 245,
+        "cluster": 65
+      },
+      {
+        "node": 248,
+        "cluster": 65
+      },
+      {
+        "node": 252,
+        "cluster": 65
+      },
+      {
+        "node": 313,
+        "cluster": 65
+      },
+      {
+        "node": 391,
+        "cluster": 65
+      },
+      {
+        "node": 445,
+        "cluster": 65
+      },
+      {
+        "node": 250,
+        "cluster": 66
+      },
+      {
+        "node": 259,
+        "cluster": 66
+      },
+      {
+        "node": 251,
+        "cluster": 67
+      },
+      {
+        "node": 255,
+        "cluster": 67
+      },
+      {
+        "node": 266,
+        "cluster": 67
+      },
+      {
+        "node": 311,
+        "cluster": 67
+      },
+      {
+        "node": 316,
+        "cluster": 67
+      },
+      {
+        "node": 442,
+        "cluster": 67
+      },
+      {
+        "node": 258,
+        "cluster": 68
+      },
+      {
+        "node": 314,
+        "cluster": 68
+      },
+      {
+        "node": 407,
+        "cluster": 68
+      },
+      {
+        "node": 446,
+        "cluster": 68
+      },
+      {
+        "node": 263,
+        "cluster": 69
+      },
+      {
+        "node": 274,
+        "cluster": 69
+      },
+      {
+        "node": 310,
+        "cluster": 69
+      },
+      {
+        "node": 321,
+        "cluster": 69
+      },
+      {
+        "node": 269,
+        "cluster": 70
+      },
+      {
+        "node": 275,
+        "cluster": 70
+      },
+      {
+        "node": 359,
+        "cluster": 70
+      },
+      {
+        "node": 360,
+        "cluster": 70
+      },
+      {
+        "node": 361,
+        "cluster": 70
+      },
+      {
+        "node": 309,
+        "cluster": 71
+      },
+      {
+        "node": 322,
+        "cluster": 71
+      },
+      {
+        "node": 358,
+        "cluster": 71
+      },
+      {
+        "node": 363,
+        "cluster": 71
+      },
+      {
+        "node": 312,
+        "cluster": 72
+      },
+      {
+        "node": 317,
+        "cluster": 72
+      },
+      {
+        "node": 444,
+        "cluster": 72
+      },
+      {
+        "node": 67,
+        "cluster": 73
+      },
+      {
+        "node": 74,
+        "cluster": 74
+      },
+      {
+        "node": 351,
+        "cluster": 74
+      },
+      {
+        "node": 80,
+        "cluster": 75
+      },
+      {
+        "node": 471,
+        "cluster": 75
+      },
+      {
+        "node": 502,
+        "cluster": 75
+      },
+      {
+        "node": 506,
+        "cluster": 75
+      },
+      {
+        "node": 510,
+        "cluster": 75
+      },
+      {
+        "node": 514,
+        "cluster": 75
+      },
+      {
+        "node": 518,
+        "cluster": 75
+      },
+      {
+        "node": 87,
+        "cluster": 76
+      },
+      {
+        "node": 462,
+        "cluster": 76
+      },
+      {
+        "node": 466,
+        "cluster": 76
+      },
+      {
+        "node": 470,
+        "cluster": 76
+      },
+      {
+        "node": 476,
+        "cluster": 76
+      },
+      {
+        "node": 490,
+        "cluster": 76
+      },
+      {
+        "node": 494,
+        "cluster": 76
+      },
+      {
+        "node": 498,
+        "cluster": 76
+      },
+      {
+        "node": 480,
+        "cluster": 77
+      },
+      {
+        "node": 88,
+        "cluster": 78
+      },
+      {
+        "node": 214,
+        "cluster": 78
+      },
+      {
+        "node": 236,
+        "cluster": 78
+      },
+      {
+        "node": 285,
+        "cluster": 78
+      },
+      {
+        "node": 305,
+        "cluster": 78
+      },
+      {
+        "node": 354,
+        "cluster": 78
+      },
+      {
+        "node": 382,
+        "cluster": 78
+      },
+      {
+        "node": 389,
+        "cluster": 78
+      },
+      {
+        "node": 333,
+        "cluster": 79
+      },
+      {
+        "node": 374,
+        "cluster": 79
+      },
+      {
+        "node": 205,
+        "cluster": 80
+      },
+      {
+        "node": 399,
+        "cluster": 80
+      },
+      {
+        "node": 409,
+        "cluster": 80
+      },
+      {
+        "node": 416,
+        "cluster": 80
+      },
+      {
+        "node": 378,
+        "cluster": 81
+      },
+      {
+        "node": 385,
+        "cluster": 81
+      },
+      {
+        "node": 392,
+        "cluster": 81
+      },
+      {
+        "node": 425,
+        "cluster": 81
+      },
+      {
+        "node": 434,
+        "cluster": 81
+      },
+      {
+        "node": 246,
+        "cluster": 82
+      },
+      {
+        "node": 522,
+        "cluster": 83
+      },
+      {
+        "node": 528,
+        "cluster": 83
+      },
+      {
+        "node": 532,
+        "cluster": 83
+      },
+      {
+        "node": 539,
+        "cluster": 83
+      },
+      {
+        "node": 540,
+        "cluster": 83
+      },
+      {
+        "node": 547,
+        "cluster": 83
+      },
+      {
+        "node": 556,
+        "cluster": 83
+      },
+      {
+        "node": 531,
+        "cluster": 84
+      },
+      {
+        "node": 534,
+        "cluster": 84
+      },
+      {
+        "node": 535,
+        "cluster": 84
+      },
+      {
+        "node": 536,
+        "cluster": 84
+      },
+      {
+        "node": 541,
+        "cluster": 84
+      },
+      {
+        "node": 542,
+        "cluster": 84
+      },
+      {
+        "node": 550,
+        "cluster": 85
+      },
+      {
+        "node": 552,
+        "cluster": 85
+      },
+      {
+        "node": 523,
+        "cluster": 86
+      },
+      {
+        "node": 524,
+        "cluster": 86
+      },
+      {
+        "node": 530,
+        "cluster": 86
+      },
+      {
+        "node": 538,
+        "cluster": 86
+      },
+      {
+        "node": 543,
+        "cluster": 86
+      },
+      {
+        "node": 549,
+        "cluster": 86
+      },
+      {
+        "node": 554,
+        "cluster": 86
+      },
+      {
+        "node": 555,
+        "cluster": 86
+      },
+      {
+        "node": 525,
+        "cluster": 87
+      },
+      {
+        "node": 533,
+        "cluster": 87
+      },
+      {
+        "node": 537,
+        "cluster": 87
+      },
+      {
+        "node": 546,
+        "cluster": 87
+      },
+      {
+        "node": 548,
+        "cluster": 87
+      },
+      {
+        "node": 526,
+        "cluster": 88
+      },
+      {
+        "node": 527,
+        "cluster": 88
+      },
+      {
+        "node": 529,
+        "cluster": 88
+      },
+      {
+        "node": 544,
+        "cluster": 88
+      },
+      {
+        "node": 545,
+        "cluster": 88
+      },
+      {
+        "node": 551,
+        "cluster": 88
+      },
+      {
+        "node": 553,
+        "cluster": 88
+      },
+      {
+        "node": 210,
+        "cluster": 89
+      },
+      {
+        "node": 234,
+        "cluster": 89
+      },
+      {
+        "node": 283,
+        "cluster": 89
+      },
+      {
+        "node": 303,
+        "cluster": 89
+      },
+      {
+        "node": 331,
+        "cluster": 89
+      },
+      {
+        "node": 372,
+        "cluster": 89
+      },
+      {
+        "node": 387,
+        "cluster": 89
+      },
+      {
+        "node": 394,
+        "cluster": 89
+      },
+      {
+        "node": 352,
+        "cluster": 90
+      },
+      {
+        "node": 380,
+        "cluster": 90
+      },
+      {
+        "node": 267,
+        "cluster": 91
+      },
+      {
+        "node": 268,
+        "cluster": 92
+      },
+      {
+        "node": 324,
+        "cluster": 93
+      },
+      {
+        "node": 330,
+        "cluster": 94
+      },
+      {
+        "node": 377,
+        "cluster": 95
+      },
+      {
+        "node": 396,
+        "cluster": 96
+      },
+      {
+        "node": 403,
+        "cluster": 96
+      },
+      {
+        "node": 413,
+        "cluster": 96
+      },
+      {
+        "node": 420,
+        "cluster": 96
+      },
+      {
+        "node": 429,
+        "cluster": 96
+      },
+      {
+        "node": 438,
+        "cluster": 96
+      },
+      {
+        "node": 454,
+        "cluster": 96
+      },
+      {
+        "node": 433,
+        "cluster": 97
+      },
+      {
+        "node": 478,
+        "cluster": 98
+      },
+      {
+        "node": 482,
+        "cluster": 98
+      },
+      {
+        "node": 485,
+        "cluster": 98
+      },
+      {
+        "node": 488,
+        "cluster": 98
+      },
+      {
+        "node": 492,
+        "cluster": 98
+      },
+      {
+        "node": 500,
+        "cluster": 98
+      },
+      {
+        "node": 508,
+        "cluster": 98
+      },
+      {
+        "node": 512,
+        "cluster": 98
+      },
+      {
+        "node": 496,
+        "cluster": 99
+      },
+      {
+        "node": 504,
+        "cluster": 99
+      },
+      {
+        "node": 199,
+        "cluster": 100
+      },
+      {
+        "node": 282,
+        "cluster": 100
+      },
+      {
+        "node": 323,
+        "cluster": 100
+      },
+      {
+        "node": 344,
+        "cluster": 100
+      },
+      {
+        "node": 369,
+        "cluster": 100
+      },
+      {
+        "node": 421,
+        "cluster": 100
+      },
+      {
+        "node": 200,
+        "cluster": 101
+      },
+      {
+        "node": 223,
+        "cluster": 102
+      },
+      {
+        "node": 229,
+        "cluster": 103
+      },
+      {
+        "node": 233,
+        "cluster": 104
+      },
+      {
+        "node": 306,
+        "cluster": 104
+      },
+      {
+        "node": 408,
+        "cluster": 104
+      },
+      {
+        "node": 451,
+        "cluster": 104
+      },
+      {
+        "node": 455,
+        "cluster": 104
+      },
+      {
+        "node": 237,
+        "cluster": 105
+      },
+      {
+        "node": 292,
+        "cluster": 106
+      },
+      {
+        "node": 349,
+        "cluster": 107
+      },
+      {
+        "node": 383,
+        "cluster": 108
+      },
+      {
+        "node": 404,
+        "cluster": 109
+      },
+      {
+        "node": 414,
+        "cluster": 110
+      },
+      {
+        "node": 430,
+        "cluster": 111
+      },
+      {
+        "node": 439,
+        "cluster": 112
+      },
+      {
+        "node": 75,
+        "cluster": 113
+      },
+      {
+        "node": 345,
+        "cluster": 113
+      },
+      {
+        "node": 365,
+        "cluster": 113
+      },
+      {
+        "node": 390,
+        "cluster": 113
+      },
+      {
+        "node": 94,
+        "cluster": 114
+      },
+      {
+        "node": 112,
+        "cluster": 115
+      },
+      {
+        "node": 201,
+        "cluster": 116
+      },
+      {
+        "node": 215,
+        "cluster": 117
+      },
+      {
+        "node": 221,
+        "cluster": 118
+      },
+      {
+        "node": 300,
+        "cluster": 118
+      },
+      {
+        "node": 371,
+        "cluster": 118
+      },
+      {
+        "node": 280,
+        "cluster": 119
+      },
+      {
+        "node": 286,
+        "cluster": 119
+      },
+      {
+        "node": 424,
+        "cluster": 119
+      },
+      {
+        "node": 295,
+        "cluster": 120
+      },
+      {
+        "node": 302,
+        "cluster": 121
+      },
+      {
+        "node": 320,
+        "cluster": 122
+      },
+      {
+        "node": 328,
+        "cluster": 123
+      },
+      {
+        "node": 334,
+        "cluster": 124
+      },
+      {
+        "node": 355,
+        "cluster": 125
+      },
+      {
+        "node": 364,
+        "cluster": 126
+      },
+      {
+        "node": 375,
+        "cluster": 127
+      },
+      {
+        "node": 397,
+        "cluster": 128
+      },
+      {
+        "node": 448,
+        "cluster": 129
+      },
+      {
+        "node": 459,
+        "cluster": 130
+      },
+      {
+        "node": 464,
+        "cluster": 130
+      },
+      {
+        "node": 468,
+        "cluster": 130
+      },
+      {
+        "node": 473,
+        "cluster": 130
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "clusters": [
+      {
+        "node": "L1_N0",
+        "cluster": 0
+      },
+      {
+        "node": "L1_N113",
+        "cluster": 0
+      },
+      {
+        "node": "L1_N114",
+        "cluster": 0
+      },
+      {
+        "node": "L1_N128",
+        "cluster": 0
+      },
+      {
+        "node": "L1_N19",
+        "cluster": 0
+      },
+      {
+        "node": "L1_N26",
+        "cluster": 0
+      },
+      {
+        "node": "L1_N74",
+        "cluster": 0
+      },
+      {
+        "node": "L1_N12",
+        "cluster": 1
+      },
+      {
+        "node": "L1_N52",
+        "cluster": 1
+      },
+      {
+        "node": "L1_N61",
+        "cluster": 1
+      },
+      {
+        "node": "L1_N62",
+        "cluster": 1
+      },
+      {
+        "node": "L1_N67",
+        "cluster": 1
+      },
+      {
+        "node": "L1_N14",
+        "cluster": 2
+      },
+      {
+        "node": "L1_N34",
+        "cluster": 2
+      },
+      {
+        "node": "L1_N40",
+        "cluster": 2
+      },
+      {
+        "node": "L1_N68",
+        "cluster": 2
+      },
+      {
+        "node": "L1_N91",
+        "cluster": 2
+      },
+      {
+        "node": "L1_N105",
+        "cluster": 3
+      },
+      {
+        "node": "L1_N53",
+        "cluster": 3
+      },
+      {
+        "node": "L1_N94",
+        "cluster": 3
+      },
+      {
+        "node": "L1_N98",
+        "cluster": 3
+      },
+      {
+        "node": "L1_N106",
+        "cluster": 4
+      },
+      {
+        "node": "L1_N119",
+        "cluster": 4
+      },
+      {
+        "node": "L1_N121",
+        "cluster": 4
+      },
+      {
+        "node": "L1_N43",
+        "cluster": 4
+      },
+      {
+        "node": "L1_N58",
+        "cluster": 4
+      },
+      {
+        "node": "L1_N11",
+        "cluster": 5
+      },
+      {
+        "node": "L1_N69",
+        "cluster": 5
+      },
+      {
+        "node": "L1_N85",
+        "cluster": 5
+      },
+      {
+        "node": "L1_N4",
+        "cluster": 6
+      },
+      {
+        "node": "L1_N75",
+        "cluster": 6
+      },
+      {
+        "node": "L1_N83",
+        "cluster": 6
+      },
+      {
+        "node": "L1_N96",
+        "cluster": 6
+      },
+      {
+        "node": "L1_N97",
+        "cluster": 6
+      },
+      {
+        "node": "L1_N99",
+        "cluster": 6
+      },
+      {
+        "node": "L1_N115",
+        "cluster": 7
+      },
+      {
+        "node": "L1_N16",
+        "cluster": 7
+      },
+      {
+        "node": "L1_N38",
+        "cluster": 7
+      },
+      {
+        "node": "L1_N118",
+        "cluster": 8
+      },
+      {
+        "node": "L1_N18",
+        "cluster": 8
+      },
+      {
+        "node": "L1_N35",
+        "cluster": 8
+      },
+      {
+        "node": "L1_N54",
+        "cluster": 8
+      },
+      {
+        "node": "L1_N77",
+        "cluster": 8
+      },
+      {
+        "node": "L1_N89",
+        "cluster": 8
+      },
+      {
+        "node": "L1_N44",
+        "cluster": 9
+      },
+      {
+        "node": "L1_N5",
+        "cluster": 9
+      },
+      {
+        "node": "L1_N110",
+        "cluster": 10
+      },
+      {
+        "node": "L1_N126",
+        "cluster": 10
+      },
+      {
+        "node": "L1_N45",
+        "cluster": 10
+      },
+      {
+        "node": "L1_N50",
+        "cluster": 10
+      },
+      {
+        "node": "L1_N122",
+        "cluster": 11
+      },
+      {
+        "node": "L1_N13",
+        "cluster": 11
+      },
+      {
+        "node": "L1_N23",
+        "cluster": 11
+      },
+      {
+        "node": "L1_N64",
+        "cluster": 11
+      },
+      {
+        "node": "L1_N84",
+        "cluster": 11
+      },
+      {
+        "node": "L1_N1",
+        "cluster": 12
+      },
+      {
+        "node": "L1_N112",
+        "cluster": 12
+      },
+      {
+        "node": "L1_N127",
+        "cluster": 12
+      },
+      {
+        "node": "L1_N7",
+        "cluster": 12
+      },
+      {
+        "node": "L1_N72",
+        "cluster": 12
+      },
+      {
+        "node": "L1_N95",
+        "cluster": 12
+      },
+      {
+        "node": "L1_N101",
+        "cluster": 13
+      },
+      {
+        "node": "L1_N117",
+        "cluster": 13
+      },
+      {
+        "node": "L1_N59",
+        "cluster": 13
+      },
+      {
+        "node": "L1_N103",
+        "cluster": 14
+      },
+      {
+        "node": "L1_N17",
+        "cluster": 14
+      },
+      {
+        "node": "L1_N51",
+        "cluster": 14
+      },
+      {
+        "node": "L1_N6",
+        "cluster": 14
+      },
+      {
+        "node": "L1_N66",
+        "cluster": 14
+      },
+      {
+        "node": "L1_N76",
+        "cluster": 14
+      },
+      {
+        "node": "L1_N10",
+        "cluster": 15
+      },
+      {
+        "node": "L1_N130",
+        "cluster": 15
+      },
+      {
+        "node": "L1_N100",
+        "cluster": 16
+      },
+      {
+        "node": "L1_N30",
+        "cluster": 16
+      },
+      {
+        "node": "L1_N81",
+        "cluster": 16
+      },
+      {
+        "node": "L1_N107",
+        "cluster": 17
+      },
+      {
+        "node": "L1_N37",
+        "cluster": 17
+      },
+      {
+        "node": "L1_N42",
+        "cluster": 17
+      },
+      {
+        "node": "L1_N86",
+        "cluster": 17
+      },
+      {
+        "node": "L1_N87",
+        "cluster": 17
+      },
+      {
+        "node": "L1_N93",
+        "cluster": 17
+      },
+      {
+        "node": "L1_N102",
+        "cluster": 18
+      },
+      {
+        "node": "L1_N120",
+        "cluster": 18
+      },
+      {
+        "node": "L1_N32",
+        "cluster": 18
+      },
+      {
+        "node": "L1_N79",
+        "cluster": 18
+      },
+      {
+        "node": "L1_N92",
+        "cluster": 18
+      },
+      {
+        "node": "L1_N104",
+        "cluster": 19
+      },
+      {
+        "node": "L1_N116",
+        "cluster": 19
+      },
+      {
+        "node": "L1_N124",
+        "cluster": 19
+      },
+      {
+        "node": "L1_N24",
+        "cluster": 19
+      },
+      {
+        "node": "L1_N27",
+        "cluster": 19
+      },
+      {
+        "node": "L1_N33",
+        "cluster": 19
+      },
+      {
+        "node": "L1_N63",
+        "cluster": 19
+      },
+      {
+        "node": "L1_N8",
+        "cluster": 19
+      },
+      {
+        "node": "L1_N109",
+        "cluster": 20
+      },
+      {
+        "node": "L1_N78",
+        "cluster": 20
+      },
+      {
+        "node": "L1_N90",
+        "cluster": 20
+      },
+      {
+        "node": "L1_N108",
+        "cluster": 21
+      },
+      {
+        "node": "L1_N129",
+        "cluster": 21
+      },
+      {
+        "node": "L1_N3",
+        "cluster": 21
+      },
+      {
+        "node": "L1_N31",
+        "cluster": 21
+      },
+      {
+        "node": "L1_N39",
+        "cluster": 21
+      },
+      {
+        "node": "L1_N56",
+        "cluster": 21
+      },
+      {
+        "node": "L1_N70",
+        "cluster": 21
+      },
+      {
+        "node": "L1_N73",
+        "cluster": 21
+      },
+      {
+        "node": "L1_N111",
+        "cluster": 22
+      },
+      {
+        "node": "L1_N125",
+        "cluster": 22
+      },
+      {
+        "node": "L1_N22",
+        "cluster": 22
+      },
+      {
+        "node": "L1_N28",
+        "cluster": 22
+      },
+      {
+        "node": "L1_N36",
+        "cluster": 22
+      },
+      {
+        "node": "L1_N46",
+        "cluster": 22
+      },
+      {
+        "node": "L1_N55",
+        "cluster": 22
+      },
+      {
+        "node": "L1_N123",
+        "cluster": 23
+      },
+      {
+        "node": "L1_N15",
+        "cluster": 23
+      },
+      {
+        "node": "L1_N21",
+        "cluster": 23
+      },
+      {
+        "node": "L1_N25",
+        "cluster": 23
+      },
+      {
+        "node": "L1_N29",
+        "cluster": 23
+      },
+      {
+        "node": "L1_N65",
+        "cluster": 23
+      },
+      {
+        "node": "L1_N71",
+        "cluster": 23
+      },
+      {
+        "node": "L1_N82",
+        "cluster": 23
+      },
+      {
+        "node": "L1_N2",
+        "cluster": 24
+      },
+      {
+        "node": "L1_N20",
+        "cluster": 25
+      },
+      {
+        "node": "L1_N41",
+        "cluster": 26
+      },
+      {
+        "node": "L1_N88",
+        "cluster": 26
+      },
+      {
+        "node": "L1_N47",
+        "cluster": 27
+      },
+      {
+        "node": "L1_N48",
+        "cluster": 28
+      },
+      {
+        "node": "L1_N49",
+        "cluster": 29
+      },
+      {
+        "node": "L1_N60",
+        "cluster": 29
+      },
+      {
+        "node": "L1_N9",
+        "cluster": 29
+      },
+      {
+        "node": "L1_N57",
+        "cluster": 30
+      },
+      {
+        "node": "L1_N80",
+        "cluster": 31
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "clusters": [
+      {
+        "node": "L2_N0",
+        "cluster": 0
+      },
+      {
+        "node": "L2_N10",
+        "cluster": 0
+      },
+      {
+        "node": "L2_N12",
+        "cluster": 0
+      },
+      {
+        "node": "L2_N27",
+        "cluster": 0
+      },
+      {
+        "node": "L2_N29",
+        "cluster": 0
+      },
+      {
+        "node": "L2_N4",
+        "cluster": 0
+      },
+      {
+        "node": "L2_N5",
+        "cluster": 0
+      },
+      {
+        "node": "L2_N9",
+        "cluster": 0
+      },
+      {
+        "node": "L2_N15",
+        "cluster": 1
+      },
+      {
+        "node": "L2_N17",
+        "cluster": 1
+      },
+      {
+        "node": "L2_N26",
+        "cluster": 1
+      },
+      {
+        "node": "L2_N28",
+        "cluster": 1
+      },
+      {
+        "node": "L2_N7",
+        "cluster": 1
+      },
+      {
+        "node": "L2_N14",
+        "cluster": 2
+      },
+      {
+        "node": "L2_N1",
+        "cluster": 3
+      },
+      {
+        "node": "L2_N11",
+        "cluster": 4
+      },
+      {
+        "node": "L2_N18",
+        "cluster": 4
+      },
+      {
+        "node": "L2_N19",
+        "cluster": 4
+      },
+      {
+        "node": "L2_N2",
+        "cluster": 4
+      },
+      {
+        "node": "L2_N21",
+        "cluster": 4
+      },
+      {
+        "node": "L2_N23",
+        "cluster": 4
+      },
+      {
+        "node": "L2_N8",
+        "cluster": 4
+      },
+      {
+        "node": "L2_N16",
+        "cluster": 5
+      },
+      {
+        "node": "L2_N22",
+        "cluster": 5
+      },
+      {
+        "node": "L2_N3",
+        "cluster": 5
+      },
+      {
+        "node": "L2_N13",
+        "cluster": 6
+      },
+      {
+        "node": "L2_N20",
+        "cluster": 6
+      },
+      {
+        "node": "L2_N24",
+        "cluster": 6
+      },
+      {
+        "node": "L2_N31",
+        "cluster": 6
+      },
+      {
+        "node": "L2_N6",
+        "cluster": 6
+      },
+      {
+        "node": "L2_N25",
+        "cluster": 7
+      },
+      {
+        "node": "L2_N30",
+        "cluster": 7
+      }
+    ]
+  }
+]
