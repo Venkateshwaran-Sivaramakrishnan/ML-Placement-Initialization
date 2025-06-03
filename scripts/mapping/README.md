@@ -28,6 +28,20 @@ Place the following files in the root of this subdirectory:
 > * `gcd_hierarchy.json`
 ---
 
+##Required Supporting Scripts
+
+In addition to the input files above, the following Python scripts **must be present** in the working directory:
+
+- `node_geometry.py`  
+- `extractor.py`  
+- `compute_hierarchy_area.py`  
+- `build_cluster_netlist.py`  
+- `instance_pin_boundary_map.py`  
+- `compute_hierarchy_connectivity.py`
+
+These scripts are invoked by the main pipeline and must be accessible at runtime.
+
+---
 ## Output Files
 
 The complete pipeline is run via the script `run_full_hierarchy_pipeline.py`. Internally, it calls the following scripts in order, each producing intermediate outputs:
