@@ -28,7 +28,7 @@ Place the following files in the root of this subdirectory:
 > * `gcd_hierarchy.json`
 ---
 
-##Required Supporting Scripts
+## Required Supporting Scripts
 
 In addition to the input files above, the following Python scripts **must be present** in the working directory:
 
