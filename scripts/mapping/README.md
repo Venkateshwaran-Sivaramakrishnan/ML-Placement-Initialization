@@ -1,55 +1,60 @@
 # **Dataset Generation**
-### **Step 1:**  
+
 #### Objective:
-1.   Generate information about nodes in cluster
-2.   Area of super clusters and sorting
+Generate cluster-wise information about nodes and convert it into a format suitable for model inference.
+
+This process involves the following steps:
+1. Compute the area of superclusters and sort them.
+2. Build internal node connectivity using shared net information.
+3. Extract IO pin connectivity and assign regions accordingly.
+4. Assign room types (T) to individual nodes and child clusters.
+5. Apply size binning (S) based on calculated area.
+6. Generate the adjacency matrix (A).
+7. Output the final `.npy` file for inference.
+
+---
 
 #### Input Files:
-1. Hypergraph text file - eg.: `ibex_nangate.txt`
-2. Cluster Hierarchy json file - `hierarchy.json`
+1. Hypergraph text file: `{design}_{tech}.txt`
+2. Cluster hierarchy JSON file: `{design}_hierarchy.json`
+
+---
 
 #### Output Files:
+The full process in `run_full_hierarchy_pipeline.py` internally executes the following scripts, which produce these intermediate files:
 
+1. From `compute_hierarcy_area.py`
 ``` bash
 > level_cluster_map_unsorted.json
 > cluster_area.json
 > level_cluster_map_sorted.json
 ```
 
-#### Run the following command to implement step 1:
-
+2. From `build_cluster_netlist.py`
 ``` bash
-python .\compute_hierarchy_area.py --design ibex --tech nangate45
+> cluster_netlists.json
 ```
 
-Change the attributes appropriately
-
-### **Step 2:**
-#### Objective
-1. Assign room types (T) for nodes and child clusters
-2. Apply size binning (S) based on computed area
-3. Generate Adjacenecy Matrix (A)
-2. Generate `.npy` file for inference
-
-#### Inputs:
-```bash
-> level_cluster_map_unsorted.json
-> cluster_area.json
+3. From `instance_pin_boundary_map.py`
+``` bash
+> instance_pin_boundary_map.json
+> cluster_boxes_map.json
 ```
 
-#### Outputs:
-```bash
+4. From `compute_hierarchy_connectivity.py`
+``` bash
 > hierarchy_connectivity.json
 > cluster_tensor_data.npy
 ```
 
-#### Run the following command to implement step 2:
+---
+#### Run the following command to implement the entire flow:
 
-```bash
-python .\compute_hierarchy_connectivity.py --design ibex --tech nangate45
+
+``` bash
+python run_full_hierarchy_pipeline.py --design gcd --tech ihp-sg13g2
 ```
 ---
->*To check out what one data point would look like run the following script*
+>*To check out what one data point would look like run the following script after running the entire flow*
 ```bash
 python data_read.py
-```
