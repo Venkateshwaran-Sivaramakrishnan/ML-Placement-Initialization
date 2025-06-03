@@ -48,7 +48,7 @@ The full process in `run_full_hierarchy_pipeline.py` internally executes the fol
 ```
 
 ---
-#### Run the following command to implement the entire flow:
+### **Run the following command to implement the entire flow:**
 
 
 ``` bash
@@ -58,3 +58,4 @@ python run_full_hierarchy_pipeline.py --design gcd --tech ihp-sg13g2
 >*To check out what one data point would look like run the following script after running the entire flow*
 ```bash
 python data_read.py
+```
