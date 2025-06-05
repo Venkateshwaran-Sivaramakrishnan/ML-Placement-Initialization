@@ -12,7 +12,7 @@ import argparse
 from shapely.geometry import Polygon,MultiPolygon,LinearRing,MultiPoint,LineString
 from shapely.ops import unary_union
 
-from MaskPLAN.MaskPLAN_BaseAll_vec import *
+from MaskPLAN_BaseAll_vec import *
 
 ## Global Para ##
     
