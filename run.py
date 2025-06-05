@@ -1,6 +1,7 @@
 import argparse
 import os
 import subprocess
+import time
 
 def main():
     parser = argparse.ArgumentParser(description="Process design and technology node inputs.")
@@ -36,7 +37,7 @@ def main():
     subprocess.run(
         ["make", "3_2_place_iop"],
         cwd=flow_dir,
-        env={**env, "DESIGN_CONFIG": design_config},
+        env={"DESIGN_CONFIG": design_config},
         check=True
     )
 
@@ -57,6 +58,8 @@ def main():
     os.chdir(result_base_dir)
     print(f"Changed working directory to: {os.getcwd()}")
 
+    extract_start_time = time.time()
+
     # Step 6: Run extractor.py script
     subprocess.run(
     [
@@ -68,6 +71,11 @@ def main():
     check=True
     )
     
+    extract_end_time = time.time() - extract_start_time
+    with open("time.txt", "a") as log_file:
+        log_file.write(f"[✓] Extraction completed in {extract_end_time:.2f} seconds\n")
+    cluster_start_time = time.time()
+
     # Step 6: Run cluster.py script
     subprocess.run(
         [
@@ -79,6 +87,25 @@ def main():
         check=True
     )
 
+    cluster_end_time = time.time() - cluster_start_time
+    with open("time.txt", "a") as log_file:
+        log_file.write(f"[✓] Clustering completed in {cluster_end_time:.2f} seconds\n")
+    mapping_start_time = time.time()
+
+    # Step 7: Run mapping pipeline
+    subprocess.run(
+        [
+            "python",
+            "../../../../../../scripts/mapping/run_full_hierarchy_pipeline.py",
+            "--design", design,
+            "--tech", tech
+        ],
+        check=True
+    )
+
+    mapping_end_time = time.time() - mapping_start_time
+    with open("time.txt", "a") as log_file:
+        log_file.write(f"[✓] Mapping completed in {mapping_end_time:.2f} seconds\n")
 
 if __name__ == "__main__":
     main()
