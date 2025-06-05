@@ -81,8 +81,8 @@ class DesignParser:
             "is_macro": tokens[3] == "True",
             "is_seq": tokens[4] == "True",
             "is_fixed": tokens[5] == "True",
-            "x": int(tokens[6]),
-            "y": int(tokens[7]),
+            "x": int(float(tokens[6])),
+            "y": int(float(tokens[7])),
             "width": int(tokens[8]),
             "height": int(tokens[9])
         }
