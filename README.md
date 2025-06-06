@@ -102,6 +102,8 @@ source OpenROAD-flow-scripts/env.sh
 
 ## Inference
 
+**Note:** For peer reproducibility, we provide pre-inferred data for the test designs and integrate it into our flow, for individuals/teams not having access to GPU compute. Hypergraph extraction, clustering, mapping, and post-inference mapping are executed using CPU compute on the fly.
+
 The MaskPLAN Inference is taylored to meet placement requirements.
 
 **Flow:** 
@@ -136,6 +138,8 @@ uv run python -m Inference.MaskPLAN_Inference_iterate_vec_Single --model Large -
 <p align="center">
   <img src="https://github.com/user-attachments/assets/978e778f-a05d-4978-baf3-c579526cc356" width="400"/>
 </p>
+
+### Standalone Inference
 
 ---
 
