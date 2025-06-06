@@ -93,10 +93,10 @@ pixi install
 
 # Run this to enter the environment installed above
 pixi shell
-
-# Source OpenROAD variables
-source OpenROAD-flow-scripts/env.sh
 ```
+
+Ensure you have [docker](https://www.docker.com/) or [podman](https://podman.io/) installed.
+This will allow you to run the OpenROAD side of things for the flow.
 
 ---
 
@@ -116,18 +116,9 @@ The MaskPLAN Inference is taylored to meet placement requirements.
 To run complete OpenROAD flow:
 
 ```bash
-python run.py -d {design} -t {tech} -N {cluster_size}
-
-Example:
-python run.py -d ibex -t nangate45 -N 8
+DESIGN={orfs design} TECH_NODE={orfs tech} CE={docker|podman} make all
 ```
-
-To run single inference:
-
-```bash
-cd Inference
 uv run python -m Inference.MaskPLAN_Inference_iterate_vec_Single --model Large --par_L 0 --par_R 0
-```
 
 #### Input
 <p align="center">
