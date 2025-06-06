@@ -139,7 +139,7 @@ uv run python -m Inference.MaskPLAN_Inference_iterate_vec_Single --model Large -
   <img src="https://github.com/user-attachments/assets/978e778f-a05d-4978-baf3-c579526cc356" width="400"/>
 </p>
 
-### Standalone Inference
+### Custom Inference (requires GPU)
 
 ---
 
