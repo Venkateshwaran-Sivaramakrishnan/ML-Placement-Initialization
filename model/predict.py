@@ -220,8 +220,8 @@ def infer(args, cluster_tensor_data):
                     if self.In_T[0,k+1] != 0: continue
                     else: 
                         pred = MaskPLAN.predict([self.M_T,self.M_L,self.M_A,self.M_S,self.M_R,self.bound,self.fd,self.In_T,self.In_L,self.In_A,self.In_S,self.In_R])[0]
-                        self.In_T[0,k+1] = np.array(np.argmax(pred[0,k, :]))
                         if self.In_T[0,k+1] == type_dimen-2: num_room = k
+                        self.In_T[0,k+1] = np.array(np.argmax(pred[0,k, :]))
 
                 elif list_len-1+1<= k < list_len*2-1: # Ada
 
