@@ -6,6 +6,7 @@ import networkx as nx
 import numpy as np
 from itertools import combinations
 from sklearn.cluster import SpectralClustering
+import pymetis
 
 
 def parse_arguments():
@@ -41,6 +42,7 @@ def hierarchical_spectral_clustering(G, N, level=0, base_cluster_id=0, prefix=""
     results = []
     assigned_nodes = set()
     current_cluster_id = base_cluster_id
+    print(f"Processing Cluster Level: {level}")
 
     if len(G) <= N:
         for node in G.nodes:
@@ -49,23 +51,29 @@ def hierarchical_spectral_clustering(G, N, level=0, base_cluster_id=0, prefix=""
         return results, current_cluster_id + 1, assigned_nodes
 
     node_list = sorted(G.nodes())
-    A = nx.to_numpy_array(G, nodelist=node_list, weight='weight')
-    num_clusters = max(2, len(G) // N)
+    node_to_idx = {node: i for i, node in enumerate(node_list)}
+    idx_to_node = {i: node for node, i in node_to_idx.items()}
+    adjacency = [[] for _ in node_list]
 
+    for u, v in G.edges():
+        u_idx = node_to_idx[u]
+        v_idx = node_to_idx[v]
+        adjacency[u_idx].append(v_idx)
+        adjacency[v_idx].append(u_idx)
+
+    num_clusters = max(2, len(G) // N)
     try:
-        sc = SpectralClustering(n_clusters=num_clusters, affinity='precomputed',
-                                assign_labels='kmeans', random_state=42)
-        labels = sc.fit_predict(A)
+        _, parts = pymetis.part_graph(num_clusters, adjacency)
     except Exception as e:
-        print(f"[WARN] Spectral clustering failed at level {level} with {len(G)} nodes: {e}")
+        print(f"[WARN] METIS clustering failed at level {level} with {len(G)} nodes: {e}")
         for node in G.nodes:
             results.append({"node": node, "cluster": current_cluster_id})
             assigned_nodes.add(node)
         return results, current_cluster_id + 1, assigned_nodes
 
     label_to_nodes = defaultdict(list)
-    for node, label in zip(node_list, labels):
-        label_to_nodes[label].append(node)
+    for idx, label in enumerate(parts):
+        label_to_nodes[label].append(idx_to_node[idx])
 
     for nodes in label_to_nodes.values():
         if len(nodes) <= N:

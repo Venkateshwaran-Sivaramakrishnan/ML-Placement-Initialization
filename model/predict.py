@@ -1,5 +1,6 @@
 import numpy as np
 import os
+import time
 import tensorflow as tf
 tf.compat.v1.enable_eager_execution()
 import numpy as np
@@ -251,7 +252,16 @@ def infer(args, cluster_tensor_data, count, bound, frontD, bound_domain):
             
             for i in range(num_room-1):
                 # Get rectangle coordinates (4 corners)
-                pt = np.array(LineString([[y_min[i], x_min[i]], [y_max[i], x_max[i]]]).envelope.exterior.coords[:-1])
+                line = LineString([[y_min[i], x_min[i]], [y_max[i], x_max[i]]])
+                envelope = line.envelope
+
+                if envelope.geom_type == "Polygon":
+                    pt = np.array(envelope.exterior.coords[:-1])
+                else:
+                    # Handle the degenerate case, e.g., repeat the point or create a small box
+                    pt = np.array([[envelope.x, envelope.y]] * 4)
+                
+                # pt = np.array(LineString([[y_min[i], x_min[i]], [y_max[i], x_max[i]]]).envelope.exterior.coords[:-1])
                 pts.append(pt)
 
                 # Get fill color from T_list (should be RGB tuple)
@@ -431,11 +441,17 @@ def main():
     count = len(cluster_tensor_data)
     print(f"Total: {count}")
 
+    infer_start_time = time.time()
+
     for num,site in enumerate(Testset_ids[:count]):
             model.reset(site)
             model.partial_input(site)
             model.inference_interation(site)
             print(f"Done: {site}")
+    
+    infer_end_time = time.time() - infer_start_time
+    with open("infer_time.txt", "a") as log_file:
+        log_file.write(f"[✓] Inference completed in {infer_end_time:.2f} seconds\n")
     
     np.save(args.output_file, cluster_tensor_data, allow_pickle=True)
 
