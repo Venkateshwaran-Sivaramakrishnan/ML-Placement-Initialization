@@ -37,7 +37,7 @@ def parse_args():
     
     parser.add_argument("input_file", help="Path to the input file")
     parser.add_argument("output_file", help="Path to the output_file")
-    parser.add_argument("--boundary_file", default="RPLAN_B.npy", help="Path to the boundary")
+    parser.add_argument("--boundary_file", default="model/RPLAN_B.npy", help="Path to the boundary")
     parser.add_argument('--model', default='Large', type=str, help='Tiny, Base, Large')
     parser.add_argument('--test_cases', default=1000, type=int) # test layouts
     parser.add_argument('--par_T', default=0.25, type=float) # partial input Type
@@ -149,7 +149,8 @@ def infer(args, cluster_tensor_data, count, bound, frontD, bound_domain):
 
             valid = (T_in[site_id]==type_dimen-2).argmax(axis=0)-1
 
-            partial_T = np.random.choice(valid-1, round(valid*args.par_T), replace=False) + 1
+            # partial_T = np.random.choice(valid-1, round(valid*args.par_T), replace=False) + 1
+            partial_T = [i+1 for i in range(valid+1)]
             self.M_T[0,partial_T] = T_in[site_id,partial_T]
             self.In_T[0,partial_T] = T_in[site_id,partial_T]
 
@@ -194,6 +195,11 @@ def infer(args, cluster_tensor_data, count, bound, frontD, bound_domain):
             #reconst_post = reconstructed.copy()
         
             # Inference, skip all [start] token and defined token
+
+            for k in range(self.In_T.shape[1]):
+                if self.In_T[0, k] == type_dimen - 2:
+                    num_room = k
+                    break
         
             for k in range(int(list_len*5-1)):
 
