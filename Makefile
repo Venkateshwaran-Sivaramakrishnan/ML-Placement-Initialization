@@ -18,17 +18,17 @@ help: ## Prints help for targets with comments
 
 all: pin_placement extract_hypergraph extract_results cluster
 
-OpenROAD-flow-scripts:
+OpenROAD-flow-scripts: ## Clones ORFS to the repo via the docker container
 	$(OPENROAD) "cd /ml_placer && /usr/bin/orfs_copy"
 
-pin_placement: OpenROAD-flow-scripts
+pin_placement: OpenROAD-flow-scripts ## Runs ORFS until the pin placement via docker container
 	$(OPENROAD) "$(SETUP_CE) DESIGN_CONFIG=$(DESIGN_DIR)/config.mk make 3_2_place_iop"
 
-extract_hypergraph: pin_placement
+extract_hypergraph: pin_placement ## Runs hypergraph extraction script
 	$(OPENROAD) "$(SETUP_CE) openroad -python ../../scripts/hypergraph/python_read_design.py"
 
-extract_results: pin_placement
+extract_results: pin_placement ## Extracts the results from the ORFS run so far
 	$(CD_BASE_DIR) && time python ../../../../../../scripts/clustering/extractor.py --design $(DESIGN) --tech $(TECH_NODE)
 
-cluster: pin_placement
+cluster: pin_placement ## Clusters the design
 	$(CD_BASE_DIR) && time python ../../../../../../scripts/clustering/cluster.py --design $(DESIGN) --N $(MAX_NODES)

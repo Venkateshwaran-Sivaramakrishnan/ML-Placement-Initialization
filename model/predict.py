@@ -31,32 +31,13 @@ room_order = [2,3,5,6,4,7,1] # order when implement post-process
 T_list = [[255,255,255,255],[255,255,0,255],[255,0,255,255],[0,255,255,255],
           [0,0,255,255],[255,0,0,255],[0,255,0,255],[127,127,255,255],[127,255,127,255]]
 
-# Load the npy file (list of dictionaries)
-cluster_tensor_data = np.load("cluster_tensor_data.npy", allow_pickle=True)
-bound = np.load("RPLAN_B.npy", allow_pickle=True)
-
-# Convert to a Python list (optional but recommended for iteration)
-cluster_tensor_data = cluster_tensor_data.tolist()
-cluster_tensor_data_predict = []
-
-# Example: Print each entry (can be filtered or formatted as needed)
-count = len(cluster_tensor_data)
-Testset_ids = [i for i in range(count)]
-frontD = [np.array([0, 63]) for i in range(count)]
-boundary = np.array(bound[0])
-bound = [boundary for i in range(count)]
-bounded_domain = [0, 0, 127, 127]
-bound_domain = np.array([bounded_domain for i in range(count)])
-
-for i in range(len(cluster_tensor_data)):
-    entry = cluster_tensor_data[i]
-    entry["bound"] = boundary
-    entry["bound_domain"] = bounded_domain
-
 def parse_args():
 
     parser = argparse.ArgumentParser()
     
+    parser.add_argument("input_file", help="Path to the input file")
+    parser.add_argument("output_file", help="Path to the output_file")
+    parser.add_argument("--boundary_file", default="RPLAN_B.npy", help="Path to the boundary")
     parser.add_argument('--model', default='Large', type=str, help='Tiny, Base, Large')
     parser.add_argument('--test_cases', default=1000, type=int) # test layouts
     parser.add_argument('--par_T', default=0.25, type=float) # partial input Type
@@ -66,10 +47,11 @@ def parse_args():
     parser.add_argument('--par_R', default=0.25, type=float) # partial input Region 
     parser.add_argument('--skip_idx', default=1, type=int,
                         help='which token to skip, default skip first [start] token')
+    parser.add_argument('--gpu', default=0, type=int, help="GPU to run this inference on")
     
     return parser.parse_args()
 
-def infer(args, cluster_tensor_data):
+def infer(args, cluster_tensor_data, count, bound, frontD, bound_domain):
 
     skip_idx = args.skip_idx
     os.makedirs('Inference/%s_Single_vec/iteration/raw' % (args.model),exist_ok=True)
@@ -408,8 +390,37 @@ def main():
     # init
     args = parse_args()
 
+    gpus = tf.config.list_physical_devices('GPU')
+
+    if gpus:
+        selected = gpus[args.gpu]
+        print(f"USING {selected}")
+        tf.config.set_visible_devices(selected, 'GPU')
+
+    # Load the npy file (list of dictionaries)
+    cluster_tensor_data = np.load(args.input_file, allow_pickle=True)
+    bound = np.load(args.boundary_file, allow_pickle=True)
+
+    # Convert to a Python list (optional but recommended for iteration)
+    cluster_tensor_data = cluster_tensor_data.tolist()
+    cluster_tensor_data_predict = []
+
+    # Example: Print each entry (can be filtered or formatted as needed)
+    count = len(cluster_tensor_data)
+    Testset_ids = [i for i in range(count)]
+    frontD = [np.array([0, 63]) for i in range(count)]
+    boundary = np.array(bound[0])
+    bound = [boundary for i in range(count)]
+    bounded_domain = [0, 0, 127, 127]
+    bound_domain = np.array([bounded_domain for i in range(count)])
+
+    for i in range(len(cluster_tensor_data)):
+        entry = cluster_tensor_data[i]
+        entry["bound"] = boundary
+        entry["bound_domain"] = bounded_domain
+
     # run
-    model = infer(args, cluster_tensor_data)
+    model = infer(args, cluster_tensor_data, count, bound, frontD, bound_domain)
 
     count = len(cluster_tensor_data)
     print(f"Total: {count}")
@@ -420,7 +431,7 @@ def main():
             model.inference_interation(site)
             print(f"Done: {site}")
     
-    np.save("cluster_tensor_data_predict.npy", cluster_tensor_data, allow_pickle=True)
+    np.save(args.output_file, cluster_tensor_data, allow_pickle=True)
 
 if __name__ == "__main__":
     main()
