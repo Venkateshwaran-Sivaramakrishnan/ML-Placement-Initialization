@@ -4,41 +4,50 @@ MAX_NODES ?= 8
 
 CE ?= docker
 
-OPENROAD = $(CE) run -v ./:/ml_placer --rm ghcr.io/udxs/ece260c-essential:main bash -c
+OPENROAD = $(CE) run --mount "type=bind,src=$(PWD),dst=/ml_placer" --rm ghcr.io/udxs/ece260c-essential:main bash -c
 
 ORFS_DIR = OpenROAD-flow-scripts/flow
 CD_ORFS = cd $(ORFS_DIR)
 CD_ORFS_CE = cd /ml_placer/$(ORFS_DIR)
-SETUP_CE = $(CD_ORFS_CE) && PATH=/opt/oss-cad-suite/bin:/root/miniconda3/bin:$$PATH YOSYS_EXE=/opt/oss-cad-suite/bin/yosys OPENROAD_EXE=/usr/bin/openroad
+SETUP_CE = source /ml_placer/source_env.sh && $(CD_ORFS_CE) &&
 DESIGN_DIR = ./designs/$(TECH_NODE)/$(DESIGN)
 CD_BASE_DIR = $(CD_ORFS)/results/$(TECH_NODE)/$(DESIGN)/base
 RUN_SCRIPT = $(CD_BASE_DIR) && time pixi run python ../../../../../../
+REL_DIR = ../../../../../../
+RESULT_DIR = $(PWD)/results/$(DESIGN)_$(TECH_NODE)
 
 help: ## Prints help for targets with comments
 	@cat $(MAKEFILE_LIST) | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-all: pin_placement extract_hypergraph extract_results cluster
+all: pin_placement extract_hypergraph extract_results cluster generate_input predict map_predictions
 
 .pixi:
 	pixi install
 
-OpenROAD-flow-scripts: ## Clones ORFS to the repo via the docker container
-	$(OPENROAD) "cd /ml_placer && /usr/bin/orfs_copy"
+OpenROAD-flow-scripts: ## Clones ORFS
+	git clone https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts.git
 
 pin_placement: OpenROAD-flow-scripts ## Runs ORFS until the pin placement via docker container
-	$(OPENROAD) "$(SETUP_CE) DESIGN_CONFIG=$(DESIGN_DIR)/config.mk make 3_2_place_iop"
+	$(OPENROAD) "$(SETUP_CE) whereis python && DESIGN_CONFIG=$(DESIGN_DIR)/config.mk make 3_2_place_iop"
 
-extract_hypergraph: pin_placement ## Runs hypergraph extraction script
-	$(OPENROAD) "$(SETUP_CE) openroad -python ../../scripts/hypergraph/python_read_design.py"
+$(RESULT_DIR):
+	mkdir -p $@
 
-extract_results: .pixi pin_placement ## Extracts the results from the ORFS run so far
-	$(RUN_SCRIPT)/scripts/clustering/extractor.py --design $(DESIGN) --tech $(TECH_NODE)
+extract_hypergraph: pin_placement $(RESULT_DIR) ## Runs hypergraph extraction script
+	$(OPENROAD) "$(SETUP_CE) openroad -python ../../scripts/hypergraph/python_read_design.py -d $(DESIGN) -t $(TECH_NODE)"
+	cp OpenROAD-flow-scripts/flow/results/$(TECH_NODE)/$(DESIGN)/base/$(DESIGN)_$(TECH_NODE).txt $(RESULT_DIR)/
+
+extract_results: .pixi pin_placement $(RESULT_DIR) ## Extracts the results from the ORFS run so far
+	$(RUN_SCRIPT)/scripts/clustering/extractor.py --design $(DESIGN) --tech $(TECH_NODE) --output_dir $(RESULT_DIR)
 
 cluster: .pixi pin_placement ## Clusters the design
-	$(RUN_SCRIPT)/scripts/clustering/cluster.py --design $(DESIGN) --N $(MAX_NODES)
+	$(RUN_SCRIPT)/scripts/clustering/cluster.py $(RESULT_DIR)/$(DESIGN).pkl --design $(DESIGN) --N $(MAX_NODES) --output_dir $(RESULT_DIR)
 
 generate_input: ## Generates .npy files for inference
-	$(RUN_SCRIPT)/scripts/mapping/run_full_hierarchy_pipeline.py --design $(DESIGN) --tech $(TECH_NODE)
+	cd $(RESULT_DIR) && pixi run python ../../scripts/mapping/run_full_hierarchy_pipeline.py --design $(DESIGN) --tech $(TECH_NODE)
 
-predict:
-	pixi run python OpenROAD-flow-scripts/flow/results/$(TECH_NODE)/$(DESIGN)/base/cluster_tensor_data.npy OpenROAD-flow-scripts/flow/results/$(TECH_NODE)/$(DESIGN)/base/cluster_tensor_prediction.npy --par_L 0
+predict: ## Runs inference
+	pixi run python model/predict.py $(RESULT_DIR)/cluster_tensor_data.npy $(RESULT_DIR)/cluster_tensor_prediction.npy --par_L 0
+
+map_predictions: ## Generate placement
+	cd $(RESULT_DIR) && pixi run python ../../scripts/prediction/mapInference.py --design $(DESIGN)	

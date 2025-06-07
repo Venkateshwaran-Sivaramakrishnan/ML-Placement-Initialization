@@ -451,7 +451,7 @@ def main():
     
     infer_end_time = time.time() - infer_start_time
     with open("infer_time.txt", "a") as log_file:
-        log_file.write(f"[✓] Inference completed in {infer_end_time:.2f} seconds\n")
+        log_file.write(f"[✓] Inference completed in {infer_end_time:.2f} seconds for {args.input_file}\n")
     
     np.save(args.output_file, cluster_tensor_data, allow_pickle=True)
 

@@ -5,3 +5,7 @@ MaskPLAN_Trained/
 # pixi environments
 .pixi
 *.egg-info
+
+OpenROAD-flow-scripts/
+results/
+*.txt

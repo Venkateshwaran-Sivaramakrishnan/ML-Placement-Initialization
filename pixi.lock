@@ -23,9 +23,12 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-15.1.0-h8f9b012_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-ng-15.1.0-h4852527_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libzlib-1.2.13-h4ab18f5_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/metis-5.1.0-hd0bcaf9_1007.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.5-h2d0b736_3.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/openssl-1.1.1w-hd590300_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/pymetis-2023.1.1-py39h54a6aaa_3.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/python-3.9.0-hffdb5ce_5_cpython.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/noarch/python_abi-3.9-7_cp39.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/readline-8.2-h8c095d6_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/sqlite-3.46.0-h6d4b2fc_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/tk-8.6.13-noxft_h4845f30_101.conda
@@ -466,7 +469,7 @@ packages:
 - pypi: ./
   name: maskplan
   version: 0.1.0
-  sha256: e58245c945f341f9bc512503c32b29e5bb3ce44f3277532f0cd001442d52120a
+  sha256: ae24e7e6fe26b0e9d18aaef3b67e2eecc9f77994268fe4fa363cb924429c1e7e
   requires_dist:
   - keras==2.6.0
   - matplotlib>=3.6.3
@@ -497,6 +500,18 @@ packages:
   - pyparsing>=2.2.1
   - python-dateutil>=2.7
   requires_python: '>=3.8'
+- conda: https://conda.anaconda.org/conda-forge/linux-64/metis-5.1.0-hd0bcaf9_1007.conda
+  sha256: e8a00971e6d00bd49f375c5d8d005b37a9abba0b1768533aed0f90a422bf5cc7
+  md5: 28eb714416de4eb83e2cbc47e99a1b45
+  depends:
+  - __glibc >=2.17,<3.0.a0
+  - libgcc >=13
+  - libstdcxx >=13
+  license: Apache-2.0
+  license_family: APACHE
+  purls: []
+  size: 3923560
+  timestamp: 1728064567817
 - conda: https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.5-h2d0b736_3.conda
   sha256: 3fde293232fa3fca98635e1167de6b7c7fda83caf24b9d6c91ec9eefb4f4d586
   md5: 47e340acb35de30501a76c7c799c41d7
@@ -619,6 +634,22 @@ packages:
   version: 3.20.0
   sha256: 7a53d4035427b9dbfbb397f46642754d294f131e93c661d056366f2a31438263
   requires_python: '>=3.7'
+- conda: https://conda.anaconda.org/conda-forge/linux-64/pymetis-2023.1.1-py39h54a6aaa_3.conda
+  sha256: 22b15ea5b035b5ef34987fb5a65fee95eb8b97e678c27bf85ce7a83ce2e7c150
+  md5: e40e2c23f8222b6509826563341de5ab
+  depends:
+  - __glibc >=2.17,<3.0.a0
+  - libgcc >=13
+  - libstdcxx >=13
+  - metis >=5.1.0,<5.1.1.0a0
+  - python >=3.9,<3.10.0a0
+  - python_abi 3.9.* *_cp39
+  license: Apache-2.0
+  license_family: APACHE
+  purls:
+  - pkg:pypi/pymetis?source=hash-mapping
+  size: 120655
+  timestamp: 1729626594746
 - pypi: https://files.pythonhosted.org/packages/05/e7/df2285f3d08fee213f2d041540fa4fc9ca6c2d44cf36d3a035bf2a8d2bcc/pyparsing-3.2.3-py3-none-any.whl
   name: pyparsing
   version: 3.2.3
@@ -657,6 +688,17 @@ packages:
   requires_dist:
   - six>=1.5
   requires_python: '>=2.7,!=3.0.*,!=3.1.*,!=3.2.*'
+- conda: https://conda.anaconda.org/conda-forge/noarch/python_abi-3.9-7_cp39.conda
+  build_number: 7
+  sha256: c536863bdc2d7e551b589ddfe105fe5bcd496c554528c577c4ab253c427b944d
+  md5: 6235ab8d07149f25a0be52f1708aef04
+  constrains:
+  - python 3.9.* *_cpython
+  license: BSD-3-Clause
+  license_family: BSD
+  purls: []
+  size: 6980
+  timestamp: 1745258876036
 - pypi: https://files.pythonhosted.org/packages/3d/32/e7bd8535d22ea2874cef6a81021ba019474ace0d13a4819c2a4bce79bd6a/PyYAML-6.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
   name: pyyaml
   version: 6.0.2

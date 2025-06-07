@@ -13,11 +13,11 @@ args = parser.parse_args()
 design = args.design
 
 # Load gcd.pkl
-with open("gcd.pkl", "rb") as f:
+with open(f"{design}.pkl", "rb") as f:
     data = pickle.load(f)
 
 # Load the npy file (list of dictionaries)
-cluster_tensor_data_predict = np.load("cluster_tensor_data_predict.npy", allow_pickle=True)
+cluster_tensor_data_predict = np.load("cluster_tensor_prediction.npy", allow_pickle=True)
 
 # Convert to a Python list (optional but recommended for iteration)
 cluster_tensor_data_predict = cluster_tensor_data_predict.tolist()

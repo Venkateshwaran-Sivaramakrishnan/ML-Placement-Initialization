@@ -181,6 +181,8 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description="Parse a design file.")
     parser.add_argument("--design", required=True, help="Name of the design (e.g., ibex)")
     parser.add_argument("--tech", required=True, help="Technology node (e.g., nangate45)")
+    parser.add_argument("--output_dir")
+    parser.add_argument("--plot", type=bool, default=False)
     return parser.parse_args()
 
 # -----------------------------
@@ -200,6 +202,7 @@ if __name__ == "__main__":
     sample_pin = next(iter(parser.io_pins))
     print(f"\nSample Net {sample_net}: {parser.hypergraph[sample_net]}")
     print(f"Sample I/O Pin {sample_pin}: {parser.io_pins[sample_pin]}")
-    parser.plot_layout()
-    parser.save_design_as_pickle(args.design)
-    parser.save_design_as_json(args.design)
+    if args.plot:
+        parser.plot_layout()
+    parser.save_design_as_pickle(args.design, args.output_dir)
+    parser.save_design_as_json(args.design, args.output_dir)

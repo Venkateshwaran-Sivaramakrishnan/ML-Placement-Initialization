@@ -11,9 +11,11 @@ import pymetis
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Placement-driven hierarchical spectral clustering.")
+    parser.add_argument("input_pkl")
     parser.add_argument("--design", required=True, help="Design name (e.g., gcd)")
     parser.add_argument("--N", type=int, default=5, help="Max number of nodes per cluster")
     parser.add_argument("--max_fanout", type=int, default=8, help="Ignore nets with more than this many nodes")
+    parser.add_argument("--output_dir")
     return parser.parse_args()
 
 
@@ -245,21 +247,21 @@ def main(filepath, args):
         ]
         all_explanations[f"level_{level}"] = analyze_cluster_connectivity(cluster_data_flat, data["hypergraph"])
 
-    output_placement = f"{args.design}_placement_clusters.json"
+    output_placement = f"{args.output_dir}/{args.design}_placement_clusters.json"
     print(f"[i] Writing placement clusters to: {output_placement}")
     with open(output_placement, "w") as f:
         json.dump(all_levels, f, indent=2)
-    output_connectivity = f"{args.design}_cluster_connectivity_explanation.json"
+    output_connectivity = f"{args.output_dir}/{args.design}_cluster_connectivity_explanation.json"
     print(f"[i] Writing connectivity explanation to: {output_connectivity}")
     with open(output_connectivity, "w") as f:
         json.dump(all_explanations, f, indent=2)
-    output_hierarchy = f"{args.design}_hierarchy.json"
+    output_hierarchy = f"{args.output_dir}/{args.design}_hierarchy.json"
     print(f"[i] Writing hierarchy to: {output_hierarchy}")
     with open(output_hierarchy, "w") as f:
         json.dump(all_levels, f, indent=2)
 
     # Save hierarchy to level-0 node mapping as a separate file
-    hierarchy_flat_output = f"{args.design}_hierarchy_cluster.json"
+    hierarchy_flat_output = f"{args.output_dir}/{args.design}_hierarchy_cluster.json"
     print(f"[i] Writing flat hierarchy node map to: {hierarchy_flat_output}")
     with open(hierarchy_flat_output, "w") as f:
         flat_map = {
@@ -286,5 +288,4 @@ def main(filepath, args):
 
 if __name__ == "__main__":
     args = parse_arguments()
-    filepath = f"{args.design}.pkl"
-    main(filepath, args)
+    main(args.input_pkl, args)
