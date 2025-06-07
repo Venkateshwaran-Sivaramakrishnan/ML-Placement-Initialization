@@ -58,5 +58,7 @@ read_initial_placement:
 	
 finish_openroad:
 	$(OPENROAD) "$(SETUP_CE) DESIGN_CONFIG=$(DESIGN_DIR)/config.mk make 3_5_place_dp"
+	@cp $(ORFS_DIR)/logs/$(TECH_NODE)/$(DESIGN)/base/3_3_place_gp.log $(RESULT_DIR)/
 	@cp $(ORFS_DIR)/logs/$(TECH_NODE)/$(DESIGN)/base/3_5_place_dp.json $(RESULT_DIR)/
+	@tac $(RESULT_DIR)/3_3_place_gp.log | awk '/\[NesterovSolve\] Iter:/ { printf "# of Iterations: %s\n", $$3; exit}'
 	@awk '/detailedplace__route__wirelength__estimated/ {printf "Estimated Wirelength: %s um\n", $$2}' $(RESULT_DIR)/3_5_place_dp.json | tr -d ','
