@@ -307,12 +307,14 @@ if __name__ == "__main__":
     parser.add_argument("-d", default="ibex", help="Give the design name")
     parser.add_argument("-t", default="nangate45", help="Give the technology node")
     parser.add_argument("-large_net_threshold", default="1000", help="Large net threshold. We should remove global nets like reset.")
-    
+    parser.add_argument("--incremental", type=int, default=0, help="Set to 1 to run incremental placement")
+
     args = parser.parse_args()
 
     tech_node = args.t
     design = args.d
     large_net_threshold = int(args.large_net_threshold)
+    run_incremental = int(args.incremental)
     hg_file_name = "./results/" + tech_node + "/" + design + "/base/" + str(design) + "_" + str(tech_node) + ".txt"
     path = "./results/" + tech_node + "/" + design + "/base"
     f = open(hg_file_name, "w")
@@ -346,11 +348,14 @@ if __name__ == "__main__":
     # Load the initial placement and run incremental placement    
     # load_init_placement("init_placement_test.txt")
 
-    design.writeDb(f"{path}/3_3_place_gp_temp.odb")
-
-    run_incremental_placement(design, path)
-    print("Finished running global placement and detailed placement.")
-    print("\n")
+    
+    if run_incremental == 1:
+      load_init_placement("init_placement_test.txt")
+      design.writeDb(f"{path}/3_3_place_gp_temp.odb")
+      print("***** Running Incremental Global Placement Mode *****")
+      run_incremental_placement(design, path) 
+      print("Finished running global placement and detailed placement.")
+      print("\n")
     print("*************************************************************************************************")
     print("Please use the generated 3_3_place_gp.def and 3_3_place_gp.odb files for remaining flows.")
     print("You can use OpenROAD GUI to visualize the placement: openroad -gui")
