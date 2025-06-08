@@ -116,7 +116,7 @@ The MaskPLAN Inference is taylored to meet placement requirements.
 To run complete OpenROAD flow:
 
 ```bash
-DESIGN={orfs design} TECH_NODE={orfs tech} CE={docker|podman} make all
+DESIGN={orfs design} TECH_NODE={orfs tech} NO_PRED={0|1} CE={docker|podman} make all
 ```
 uv run python -m Inference.MaskPLAN_Inference_iterate_vec_Single --model Large --par_L 0 --par_R 0
 
