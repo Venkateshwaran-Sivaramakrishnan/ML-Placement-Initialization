@@ -104,8 +104,8 @@ $(RESULT_DIR)/init_placement_test.txt $(ORFS_DIR)/init_placement_test.txt: $(RES
 	@cp $(RESULT_DIR)/init_placement_test.txt $(ORFS_DIR)/init_placement_test.txt
 
 # Step 8 - Read our initial placements back in to OR
-$(DESIGN_RESULTS_DIR)/3_3_place_gp.odb: $(ORFS_DIR)/init_placement_test.txt
-	$(OPENROAD) "$(SETUP_CE) openroad -python ../../scripts/hypergraph/python_read_design.py -d $(DESIGN) -t $(TECH_NODE) --incremental 1"
+$(DESIGN_RESULTS_DIR)/3_3_place_gp.odb: $(ORFS_DIR)/init_placement_test.txt	
+	$(OPENROAD) "$(SETUP_CE) rm -rf results/$(TECH_NODE)/$(DESIGN)/base/3_5_*; openroad -python ../../scripts/hypergraph/python_read_design.py -d $(DESIGN) -t $(TECH_NODE) --incremental 1" | $(LOG)
 	
 # Step 9 - Run rest of placement
 $(RESULT_DIR)/results.txt: $(DESIGN_RESULTS_DIR)/3_3_place_gp.odb
