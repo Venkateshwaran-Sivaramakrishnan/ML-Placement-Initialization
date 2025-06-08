@@ -105,19 +105,22 @@ $(RESULT_DIR)/init_placement_test.txt $(ORFS_DIR)/init_placement_test.txt: $(RES
 
 # Step 8 - Read our initial placements back in to OR
 $(DESIGN_RESULTS_DIR)/3_3_place_gp.odb: $(ORFS_DIR)/init_placement_test.txt	
-	$(OPENROAD) "$(SETUP_CE) rm -rf results/$(TECH_NODE)/$(DESIGN)/base/3_5_*; openroad -python ../../scripts/hypergraph/python_read_design.py -d $(DESIGN) -t $(TECH_NODE) --incremental 1" | $(LOG)
+	$(OPENROAD) "$(SETUP_CE) rm -rf results/$(TECH_NODE)/$(DESIGN)/base/3_5_*; openroad -python ../../scripts/hypergraph/python_read_design.py -d $(DESIGN) -t $(TECH_NODE) --incremental 1" | tee $(RESULT_DIR)/global_placement.log | $(LOG)
 	
 # Step 9 - Run rest of placement
 $(RESULT_DIR)/results.txt: $(DESIGN_RESULTS_DIR)/3_3_place_gp.odb
 	$(OPENROAD) "$(SETUP_CE) DESIGN_CONFIG=$(DESIGN_DIR)/config.mk make 3_5_place_dp" | tee $(RESULT_DIR)/final_placement.log
 	@cp $(ORFS_DIR)/logs/$(TECH_NODE)/$(DESIGN)/base/3_5_place_dp.json $(RESULT_DIR)/3_5_place_dp.results.json
 	@tac $(RESULT_DIR)/final_placement.log | awk '/final/ {f=1;next} f { printf "# of Iterations: %s\n", $$1; exit}' | tee $(RESULT_DIR)/results.txt
+	@tac $(RESULT_DIR)/global_placement.log | awk '/\[NesterovSolve\] Iter:/ { printf "# of Global Placement Iterations: %s\n", $$3; exit}' | tee -a $(RESULT_DIR)/results.txt
 	@awk '/detailedplace__route__wirelength__estimated/ {printf "Estimated Wirelength: %s um\n", $$2}' $(RESULT_DIR)/3_5_place_dp.results.json | tr -d ',' | tee -a $(RESULT_DIR)/results.txt
 
 # Step 0 - Run baseline
 $(RESULT_DIR)/baseline.txt: OpenROAD-flow-scripts $(RESULT_DIR)
 	$(OPENROAD) "$(SETUP_CE) DESIGN_CONFIG=$(DESIGN_DIR)/config.mk make clean_place && DESIGN_CONFIG=$(DESIGN_DIR)/config.mk make 3_5_place_dp" | tee $(RESULT_DIR)/baseline_placement.log
+	@cp $(ORFS_DIR)/logs/$(TECH_NODE)/$(DESIGN)/base/3_3_place_gp.log $(RESULT_DIR)/3_3_place_gp.baseline.log
 	@cp $(ORFS_DIR)/logs/$(TECH_NODE)/$(DESIGN)/base/3_5_place_dp.json $(RESULT_DIR)/3_5_place_dp.baseline.json
-	@tac $(RESULT_DIR)/baseline_placement.log | awk '/final/ {f=1;next} f { printf "# of Iterations: %s\n", $$1; exit}' | tee $(RESULT_DIR)/baseline.txt
+	@tac $(RESULT_DIR)/baseline_placement.log | awk '/final/ {f=1;next} f { printf "# of Detailed Placement Iterations: %s\n", $$1; exit}' | tee $(RESULT_DIR)/baseline.txt
+	@tac $(RESULT_DIR)/3_3_place_gp.baseline.log | awk '/\[NesterovSolve\] Iter:/ { printf "# of Global Placement Iterations: %s\n", $$3; exit}' | tee -a $(RESULT_DIR)/baseline.txt
 	@awk '/detailedplace__route__wirelength__estimated/ {printf "Estimated Wirelength: %s um\n", $$2}' $(RESULT_DIR)/3_5_place_dp.baseline.json | tr -d ',' | tee -a $(RESULT_DIR)/baseline.txt
 	$(OPENROAD) "$(SETUP_CE) DESIGN_CONFIG=$(DESIGN_DIR)/config.mk make clean_place"
