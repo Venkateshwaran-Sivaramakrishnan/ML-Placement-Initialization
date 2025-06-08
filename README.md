@@ -95,7 +95,7 @@ pixi install
 pixi shell
 ```
 
-Ensure you have [docker](https://www.docker.com/) or [podman](https://podman.io/) installed.
+Ensure you have [docker](https://www.docker.com/).
 This will allow you to run the OpenROAD side of things for the flow.
 
 These scripts have only been tested on Linux systems.

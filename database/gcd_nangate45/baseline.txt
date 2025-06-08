@@ -1,0 +1,2 @@
+# of Iterations: 620
+Estimated Wirelength: 3216.71 um

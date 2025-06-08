@@ -48,6 +48,8 @@ run: finish_placement ## Run entire flow
 
 baseline: $(RESULT_DIR)/baseline.txt ## Run ORFS without our flow to get baseline metrics
 
+all: baseline run ## Runs both the baseline and the main flow
+
 clean: ## Deletes results directory (should re-trigger most targets)
 	rm -rf $(RESULT_DIR)
 
