@@ -1,0 +1,479 @@
+Sun Jun  8 06:58:49 PM PDT 2025
+READY TO RUN!
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_1_place_gp_skip_io global_place_skip_io
+Running global_place_skip_io.tcl, stage 3_1_place_gp_skip_io
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+global_placement -skip_io -density 0.65 -pad_left 0 -pad_right 0
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.054  0.270 ) um
+[INFO GPL-0004] CoreBBox: (  2.052  2.160 ) ( 67.446 67.230 ) um
+[INFO GPL-0006] NumInstances:             16732
+[INFO GPL-0007] NumPlaceInstances:        16007
+[INFO GPL-0008] NumFixedInstances:          725
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                  16543
+[INFO GPL-0011] NumPins:                  54053
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 69.479 69.479 ) um
+[INFO GPL-0013] CoreBBox: (  2.052  2.160 ) ( 67.446 67.230 ) um
+[INFO GPL-0016] CoreArea:              4255.188 um^2
+[INFO GPL-0017] NonPlaceInstsArea:       21.141 um^2
+[INFO GPL-0018] PlaceInstsArea:        1729.975 um^2
+[INFO GPL-0019] Util:                    40.859 %
+[INFO GPL-0020] StdInstsArea:          1729.975 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[INFO GPL-0031] FillerInit:NumGCells:     25891
+[INFO GPL-0032] FillerInit:NumGNets:      16543
+[INFO GPL-0033] FillerInit:NumGPins:      54053
+[INFO GPL-0023] TargetDensity:            0.650
+[INFO GPL-0024] AvrgPlaceInstArea:        0.108 um^2
+[INFO GPL-0025] IdealBinArea:             0.166 um^2
+[INFO GPL-0026] IdealBinCnt:              25591
+[INFO GPL-0027] TotalBinArea:          4255.188 um^2
+[INFO GPL-0028] BinCnt:       128    128
+[INFO GPL-0029] BinSize: (  0.511  0.509 )
+[INFO GPL-0030] NumBins: 16384
+[NesterovSolve] Iter:    1 overflow: 0.986 HPWL: 20160291
+[NesterovSolve] Iter:   10 overflow: 0.995 HPWL: 2168664
+[NesterovSolve] Iter:   20 overflow: 0.995 HPWL: 1769880
+[NesterovSolve] Iter:   30 overflow: 0.995 HPWL: 1730816
+[NesterovSolve] Iter:   40 overflow: 0.995 HPWL: 1721084
+[NesterovSolve] Iter:   50 overflow: 0.995 HPWL: 1716267
+[NesterovSolve] Iter:   60 overflow: 0.995 HPWL: 1716640
+[NesterovSolve] Iter:   70 overflow: 0.995 HPWL: 1728347
+[NesterovSolve] Iter:   80 overflow: 0.995 HPWL: 1765347
+[NesterovSolve] Iter:   90 overflow: 0.994 HPWL: 1885374
+[NesterovSolve] Iter:  100 overflow: 0.993 HPWL: 2182538
+[NesterovSolve] Iter:  110 overflow: 0.990 HPWL: 2709474
+[NesterovSolve] Iter:  120 overflow: 0.986 HPWL: 3421886
+[NesterovSolve] Iter:  130 overflow: 0.980 HPWL: 4231126
+[NesterovSolve] Iter:  140 overflow: 0.971 HPWL: 5141004
+[NesterovSolve] Iter:  150 overflow: 0.962 HPWL: 6199561
+[NesterovSolve] Iter:  160 overflow: 0.951 HPWL: 7455660
+[NesterovSolve] Iter:  170 overflow: 0.936 HPWL: 8964371
+[NesterovSolve] Iter:  180 overflow: 0.919 HPWL: 10783642
+[NesterovSolve] Iter:  190 overflow: 0.898 HPWL: 12858603
+[NesterovSolve] Iter:  200 overflow: 0.875 HPWL: 15129931
+[NesterovSolve] Iter:  210 overflow: 0.848 HPWL: 17721227
+[NesterovSolve] Iter:  220 overflow: 0.820 HPWL: 20513376
+[NesterovSolve] Iter:  230 overflow: 0.792 HPWL: 22902502
+[NesterovSolve] Iter:  240 overflow: 0.764 HPWL: 25312447
+[NesterovSolve] Iter:  250 overflow: 0.734 HPWL: 27301255
+[NesterovSolve] Iter:  260 overflow: 0.702 HPWL: 29432153
+[NesterovSolve] Iter:  270 overflow: 0.666 HPWL: 31370896
+[NesterovSolve] Iter:  280 overflow: 0.628 HPWL: 33024233
+[NesterovSolve] Iter:  290 overflow: 0.592 HPWL: 34578315
+[NesterovSolve] Iter:  300 overflow: 0.554 HPWL: 36239665
+[NesterovSolve] Iter:  310 overflow: 0.511 HPWL: 38038942
+[NesterovSolve] Iter:  320 overflow: 0.464 HPWL: 39829881
+[NesterovSolve] Iter:  330 overflow: 0.404 HPWL: 41785241
+[NesterovSolve] Iter:  340 overflow: 0.331 HPWL: 43960999
+[NesterovSolve] Iter:  350 overflow: 0.278 HPWL: 45398940
+[NesterovSolve] Iter:  360 overflow: 0.233 HPWL: 46649942
+[NesterovSolve] Iter:  370 overflow: 0.196 HPWL: 47543302
+[NesterovSolve] Iter:  380 overflow: 0.166 HPWL: 48225230
+[NesterovSolve] Iter:  390 overflow: 0.141 HPWL: 48738371
+[NesterovSolve] Iter:  400 overflow: 0.122 HPWL: 49105035
+[NesterovSolve] Iter:  410 overflow: 0.104 HPWL: 49395604
+[NesterovSolve] Finished with Overflow: 0.098909
+Took 10 seconds: global_placement -skip_io -density 0.65 -pad_left 0 -pad_right 0
+Elapsed time: 0:12.66[h:]min:sec. CPU time: user 159.76 sys 0.44 (1264%). Peak memory: 264312KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_2_place_iop io_placement
+Running io_placement.tcl, stage 3_2_place_iop
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+place_pins -hor_layers M4 -ver_layers M5
+Found 0 macro blocks.
+Using 2 tracks default min distance between IO pins.
+[INFO PPL-0001] Number of available slots 2832
+[INFO PPL-0002] Number of I/O             388
+[INFO PPL-0003] Number of I/O w/sink      388
+[INFO PPL-0004] Number of I/O w/o sink    0
+[INFO PPL-0005] Slots per section         200
+[INFO PPL-0008] Successfully assigned pins to sections.
+[INFO PPL-0012] I/O nets HPWL: 10303.49 um.
+Elapsed time: 0:02.09[h:]min:sec. CPU time: user 1.92 sys 0.13 (98%). Peak memory: 237472KB.
+READY TO RUN!
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[WARNING ORD-0039] .openroad ignored with -python
+[INFO ODB-0227] LEF file: platforms/asap7/lef/asap7_tech_1x_201209.lef, created 24 layers, 9 vias
+[WARNING ODB-0217] duplicate VIARULE (Pad_M9) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (M9_M8) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (M8_M7) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (M7_M6) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (M6_M5) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (M3_M2widePWR0p936) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (M4_M3widePWR0p864) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (M5_M4widePWR0p864) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (M6_M5widePWR1p152) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (M7_M6widePWR1p152) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (M2_M1) ignoring...
+[INFO ODB-0227] LEF file: platforms/asap7/lef/asap7_tech_1x_201209.lef
+[INFO ODB-0227] LEF file: platforms/asap7/lef/asap7sc7p5t_28_L_1x_220121a.lef, created 212 library cells
+[INFO ODB-0394] Duplicate site asap7sc7p5t in asap7sc7p5t_28_R_1x_220121a already seen in asap7sc7p5t_28_L_1x_220121a
+[INFO ODB-0227] LEF file: platforms/asap7/lef/asap7sc7p5t_28_R_1x_220121a.lef, created 212 library cells
+[INFO ODB-0394] Duplicate site asap7sc7p5t in asap7sc7p5t_28_SL_1x_220121a already seen in asap7sc7p5t_28_L_1x_220121a
+[INFO ODB-0227] LEF file: platforms/asap7/lef/asap7sc7p5t_28_SL_1x_220121a.lef, created 212 library cells
+[INFO ODB-0394] Duplicate site asap7sc7p5t in asap7sc7p5t_28_SRAM_1x_220121a already seen in asap7sc7p5t_28_L_1x_220121a
+[INFO ODB-0227] LEF file: platforms/asap7/lef/asap7sc7p5t_28_SRAM_1x_220121a.lef, created 212 library cells
+[INFO ODB-0227] LEF file: platforms/asap7/lef/asap7sc7p5t_DFFHQNH2V2X.lef, created 9 library cells
+[INFO ODB-0394] Duplicate site asap7sc7p5t_pg in asap7sc7p5t_DFFHQNV2X already seen in asap7sc7p5t_DFFHQNH2V2X
+[INFO ODB-0227] LEF file: platforms/asap7/lef/asap7sc7p5t_DFFHQNV2X.lef, created 9 library cells
+[INFO ODB-0394] Duplicate site asap7sc7p5t_pg in asap7sc7p5t_DFFHQNV4X already seen in asap7sc7p5t_DFFHQNH2V2X
+[INFO ODB-0227] LEF file: platforms/asap7/lef/asap7sc7p5t_DFFHQNV4X.lef, created 9 library cells
+[WARNING ODB-0176] error: undefined layer (LIG) referenced
+[WARNING ODB-0186] macro DFHV2Xx1_ASAP7_75t_L references unknown site core
+[WARNING ODB-0176] error: undefined layer (LIG) referenced
+[WARNING ODB-0186] macro DFHV2Xx1_ASAP7_75t_R references unknown site core
+[WARNING ODB-0176] error: undefined layer (LIG) referenced
+[WARNING ODB-0186] macro DFHV2Xx1_ASAP7_75t_SL references unknown site core
+[WARNING ODB-0176] error: undefined layer (LIG) referenced
+[WARNING ODB-0186] macro DFHV2Xx2_ASAP7_75t_L references unknown site core
+[WARNING ODB-0176] error: undefined layer (LIG) referenced
+[WARNING ODB-0186] macro DFHV2Xx2_ASAP7_75t_R references unknown site core
+[WARNING ODB-0176] error: undefined layer (LIG) referenced
+[WARNING ODB-0186] macro DFHV2Xx2_ASAP7_75t_SL references unknown site core
+[WARNING ODB-0176] error: undefined layer (LIG) referenced
+[WARNING ODB-0186] macro DFHV2Xx3_ASAP7_75t_L references unknown site core
+[WARNING ODB-0176] error: undefined layer (LIG) referenced
+[WARNING ODB-0186] macro DFHV2Xx3_ASAP7_75t_R references unknown site core
+[WARNING ODB-0176] error: undefined layer (LIG) referenced
+[WARNING ODB-0186] macro DFHV2Xx3_ASAP7_75t_SL references unknown site core
+[WARNING ODB-0176] error: undefined layer (LIG) referenced
+[WARNING ODB-0186] macro DFHV2Xx4_ASAP7_75t_L references unknown site core
+[WARNING ODB-0176] error: undefined layer (LIG) referenced
+[WARNING ODB-0186] macro DFHV2Xx4_ASAP7_75t_R references unknown site core
+[WARNING ODB-0176] error: undefined layer (LIG) referenced
+[WARNING ODB-0186] macro DFHV2Xx4_ASAP7_75t_SL references unknown site core
+[INFO ODB-0227] LEF file: platforms/asap7/lef/asap7sc7p5t_DFHV2X.lef, created 12 library cells
+[INFO ODB-0227] LEF file: platforms/asap7/lef/fakeram7_2048x39.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/asap7/lef/fakeram7_256x256.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/asap7/lef/fakeram7_256x32.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/asap7/lef/fakeram7_256x34.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/asap7/lef/fakeram7_64x21.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/asap7/lef/fakeram_256x128.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/asap7/lef/fakeram_256x64.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/asap7/lef/fakeram_32x46.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/asap7/lef/fakeram_512x8.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/asap7/lef/fakeram_64x20.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/asap7/lef/fakeram_64x22.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/asap7/lef/fakeregfile_128x64.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/asap7/lef/fakeregfile_32x46.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/asap7/lef/fakeregfile_64x64.lef, created 1 library cells
+[ERROR ORD-0013] Command units uninitialized. Use the read_liberty or set_cmd_units command to set units.
+[ERROR STA-2141] No liberty libraries found.
+Design: aes_cipher_top
+Die size: 69479 x 69479 DBU
+Core size: 65394 x 65070 DBU
+IO Pins: 388 | Instances: 16007 | Nets: 16266
+
+Sample Net 1147: [16169]
+Sample I/O Pin 0: {'name': 'clk', 'type': 'INPUT', 'x': 42, 'y': 49452}
+[✓] Pickle file saved to /data/cse291/venkat/latest/ML-Based-Placement-Initialization/results/aes_asap7/aes.pkl
+[✓] Design saved to /data/cse291/venkat/latest/ML-Based-Placement-Initialization/results/aes_asap7/aes.json
+Processing Cluster Level: 0
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 1
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 3
+Processing Cluster Level: 3
+Processing Cluster Level: 3
+Processing Cluster Level: 3
+[i] Writing placement clusters to: /data/cse291/venkat/latest/ML-Based-Placement-Initialization/results/aes_asap7/aes_placement_clusters.json
+[i] Writing connectivity explanation to: /data/cse291/venkat/latest/ML-Based-Placement-Initialization/results/aes_asap7/aes_cluster_connectivity_explanation.json
+[i] Writing hierarchy to: /data/cse291/venkat/latest/ML-Based-Placement-Initialization/results/aes_asap7/aes_hierarchy.json
+[i] Writing flat hierarchy node map to: /data/cse291/venkat/latest/ML-Based-Placement-Initialization/results/aes_asap7/aes_hierarchy_cluster.json
+Level 0 → 16007 nodes → 2260 clusters
+Level 1 → 2260 nodes → 297 clusters
+Level 2 → 297 nodes → 40 clusters
+Level 3 → 40 nodes → 5 clusters
+[✓] All eligible instances were assigned to clusters.
+Step 1: Compute hierarchy area and cluster maps...
+Cluster area and sorted cluster children computed successfully.
+Step 2: Build cluster netlists...
+✅ Dumped cluster netlists to cluster_netlists.json
+Step 3: Build instance pin boundary and cluster boxes...
+✅ Saved instance-to-pin-boundary mapping to instance_pin_boundary_map.json
+✅ Saved cluster_boxes_map.json
+Step 4: Compute hierarchy connectivity and save .npy...
+✅ Saved connectivity to hierarchy_connectivity.json
+✅ Saved cluster tensor data to cluster_tensor_data.npy
+✅ All steps completed!
