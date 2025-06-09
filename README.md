@@ -98,8 +98,10 @@ pixi shell
 Ensure you have [docker](https://www.docker.com/).
 This will allow you to run the OpenROAD side of things for the flow.
 
-These scripts have only been tested on Linux systems.
-Please use WSL if on Windows.
+These scripts have been extensively tested on Linux systems and, to a limited extent, on WSL.
+
+Please refer to this [docker desktop on WSL installation guide](https://github.com/VenkateshwaranSivaramakrishnan/ML-Based-Placement-Initialization/blob/main/WSL%20%7C%20Docker%20Desktop%20Installation%20Guide.md) for Windows. 
+
 MacOS might work but hasn't been rigorously tested.
 
 ---
