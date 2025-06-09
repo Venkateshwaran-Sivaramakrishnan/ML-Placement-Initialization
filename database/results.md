@@ -7,7 +7,7 @@
 | Design | Tech      | # Iterations | Est. Wirelength (µm) |
 |--------|-----------|--------------|-----------------------|
 | gcd    | asap7     | 420          | 985.547               |
-| gcd    | nangate45 | 620          | 3216.71               |
+| gcd    | nangate45 | 360          | 3216.71               |
 | ibex   | nangate45 | 2180        | 278282                |
 
 ---
@@ -19,7 +19,7 @@
 | Design | Tech      | # Iterations | Est. Wirelength (µm) | HPWL Improved       | Iteration Count Improved |
 |--------|-----------|--------------|-----------------------|----------------------|---------------------------|
 | gcd    | asap7     | 420          | 3139.76               |                      |                           |
-| gcd    | nangate45 | 620          | 3165.16               | <p align="center">✅</p> |                           |
+| gcd    | nangate45 | 290          | 3165.16               | <p align="center">✅</p> |                           |
 | ibex   | nangate45 | 300        | 263830                | <p align="center">✅</p> |                           |
 
 ---
