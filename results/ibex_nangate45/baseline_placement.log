@@ -1,0 +1,1631 @@
+READY TO RUN!
+rm -f ./results/nangate45/ibex/base/3_*place*.odb
+rm -f ./results/nangate45/ibex/base/3_place.sdc
+rm -f ./results/nangate45/ibex/base/3_*.def ./results/nangate45/ibex/base/3_*.v
+rm -f ./reports/nangate45/ibex/base/3_*
+rm -f ./logs/nangate45/ibex/base/3_*
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_1_place_gp_skip_io global_place_skip_io
+Running global_place_skip_io.tcl, stage 3_1_place_gp_skip_io
+[INFO GPL-0002] DBU: 2000
+[INFO GPL-0003] SiteSize: (  0.190  1.400 ) um
+[INFO GPL-0004] CoreBBox: (  1.140  1.400 ) ( 240.730 239.400 ) um
+[WARNING GPL-0001] alert_major_o toplevel port is not placed!
+       Replace will regard alert_major_o is placed in (0, 0)
+[WARNING GPL-0001] alert_minor_o toplevel port is not placed!
+       Replace will regard alert_minor_o is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[0] toplevel port is not placed!
+       Replace will regard boot_addr_i[0] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[10] toplevel port is not placed!
+       Replace will regard boot_addr_i[10] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[11] toplevel port is not placed!
+       Replace will regard boot_addr_i[11] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[12] toplevel port is not placed!
+       Replace will regard boot_addr_i[12] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[13] toplevel port is not placed!
+       Replace will regard boot_addr_i[13] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[14] toplevel port is not placed!
+       Replace will regard boot_addr_i[14] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[15] toplevel port is not placed!
+       Replace will regard boot_addr_i[15] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[16] toplevel port is not placed!
+       Replace will regard boot_addr_i[16] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[17] toplevel port is not placed!
+       Replace will regard boot_addr_i[17] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[18] toplevel port is not placed!
+       Replace will regard boot_addr_i[18] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[19] toplevel port is not placed!
+       Replace will regard boot_addr_i[19] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[1] toplevel port is not placed!
+       Replace will regard boot_addr_i[1] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[20] toplevel port is not placed!
+       Replace will regard boot_addr_i[20] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[21] toplevel port is not placed!
+       Replace will regard boot_addr_i[21] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[22] toplevel port is not placed!
+       Replace will regard boot_addr_i[22] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[23] toplevel port is not placed!
+       Replace will regard boot_addr_i[23] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[24] toplevel port is not placed!
+       Replace will regard boot_addr_i[24] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[25] toplevel port is not placed!
+       Replace will regard boot_addr_i[25] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[26] toplevel port is not placed!
+       Replace will regard boot_addr_i[26] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[27] toplevel port is not placed!
+       Replace will regard boot_addr_i[27] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[28] toplevel port is not placed!
+       Replace will regard boot_addr_i[28] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[29] toplevel port is not placed!
+       Replace will regard boot_addr_i[29] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[2] toplevel port is not placed!
+       Replace will regard boot_addr_i[2] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[30] toplevel port is not placed!
+       Replace will regard boot_addr_i[30] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[31] toplevel port is not placed!
+       Replace will regard boot_addr_i[31] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[3] toplevel port is not placed!
+       Replace will regard boot_addr_i[3] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[4] toplevel port is not placed!
+       Replace will regard boot_addr_i[4] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[5] toplevel port is not placed!
+       Replace will regard boot_addr_i[5] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[6] toplevel port is not placed!
+       Replace will regard boot_addr_i[6] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[7] toplevel port is not placed!
+       Replace will regard boot_addr_i[7] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[8] toplevel port is not placed!
+       Replace will regard boot_addr_i[8] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[9] toplevel port is not placed!
+       Replace will regard boot_addr_i[9] is placed in (0, 0)
+[WARNING GPL-0001] clk_i toplevel port is not placed!
+       Replace will regard clk_i is placed in (0, 0)
+[WARNING GPL-0001] core_sleep_o toplevel port is not placed!
+       Replace will regard core_sleep_o is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[0] toplevel port is not placed!
+       Replace will regard data_addr_o[0] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[10] toplevel port is not placed!
+       Replace will regard data_addr_o[10] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[11] toplevel port is not placed!
+       Replace will regard data_addr_o[11] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[12] toplevel port is not placed!
+       Replace will regard data_addr_o[12] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[13] toplevel port is not placed!
+       Replace will regard data_addr_o[13] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[14] toplevel port is not placed!
+       Replace will regard data_addr_o[14] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[15] toplevel port is not placed!
+       Replace will regard data_addr_o[15] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[16] toplevel port is not placed!
+       Replace will regard data_addr_o[16] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[17] toplevel port is not placed!
+       Replace will regard data_addr_o[17] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[18] toplevel port is not placed!
+       Replace will regard data_addr_o[18] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[19] toplevel port is not placed!
+       Replace will regard data_addr_o[19] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[1] toplevel port is not placed!
+       Replace will regard data_addr_o[1] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[20] toplevel port is not placed!
+       Replace will regard data_addr_o[20] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[21] toplevel port is not placed!
+       Replace will regard data_addr_o[21] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[22] toplevel port is not placed!
+       Replace will regard data_addr_o[22] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[23] toplevel port is not placed!
+       Replace will regard data_addr_o[23] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[24] toplevel port is not placed!
+       Replace will regard data_addr_o[24] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[25] toplevel port is not placed!
+       Replace will regard data_addr_o[25] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[26] toplevel port is not placed!
+       Replace will regard data_addr_o[26] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[27] toplevel port is not placed!
+       Replace will regard data_addr_o[27] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[28] toplevel port is not placed!
+       Replace will regard data_addr_o[28] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[29] toplevel port is not placed!
+       Replace will regard data_addr_o[29] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[2] toplevel port is not placed!
+       Replace will regard data_addr_o[2] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[30] toplevel port is not placed!
+       Replace will regard data_addr_o[30] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[31] toplevel port is not placed!
+       Replace will regard data_addr_o[31] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[3] toplevel port is not placed!
+       Replace will regard data_addr_o[3] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[4] toplevel port is not placed!
+       Replace will regard data_addr_o[4] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[5] toplevel port is not placed!
+       Replace will regard data_addr_o[5] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[6] toplevel port is not placed!
+       Replace will regard data_addr_o[6] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[7] toplevel port is not placed!
+       Replace will regard data_addr_o[7] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[8] toplevel port is not placed!
+       Replace will regard data_addr_o[8] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[9] toplevel port is not placed!
+       Replace will regard data_addr_o[9] is placed in (0, 0)
+[WARNING GPL-0001] data_be_o[0] toplevel port is not placed!
+       Replace will regard data_be_o[0] is placed in (0, 0)
+[WARNING GPL-0001] data_be_o[1] toplevel port is not placed!
+       Replace will regard data_be_o[1] is placed in (0, 0)
+[WARNING GPL-0001] data_be_o[2] toplevel port is not placed!
+       Replace will regard data_be_o[2] is placed in (0, 0)
+[WARNING GPL-0001] data_be_o[3] toplevel port is not placed!
+       Replace will regard data_be_o[3] is placed in (0, 0)
+[WARNING GPL-0001] data_err_i toplevel port is not placed!
+       Replace will regard data_err_i is placed in (0, 0)
+[WARNING GPL-0001] data_gnt_i toplevel port is not placed!
+       Replace will regard data_gnt_i is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[0] toplevel port is not placed!
+       Replace will regard data_rdata_i[0] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[10] toplevel port is not placed!
+       Replace will regard data_rdata_i[10] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[11] toplevel port is not placed!
+       Replace will regard data_rdata_i[11] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[12] toplevel port is not placed!
+       Replace will regard data_rdata_i[12] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[13] toplevel port is not placed!
+       Replace will regard data_rdata_i[13] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[14] toplevel port is not placed!
+       Replace will regard data_rdata_i[14] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[15] toplevel port is not placed!
+       Replace will regard data_rdata_i[15] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[16] toplevel port is not placed!
+       Replace will regard data_rdata_i[16] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[17] toplevel port is not placed!
+       Replace will regard data_rdata_i[17] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[18] toplevel port is not placed!
+       Replace will regard data_rdata_i[18] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[19] toplevel port is not placed!
+       Replace will regard data_rdata_i[19] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[1] toplevel port is not placed!
+       Replace will regard data_rdata_i[1] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[20] toplevel port is not placed!
+       Replace will regard data_rdata_i[20] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[21] toplevel port is not placed!
+       Replace will regard data_rdata_i[21] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[22] toplevel port is not placed!
+       Replace will regard data_rdata_i[22] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[23] toplevel port is not placed!
+       Replace will regard data_rdata_i[23] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[24] toplevel port is not placed!
+       Replace will regard data_rdata_i[24] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[25] toplevel port is not placed!
+       Replace will regard data_rdata_i[25] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[26] toplevel port is not placed!
+       Replace will regard data_rdata_i[26] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[27] toplevel port is not placed!
+       Replace will regard data_rdata_i[27] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[28] toplevel port is not placed!
+       Replace will regard data_rdata_i[28] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[29] toplevel port is not placed!
+       Replace will regard data_rdata_i[29] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[2] toplevel port is not placed!
+       Replace will regard data_rdata_i[2] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[30] toplevel port is not placed!
+       Replace will regard data_rdata_i[30] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[31] toplevel port is not placed!
+       Replace will regard data_rdata_i[31] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[3] toplevel port is not placed!
+       Replace will regard data_rdata_i[3] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[4] toplevel port is not placed!
+       Replace will regard data_rdata_i[4] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[5] toplevel port is not placed!
+       Replace will regard data_rdata_i[5] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[6] toplevel port is not placed!
+       Replace will regard data_rdata_i[6] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[7] toplevel port is not placed!
+       Replace will regard data_rdata_i[7] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[8] toplevel port is not placed!
+       Replace will regard data_rdata_i[8] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[9] toplevel port is not placed!
+       Replace will regard data_rdata_i[9] is placed in (0, 0)
+[WARNING GPL-0001] data_req_o toplevel port is not placed!
+       Replace will regard data_req_o is placed in (0, 0)
+[WARNING GPL-0001] data_rvalid_i toplevel port is not placed!
+       Replace will regard data_rvalid_i is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[0] toplevel port is not placed!
+       Replace will regard data_wdata_o[0] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[10] toplevel port is not placed!
+       Replace will regard data_wdata_o[10] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[11] toplevel port is not placed!
+       Replace will regard data_wdata_o[11] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[12] toplevel port is not placed!
+       Replace will regard data_wdata_o[12] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[13] toplevel port is not placed!
+       Replace will regard data_wdata_o[13] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[14] toplevel port is not placed!
+       Replace will regard data_wdata_o[14] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[15] toplevel port is not placed!
+       Replace will regard data_wdata_o[15] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[16] toplevel port is not placed!
+       Replace will regard data_wdata_o[16] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[17] toplevel port is not placed!
+       Replace will regard data_wdata_o[17] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[18] toplevel port is not placed!
+       Replace will regard data_wdata_o[18] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[19] toplevel port is not placed!
+       Replace will regard data_wdata_o[19] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[1] toplevel port is not placed!
+       Replace will regard data_wdata_o[1] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[20] toplevel port is not placed!
+       Replace will regard data_wdata_o[20] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[21] toplevel port is not placed!
+       Replace will regard data_wdata_o[21] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[22] toplevel port is not placed!
+       Replace will regard data_wdata_o[22] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[23] toplevel port is not placed!
+       Replace will regard data_wdata_o[23] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[24] toplevel port is not placed!
+       Replace will regard data_wdata_o[24] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[25] toplevel port is not placed!
+       Replace will regard data_wdata_o[25] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[26] toplevel port is not placed!
+       Replace will regard data_wdata_o[26] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[27] toplevel port is not placed!
+       Replace will regard data_wdata_o[27] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[28] toplevel port is not placed!
+       Replace will regard data_wdata_o[28] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[29] toplevel port is not placed!
+       Replace will regard data_wdata_o[29] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[2] toplevel port is not placed!
+       Replace will regard data_wdata_o[2] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[30] toplevel port is not placed!
+       Replace will regard data_wdata_o[30] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[31] toplevel port is not placed!
+       Replace will regard data_wdata_o[31] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[3] toplevel port is not placed!
+       Replace will regard data_wdata_o[3] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[4] toplevel port is not placed!
+       Replace will regard data_wdata_o[4] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[5] toplevel port is not placed!
+       Replace will regard data_wdata_o[5] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[6] toplevel port is not placed!
+       Replace will regard data_wdata_o[6] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[7] toplevel port is not placed!
+       Replace will regard data_wdata_o[7] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[8] toplevel port is not placed!
+       Replace will regard data_wdata_o[8] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[9] toplevel port is not placed!
+       Replace will regard data_wdata_o[9] is placed in (0, 0)
+[WARNING GPL-0001] data_we_o toplevel port is not placed!
+       Replace will regard data_we_o is placed in (0, 0)
+[WARNING GPL-0001] debug_req_i toplevel port is not placed!
+       Replace will regard debug_req_i is placed in (0, 0)
+[WARNING GPL-0001] fetch_enable_i toplevel port is not placed!
+       Replace will regard fetch_enable_i is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[0] toplevel port is not placed!
+       Replace will regard hart_id_i[0] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[10] toplevel port is not placed!
+       Replace will regard hart_id_i[10] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[11] toplevel port is not placed!
+       Replace will regard hart_id_i[11] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[12] toplevel port is not placed!
+       Replace will regard hart_id_i[12] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[13] toplevel port is not placed!
+       Replace will regard hart_id_i[13] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[14] toplevel port is not placed!
+       Replace will regard hart_id_i[14] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[15] toplevel port is not placed!
+       Replace will regard hart_id_i[15] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[16] toplevel port is not placed!
+       Replace will regard hart_id_i[16] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[17] toplevel port is not placed!
+       Replace will regard hart_id_i[17] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[18] toplevel port is not placed!
+       Replace will regard hart_id_i[18] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[19] toplevel port is not placed!
+       Replace will regard hart_id_i[19] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[1] toplevel port is not placed!
+       Replace will regard hart_id_i[1] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[20] toplevel port is not placed!
+       Replace will regard hart_id_i[20] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[21] toplevel port is not placed!
+       Replace will regard hart_id_i[21] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[22] toplevel port is not placed!
+       Replace will regard hart_id_i[22] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[23] toplevel port is not placed!
+       Replace will regard hart_id_i[23] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[24] toplevel port is not placed!
+       Replace will regard hart_id_i[24] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[25] toplevel port is not placed!
+       Replace will regard hart_id_i[25] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[26] toplevel port is not placed!
+       Replace will regard hart_id_i[26] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[27] toplevel port is not placed!
+       Replace will regard hart_id_i[27] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[28] toplevel port is not placed!
+       Replace will regard hart_id_i[28] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[29] toplevel port is not placed!
+       Replace will regard hart_id_i[29] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[2] toplevel port is not placed!
+       Replace will regard hart_id_i[2] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[30] toplevel port is not placed!
+       Replace will regard hart_id_i[30] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[31] toplevel port is not placed!
+       Replace will regard hart_id_i[31] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[3] toplevel port is not placed!
+       Replace will regard hart_id_i[3] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[4] toplevel port is not placed!
+       Replace will regard hart_id_i[4] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[5] toplevel port is not placed!
+       Replace will regard hart_id_i[5] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[6] toplevel port is not placed!
+       Replace will regard hart_id_i[6] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[7] toplevel port is not placed!
+       Replace will regard hart_id_i[7] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[8] toplevel port is not placed!
+       Replace will regard hart_id_i[8] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[9] toplevel port is not placed!
+       Replace will regard hart_id_i[9] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[0] toplevel port is not placed!
+       Replace will regard instr_addr_o[0] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[10] toplevel port is not placed!
+       Replace will regard instr_addr_o[10] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[11] toplevel port is not placed!
+       Replace will regard instr_addr_o[11] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[12] toplevel port is not placed!
+       Replace will regard instr_addr_o[12] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[13] toplevel port is not placed!
+       Replace will regard instr_addr_o[13] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[14] toplevel port is not placed!
+       Replace will regard instr_addr_o[14] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[15] toplevel port is not placed!
+       Replace will regard instr_addr_o[15] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[16] toplevel port is not placed!
+       Replace will regard instr_addr_o[16] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[17] toplevel port is not placed!
+       Replace will regard instr_addr_o[17] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[18] toplevel port is not placed!
+       Replace will regard instr_addr_o[18] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[19] toplevel port is not placed!
+       Replace will regard instr_addr_o[19] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[1] toplevel port is not placed!
+       Replace will regard instr_addr_o[1] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[20] toplevel port is not placed!
+       Replace will regard instr_addr_o[20] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[21] toplevel port is not placed!
+       Replace will regard instr_addr_o[21] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[22] toplevel port is not placed!
+       Replace will regard instr_addr_o[22] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[23] toplevel port is not placed!
+       Replace will regard instr_addr_o[23] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[24] toplevel port is not placed!
+       Replace will regard instr_addr_o[24] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[25] toplevel port is not placed!
+       Replace will regard instr_addr_o[25] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[26] toplevel port is not placed!
+       Replace will regard instr_addr_o[26] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[27] toplevel port is not placed!
+       Replace will regard instr_addr_o[27] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[28] toplevel port is not placed!
+       Replace will regard instr_addr_o[28] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[29] toplevel port is not placed!
+       Replace will regard instr_addr_o[29] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[2] toplevel port is not placed!
+       Replace will regard instr_addr_o[2] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[30] toplevel port is not placed!
+       Replace will regard instr_addr_o[30] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[31] toplevel port is not placed!
+       Replace will regard instr_addr_o[31] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[3] toplevel port is not placed!
+       Replace will regard instr_addr_o[3] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[4] toplevel port is not placed!
+       Replace will regard instr_addr_o[4] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[5] toplevel port is not placed!
+       Replace will regard instr_addr_o[5] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[6] toplevel port is not placed!
+       Replace will regard instr_addr_o[6] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[7] toplevel port is not placed!
+       Replace will regard instr_addr_o[7] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[8] toplevel port is not placed!
+       Replace will regard instr_addr_o[8] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[9] toplevel port is not placed!
+       Replace will regard instr_addr_o[9] is placed in (0, 0)
+[WARNING GPL-0001] instr_err_i toplevel port is not placed!
+       Replace will regard instr_err_i is placed in (0, 0)
+[WARNING GPL-0001] instr_gnt_i toplevel port is not placed!
+       Replace will regard instr_gnt_i is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[0] toplevel port is not placed!
+       Replace will regard instr_rdata_i[0] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[10] toplevel port is not placed!
+       Replace will regard instr_rdata_i[10] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[11] toplevel port is not placed!
+       Replace will regard instr_rdata_i[11] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[12] toplevel port is not placed!
+       Replace will regard instr_rdata_i[12] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[13] toplevel port is not placed!
+       Replace will regard instr_rdata_i[13] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[14] toplevel port is not placed!
+       Replace will regard instr_rdata_i[14] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[15] toplevel port is not placed!
+       Replace will regard instr_rdata_i[15] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[16] toplevel port is not placed!
+       Replace will regard instr_rdata_i[16] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[17] toplevel port is not placed!
+       Replace will regard instr_rdata_i[17] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[18] toplevel port is not placed!
+       Replace will regard instr_rdata_i[18] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[19] toplevel port is not placed!
+       Replace will regard instr_rdata_i[19] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[1] toplevel port is not placed!
+       Replace will regard instr_rdata_i[1] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[20] toplevel port is not placed!
+       Replace will regard instr_rdata_i[20] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[21] toplevel port is not placed!
+       Replace will regard instr_rdata_i[21] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[22] toplevel port is not placed!
+       Replace will regard instr_rdata_i[22] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[23] toplevel port is not placed!
+       Replace will regard instr_rdata_i[23] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[24] toplevel port is not placed!
+       Replace will regard instr_rdata_i[24] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[25] toplevel port is not placed!
+       Replace will regard instr_rdata_i[25] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[26] toplevel port is not placed!
+       Replace will regard instr_rdata_i[26] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[27] toplevel port is not placed!
+       Replace will regard instr_rdata_i[27] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[28] toplevel port is not placed!
+       Replace will regard instr_rdata_i[28] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[29] toplevel port is not placed!
+       Replace will regard instr_rdata_i[29] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[2] toplevel port is not placed!
+       Replace will regard instr_rdata_i[2] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[30] toplevel port is not placed!
+       Replace will regard instr_rdata_i[30] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[31] toplevel port is not placed!
+       Replace will regard instr_rdata_i[31] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[3] toplevel port is not placed!
+       Replace will regard instr_rdata_i[3] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[4] toplevel port is not placed!
+       Replace will regard instr_rdata_i[4] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[5] toplevel port is not placed!
+       Replace will regard instr_rdata_i[5] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[6] toplevel port is not placed!
+       Replace will regard instr_rdata_i[6] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[7] toplevel port is not placed!
+       Replace will regard instr_rdata_i[7] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[8] toplevel port is not placed!
+       Replace will regard instr_rdata_i[8] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[9] toplevel port is not placed!
+       Replace will regard instr_rdata_i[9] is placed in (0, 0)
+[WARNING GPL-0001] instr_req_o toplevel port is not placed!
+       Replace will regard instr_req_o is placed in (0, 0)
+[WARNING GPL-0001] instr_rvalid_i toplevel port is not placed!
+       Replace will regard instr_rvalid_i is placed in (0, 0)
+[WARNING GPL-0001] irq_external_i toplevel port is not placed!
+       Replace will regard irq_external_i is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[0] toplevel port is not placed!
+       Replace will regard irq_fast_i[0] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[10] toplevel port is not placed!
+       Replace will regard irq_fast_i[10] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[11] toplevel port is not placed!
+       Replace will regard irq_fast_i[11] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[12] toplevel port is not placed!
+       Replace will regard irq_fast_i[12] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[13] toplevel port is not placed!
+       Replace will regard irq_fast_i[13] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[14] toplevel port is not placed!
+       Replace will regard irq_fast_i[14] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[1] toplevel port is not placed!
+       Replace will regard irq_fast_i[1] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[2] toplevel port is not placed!
+       Replace will regard irq_fast_i[2] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[3] toplevel port is not placed!
+       Replace will regard irq_fast_i[3] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[4] toplevel port is not placed!
+       Replace will regard irq_fast_i[4] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[5] toplevel port is not placed!
+       Replace will regard irq_fast_i[5] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[6] toplevel port is not placed!
+       Replace will regard irq_fast_i[6] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[7] toplevel port is not placed!
+       Replace will regard irq_fast_i[7] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[8] toplevel port is not placed!
+       Replace will regard irq_fast_i[8] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[9] toplevel port is not placed!
+       Replace will regard irq_fast_i[9] is placed in (0, 0)
+[WARNING GPL-0001] irq_nm_i toplevel port is not placed!
+       Replace will regard irq_nm_i is placed in (0, 0)
+[WARNING GPL-0001] irq_software_i toplevel port is not placed!
+       Replace will regard irq_software_i is placed in (0, 0)
+[WARNING GPL-0001] irq_timer_i toplevel port is not placed!
+       Replace will regard irq_timer_i is placed in (0, 0)
+[WARNING GPL-0001] rst_ni toplevel port is not placed!
+       Replace will regard rst_ni is placed in (0, 0)
+[WARNING GPL-0001] test_en_i toplevel port is not placed!
+       Replace will regard test_en_i is placed in (0, 0)
+[INFO GPL-0006] NumInstances:             16572
+[INFO GPL-0007] NumPlaceInstances:        16146
+[INFO GPL-0008] NumFixedInstances:          426
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                  18783
+[INFO GPL-0011] NumPins:                  61158
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 241.790 241.790 ) um
+[INFO GPL-0013] CoreBBox: (  1.140  1.400 ) ( 240.730 239.400 ) um
+[INFO GPL-0016] CoreArea:             57022.420 um^2
+[INFO GPL-0017] NonPlaceInstsArea:      113.316 um^2
+[INFO GPL-0018] PlaceInstsArea:       29017.142 um^2
+[INFO GPL-0019] Util:                    50.989 %
+[INFO GPL-0020] StdInstsArea:         29017.142 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[INFO GPL-0031] FillerInit:NumGCells:     32873
+[INFO GPL-0032] FillerInit:NumGNets:      18783
+[INFO GPL-0033] FillerInit:NumGPins:      61158
+[INFO GPL-0023] TargetDensity:            1.000
+[INFO GPL-0024] AvrgPlaceInstArea:        1.797 um^2
+[INFO GPL-0025] IdealBinArea:             1.797 um^2
+[INFO GPL-0026] IdealBinCnt:              31728
+[INFO GPL-0027] TotalBinArea:         57022.420 um^2
+[INFO GPL-0028] BinCnt:       128    128
+[INFO GPL-0029] BinSize: (  1.872  1.859 )
+[INFO GPL-0030] NumBins: 16384
+Placement density is 0.6179086303710938, computed from PLACE_DENSITY_LB_ADDON 0.20 and lower bound 0.5098857879638672
+global_placement -skip_io -density 0.6179086303710938 -pad_left 0 -pad_right 0
+[INFO GPL-0002] DBU: 2000
+[INFO GPL-0003] SiteSize: (  0.190  1.400 ) um
+[INFO GPL-0004] CoreBBox: (  1.140  1.400 ) ( 240.730 239.400 ) um
+[INFO GPL-0006] NumInstances:             16572
+[INFO GPL-0007] NumPlaceInstances:        16146
+[INFO GPL-0008] NumFixedInstances:          426
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                  18783
+[INFO GPL-0011] NumPins:                  60894
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 241.790 241.790 ) um
+[INFO GPL-0013] CoreBBox: (  1.140  1.400 ) ( 240.730 239.400 ) um
+[INFO GPL-0016] CoreArea:             57022.420 um^2
+[INFO GPL-0017] NonPlaceInstsArea:      113.316 um^2
+[INFO GPL-0018] PlaceInstsArea:       29017.142 um^2
+[INFO GPL-0019] Util:                    50.989 %
+[INFO GPL-0020] StdInstsArea:         29017.142 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[INFO GPL-0031] FillerInit:NumGCells:     19832
+[INFO GPL-0032] FillerInit:NumGNets:      18783
+[INFO GPL-0033] FillerInit:NumGPins:      60894
+[INFO GPL-0023] TargetDensity:            0.618
+[INFO GPL-0024] AvrgPlaceInstArea:        1.797 um^2
+[INFO GPL-0025] IdealBinArea:             2.908 um^2
+[INFO GPL-0026] IdealBinCnt:              19605
+[INFO GPL-0027] TotalBinArea:         57022.420 um^2
+[INFO GPL-0028] BinCnt:       128    128
+[INFO GPL-0029] BinSize: (  1.872  1.859 )
+[INFO GPL-0030] NumBins: 16384
+[NesterovSolve] Iter:    1 overflow: 0.994 HPWL: 57171075
+[NesterovSolve] Iter:   10 overflow: 0.998 HPWL: 26312630
+[NesterovSolve] Iter:   20 overflow: 0.999 HPWL: 25348504
+[NesterovSolve] Iter:   30 overflow: 0.999 HPWL: 25273729
+[NesterovSolve] Iter:   40 overflow: 0.999 HPWL: 25182062
+[NesterovSolve] Iter:   50 overflow: 0.999 HPWL: 25128673
+[NesterovSolve] Iter:   60 overflow: 0.999 HPWL: 25078933
+[NesterovSolve] Iter:   70 overflow: 0.999 HPWL: 25049921
+[NesterovSolve] Iter:   80 overflow: 0.998 HPWL: 25049080
+[NesterovSolve] Iter:   90 overflow: 0.998 HPWL: 25101647
+[NesterovSolve] Iter:  100 overflow: 0.998 HPWL: 25339342
+[NesterovSolve] Iter:  110 overflow: 0.998 HPWL: 26105000
+[NesterovSolve] Iter:  120 overflow: 0.997 HPWL: 27940419
+[NesterovSolve] Iter:  130 overflow: 0.996 HPWL: 31343250
+[NesterovSolve] Iter:  140 overflow: 0.994 HPWL: 36862851
+[NesterovSolve] Iter:  150 overflow: 0.993 HPWL: 44896346
+[NesterovSolve] Iter:  160 overflow: 0.989 HPWL: 55787392
+[NesterovSolve] Iter:  170 overflow: 0.984 HPWL: 68715074
+[NesterovSolve] Iter:  180 overflow: 0.978 HPWL: 82613127
+[NesterovSolve] Iter:  190 overflow: 0.968 HPWL: 99048599
+[NesterovSolve] Iter:  200 overflow: 0.955 HPWL: 119237087
+[NesterovSolve] Iter:  210 overflow: 0.938 HPWL: 142738013
+[NesterovSolve] Iter:  220 overflow: 0.919 HPWL: 167040174
+[NesterovSolve] Iter:  230 overflow: 0.894 HPWL: 193811271
+[NesterovSolve] Iter:  240 overflow: 0.865 HPWL: 222323654
+[NesterovSolve] Iter:  250 overflow: 0.833 HPWL: 251512515
+[NesterovSolve] Iter:  260 overflow: 0.799 HPWL: 279122241
+[NesterovSolve] Iter:  270 overflow: 0.761 HPWL: 305342251
+[NesterovSolve] Iter:  280 overflow: 0.720 HPWL: 331268080
+[NesterovSolve] Iter:  290 overflow: 0.675 HPWL: 354833290
+[NesterovSolve] Iter:  300 overflow: 0.626 HPWL: 375877512
+[NesterovSolve] Iter:  310 overflow: 0.573 HPWL: 396757989
+[NesterovSolve] Iter:  320 overflow: 0.525 HPWL: 416894305
+[NesterovSolve] Iter:  330 overflow: 0.477 HPWL: 428853004
+[NesterovSolve] Iter:  340 overflow: 0.431 HPWL: 436911265
+[NesterovSolve] Iter:  350 overflow: 0.383 HPWL: 445286902
+[NesterovSolve] Iter:  360 overflow: 0.337 HPWL: 450855369
+[NesterovSolve] Iter:  370 overflow: 0.305 HPWL: 453336618
+[NesterovSolve] Iter:  380 overflow: 0.276 HPWL: 456008670
+[NesterovSolve] Iter:  390 overflow: 0.244 HPWL: 457838450
+[NesterovSolve] Iter:  400 overflow: 0.213 HPWL: 459453420
+[NesterovSolve] Iter:  410 overflow: 0.187 HPWL: 460806690
+[NesterovSolve] Iter:  420 overflow: 0.161 HPWL: 461895345
+[NesterovSolve] Iter:  430 overflow: 0.141 HPWL: 462820738
+[NesterovSolve] Iter:  440 overflow: 0.122 HPWL: 463618860
+[NesterovSolve] Iter:  450 overflow: 0.106 HPWL: 464435232
+[NesterovSolve] Finished with Overflow: 0.099854
+Took 9 seconds: global_placement -skip_io -density 0.6179086303710938 -pad_left 0 -pad_right 0
+Elapsed time: 0:09.92[h:]min:sec. CPU time: user 143.67 sys 0.24 (1449%). Peak memory: 177400KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_2_place_iop io_placement
+Running io_placement.tcl, stage 3_2_place_iop
+place_pins -hor_layers metal5 -ver_layers metal6
+Found 0 macro blocks.
+Using 2 tracks default min distance between IO pins.
+[INFO PPL-0001] Number of available slots 1712
+[INFO PPL-0002] Number of I/O             264
+[INFO PPL-0003] Number of I/O w/sink      256
+[INFO PPL-0004] Number of I/O w/o sink    8
+[INFO PPL-0005] Slots per section         200
+[INFO PPL-0008] Successfully assigned pins to sections.
+[INFO PPL-0012] I/O nets HPWL: 15900.39 um.
+Elapsed time: 0:00.58[h:]min:sec. CPU time: user 0.51 sys 0.06 (99%). Peak memory: 148216KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_3_place_gp global_place
+Running global_place.tcl, stage 3_3_place_gp
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/nangate45/fastroute.tcl
+[INFO GPL-0002] DBU: 2000
+[INFO GPL-0003] SiteSize: (  0.190  1.400 ) um
+[INFO GPL-0004] CoreBBox: (  1.140  1.400 ) ( 240.730 239.400 ) um
+[INFO GPL-0006] NumInstances:             16572
+[INFO GPL-0007] NumPlaceInstances:        16146
+[INFO GPL-0008] NumFixedInstances:          426
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                  18783
+[INFO GPL-0011] NumPins:                  61158
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 241.790 241.790 ) um
+[INFO GPL-0013] CoreBBox: (  1.140  1.400 ) ( 240.730 239.400 ) um
+[INFO GPL-0016] CoreArea:             57022.420 um^2
+[INFO GPL-0017] NonPlaceInstsArea:      113.316 um^2
+[INFO GPL-0018] PlaceInstsArea:       29017.142 um^2
+[INFO GPL-0019] Util:                    50.989 %
+[INFO GPL-0020] StdInstsArea:         29017.142 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[INFO GPL-0031] FillerInit:NumGCells:     32873
+[INFO GPL-0032] FillerInit:NumGNets:      18783
+[INFO GPL-0033] FillerInit:NumGPins:      61158
+[INFO GPL-0023] TargetDensity:            1.000
+[INFO GPL-0024] AvrgPlaceInstArea:        1.797 um^2
+[INFO GPL-0025] IdealBinArea:             1.797 um^2
+[INFO GPL-0026] IdealBinCnt:              31728
+[INFO GPL-0027] TotalBinArea:         57022.420 um^2
+[INFO GPL-0028] BinCnt:       128    128
+[INFO GPL-0029] BinSize: (  1.872  1.859 )
+[INFO GPL-0030] NumBins: 16384
+Placement density is 0.6179086303710938, computed from PLACE_DENSITY_LB_ADDON 0.20 and lower bound 0.5098857879638672
+global_placement -density 0.6179086303710938 -pad_left 0 -pad_right 0 -routability_driven -timing_driven
+[INFO GPL-0002] DBU: 2000
+[INFO GPL-0003] SiteSize: (  0.190  1.400 ) um
+[INFO GPL-0004] CoreBBox: (  1.140  1.400 ) ( 240.730 239.400 ) um
+[INFO GPL-0006] NumInstances:             16572
+[INFO GPL-0007] NumPlaceInstances:        16146
+[INFO GPL-0008] NumFixedInstances:          426
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                  18783
+[INFO GPL-0011] NumPins:                  61158
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 241.790 241.790 ) um
+[INFO GPL-0013] CoreBBox: (  1.140  1.400 ) ( 240.730 239.400 ) um
+[INFO GPL-0016] CoreArea:             57022.420 um^2
+[INFO GPL-0017] NonPlaceInstsArea:      113.316 um^2
+[INFO GPL-0018] PlaceInstsArea:       29017.142 um^2
+[INFO GPL-0019] Util:                    50.989 %
+[INFO GPL-0020] StdInstsArea:         29017.142 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[InitialPlace]  Iter: 1 CG residual: 0.00630288 HPWL: 611947901
+[InitialPlace]  Iter: 2 CG residual: 0.00002836 HPWL: 212221629
+[InitialPlace]  Iter: 3 CG residual: 0.00628497 HPWL: 208870102
+[InitialPlace]  Iter: 4 CG residual: 0.00001479 HPWL: 206806891
+[InitialPlace]  Iter: 5 CG residual: 0.00001921 HPWL: 206094164
+[InitialPlace]  Iter: 6 CG residual: 0.00002508 HPWL: 205996949
+[InitialPlace]  Iter: 7 CG residual: 0.00000378 HPWL: 205720393
+[INFO GPL-0031] FillerInit:NumGCells:     19832
+[INFO GPL-0032] FillerInit:NumGNets:      18783
+[INFO GPL-0033] FillerInit:NumGPins:      61158
+[INFO GPL-0023] TargetDensity:            0.618
+[INFO GPL-0024] AvrgPlaceInstArea:        1.797 um^2
+[INFO GPL-0025] IdealBinArea:             2.908 um^2
+[INFO GPL-0026] IdealBinCnt:              19605
+[INFO GPL-0027] TotalBinArea:         57022.420 um^2
+[INFO GPL-0028] BinCnt:       128    128
+[INFO GPL-0029] BinSize: (  1.872  1.859 )
+[INFO GPL-0030] NumBins: 16384
+[NesterovSolve] Iter:    1 overflow: 0.986 HPWL: 139249197
+[NesterovSolve] Iter:   10 overflow: 0.951 HPWL: 151097640
+[NesterovSolve] Iter:   20 overflow: 0.935 HPWL: 167663432
+[NesterovSolve] Iter:   30 overflow: 0.927 HPWL: 173241365
+[NesterovSolve] Iter:   40 overflow: 0.923 HPWL: 175106392
+[NesterovSolve] Iter:   50 overflow: 0.922 HPWL: 176335155
+[NesterovSolve] Iter:   60 overflow: 0.922 HPWL: 176697858
+[NesterovSolve] Iter:   70 overflow: 0.922 HPWL: 176727073
+[NesterovSolve] Iter:   80 overflow: 0.922 HPWL: 176287448
+[NesterovSolve] Iter:   90 overflow: 0.922 HPWL: 175360126
+[NesterovSolve] Iter:  100 overflow: 0.922 HPWL: 174164485
+[NesterovSolve] Iter:  110 overflow: 0.922 HPWL: 173288883
+[NesterovSolve] Iter:  120 overflow: 0.922 HPWL: 173049780
+[NesterovSolve] Iter:  130 overflow: 0.921 HPWL: 173494315
+[NesterovSolve] Iter:  140 overflow: 0.921 HPWL: 174590465
+[NesterovSolve] Iter:  150 overflow: 0.920 HPWL: 176749142
+[NesterovSolve] Iter:  160 overflow: 0.919 HPWL: 180845956
+[NesterovSolve] Iter:  170 overflow: 0.917 HPWL: 187061715
+[NesterovSolve] Iter:  180 overflow: 0.914 HPWL: 195204739
+[NesterovSolve] Iter:  190 overflow: 0.909 HPWL: 205903247
+[NesterovSolve] Iter:  200 overflow: 0.900 HPWL: 219892138
+[NesterovSolve] Iter:  210 overflow: 0.888 HPWL: 236948045
+[NesterovSolve] Iter:  220 overflow: 0.874 HPWL: 256889013
+[NesterovSolve] Iter:  230 overflow: 0.856 HPWL: 277906860
+[NesterovSolve] Iter:  240 overflow: 0.833 HPWL: 301047150
+[NesterovSolve] Iter:  250 overflow: 0.807 HPWL: 323040324
+[INFO GPL-0100] Timing-driven iteration 1/5, virtual: true.
+[INFO GPL-0101]    Iter: 258, overflow: 0.784, keep rsz at: 0.3, HPWL: 339657666
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     18783
+    final |    +10.7% |    3315 |       5 |             4 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0036] Found 4 capacitance violations.
+[INFO RSZ-0039] Resized 3315 instances.
+[INFO RSZ-0038] Inserted 5 buffers in 4 nets.
+[INFO GPL-0106] Timing-driven: worst slack -3.58e-10
+[INFO GPL-0103] Timing-driven: weighted 1877 nets.
+[NesterovSolve] Iter:  260 overflow: 0.778 HPWL: 344158332
+[NesterovSolve] Iter:  270 overflow: 0.748 HPWL: 359855401
+[NesterovSolve] Iter:  280 overflow: 0.707 HPWL: 382346924
+[NesterovSolve] Iter:  290 overflow: 0.666 HPWL: 400598162
+[INFO GPL-0100] Timing-driven iteration 2/5, virtual: true.
+[INFO GPL-0101]    Iter: 297, overflow: 0.633, keep rsz at: 0.3, HPWL: 413845998
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     18783
+    final |    +11.4% |    3415 |       7 |             5 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 1 slew violations.
+[INFO RSZ-0036] Found 5 capacitance violations.
+[INFO RSZ-0039] Resized 3415 instances.
+[INFO RSZ-0038] Inserted 7 buffers in 5 nets.
+[INFO GPL-0106] Timing-driven: worst slack -3.05e-10
+[INFO GPL-0103] Timing-driven: weighted 1877 nets.
+[NesterovSolve] Iter:  300 overflow: 0.620 HPWL: 418420041
+[INFO GPL-0088] Routability snapshot saved at iter = 304
+[NesterovSolve] Iter:  310 overflow: 0.571 HPWL: 434387828
+[NesterovSolve] Iter:  320 overflow: 0.520 HPWL: 449864312
+[NesterovSolve] Iter:  330 overflow: 0.472 HPWL: 462593407
+[NesterovSolve] Iter:  340 overflow: 0.425 HPWL: 471245969
+[NesterovSolve] Iter:  350 overflow: 0.378 HPWL: 478210984
+[NesterovSolve] Iter:  360 overflow: 0.333 HPWL: 482646902
+[NesterovSolve] Iter:  370 overflow: 0.302 HPWL: 485164779
+[INFO GPL-0075] Routability iteration: 1
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 16.4268
+[INFO GPL-0082] OverflowTileCnt: 241
+[INFO GPL-0083] 0.5%RC: 1.1559
+[INFO GPL-0084] 1.0%RC: 1.1078
+[INFO GPL-0085] 2.0%RC: 1.0616
+[INFO GPL-0086] 5.0%RC: 0.9871
+[INFO GPL-0087] FinalRC: 1.1318387
+[INFO GPL-0078] FinalRC lower than minRC (1000000015047466219876688855040.0000), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      321.352 um^2 (+1.11%)
+[INFO GPL-0046] TargetDensity:            0.618
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    29017.142 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.485 um^2
+[INFO GPL-0052] TotalGCellsArea:      35164.627 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   35485.979 um^2
+[INFO GPL-0054] NewTargetDensity:         0.624
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          35485.979 um^2
+[INFO GPL-0057] NewNesterovInstArea:  29338.494 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.484 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   35485.979 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  380 overflow: 0.559 HPWL: 440019423
+[NesterovSolve] Iter:  390 overflow: 0.521 HPWL: 450467413
+[NesterovSolve] Iter:  400 overflow: 0.483 HPWL: 458408477
+[NesterovSolve] Iter:  410 overflow: 0.442 HPWL: 465482081
+[NesterovSolve] Iter:  420 overflow: 0.406 HPWL: 472777127
+[NesterovSolve] Iter:  430 overflow: 0.370 HPWL: 477059765
+[NesterovSolve] Iter:  440 overflow: 0.334 HPWL: 481624139
+[NesterovSolve] Iter:  450 overflow: 0.299 HPWL: 484765656
+[INFO GPL-0075] Routability iteration: 2
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 12.2543
+[INFO GPL-0082] OverflowTileCnt: 199
+[INFO GPL-0083] 0.5%RC: 1.1214
+[INFO GPL-0084] 1.0%RC: 1.0852
+[INFO GPL-0085] 2.0%RC: 1.0431
+[INFO GPL-0086] 5.0%RC: 0.9777
+[INFO GPL-0087] FinalRC: 1.1033033
+[INFO GPL-0078] FinalRC lower than minRC (1.1318), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      257.788 um^2 (+0.88%)
+[INFO GPL-0046] TargetDensity:            0.624
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    29338.494 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.484 um^2
+[INFO GPL-0052] TotalGCellsArea:      35485.979 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   35743.767 um^2
+[INFO GPL-0054] NewTargetDensity:         0.628
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          35743.769 um^2
+[INFO GPL-0057] NewNesterovInstArea:  29596.283 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.486 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   35743.769 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  460 overflow: 0.554 HPWL: 442829634
+[NesterovSolve] Iter:  470 overflow: 0.518 HPWL: 453407309
+[NesterovSolve] Iter:  480 overflow: 0.478 HPWL: 460959626
+[NesterovSolve] Iter:  490 overflow: 0.437 HPWL: 467698801
+[NesterovSolve] Iter:  500 overflow: 0.403 HPWL: 475372407
+[NesterovSolve] Iter:  510 overflow: 0.368 HPWL: 479310610
+[NesterovSolve] Iter:  520 overflow: 0.332 HPWL: 483523735
+[INFO GPL-0075] Routability iteration: 3
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 10.1133
+[INFO GPL-0082] OverflowTileCnt: 186
+[INFO GPL-0083] 0.5%RC: 1.1048
+[INFO GPL-0084] 1.0%RC: 1.0712
+[INFO GPL-0085] 2.0%RC: 1.0351
+[INFO GPL-0086] 5.0%RC: 0.9749
+[INFO GPL-0087] FinalRC: 1.0879686
+[INFO GPL-0078] FinalRC lower than minRC (1.1033), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      189.558 um^2 (+0.64%)
+[INFO GPL-0046] TargetDensity:            0.628
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    29596.283 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.486 um^2
+[INFO GPL-0052] TotalGCellsArea:      35743.769 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   35933.326 um^2
+[INFO GPL-0054] NewTargetDensity:         0.631
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          35933.327 um^2
+[INFO GPL-0057] NewNesterovInstArea:  29785.840 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.487 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   35933.327 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  530 overflow: 0.594 HPWL: 428085430
+[NesterovSolve] Iter:  540 overflow: 0.550 HPWL: 445229734
+[NesterovSolve] Iter:  550 overflow: 0.513 HPWL: 455817261
+[NesterovSolve] Iter:  560 overflow: 0.474 HPWL: 462569347
+[NesterovSolve] Iter:  570 overflow: 0.434 HPWL: 469482307
+[NesterovSolve] Iter:  580 overflow: 0.400 HPWL: 477104649
+[NesterovSolve] Iter:  590 overflow: 0.364 HPWL: 481028948
+[NesterovSolve] Iter:  600 overflow: 0.328 HPWL: 485160404
+[INFO GPL-0075] Routability iteration: 4
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 10.0214
+[INFO GPL-0082] OverflowTileCnt: 173
+[INFO GPL-0083] 0.5%RC: 1.1051
+[INFO GPL-0084] 1.0%RC: 1.0721
+[INFO GPL-0085] 2.0%RC: 1.0328
+[INFO GPL-0086] 5.0%RC: 0.9720
+[INFO GPL-0087] FinalRC: 1.0886
+[INFO GPL-0079] MinRC (1.0879686) violation occurred, total count: 1.
+[INFO GPL-0045] InflatedAreaDelta:      190.460 um^2 (+0.64%)
+[INFO GPL-0046] TargetDensity:            0.631
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    29785.840 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.487 um^2
+[INFO GPL-0052] TotalGCellsArea:      35933.327 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36123.788 um^2
+[INFO GPL-0054] NewTargetDensity:         0.635
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36123.787 um^2
+[INFO GPL-0057] NewNesterovInstArea:  29976.301 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.486 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36123.787 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  610 overflow: 0.590 HPWL: 430371118
+[NesterovSolve] Iter:  620 overflow: 0.545 HPWL: 447824751
+[NesterovSolve] Iter:  630 overflow: 0.508 HPWL: 458365921
+[NesterovSolve] Iter:  640 overflow: 0.469 HPWL: 464251639
+[NesterovSolve] Iter:  650 overflow: 0.429 HPWL: 471572486
+[NesterovSolve] Iter:  660 overflow: 0.395 HPWL: 479161327
+[NesterovSolve] Iter:  670 overflow: 0.360 HPWL: 482894926
+[NesterovSolve] Iter:  680 overflow: 0.324 HPWL: 486860954
+[INFO GPL-0075] Routability iteration: 5
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 7.8720
+[INFO GPL-0082] OverflowTileCnt: 155
+[INFO GPL-0083] 0.5%RC: 1.0845
+[INFO GPL-0084] 1.0%RC: 1.0582
+[INFO GPL-0085] 2.0%RC: 1.0218
+[INFO GPL-0086] 5.0%RC: 0.9677
+[INFO GPL-0087] FinalRC: 1.0713062
+[INFO GPL-0078] FinalRC lower than minRC (1.0880), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      155.818 um^2 (+0.52%)
+[INFO GPL-0046] TargetDensity:            0.635
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    29976.301 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.486 um^2
+[INFO GPL-0052] TotalGCellsArea:      36123.787 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36279.605 um^2
+[INFO GPL-0054] NewTargetDensity:         0.638
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36279.603 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30132.118 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.485 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36279.603 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  690 overflow: 0.584 HPWL: 433320278
+[NesterovSolve] Iter:  700 overflow: 0.542 HPWL: 449916379
+[NesterovSolve] Iter:  710 overflow: 0.504 HPWL: 460422853
+[NesterovSolve] Iter:  720 overflow: 0.465 HPWL: 465645555
+[NesterovSolve] Iter:  730 overflow: 0.427 HPWL: 473351941
+[NesterovSolve] Iter:  740 overflow: 0.390 HPWL: 480536544
+[NesterovSolve] Iter:  750 overflow: 0.357 HPWL: 484204260
+[NesterovSolve] Iter:  760 overflow: 0.320 HPWL: 488558008
+[INFO GPL-0075] Routability iteration: 6
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 5.5614
+[INFO GPL-0082] OverflowTileCnt: 135
+[INFO GPL-0083] 0.5%RC: 1.0663
+[INFO GPL-0084] 1.0%RC: 1.0418
+[INFO GPL-0085] 2.0%RC: 1.0111
+[INFO GPL-0086] 5.0%RC: 0.9623
+[INFO GPL-0087] FinalRC: 1.0540594
+[INFO GPL-0078] FinalRC lower than minRC (1.0713), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      100.666 um^2 (+0.33%)
+[INFO GPL-0046] TargetDensity:            0.638
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30132.118 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.485 um^2
+[INFO GPL-0052] TotalGCellsArea:      36279.603 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36380.269 um^2
+[INFO GPL-0054] NewTargetDensity:         0.639
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36380.271 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30232.784 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.486 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36380.271 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  770 overflow: 0.578 HPWL: 436489444
+[NesterovSolve] Iter:  780 overflow: 0.538 HPWL: 451947147
+[NesterovSolve] Iter:  790 overflow: 0.500 HPWL: 462016079
+[NesterovSolve] Iter:  800 overflow: 0.460 HPWL: 466857972
+[NesterovSolve] Iter:  810 overflow: 0.423 HPWL: 474995299
+[NesterovSolve] Iter:  820 overflow: 0.387 HPWL: 481824994
+[NesterovSolve] Iter:  830 overflow: 0.352 HPWL: 485455840
+[NesterovSolve] Iter:  840 overflow: 0.317 HPWL: 489770357
+[INFO GPL-0075] Routability iteration: 7
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 4.4075
+[INFO GPL-0082] OverflowTileCnt: 126
+[INFO GPL-0083] 0.5%RC: 1.0553
+[INFO GPL-0084] 1.0%RC: 1.0331
+[INFO GPL-0085] 2.0%RC: 1.0063
+[INFO GPL-0086] 5.0%RC: 0.9585
+[INFO GPL-0087] FinalRC: 1.0441884
+[INFO GPL-0078] FinalRC lower than minRC (1.0541), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:       75.315 um^2 (+0.25%)
+[INFO GPL-0046] TargetDensity:            0.639
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30232.784 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.486 um^2
+[INFO GPL-0052] TotalGCellsArea:      36380.271 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36455.585 um^2
+[INFO GPL-0054] NewTargetDensity:         0.641
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36455.584 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30308.099 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.485 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36455.584 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  850 overflow: 0.573 HPWL: 439078283
+[NesterovSolve] Iter:  860 overflow: 0.536 HPWL: 453556634
+[NesterovSolve] Iter:  870 overflow: 0.496 HPWL: 463008021
+[NesterovSolve] Iter:  880 overflow: 0.456 HPWL: 467776509
+[NesterovSolve] Iter:  890 overflow: 0.420 HPWL: 476194032
+[NesterovSolve] Iter:  900 overflow: 0.385 HPWL: 482564585
+[NesterovSolve] Iter:  910 overflow: 0.347 HPWL: 486268511
+[NesterovSolve] Iter:  920 overflow: 0.314 HPWL: 490606670
+[INFO GPL-0075] Routability iteration: 8
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 3.6790
+[INFO GPL-0082] OverflowTileCnt: 112
+[INFO GPL-0083] 0.5%RC: 1.0479
+[INFO GPL-0084] 1.0%RC: 1.0269
+[INFO GPL-0085] 2.0%RC: 1.0015
+[INFO GPL-0086] 5.0%RC: 0.9567
+[INFO GPL-0087] FinalRC: 1.0373844
+[INFO GPL-0078] FinalRC lower than minRC (1.0442), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:       69.103 um^2 (+0.23%)
+[INFO GPL-0046] TargetDensity:            0.641
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30308.099 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.485 um^2
+[INFO GPL-0052] TotalGCellsArea:      36455.584 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36524.687 um^2
+[INFO GPL-0054] NewTargetDensity:         0.642
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36524.687 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30377.202 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.485 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36524.687 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  930 overflow: 0.568 HPWL: 441544833
+[NesterovSolve] Iter:  940 overflow: 0.532 HPWL: 455293355
+[NesterovSolve] Iter:  950 overflow: 0.492 HPWL: 464035882
+[NesterovSolve] Iter:  960 overflow: 0.452 HPWL: 468913471
+[NesterovSolve] Iter:  970 overflow: 0.415 HPWL: 477677160
+[NesterovSolve] Iter:  980 overflow: 0.382 HPWL: 483501294
+[NesterovSolve] Iter:  990 overflow: 0.343 HPWL: 487004731
+[NesterovSolve] Iter: 1000 overflow: 0.310 HPWL: 491229140
+[INFO GPL-0075] Routability iteration: 9
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 3.7397
+[INFO GPL-0082] OverflowTileCnt: 104
+[INFO GPL-0083] 0.5%RC: 1.0497
+[INFO GPL-0084] 1.0%RC: 1.0272
+[INFO GPL-0085] 2.0%RC: 1.0019
+[INFO GPL-0086] 5.0%RC: 0.9563
+[INFO GPL-0087] FinalRC: 1.038455
+[INFO GPL-0079] MinRC (1.0373844) violation occurred, total count: 1.
+[INFO GPL-0045] InflatedAreaDelta:       74.884 um^2 (+0.25%)
+[INFO GPL-0046] TargetDensity:            0.642
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30377.202 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.485 um^2
+[INFO GPL-0052] TotalGCellsArea:      36524.687 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36599.571 um^2
+[INFO GPL-0054] NewTargetDensity:         0.643
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36599.570 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30452.086 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.484 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36599.570 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1010 overflow: 0.564 HPWL: 443611510
+[NesterovSolve] Iter: 1020 overflow: 0.528 HPWL: 456814240
+[NesterovSolve] Iter: 1030 overflow: 0.489 HPWL: 464937920
+[NesterovSolve] Iter: 1040 overflow: 0.449 HPWL: 470143845
+[NesterovSolve] Iter: 1050 overflow: 0.412 HPWL: 479167192
+[NesterovSolve] Iter: 1060 overflow: 0.378 HPWL: 484476365
+[NesterovSolve] Iter: 1070 overflow: 0.339 HPWL: 487821151
+[NesterovSolve] Iter: 1080 overflow: 0.305 HPWL: 492161636
+[INFO GPL-0075] Routability iteration: 10
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 2.6122
+[INFO GPL-0082] OverflowTileCnt: 90
+[INFO GPL-0083] 0.5%RC: 1.0372
+[INFO GPL-0084] 1.0%RC: 1.0171
+[INFO GPL-0085] 2.0%RC: 0.9935
+[INFO GPL-0086] 5.0%RC: 0.9522
+[INFO GPL-0087] FinalRC: 1.0271363
+[INFO GPL-0078] FinalRC lower than minRC (1.0374), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:       38.743 um^2 (+0.13%)
+[INFO GPL-0046] TargetDensity:            0.643
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30452.086 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.484 um^2
+[INFO GPL-0052] TotalGCellsArea:      36599.570 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36638.314 um^2
+[INFO GPL-0054] NewTargetDensity:         0.644
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36638.314 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30490.830 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.485 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36638.314 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1090 overflow: 0.560 HPWL: 445723966
+[NesterovSolve] Iter: 1100 overflow: 0.525 HPWL: 458393491
+[NesterovSolve] Iter: 1110 overflow: 0.484 HPWL: 465817606
+[NesterovSolve] Iter: 1120 overflow: 0.444 HPWL: 471315531
+[NesterovSolve] Iter: 1130 overflow: 0.408 HPWL: 480293332
+[NesterovSolve] Iter: 1140 overflow: 0.374 HPWL: 485340514
+[NesterovSolve] Iter: 1150 overflow: 0.337 HPWL: 488465558
+[NesterovSolve] Iter: 1160 overflow: 0.301 HPWL: 492644726
+[INFO GPL-0075] Routability iteration: 11
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 2.2055
+[INFO GPL-0082] OverflowTileCnt: 84
+[INFO GPL-0083] 0.5%RC: 1.0319
+[INFO GPL-0084] 1.0%RC: 1.0129
+[INFO GPL-0085] 2.0%RC: 0.9904
+[INFO GPL-0086] 5.0%RC: 0.9508
+[INFO GPL-0087] FinalRC: 1.0224319
+[INFO GPL-0078] FinalRC lower than minRC (1.0271), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:       33.790 um^2 (+0.11%)
+[INFO GPL-0046] TargetDensity:            0.644
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30490.830 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.485 um^2
+[INFO GPL-0052] TotalGCellsArea:      36638.314 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36672.104 um^2
+[INFO GPL-0054] NewTargetDensity:         0.644
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36672.102 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30524.619 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.483 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36672.102 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1170 overflow: 0.556 HPWL: 447174604
+[NesterovSolve] Iter: 1180 overflow: 0.520 HPWL: 459682830
+[NesterovSolve] Iter: 1190 overflow: 0.481 HPWL: 466327687
+[NesterovSolve] Iter: 1200 overflow: 0.441 HPWL: 472258028
+[NesterovSolve] Iter: 1210 overflow: 0.404 HPWL: 481130142
+[NesterovSolve] Iter: 1220 overflow: 0.370 HPWL: 485592764
+[NesterovSolve] Iter: 1230 overflow: 0.334 HPWL: 489197025
+[NesterovSolve] Iter: 1240 overflow: 0.298 HPWL: 493032038
+[INFO GPL-0075] Routability iteration: 12
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 2.3061
+[INFO GPL-0082] OverflowTileCnt: 82
+[INFO GPL-0083] 0.5%RC: 1.0336
+[INFO GPL-0084] 1.0%RC: 1.0136
+[INFO GPL-0085] 2.0%RC: 0.9905
+[INFO GPL-0086] 5.0%RC: 0.9511
+[INFO GPL-0087] FinalRC: 1.0235945
+[INFO GPL-0079] MinRC (1.0224319) violation occurred, total count: 1.
+[INFO GPL-0045] InflatedAreaDelta:       40.592 um^2 (+0.13%)
+[INFO GPL-0046] TargetDensity:            0.644
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30524.619 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.483 um^2
+[INFO GPL-0052] TotalGCellsArea:      36672.102 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36712.695 um^2
+[INFO GPL-0054] NewTargetDensity:         0.645
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36712.694 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30565.211 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.482 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36712.694 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1250 overflow: 0.552 HPWL: 449183754
+[NesterovSolve] Iter: 1260 overflow: 0.516 HPWL: 461215262
+[NesterovSolve] Iter: 1270 overflow: 0.477 HPWL: 467006875
+[NesterovSolve] Iter: 1280 overflow: 0.436 HPWL: 473559061
+[NesterovSolve] Iter: 1290 overflow: 0.401 HPWL: 482188977
+[NesterovSolve] Iter: 1300 overflow: 0.365 HPWL: 486289376
+[NesterovSolve] Iter: 1310 overflow: 0.331 HPWL: 489901005
+[INFO GPL-0075] Routability iteration: 13
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 3.0611
+[INFO GPL-0082] OverflowTileCnt: 94
+[INFO GPL-0083] 0.5%RC: 1.0436
+[INFO GPL-0084] 1.0%RC: 1.0204
+[INFO GPL-0085] 2.0%RC: 0.9936
+[INFO GPL-0086] 5.0%RC: 0.9516
+[INFO GPL-0087] FinalRC: 1.0319759
+[INFO GPL-0079] MinRC (1.0224319) violation occurred, total count: 2.
+[INFO GPL-0045] InflatedAreaDelta:       55.663 um^2 (+0.18%)
+[INFO GPL-0046] TargetDensity:            0.645
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30565.211 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.482 um^2
+[INFO GPL-0052] TotalGCellsArea:      36712.694 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36768.357 um^2
+[INFO GPL-0054] NewTargetDensity:         0.646
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36768.358 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30620.874 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.484 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36768.358 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1320 overflow: 0.597 HPWL: 428085430
+[NesterovSolve] Iter: 1330 overflow: 0.549 HPWL: 450730265
+[NesterovSolve] Iter: 1340 overflow: 0.511 HPWL: 462659746
+[NesterovSolve] Iter: 1350 overflow: 0.473 HPWL: 467636916
+[NesterovSolve] Iter: 1360 overflow: 0.433 HPWL: 474921331
+[NesterovSolve] Iter: 1370 overflow: 0.398 HPWL: 483101279
+[NesterovSolve] Iter: 1380 overflow: 0.361 HPWL: 486720783
+[NesterovSolve] Iter: 1390 overflow: 0.327 HPWL: 490866259
+[INFO GPL-0075] Routability iteration: 14
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 1.9148
+[INFO GPL-0082] OverflowTileCnt: 76
+[INFO GPL-0083] 0.5%RC: 1.0284
+[INFO GPL-0084] 1.0%RC: 1.0100
+[INFO GPL-0085] 2.0%RC: 0.9878
+[INFO GPL-0086] 5.0%RC: 0.9483
+[INFO GPL-0087] FinalRC: 1.0191958
+[INFO GPL-0078] FinalRC lower than minRC (1.0224), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:       30.457 um^2 (+0.10%)
+[INFO GPL-0046] TargetDensity:            0.646
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30620.874 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.484 um^2
+[INFO GPL-0052] TotalGCellsArea:      36768.358 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36798.816 um^2
+[INFO GPL-0054] NewTargetDensity:         0.647
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36798.816 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30651.331 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.485 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36798.816 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1400 overflow: 0.592 HPWL: 430816323
+[NesterovSolve] Iter: 1410 overflow: 0.546 HPWL: 452485264
+[NesterovSolve] Iter: 1420 overflow: 0.506 HPWL: 463813200
+[NesterovSolve] Iter: 1430 overflow: 0.469 HPWL: 468337632
+[NesterovSolve] Iter: 1440 overflow: 0.429 HPWL: 476095171
+[NesterovSolve] Iter: 1450 overflow: 0.395 HPWL: 483985151
+[NesterovSolve] Iter: 1460 overflow: 0.358 HPWL: 487373753
+[NesterovSolve] Iter: 1470 overflow: 0.324 HPWL: 491444184
+[INFO GPL-0075] Routability iteration: 15
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 2.0953
+[INFO GPL-0082] OverflowTileCnt: 78
+[INFO GPL-0083] 0.5%RC: 1.0309
+[INFO GPL-0084] 1.0%RC: 1.0120
+[INFO GPL-0085] 2.0%RC: 0.9889
+[INFO GPL-0086] 5.0%RC: 0.9483
+[INFO GPL-0087] FinalRC: 1.0214783
+[INFO GPL-0079] MinRC (1.0191958) violation occurred, total count: 1.
+[INFO GPL-0045] InflatedAreaDelta:       31.393 um^2 (+0.10%)
+[INFO GPL-0046] TargetDensity:            0.647
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30651.331 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.485 um^2
+[INFO GPL-0052] TotalGCellsArea:      36798.816 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36830.209 um^2
+[INFO GPL-0054] NewTargetDensity:         0.647
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36830.208 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30682.724 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.484 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36830.208 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1480 overflow: 0.585 HPWL: 434502873
+[NesterovSolve] Iter: 1490 overflow: 0.542 HPWL: 453694887
+[NesterovSolve] Iter: 1500 overflow: 0.503 HPWL: 464666672
+[NesterovSolve] Iter: 1510 overflow: 0.466 HPWL: 468919095
+[NesterovSolve] Iter: 1520 overflow: 0.427 HPWL: 477091419
+[NesterovSolve] Iter: 1530 overflow: 0.391 HPWL: 484459789
+[NesterovSolve] Iter: 1540 overflow: 0.355 HPWL: 487774867
+[NesterovSolve] Iter: 1550 overflow: 0.321 HPWL: 492310930
+[INFO GPL-0075] Routability iteration: 16
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 1.9306
+[INFO GPL-0082] OverflowTileCnt: 70
+[INFO GPL-0083] 0.5%RC: 1.0287
+[INFO GPL-0084] 1.0%RC: 1.0102
+[INFO GPL-0085] 2.0%RC: 0.9885
+[INFO GPL-0086] 5.0%RC: 0.9486
+[INFO GPL-0087] FinalRC: 1.0194608
+[INFO GPL-0079] MinRC (1.0191958) violation occurred, total count: 2.
+[INFO GPL-0045] InflatedAreaDelta:       28.952 um^2 (+0.09%)
+[INFO GPL-0046] TargetDensity:            0.647
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30682.724 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.484 um^2
+[INFO GPL-0052] TotalGCellsArea:      36830.208 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36859.160 um^2
+[INFO GPL-0054] NewTargetDensity:         0.648
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36859.159 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30711.676 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.483 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36859.159 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1560 overflow: 0.579 HPWL: 438197942
+[NesterovSolve] Iter: 1570 overflow: 0.539 HPWL: 455449076
+[NesterovSolve] Iter: 1580 overflow: 0.499 HPWL: 465556795
+[NesterovSolve] Iter: 1590 overflow: 0.461 HPWL: 469695083
+[NesterovSolve] Iter: 1600 overflow: 0.422 HPWL: 478411777
+[NesterovSolve] Iter: 1610 overflow: 0.388 HPWL: 485327488
+[NesterovSolve] Iter: 1620 overflow: 0.351 HPWL: 488425870
+[NesterovSolve] Iter: 1630 overflow: 0.317 HPWL: 493048265
+[INFO GPL-0075] Routability iteration: 17
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 1.8285
+[INFO GPL-0082] OverflowTileCnt: 72
+[INFO GPL-0083] 0.5%RC: 1.0271
+[INFO GPL-0084] 1.0%RC: 1.0091
+[INFO GPL-0085] 2.0%RC: 0.9870
+[INFO GPL-0086] 5.0%RC: 0.9481
+[INFO GPL-0087] FinalRC: 1.0181032
+[INFO GPL-0078] FinalRC lower than minRC (1.0192), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:       25.740 um^2 (+0.08%)
+[INFO GPL-0046] TargetDensity:            0.648
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30711.676 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.483 um^2
+[INFO GPL-0052] TotalGCellsArea:      36859.159 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36884.898 um^2
+[INFO GPL-0054] NewTargetDensity:         0.648
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36884.898 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30737.416 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.482 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36884.898 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1640 overflow: 0.573 HPWL: 441047032
+[NesterovSolve] Iter: 1650 overflow: 0.535 HPWL: 456649832
+[NesterovSolve] Iter: 1660 overflow: 0.496 HPWL: 466214618
+[NesterovSolve] Iter: 1670 overflow: 0.457 HPWL: 470430207
+[NesterovSolve] Iter: 1680 overflow: 0.419 HPWL: 479456065
+[NesterovSolve] Iter: 1690 overflow: 0.385 HPWL: 485858438
+[NesterovSolve] Iter: 1700 overflow: 0.348 HPWL: 489005250
+[NesterovSolve] Iter: 1710 overflow: 0.313 HPWL: 493547600
+[INFO GPL-0075] Routability iteration: 18
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 1.5976
+[INFO GPL-0082] OverflowTileCnt: 68
+[INFO GPL-0083] 0.5%RC: 1.0238
+[INFO GPL-0084] 1.0%RC: 1.0075
+[INFO GPL-0085] 2.0%RC: 0.9865
+[INFO GPL-0086] 5.0%RC: 0.9485
+[INFO GPL-0087] FinalRC: 1.0156778
+[INFO GPL-0078] FinalRC lower than minRC (1.0181), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:       20.411 um^2 (+0.07%)
+[INFO GPL-0046] TargetDensity:            0.648
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30737.416 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.482 um^2
+[INFO GPL-0052] TotalGCellsArea:      36884.898 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36905.309 um^2
+[INFO GPL-0054] NewTargetDensity:         0.648
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36905.308 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30757.826 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.482 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36905.308 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1720 overflow: 0.568 HPWL: 443572420
+[NesterovSolve] Iter: 1730 overflow: 0.532 HPWL: 458221704
+[NesterovSolve] Iter: 1740 overflow: 0.491 HPWL: 466937617
+[NesterovSolve] Iter: 1750 overflow: 0.453 HPWL: 471379141
+[NesterovSolve] Iter: 1760 overflow: 0.415 HPWL: 480614515
+[NesterovSolve] Iter: 1770 overflow: 0.380 HPWL: 486652755
+[NesterovSolve] Iter: 1780 overflow: 0.344 HPWL: 489583367
+[NesterovSolve] Iter: 1790 overflow: 0.309 HPWL: 494013057
+[INFO GPL-0075] Routability iteration: 19
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 1.5208
+[INFO GPL-0082] OverflowTileCnt: 61
+[INFO GPL-0083] 0.5%RC: 1.0227
+[INFO GPL-0084] 1.0%RC: 1.0057
+[INFO GPL-0085] 2.0%RC: 0.9841
+[INFO GPL-0086] 5.0%RC: 0.9466
+[INFO GPL-0087] FinalRC: 1.0141906
+[INFO GPL-0078] FinalRC lower than minRC (1.0157), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:       21.542 um^2 (+0.07%)
+[INFO GPL-0046] TargetDensity:            0.648
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30757.826 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.482 um^2
+[INFO GPL-0052] TotalGCellsArea:      36905.308 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36926.851 um^2
+[INFO GPL-0054] NewTargetDensity:         0.649
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36926.849 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30779.369 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.480 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36926.849 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1800 overflow: 0.563 HPWL: 445495644
+[NesterovSolve] Iter: 1810 overflow: 0.528 HPWL: 459317598
+[NesterovSolve] Iter: 1820 overflow: 0.488 HPWL: 467415415
+[NesterovSolve] Iter: 1830 overflow: 0.449 HPWL: 472268649
+[NesterovSolve] Iter: 1840 overflow: 0.412 HPWL: 481618914
+[NesterovSolve] Iter: 1850 overflow: 0.377 HPWL: 487128717
+[NesterovSolve] Iter: 1860 overflow: 0.340 HPWL: 490153758
+[NesterovSolve] Iter: 1870 overflow: 0.305 HPWL: 494387232
+[INFO GPL-0075] Routability iteration: 20
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 1.7563
+[INFO GPL-0082] OverflowTileCnt: 70
+[INFO GPL-0083] 0.5%RC: 1.0262
+[INFO GPL-0084] 1.0%RC: 1.0070
+[INFO GPL-0085] 2.0%RC: 0.9841
+[INFO GPL-0086] 5.0%RC: 0.9458
+[INFO GPL-0087] FinalRC: 1.0165952
+[INFO GPL-0079] MinRC (1.0141906) violation occurred, total count: 1.
+[INFO GPL-0045] InflatedAreaDelta:       25.555 um^2 (+0.08%)
+[INFO GPL-0046] TargetDensity:            0.649
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30779.369 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.480 um^2
+[INFO GPL-0052] TotalGCellsArea:      36926.849 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36952.404 um^2
+[INFO GPL-0054] NewTargetDensity:         0.649
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36952.404 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30804.924 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.480 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36952.404 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1880 overflow: 0.560 HPWL: 447700330
+[NesterovSolve] Iter: 1890 overflow: 0.525 HPWL: 460759564
+[NesterovSolve] Iter: 1900 overflow: 0.483 HPWL: 468019526
+[NesterovSolve] Iter: 1910 overflow: 0.444 HPWL: 473441003
+[NesterovSolve] Iter: 1920 overflow: 0.408 HPWL: 482808373
+[NesterovSolve] Iter: 1930 overflow: 0.372 HPWL: 487626985
+[NesterovSolve] Iter: 1940 overflow: 0.337 HPWL: 490807329
+[NesterovSolve] Iter: 1950 overflow: 0.302 HPWL: 494814806
+[INFO GPL-0075] Routability iteration: 21
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 1.7366
+[INFO GPL-0082] OverflowTileCnt: 63
+[INFO GPL-0083] 0.5%RC: 1.0259
+[INFO GPL-0084] 1.0%RC: 1.0079
+[INFO GPL-0085] 2.0%RC: 0.9863
+[INFO GPL-0086] 5.0%RC: 0.9474
+[INFO GPL-0087] FinalRC: 1.0168948
+[INFO GPL-0079] MinRC (1.0141906) violation occurred, total count: 2.
+[INFO GPL-0045] InflatedAreaDelta:       21.744 um^2 (+0.07%)
+[INFO GPL-0046] TargetDensity:            0.649
+[INFO GPL-0049] WhiteSpaceArea:       56909.104 um^2
+[INFO GPL-0050] NesterovInstsArea:    30804.924 um^2
+[INFO GPL-0051] TotalFillerArea:       6147.480 um^2
+[INFO GPL-0052] TotalGCellsArea:      36952.404 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   36974.148 um^2
+[INFO GPL-0054] NewTargetDensity:         0.650
+[INFO GPL-0055] NewWhiteSpaceArea:    56909.104 um^2
+[INFO GPL-0056] MovableArea:          36974.150 um^2
+[INFO GPL-0057] NewNesterovInstArea:  30826.668 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6147.482 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   36974.150 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1960 overflow: 0.556 HPWL: 449167894
+[NesterovSolve] Iter: 1970 overflow: 0.521 HPWL: 462007397
+[NesterovSolve] Iter: 1980 overflow: 0.481 HPWL: 468345699
+[NesterovSolve] Iter: 1990 overflow: 0.441 HPWL: 474436291
+[NesterovSolve] Iter: 2000 overflow: 0.404 HPWL: 483621189
+[NesterovSolve] Iter: 2010 overflow: 0.368 HPWL: 487962072
+[NesterovSolve] Iter: 2020 overflow: 0.334 HPWL: 491578542
+[NesterovSolve] Iter: 2030 overflow: 0.298 HPWL: 495277899
+[INFO GPL-0075] Routability iteration: 22
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     115  115
+[INFO GPL-0040] NumTiles: 13225
+[INFO GPL-0081] TotalRouteOverflow: 1.7605
+[INFO GPL-0082] OverflowTileCnt: 69
+[INFO GPL-0083] 0.5%RC: 1.0263
+[INFO GPL-0084] 1.0%RC: 1.0082
+[INFO GPL-0085] 2.0%RC: 0.9862
+[INFO GPL-0086] 5.0%RC: 0.9469
+[INFO GPL-0087] FinalRC: 1.0172416
+[INFO GPL-0079] MinRC (1.0141906) violation occurred, total count: 3.
+[INFO GPL-0045] InflatedAreaDelta:       22.754 um^2 (+0.07%)
+[INFO GPL-0046] TargetDensity:            0.650
+Revert Routability Procedure. Target density higher than max, or minRC max violations.
+[INFO GPL-0080] minRcViolatedCnt: 3
+[INFO GPL-0047] SavedMinRC: 1.0142
+[INFO GPL-0048] SavedTargetDensity: 0.6485
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 2040 overflow: 0.551 HPWL: 450164623
+[NesterovSolve] Iter: 2050 overflow: 0.515 HPWL: 462469001
+[NesterovSolve] Iter: 2060 overflow: 0.476 HPWL: 468067152
+[NesterovSolve] Iter: 2070 overflow: 0.435 HPWL: 474919999
+[NesterovSolve] Iter: 2080 overflow: 0.400 HPWL: 483652741
+[NesterovSolve] Iter: 2090 overflow: 0.363 HPWL: 487707756
+[NesterovSolve] Iter: 2100 overflow: 0.331 HPWL: 491504896
+[NesterovSolve] Iter: 2110 overflow: 0.294 HPWL: 494854237
+[INFO GPL-0100] Timing-driven iteration 3/5, virtual: false.
+[INFO GPL-0101]    Iter: 2114, overflow: 0.282, keep rsz at: 0.3, HPWL: 495650623
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     18783
+    final |    +12.6% |    3663 |       7 |             6 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 1 slew violations.
+[INFO RSZ-0036] Found 6 capacitance violations.
+[INFO RSZ-0039] Resized 3663 instances.
+[INFO RSZ-0038] Inserted 7 buffers in 6 nets.
+[INFO GPL-0106] Timing-driven: worst slack -3.18e-10
+[INFO GPL-0103] Timing-driven: weighted 1876 nets.
+[INFO GPL-0107] Timing-driven: repair_design delta area: 2875.249 um^2 (+9.33%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl cells created: 7 (+0.00%)
+[INFO GPL-0109] Timing-driven: inserted buffers as reported by repair_design: 7
+[INFO GPL-0110] Timing-driven: new target density: 0.70022887
+[NesterovSolve] Iter: 2120 overflow: 0.261 HPWL: 502327513
+[NesterovSolve] Iter: 2130 overflow: 0.232 HPWL: 488010241
+[INFO GPL-0100] Timing-driven iteration 4/5, virtual: false.
+[INFO GPL-0101]    Iter: 2139, overflow: 0.205, keep rsz at: 0.3, HPWL: 486653882
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     18783
+    final |     +1.5% |     898 |       1 |             1 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0036] Found 1 capacitance violations.
+[INFO RSZ-0039] Resized 898 instances.
+[INFO RSZ-0038] Inserted 1 buffers in 1 nets.
+[INFO GPL-0106] Timing-driven: worst slack -2.43e-10
+[INFO GPL-0103] Timing-driven: weighted 1877 nets.
+[INFO GPL-0107] Timing-driven: repair_design delta area: 448.552 um^2 (+1.33%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl cells created: 1 (+0.00%)
+[INFO GPL-0109] Timing-driven: inserted buffers as reported by repair_design: 1
+[INFO GPL-0110] Timing-driven: new target density: 0.7081108
+[NesterovSolve] Iter: 2140 overflow: 0.203 HPWL: 485490694
+[NesterovSolve] Iter: 2150 overflow: 0.177 HPWL: 486697675
+[NesterovSolve] Iter: 2160 overflow: 0.153 HPWL: 486790575
+[INFO GPL-0100] Timing-driven iteration 5/5, virtual: false.
+[INFO GPL-0101]    Iter: 2164, overflow: 0.144, keep rsz at: 0.3, HPWL: 486744348
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     18783
+    final |     +0.2% |     248 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0039] Resized 248 instances.
+[INFO GPL-0106] Timing-driven: worst slack -2.3e-10
+[INFO GPL-0103] Timing-driven: weighted 1876 nets.
+[INFO GPL-0107] Timing-driven: repair_design delta area: 51.235 um^2 (+0.15%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl cells created: 0 (+0.00%)
+[INFO GPL-0109] Timing-driven: inserted buffers as reported by repair_design: 0
+[INFO GPL-0110] Timing-driven: new target density: 0.70901114
+[NesterovSolve] Iter: 2170 overflow: 0.131 HPWL: 486901310
+[NesterovSolve] Iter: 2180 overflow: 0.114 HPWL: 487236109
+[NesterovSolve] Finished with Overflow: 0.099271
+Took 83 seconds: global_placement -density 0.6179086303710938 -pad_left 0 -pad_right 0 -routability_driven -timing_driven
+Report metrics stage 3, global place...
+
+==========================================================================
+global place report_design_area
+--------------------------------------------------------------------------
+Design area 33225 u^2 58% utilization.
+Elapsed time: 1:38.19[h:]min:sec. CPU time: user 816.67 sys 68.29 (901%). Peak memory: 511208KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_4_place_resized resize
+Running resize.tcl, stage 3_4_place_resized
+Perform port buffering...
+[INFO RSZ-0027] Inserted 141 input buffers.
+[INFO RSZ-0028] Inserted 100 output buffers.
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+[INFO RSZ-0058] Using max wire length 640um.
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     19032
+     1000 |     +0.0% |       6 |       0 |             0 |     18032
+     2000 |     +0.0% |      12 |       0 |             0 |     17032
+     3000 |     +0.0% |      26 |       0 |             0 |     16032
+     4000 |     +0.0% |      27 |       0 |             0 |     15032
+     5000 |     +0.0% |      30 |       0 |             0 |     14032
+     6000 |     +0.0% |      33 |       0 |             0 |     13032
+     7000 |     -0.0% |      47 |       0 |             0 |     12032
+     8000 |     -0.1% |      70 |       0 |             0 |     11032
+     9000 |     -0.0% |      82 |       0 |             0 |     10032
+    10000 |     -0.1% |     102 |       0 |             0 |      9032
+    11000 |     -0.1% |     116 |       0 |             0 |      8032
+    12000 |     -0.1% |     120 |       0 |             0 |      7032
+    13000 |     -0.0% |     123 |       0 |             0 |      6032
+    14000 |     -0.1% |     128 |       0 |             0 |      5032
+    15000 |     -0.1% |     131 |       0 |             0 |      4032
+    16000 |     -0.1% |     143 |       0 |             0 |      3032
+    17000 |     -0.1% |     145 |       0 |             0 |      2032
+    18000 |     -0.1% |     145 |       0 |             0 |      1032
+    19000 |     +0.1% |     200 |      22 |             1 |        32
+    final |     +0.1% |     200 |      22 |             1 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 1 slew violations.
+[INFO RSZ-0036] Found 1 capacitance violations.
+[INFO RSZ-0039] Resized 200 instances.
+[INFO RSZ-0038] Inserted 22 buffers in 1 nets.
+Repair tie lo fanout...
+[INFO RSZ-0042] Inserted 6 tie LOGIC0_X1 instances.
+Repair tie hi fanout...
+Floating nets: 
+Report metrics stage 3, resizer...
