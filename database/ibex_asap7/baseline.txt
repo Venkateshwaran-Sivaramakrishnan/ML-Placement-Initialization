@@ -1,0 +1,3 @@
+# of Detailed Placement Iterations: 19000
+# of Global Placement Iterations: 410
+Estimated Wirelength: 92269.5 um

@@ -1,0 +1,1841 @@
+READY TO RUN!
+rm -f ./results/asap7/ibex/base/3_*place*.odb
+rm -f ./results/asap7/ibex/base/3_place.sdc
+rm -f ./results/asap7/ibex/base/3_*.def ./results/asap7/ibex/base/3_*.v
+rm -f ./reports/asap7/ibex/base/3_*
+rm -f ./logs/asap7/ibex/base/3_*
+/ml_placer/OpenROAD-flow-scripts/flow/util/preprocessLib.py -i /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz -o objects/asap7/ibex/base/lib/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib
+Opening file for replace: /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+Commented 0 lines containing "original_pin"
+Replaced malformed functions 0
+Replaced capacitive_load_unit 0
+Writing replaced file: objects/asap7/ibex/base/lib/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib
+/ml_placer/OpenROAD-flow-scripts/flow/util/preprocessLib.py -i /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz -o objects/asap7/ibex/base/lib/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib
+Opening file for replace: /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+Commented 0 lines containing "original_pin"
+Replaced malformed functions 0
+Replaced capacitive_load_unit 0
+Writing replaced file: objects/asap7/ibex/base/lib/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib
+/ml_placer/OpenROAD-flow-scripts/flow/util/preprocessLib.py -i /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz -o objects/asap7/ibex/base/lib/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib
+Opening file for replace: /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+Commented 0 lines containing "original_pin"
+Replaced malformed functions 0
+Replaced capacitive_load_unit 0
+Writing replaced file: objects/asap7/ibex/base/lib/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib
+/ml_placer/OpenROAD-flow-scripts/flow/util/preprocessLib.py -i /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz -o objects/asap7/ibex/base/lib/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib
+Opening file for replace: /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+Commented 0 lines containing "original_pin"
+Replaced malformed functions 0
+Replaced capacitive_load_unit 0
+Writing replaced file: objects/asap7/ibex/base/lib/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib
+/ml_placer/OpenROAD-flow-scripts/flow/util/preprocessLib.py -i /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib -o objects/asap7/ibex/base/lib/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+Opening file for replace: /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+Commented 0 lines containing "original_pin"
+Replaced malformed functions 0
+Replaced capacitive_load_unit 0
+Writing replaced file: objects/asap7/ibex/base/lib/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+mkdir -p results/asap7/ibex/base/
+echo 1260 > results/asap7/ibex/base/clock_period.txt
+/ml_placer/OpenROAD-flow-scripts/flow/util/mergeLib.pl asap7_merged  ./objects/asap7/ibex/base/lib/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib  ./objects/asap7/ibex/base/lib/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib  ./objects/asap7/ibex/base/lib/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib  ./objects/asap7/ibex/base/lib/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib ./objects/asap7/ibex/base/lib/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib > objects/asap7/ibex/base/lib/merged.lib
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/synth.sh /ml_placer/OpenROAD-flow-scripts/flow/scripts/synth_canonicalize.tcl ./logs/asap7/ibex/base/1_1_yosys_canonicalize.log
+Using ABC speed script.
+Extracting clock period from SDC file: ./results/asap7/ibex/base/clock_period.txt
+Setting clock period to 1260
+1. Executing Liberty frontend: ./objects/asap7/ibex/base/lib/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib
+2. Executing Liberty frontend: ./objects/asap7/ibex/base/lib/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib
+3. Executing Liberty frontend: ./objects/asap7/ibex/base/lib/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib
+4. Executing Liberty frontend: ./objects/asap7/ibex/base/lib/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib
+5. Executing Liberty frontend: ./objects/asap7/ibex/base/lib/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+6. Executing Liberty frontend: ./objects/asap7/ibex/base/lib/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib
+7. Executing Liberty frontend: ./objects/asap7/ibex/base/lib/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib
+8. Executing Liberty frontend: ./objects/asap7/ibex/base/lib/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib
+9. Executing Liberty frontend: ./objects/asap7/ibex/base/lib/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib
+10. Executing Liberty frontend: ./objects/asap7/ibex/base/lib/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+11. Executing SLANG frontend.
+11.1. Executing UNDRIVEN pass. (resolve undriven signals)
+11.2. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+11.3. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+11.4. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+11.5. Executing PROC_INIT pass (extract init attributes).
+11.6. Executing PROC_ROM pass (convert switches to ROMs).
+11.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+11.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+11.9. Executing OPT_EXPR pass (perform const folding).
+12. Executing Verilog-2005 frontend: /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/yoSys/cells_clkgate_R.v
+13. Executing HIERARCHY pass (managing design hierarchy).
+13.1. Analyzing design hierarchy..
+13.2. Analyzing design hierarchy..
+14. Executing OPT_CLEAN pass (remove unused cells and wires).
+15. Executing RTLIL backend.
+End of script. Logfile hash: 6d1eb96f64, CPU: user 1.75s system 0.11s, MEM: 84.43 MB peak
+Yosys 0.51+85 (git sha1 d3aec12fe, clang++ 18.1.8 -fPIC -O3)
+Time spent: 76% 12x read_liberty (1 sec), 7% 2x read_slang (0 sec), ...
+Top level design units:
+    ibex_core
+
+Build succeeded: 0 errors, 0 warnings
+Elapsed time: 0:01.93[h:]min:sec. CPU time: user 1.84 sys 0.12 (101%). Peak memory: 86456KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/synth.sh /ml_placer/OpenROAD-flow-scripts/flow/scripts/synth.tcl ./logs/asap7/ibex/base/1_1_yosys.log
+Using ABC speed script.
+Extracting clock period from SDC file: ./results/asap7/ibex/base/clock_period.txt
+Setting clock period to 1260
+1. Executing RTLIL frontend.
+2. Executing HIERARCHY pass (managing design hierarchy).
+2.1. Analyzing design hierarchy..
+2.2. Analyzing design hierarchy..
+3. Executing SYNTH pass.
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+3.1.1. Analyzing design hierarchy..
+3.1.2. Analyzing design hierarchy..
+3.2. Executing PROC pass (convert processes to netlists).
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+3.3. Executing FLATTEN pass (flatten design).
+3.4. Executing OPT_EXPR pass (perform const folding).
+3.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.6. Executing CHECK pass (checking for obvious problems).
+3.7. Executing OPT pass (performing simple optimizations).
+3.7.1. Executing OPT_EXPR pass (perform const folding).
+3.7.2. Executing OPT_MERGE pass (detect identical cells).
+3.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.7.5. Executing OPT_MERGE pass (detect identical cells).
+3.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.7.8. Executing OPT_EXPR pass (perform const folding).
+3.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+3.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.7.12. Executing OPT_MERGE pass (detect identical cells).
+3.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+3.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.7.15. Executing OPT_EXPR pass (perform const folding).
+3.7.16. Rerunning OPT passes. (Maybe there is more to do..)
+3.7.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.7.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.7.19. Executing OPT_MERGE pass (detect identical cells).
+3.7.20. Executing OPT_DFF pass (perform DFF optimizations).
+3.7.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.7.22. Executing OPT_EXPR pass (perform const folding).
+3.7.23. Rerunning OPT passes. (Maybe there is more to do..)
+3.7.24. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.7.25. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.7.26. Executing OPT_MERGE pass (detect identical cells).
+3.7.27. Executing OPT_DFF pass (perform DFF optimizations).
+3.7.28. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.7.29. Executing OPT_EXPR pass (perform const folding).
+3.7.30. Finished OPT passes. (There is nothing left to do.)
+3.8. Executing FSM pass (extract and optimize FSM).
+3.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+3.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+3.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+3.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+3.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+3.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+3.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+3.9. Executing OPT pass (performing simple optimizations).
+3.9.1. Executing OPT_EXPR pass (perform const folding).
+3.9.2. Executing OPT_MERGE pass (detect identical cells).
+3.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.9.5. Executing OPT_MERGE pass (detect identical cells).
+3.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.9.8. Executing OPT_EXPR pass (perform const folding).
+3.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+3.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.9.12. Executing OPT_MERGE pass (detect identical cells).
+3.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+3.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.9.15. Executing OPT_EXPR pass (perform const folding).
+3.9.16. Rerunning OPT passes. (Maybe there is more to do..)
+3.9.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.9.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.9.19. Executing OPT_MERGE pass (detect identical cells).
+3.9.20. Executing OPT_DFF pass (perform DFF optimizations).
+3.9.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.9.22. Executing OPT_EXPR pass (perform const folding).
+3.9.23. Rerunning OPT passes. (Maybe there is more to do..)
+3.9.24. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.9.25. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.9.26. Executing OPT_MERGE pass (detect identical cells).
+3.9.27. Executing OPT_DFF pass (perform DFF optimizations).
+3.9.28. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.9.29. Executing OPT_EXPR pass (perform const folding).
+3.9.30. Finished OPT passes. (There is nothing left to do.)
+3.10. Executing WREDUCE pass (reducing word size of cells).
+3.11. Executing PEEPOPT pass (run peephole optimizers).
+3.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.13. Executing ALUMACC pass (create $alu and $macc cells).
+3.14. Executing SHARE pass (SAT-based resource sharing).
+3.15. Executing OPT pass (performing simple optimizations).
+3.15.1. Executing OPT_EXPR pass (perform const folding).
+3.15.2. Executing OPT_MERGE pass (detect identical cells).
+3.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.15.5. Executing OPT_MERGE pass (detect identical cells).
+3.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.15.8. Executing OPT_EXPR pass (perform const folding).
+3.15.9. Rerunning OPT passes. (Maybe there is more to do..)
+3.15.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.15.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.15.12. Executing OPT_MERGE pass (detect identical cells).
+3.15.13. Executing OPT_DFF pass (perform DFF optimizations).
+3.15.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.15.15. Executing OPT_EXPR pass (perform const folding).
+3.15.16. Finished OPT passes. (There is nothing left to do.)
+3.16. Executing MEMORY pass.
+3.16.1. Executing OPT_MEM pass (optimize memories).
+3.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+3.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+3.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+3.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+3.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+3.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+3.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+3.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+4. Executing SYNTH pass.
+4.1. Executing OPT pass (performing simple optimizations).
+4.1.1. Executing OPT_EXPR pass (perform const folding).
+4.1.2. Executing OPT_MERGE pass (detect identical cells).
+4.1.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.1.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.1.5. Finished fast OPT passes.
+4.2. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+4.3. Executing OPT pass (performing simple optimizations).
+4.3.1. Executing OPT_EXPR pass (perform const folding).
+4.3.2. Executing OPT_MERGE pass (detect identical cells).
+4.3.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.5. Executing OPT_MERGE pass (detect identical cells).
+4.3.6. Executing OPT_SHARE pass.
+4.3.7. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.9. Executing OPT_EXPR pass (perform const folding).
+4.3.10. Rerunning OPT passes. (Maybe there is more to do..)
+4.3.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.13. Executing OPT_MERGE pass (detect identical cells).
+4.3.14. Executing OPT_SHARE pass.
+4.3.15. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.17. Executing OPT_EXPR pass (perform const folding).
+4.3.18. Rerunning OPT passes. (Maybe there is more to do..)
+4.3.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.21. Executing OPT_MERGE pass (detect identical cells).
+4.3.22. Executing OPT_SHARE pass.
+4.3.23. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.25. Executing OPT_EXPR pass (perform const folding).
+4.3.26. Rerunning OPT passes. (Maybe there is more to do..)
+4.3.27. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.28. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.29. Executing OPT_MERGE pass (detect identical cells).
+4.3.30. Executing OPT_SHARE pass.
+4.3.31. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.32. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.33. Executing OPT_EXPR pass (perform const folding).
+4.3.34. Rerunning OPT passes. (Maybe there is more to do..)
+4.3.35. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.36. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.37. Executing OPT_MERGE pass (detect identical cells).
+4.3.38. Executing OPT_SHARE pass.
+4.3.39. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.40. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.41. Executing OPT_EXPR pass (perform const folding).
+4.3.42. Finished OPT passes. (There is nothing left to do.)
+4.4. Executing TECHMAP pass (map to technology primitives).
+4.4.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+4.4.2. Executing Verilog-2005 frontend: /ml_placer/OpenROAD-flow-scripts/flow/platforms/common/lcu_kogge_stone.v
+4.4.3. Continuing TECHMAP pass.
+4.5. Executing OPT pass (performing simple optimizations).
+4.5.1. Executing OPT_EXPR pass (perform const folding).
+4.5.2. Executing OPT_MERGE pass (detect identical cells).
+4.5.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.5.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.5.5. Finished fast OPT passes.
+4.6. Executing ABC pass (technology mapping using ABC).
+4.6.1. Extracting gate netlist of module `\ibex_core' to `<abc-temp-dir>/input.blif'..
+4.7. Executing OPT pass (performing simple optimizations).
+4.7.1. Executing OPT_EXPR pass (perform const folding).
+4.7.2. Executing OPT_MERGE pass (detect identical cells).
+4.7.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.7.5. Finished fast OPT passes.
+4.8. Executing HIERARCHY pass (managing design hierarchy).
+4.8.1. Analyzing design hierarchy..
+4.8.2. Analyzing design hierarchy..
+4.9. Printing statistics.
+4.10. Executing CHECK pass (checking for obvious problems).
+5. Executing OPT pass (performing simple optimizations).
+5.1. Executing OPT_EXPR pass (perform const folding).
+5.2. Executing OPT_MERGE pass (detect identical cells).
+5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+5.5. Executing OPT_MERGE pass (detect identical cells).
+5.6. Executing OPT_DFF pass (perform DFF optimizations).
+5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+5.8. Executing OPT_EXPR pass (perform const folding).
+5.9. Rerunning OPT passes. (Maybe there is more to do..)
+5.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+5.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+5.12. Executing OPT_MERGE pass (detect identical cells).
+5.13. Executing OPT_DFF pass (perform DFF optimizations).
+5.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+5.15. Executing OPT_EXPR pass (perform const folding).
+5.16. Finished OPT passes. (There is nothing left to do.)
+6. Executing EXTRACT_FA pass (find and extract full/half adders).
+7. Executing TECHMAP pass (map to technology primitives).
+7.1. Executing Verilog-2005 frontend: /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/yoSys/cells_adders_R.v
+7.2. Continuing TECHMAP pass.
+8. Executing TECHMAP pass (map to technology primitives).
+8.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+8.2. Continuing TECHMAP pass.
+9. Executing OPT pass (performing simple optimizations).
+9.1. Executing OPT_EXPR pass (perform const folding).
+9.2. Executing OPT_MERGE pass (detect identical cells).
+9.3. Executing OPT_DFF pass (perform DFF optimizations).
+9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+9.5. Finished fast OPT passes.
+10. Executing TECHMAP pass (map to technology primitives).
+10.1. Executing Verilog-2005 frontend: /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/yoSys/cells_latch_R.v
+10.2. Continuing TECHMAP pass.
+11. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+11.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+12. Executing OPT pass (performing simple optimizations).
+12.1. Executing OPT_EXPR pass (perform const folding).
+12.2. Executing OPT_MERGE pass (detect identical cells).
+12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+12.5. Executing OPT_MERGE pass (detect identical cells).
+12.6. Executing OPT_DFF pass (perform DFF optimizations).
+12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+12.8. Executing OPT_EXPR pass (perform const folding).
+12.9. Rerunning OPT passes. (Maybe there is more to do..)
+12.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+12.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+12.12. Executing OPT_MERGE pass (detect identical cells).
+12.13. Executing OPT_DFF pass (perform DFF optimizations).
+12.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+12.15. Executing OPT_EXPR pass (perform const folding).
+12.16. Finished OPT passes. (There is nothing left to do.)
+abc -script /ml_placer/OpenROAD-flow-scripts/flow/scripts/abc_speed.script -liberty ./objects/asap7/ibex/base/lib/merged.lib -constr ./objects/asap7/ibex/base/abc.constr -dont_use *x1p*_ASAP7* -dont_use *xp*_ASAP7* -dont_use SDF* -dont_use ICG* -D 1260
+13. Executing ABC pass (technology mapping using ABC).
+13.1. Extracting gate netlist of module `\ibex_core' to `<abc-temp-dir>/input.blif'..
+13.1.1. Executing ABC.
+13.1.2. Re-integrating ABC results.
+Took 57 seconds: abc -script /ml_placer/OpenROAD-flow-scripts/flow/scripts/abc_speed.script -liberty ./objects/asap7/ibex/base/lib/merged.lib -constr ./objects/asap7/ibex/base/abc.constr -dont_use *x1p*_ASAP7* -dont_use *xp*_ASAP7* -dont_use SDF* -dont_use ICG* -D 1260
+14. Executing SETUNDEF pass (replace undef values with defined constants).
+15. Executing SPLITNETS pass (splitting up multi-bit signals).
+16. Executing OPT_CLEAN pass (remove unused cells and wires).
+17. Executing HILOMAP pass (mapping to constant drivers).
+18. Executing INSBUF pass (insert buffer cells for connected wires).
+19. Executing CHECK pass (checking for obvious problems).
+20. Printing statistics.
+21. Executing CHECK pass (checking for obvious problems).
+22. Executing Verilog backend.
+22.1. Executing BMUXMAP pass.
+22.2. Executing DEMUXMAP pass.
+exec cp /ml_placer/OpenROAD-flow-scripts/flow/designs/asap7/ibex/constraint.sdc ./results/asap7/ibex/base/1_synth.sdc
+End of script. Logfile hash: 7ae45629ca, CPU: user 19.40s system 0.19s, MEM: 184.18 MB peak
+Yosys 0.51+85 (git sha1 d3aec12fe, clang++ 18.1.8 -fPIC -O3)
+Time spent: 75% 2x abc (58 sec), 6% 1x extract_fa (5 sec), ...
+Elapsed time: 1:17.70[h:]min:sec. CPU time: user 77.08 sys 0.40 (99%). Peak memory: 188604KB.
+mkdir -p ./results/asap7/ibex/base ./logs/asap7/ibex/base ./reports/asap7/ibex/base
+cp ./results/asap7/ibex/base/1_1_yosys.v ./results/asap7/ibex/base/1_synth.v
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 16 thread(s).
+mkdir -p ./objects/asap7/ibex/base
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_1_floorplan floorplan
+Running floorplan.tcl, stage 2_1_floorplan
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+[INFO ODB-0227] LEF file: /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/lef/asap7_tech_1x_201209.lef, created 24 layers, 9 vias
+[INFO ODB-0227] LEF file: /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/lef/asap7sc7p5t_28_R_1x_220121a.lef, created 212 library cells
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+Warning: There are 6 unconstrained endpoints.
+number instances in verilog is 18530
+[WARNING IFP-0028] Core area lower left (2.000, 2.000) snapped to (2.052, 2.160).
+[INFO IFP-0001] Added 279 rows of 1397 site asap7sc7p5t.
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/openRoad/make_tracks.tcl
+repair_timing -verbose -setup_margin 0 -repair_tns 100
+[WARNING RSZ-0021] no estimated parasitics. Using wire load models.
+[INFO RSZ-0094] Found 344 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 344 out of 344 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   TNS      |  Viol  | Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpt
+--------------------------------------------------------------------------------------------------------------
+        0 |       0 |       0 |        0 |      0 |     0 |    +0.0% |  -88.518 |   -14755.9 |    344 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35101_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+       10 |       1 |       2 |        0 |      0 |     6 |    -0.0% |  -53.921 |    -4753.8 |    344 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+       20 |       1 |      11 |        0 |      0 |     7 |    +0.0% |  -41.344 |    -2949.6 |    344 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+       30 |       3 |      18 |        0 |      0 |     8 |    +0.0% |   -5.870 |     -149.1 |    344 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35101_/CON
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35163_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35148_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _35380_/SN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20098_/Y
+       36 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    342 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       37 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    341 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       38 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    340 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       39 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    339 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       40 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    339 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       40 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    338 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       41 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    337 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       42 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    336 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       43 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    335 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       44 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    334 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       45 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    333 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       46 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    332 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       47 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    331 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       48 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    330 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       49 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    329 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       50 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    329 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       50 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    328 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       51 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    327 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       52 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    326 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       53 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    325 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       54 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    324 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       55 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    323 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       56 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    322 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       57 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    321 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       58 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    320 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       59 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    319 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       60 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    319 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       60 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    318 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       61 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    317 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       62 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    316 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       63 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    315 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       64 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    314 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       65 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    313 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       66 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    312 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       67 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    311 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       68 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    310 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       69 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    309 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       70 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    309 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       70 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    308 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       71 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    307 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       72 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    306 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       73 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    305 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       74 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    304 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       75 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    303 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       76 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    302 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       77 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    301 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       78 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    300 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       79 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    299 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       80 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    299 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       80 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    298 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       81 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    297 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       82 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    296 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       83 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    295 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       84 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    294 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       85 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    293 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       86 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    292 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       87 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    291 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       88 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    290 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       89 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    289 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       90 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    289 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       90 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    288 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       91 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    287 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       92 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    286 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       93 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    285 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       94 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    284 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       95 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    283 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       96 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    282 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       97 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    281 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       98 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    280 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+       99 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    279 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      100 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    279 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      100 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    278 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      101 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    277 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      102 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    276 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      103 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    275 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      104 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    274 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      105 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    273 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      106 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    272 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      107 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    271 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      108 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    270 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      109 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    269 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      110 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    269 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      110 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    268 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      111 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    267 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      112 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    266 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      113 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    265 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      114 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    264 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      115 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    263 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      116 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    262 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      117 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    261 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      118 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    260 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      119 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    259 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      120 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    259 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      120 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    258 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      121 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    257 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      122 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    256 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      123 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    255 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      124 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    254 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      125 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    253 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      126 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    252 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      127 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    251 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      128 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    250 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      129 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    249 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      130 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    249 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      130 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    248 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      131 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    247 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      132 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    246 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      133 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    245 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      134 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    244 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      135 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    243 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      136 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    242 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      137 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    241 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      138 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    240 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      139 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    239 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      140 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    239 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      140 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    238 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      141 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    237 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      142 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    236 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      143 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    235 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      144 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    234 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      145 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    233 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      146 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    232 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      147 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    231 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      148 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    230 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      149 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    229 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      150 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    229 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      150 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    228 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      151 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    227 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      152 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    226 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      153 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    225 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      154 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    224 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      155 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    223 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      156 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    222 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      157 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    221 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      158 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    220 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      159 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    219 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      160 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    219 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      160 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    218 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      161 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    217 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      162 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    216 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      163 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    215 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      164 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    214 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      165 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    213 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      166 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    212 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      167 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    211 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      168 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    210 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      169 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    209 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      170 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    209 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      170 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    208 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      171 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    207 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      172 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    206 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      173 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    205 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      174 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    204 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      175 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    203 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      176 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    202 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      177 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    201 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      178 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    200 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      179 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    199 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      180 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    199 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      180 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    198 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      181 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    197 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      182 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    196 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      183 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    195 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      184 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    194 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      185 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    193 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      186 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    192 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      187 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    191 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      188 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    190 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      189 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    189 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      190 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    189 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      190 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    188 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      191 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    187 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      192 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    186 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      193 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    185 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      194 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    184 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      195 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    183 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      196 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    182 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      197 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    181 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      198 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    180 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      199 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    179 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      200 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    179 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      200 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    178 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      201 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    177 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      202 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    176 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      203 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    175 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      204 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    174 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      205 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    173 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      206 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    172 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      207 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    171 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      208 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    170 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      209 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    169 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      210 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    169 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      210 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    168 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      211 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    167 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      212 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    166 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      213 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    165 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      214 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    164 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      215 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    163 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      216 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    162 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      217 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    161 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      218 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    160 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      219 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    159 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      220 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    159 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      220 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    158 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      221 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    157 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      222 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    156 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      223 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    155 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      224 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    154 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      225 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    153 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      226 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    152 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      227 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    151 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      228 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    150 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      229 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    149 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      230 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    149 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      230 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    148 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      231 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    147 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      232 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    146 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      233 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    145 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      234 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    144 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      235 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    143 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      236 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    142 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      237 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    141 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      238 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    140 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      239 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    139 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      240 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    139 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      240 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    138 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      241 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    137 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      242 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    136 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      243 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    135 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      244 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    134 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      245 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    133 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      246 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    132 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      247 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    131 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      248 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    130 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      249 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    129 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      250 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    129 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      250 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    128 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      251 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    127 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      252 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    126 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      253 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    125 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      254 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    124 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      255 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    123 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      256 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    122 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      257 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    121 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      258 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    120 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      259 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    119 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      260 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    119 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      260 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    118 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      261 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    117 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      262 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    116 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      263 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    115 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      264 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    114 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      265 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    113 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      266 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    112 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      267 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    111 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      268 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    110 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      269 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    109 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      270 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    109 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      270 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    108 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      271 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    107 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      272 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    106 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      273 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    105 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      274 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    104 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      275 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    103 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      276 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    102 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      277 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    101 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      278 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |    100 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      279 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     99 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      280 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     99 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      280 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     98 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      281 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     97 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      282 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     96 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      283 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     95 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      284 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     94 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      285 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     93 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      286 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     92 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      287 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     91 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      288 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     90 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      289 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     89 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      290 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     89 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      290 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     88 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      291 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     87 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      292 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     86 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      293 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     85 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      294 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     84 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      295 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     83 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      296 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     82 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      297 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     81 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      298 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     80 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      299 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     79 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      300 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     79 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      300 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     78 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      301 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     77 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      302 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     76 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      303 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     75 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      304 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     74 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      305 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     73 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      306 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     72 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      307 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     71 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      308 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     70 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      309 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     69 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      310 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     69 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      310 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     68 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      311 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     67 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      312 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     66 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      313 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     65 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      314 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     64 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      315 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     63 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      316 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     62 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      317 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     61 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      318 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     60 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      319 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     59 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      320 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     59 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      320 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     58 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      321 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     57 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      322 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     56 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      323 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     55 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      324 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     54 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      325 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     53 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      326 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     52 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      327 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     51 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      328 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     50 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      329 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     49 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      330 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     49 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      330 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     48 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      331 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     47 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      332 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     46 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      333 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     45 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      334 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     44 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      335 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     43 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      336 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     42 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      337 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     41 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      338 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     40 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      339 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     39 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      340 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     39 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      340 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     38 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      341 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     37 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      342 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     36 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      343 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     35 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      344 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     34 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      345 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     33 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      346 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     32 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      347 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     31 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      348 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     30 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      349 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     29 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      350 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     29 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      350 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     28 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      351 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     27 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      352 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     26 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      353 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     25 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      354 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     24 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      355 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     23 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      356 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     22 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      357 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     21 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      358 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     20 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      359 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     19 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      360 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     19 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      360 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     18 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      361 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     17 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      362 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     16 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      363 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     15 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      364 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     14 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      365 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     13 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      366 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     12 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      367 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     11 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      368 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |     10 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      369 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |      9 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      370 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |      9 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      370 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |      8 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      371 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |      7 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      372 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |      6 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      373 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |      5 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      374 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |      4 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      375 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |      3 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      376 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |      2 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      377 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |      1 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      378 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |      0 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+      379 |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |      0 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+    final |       3 |      23 |        0 |      1 |     8 |    +0.0% |    0.995 |        0.0 |      0 | gen_regfile_ff.register_file_i.rf_reg\[1023\]$_DFFE_PN0P_/D
+--------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0059] Removed 3 buffers.
+[INFO RSZ-0041] Resized 23 instances.
+[INFO RSZ-0043] Swapped pins on 8 instances.
+[INFO RSZ-0049] Cloned 1 instances.
+[INFO RSZ-0033] No hold violations found.
+Took 6 seconds: repair_timing -verbose -setup_margin 0 -repair_tns 100
+Default units for flow
+ time 1ps
+ capacitance 1fF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1pW
+ distance 1um
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 2283 u^2 40% utilization.
+Elapsed time: 0:28.64[h:]min:sec. CPU time: user 43.56 sys 16.78 (210%). Peak memory: 313524KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_2_floorplan_macro macro_place
+Running macro_place.tcl, stage 2_2_floorplan_macro
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+No macros found: Skipping macro_placement
+Elapsed time: 0:02.04[h:]min:sec. CPU time: user 1.89 sys 0.14 (99%). Peak memory: 238652KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_3_floorplan_tapcell tapcell
+Running tapcell.tcl, stage 2_3_floorplan_tapcell
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+Tap and End Cap cell insertion
+  TAP Cell          : TAPCELL_ASAP7_75t_R
+  ENDCAP Cell       : TAPCELL_ASAP7_75t_R
+  Halo Around Macro : 2 2
+  TAP Cell Distance : 25
+[INFO TAP-0004] Inserted 558 endcaps.
+[INFO TAP-0005] Inserted 421 tapcells.
+Elapsed time: 0:02.00[h:]min:sec. CPU time: user 1.88 sys 0.11 (99%). Peak memory: 230068KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_4_floorplan_pdn pdn
+Running pdn.tcl, stage 2_4_floorplan_pdn
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+[INFO PDN-0001] Inserting grid: top
+Elapsed time: 0:02.35[h:]min:sec. CPU time: user 2.20 sys 0.14 (99%). Peak memory: 242988KB.
+cp ./results/asap7/ibex/base/2_4_floorplan_pdn.odb ./results/asap7/ibex/base/2_floorplan.odb
+cp ./results/asap7/ibex/base/2_1_floorplan.sdc ./results/asap7/ibex/base/2_floorplan.sdc
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_1_place_gp_skip_io global_place_skip_io
+Running global_place_skip_io.tcl, stage 3_1_place_gp_skip_io
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.054  0.270 ) um
+[INFO GPL-0004] CoreBBox: (  2.052  2.160 ) ( 77.490 77.490 ) um
+[WARNING GPL-0001] alert_major_o toplevel port is not placed!
+       Replace will regard alert_major_o is placed in (0, 0)
+[WARNING GPL-0001] alert_minor_o toplevel port is not placed!
+       Replace will regard alert_minor_o is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[0] toplevel port is not placed!
+       Replace will regard boot_addr_i[0] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[10] toplevel port is not placed!
+       Replace will regard boot_addr_i[10] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[11] toplevel port is not placed!
+       Replace will regard boot_addr_i[11] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[12] toplevel port is not placed!
+       Replace will regard boot_addr_i[12] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[13] toplevel port is not placed!
+       Replace will regard boot_addr_i[13] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[14] toplevel port is not placed!
+       Replace will regard boot_addr_i[14] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[15] toplevel port is not placed!
+       Replace will regard boot_addr_i[15] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[16] toplevel port is not placed!
+       Replace will regard boot_addr_i[16] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[17] toplevel port is not placed!
+       Replace will regard boot_addr_i[17] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[18] toplevel port is not placed!
+       Replace will regard boot_addr_i[18] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[19] toplevel port is not placed!
+       Replace will regard boot_addr_i[19] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[1] toplevel port is not placed!
+       Replace will regard boot_addr_i[1] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[20] toplevel port is not placed!
+       Replace will regard boot_addr_i[20] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[21] toplevel port is not placed!
+       Replace will regard boot_addr_i[21] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[22] toplevel port is not placed!
+       Replace will regard boot_addr_i[22] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[23] toplevel port is not placed!
+       Replace will regard boot_addr_i[23] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[24] toplevel port is not placed!
+       Replace will regard boot_addr_i[24] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[25] toplevel port is not placed!
+       Replace will regard boot_addr_i[25] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[26] toplevel port is not placed!
+       Replace will regard boot_addr_i[26] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[27] toplevel port is not placed!
+       Replace will regard boot_addr_i[27] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[28] toplevel port is not placed!
+       Replace will regard boot_addr_i[28] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[29] toplevel port is not placed!
+       Replace will regard boot_addr_i[29] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[2] toplevel port is not placed!
+       Replace will regard boot_addr_i[2] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[30] toplevel port is not placed!
+       Replace will regard boot_addr_i[30] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[31] toplevel port is not placed!
+       Replace will regard boot_addr_i[31] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[3] toplevel port is not placed!
+       Replace will regard boot_addr_i[3] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[4] toplevel port is not placed!
+       Replace will regard boot_addr_i[4] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[5] toplevel port is not placed!
+       Replace will regard boot_addr_i[5] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[6] toplevel port is not placed!
+       Replace will regard boot_addr_i[6] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[7] toplevel port is not placed!
+       Replace will regard boot_addr_i[7] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[8] toplevel port is not placed!
+       Replace will regard boot_addr_i[8] is placed in (0, 0)
+[WARNING GPL-0001] boot_addr_i[9] toplevel port is not placed!
+       Replace will regard boot_addr_i[9] is placed in (0, 0)
+[WARNING GPL-0001] clk_i toplevel port is not placed!
+       Replace will regard clk_i is placed in (0, 0)
+[WARNING GPL-0001] core_sleep_o toplevel port is not placed!
+       Replace will regard core_sleep_o is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[0] toplevel port is not placed!
+       Replace will regard data_addr_o[0] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[10] toplevel port is not placed!
+       Replace will regard data_addr_o[10] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[11] toplevel port is not placed!
+       Replace will regard data_addr_o[11] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[12] toplevel port is not placed!
+       Replace will regard data_addr_o[12] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[13] toplevel port is not placed!
+       Replace will regard data_addr_o[13] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[14] toplevel port is not placed!
+       Replace will regard data_addr_o[14] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[15] toplevel port is not placed!
+       Replace will regard data_addr_o[15] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[16] toplevel port is not placed!
+       Replace will regard data_addr_o[16] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[17] toplevel port is not placed!
+       Replace will regard data_addr_o[17] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[18] toplevel port is not placed!
+       Replace will regard data_addr_o[18] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[19] toplevel port is not placed!
+       Replace will regard data_addr_o[19] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[1] toplevel port is not placed!
+       Replace will regard data_addr_o[1] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[20] toplevel port is not placed!
+       Replace will regard data_addr_o[20] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[21] toplevel port is not placed!
+       Replace will regard data_addr_o[21] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[22] toplevel port is not placed!
+       Replace will regard data_addr_o[22] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[23] toplevel port is not placed!
+       Replace will regard data_addr_o[23] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[24] toplevel port is not placed!
+       Replace will regard data_addr_o[24] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[25] toplevel port is not placed!
+       Replace will regard data_addr_o[25] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[26] toplevel port is not placed!
+       Replace will regard data_addr_o[26] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[27] toplevel port is not placed!
+       Replace will regard data_addr_o[27] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[28] toplevel port is not placed!
+       Replace will regard data_addr_o[28] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[29] toplevel port is not placed!
+       Replace will regard data_addr_o[29] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[2] toplevel port is not placed!
+       Replace will regard data_addr_o[2] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[30] toplevel port is not placed!
+       Replace will regard data_addr_o[30] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[31] toplevel port is not placed!
+       Replace will regard data_addr_o[31] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[3] toplevel port is not placed!
+       Replace will regard data_addr_o[3] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[4] toplevel port is not placed!
+       Replace will regard data_addr_o[4] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[5] toplevel port is not placed!
+       Replace will regard data_addr_o[5] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[6] toplevel port is not placed!
+       Replace will regard data_addr_o[6] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[7] toplevel port is not placed!
+       Replace will regard data_addr_o[7] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[8] toplevel port is not placed!
+       Replace will regard data_addr_o[8] is placed in (0, 0)
+[WARNING GPL-0001] data_addr_o[9] toplevel port is not placed!
+       Replace will regard data_addr_o[9] is placed in (0, 0)
+[WARNING GPL-0001] data_be_o[0] toplevel port is not placed!
+       Replace will regard data_be_o[0] is placed in (0, 0)
+[WARNING GPL-0001] data_be_o[1] toplevel port is not placed!
+       Replace will regard data_be_o[1] is placed in (0, 0)
+[WARNING GPL-0001] data_be_o[2] toplevel port is not placed!
+       Replace will regard data_be_o[2] is placed in (0, 0)
+[WARNING GPL-0001] data_be_o[3] toplevel port is not placed!
+       Replace will regard data_be_o[3] is placed in (0, 0)
+[WARNING GPL-0001] data_err_i toplevel port is not placed!
+       Replace will regard data_err_i is placed in (0, 0)
+[WARNING GPL-0001] data_gnt_i toplevel port is not placed!
+       Replace will regard data_gnt_i is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[0] toplevel port is not placed!
+       Replace will regard data_rdata_i[0] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[10] toplevel port is not placed!
+       Replace will regard data_rdata_i[10] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[11] toplevel port is not placed!
+       Replace will regard data_rdata_i[11] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[12] toplevel port is not placed!
+       Replace will regard data_rdata_i[12] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[13] toplevel port is not placed!
+       Replace will regard data_rdata_i[13] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[14] toplevel port is not placed!
+       Replace will regard data_rdata_i[14] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[15] toplevel port is not placed!
+       Replace will regard data_rdata_i[15] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[16] toplevel port is not placed!
+       Replace will regard data_rdata_i[16] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[17] toplevel port is not placed!
+       Replace will regard data_rdata_i[17] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[18] toplevel port is not placed!
+       Replace will regard data_rdata_i[18] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[19] toplevel port is not placed!
+       Replace will regard data_rdata_i[19] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[1] toplevel port is not placed!
+       Replace will regard data_rdata_i[1] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[20] toplevel port is not placed!
+       Replace will regard data_rdata_i[20] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[21] toplevel port is not placed!
+       Replace will regard data_rdata_i[21] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[22] toplevel port is not placed!
+       Replace will regard data_rdata_i[22] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[23] toplevel port is not placed!
+       Replace will regard data_rdata_i[23] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[24] toplevel port is not placed!
+       Replace will regard data_rdata_i[24] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[25] toplevel port is not placed!
+       Replace will regard data_rdata_i[25] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[26] toplevel port is not placed!
+       Replace will regard data_rdata_i[26] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[27] toplevel port is not placed!
+       Replace will regard data_rdata_i[27] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[28] toplevel port is not placed!
+       Replace will regard data_rdata_i[28] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[29] toplevel port is not placed!
+       Replace will regard data_rdata_i[29] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[2] toplevel port is not placed!
+       Replace will regard data_rdata_i[2] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[30] toplevel port is not placed!
+       Replace will regard data_rdata_i[30] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[31] toplevel port is not placed!
+       Replace will regard data_rdata_i[31] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[3] toplevel port is not placed!
+       Replace will regard data_rdata_i[3] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[4] toplevel port is not placed!
+       Replace will regard data_rdata_i[4] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[5] toplevel port is not placed!
+       Replace will regard data_rdata_i[5] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[6] toplevel port is not placed!
+       Replace will regard data_rdata_i[6] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[7] toplevel port is not placed!
+       Replace will regard data_rdata_i[7] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[8] toplevel port is not placed!
+       Replace will regard data_rdata_i[8] is placed in (0, 0)
+[WARNING GPL-0001] data_rdata_i[9] toplevel port is not placed!
+       Replace will regard data_rdata_i[9] is placed in (0, 0)
+[WARNING GPL-0001] data_req_o toplevel port is not placed!
+       Replace will regard data_req_o is placed in (0, 0)
+[WARNING GPL-0001] data_rvalid_i toplevel port is not placed!
+       Replace will regard data_rvalid_i is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[0] toplevel port is not placed!
+       Replace will regard data_wdata_o[0] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[10] toplevel port is not placed!
+       Replace will regard data_wdata_o[10] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[11] toplevel port is not placed!
+       Replace will regard data_wdata_o[11] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[12] toplevel port is not placed!
+       Replace will regard data_wdata_o[12] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[13] toplevel port is not placed!
+       Replace will regard data_wdata_o[13] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[14] toplevel port is not placed!
+       Replace will regard data_wdata_o[14] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[15] toplevel port is not placed!
+       Replace will regard data_wdata_o[15] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[16] toplevel port is not placed!
+       Replace will regard data_wdata_o[16] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[17] toplevel port is not placed!
+       Replace will regard data_wdata_o[17] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[18] toplevel port is not placed!
+       Replace will regard data_wdata_o[18] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[19] toplevel port is not placed!
+       Replace will regard data_wdata_o[19] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[1] toplevel port is not placed!
+       Replace will regard data_wdata_o[1] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[20] toplevel port is not placed!
+       Replace will regard data_wdata_o[20] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[21] toplevel port is not placed!
+       Replace will regard data_wdata_o[21] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[22] toplevel port is not placed!
+       Replace will regard data_wdata_o[22] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[23] toplevel port is not placed!
+       Replace will regard data_wdata_o[23] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[24] toplevel port is not placed!
+       Replace will regard data_wdata_o[24] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[25] toplevel port is not placed!
+       Replace will regard data_wdata_o[25] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[26] toplevel port is not placed!
+       Replace will regard data_wdata_o[26] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[27] toplevel port is not placed!
+       Replace will regard data_wdata_o[27] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[28] toplevel port is not placed!
+       Replace will regard data_wdata_o[28] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[29] toplevel port is not placed!
+       Replace will regard data_wdata_o[29] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[2] toplevel port is not placed!
+       Replace will regard data_wdata_o[2] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[30] toplevel port is not placed!
+       Replace will regard data_wdata_o[30] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[31] toplevel port is not placed!
+       Replace will regard data_wdata_o[31] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[3] toplevel port is not placed!
+       Replace will regard data_wdata_o[3] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[4] toplevel port is not placed!
+       Replace will regard data_wdata_o[4] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[5] toplevel port is not placed!
+       Replace will regard data_wdata_o[5] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[6] toplevel port is not placed!
+       Replace will regard data_wdata_o[6] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[7] toplevel port is not placed!
+       Replace will regard data_wdata_o[7] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[8] toplevel port is not placed!
+       Replace will regard data_wdata_o[8] is placed in (0, 0)
+[WARNING GPL-0001] data_wdata_o[9] toplevel port is not placed!
+       Replace will regard data_wdata_o[9] is placed in (0, 0)
+[WARNING GPL-0001] data_we_o toplevel port is not placed!
+       Replace will regard data_we_o is placed in (0, 0)
+[WARNING GPL-0001] debug_req_i toplevel port is not placed!
+       Replace will regard debug_req_i is placed in (0, 0)
+[WARNING GPL-0001] fetch_enable_i toplevel port is not placed!
+       Replace will regard fetch_enable_i is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[0] toplevel port is not placed!
+       Replace will regard hart_id_i[0] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[10] toplevel port is not placed!
+       Replace will regard hart_id_i[10] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[11] toplevel port is not placed!
+       Replace will regard hart_id_i[11] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[12] toplevel port is not placed!
+       Replace will regard hart_id_i[12] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[13] toplevel port is not placed!
+       Replace will regard hart_id_i[13] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[14] toplevel port is not placed!
+       Replace will regard hart_id_i[14] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[15] toplevel port is not placed!
+       Replace will regard hart_id_i[15] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[16] toplevel port is not placed!
+       Replace will regard hart_id_i[16] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[17] toplevel port is not placed!
+       Replace will regard hart_id_i[17] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[18] toplevel port is not placed!
+       Replace will regard hart_id_i[18] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[19] toplevel port is not placed!
+       Replace will regard hart_id_i[19] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[1] toplevel port is not placed!
+       Replace will regard hart_id_i[1] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[20] toplevel port is not placed!
+       Replace will regard hart_id_i[20] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[21] toplevel port is not placed!
+       Replace will regard hart_id_i[21] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[22] toplevel port is not placed!
+       Replace will regard hart_id_i[22] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[23] toplevel port is not placed!
+       Replace will regard hart_id_i[23] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[24] toplevel port is not placed!
+       Replace will regard hart_id_i[24] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[25] toplevel port is not placed!
+       Replace will regard hart_id_i[25] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[26] toplevel port is not placed!
+       Replace will regard hart_id_i[26] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[27] toplevel port is not placed!
+       Replace will regard hart_id_i[27] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[28] toplevel port is not placed!
+       Replace will regard hart_id_i[28] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[29] toplevel port is not placed!
+       Replace will regard hart_id_i[29] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[2] toplevel port is not placed!
+       Replace will regard hart_id_i[2] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[30] toplevel port is not placed!
+       Replace will regard hart_id_i[30] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[31] toplevel port is not placed!
+       Replace will regard hart_id_i[31] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[3] toplevel port is not placed!
+       Replace will regard hart_id_i[3] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[4] toplevel port is not placed!
+       Replace will regard hart_id_i[4] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[5] toplevel port is not placed!
+       Replace will regard hart_id_i[5] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[6] toplevel port is not placed!
+       Replace will regard hart_id_i[6] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[7] toplevel port is not placed!
+       Replace will regard hart_id_i[7] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[8] toplevel port is not placed!
+       Replace will regard hart_id_i[8] is placed in (0, 0)
+[WARNING GPL-0001] hart_id_i[9] toplevel port is not placed!
+       Replace will regard hart_id_i[9] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[0] toplevel port is not placed!
+       Replace will regard instr_addr_o[0] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[10] toplevel port is not placed!
+       Replace will regard instr_addr_o[10] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[11] toplevel port is not placed!
+       Replace will regard instr_addr_o[11] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[12] toplevel port is not placed!
+       Replace will regard instr_addr_o[12] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[13] toplevel port is not placed!
+       Replace will regard instr_addr_o[13] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[14] toplevel port is not placed!
+       Replace will regard instr_addr_o[14] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[15] toplevel port is not placed!
+       Replace will regard instr_addr_o[15] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[16] toplevel port is not placed!
+       Replace will regard instr_addr_o[16] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[17] toplevel port is not placed!
+       Replace will regard instr_addr_o[17] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[18] toplevel port is not placed!
+       Replace will regard instr_addr_o[18] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[19] toplevel port is not placed!
+       Replace will regard instr_addr_o[19] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[1] toplevel port is not placed!
+       Replace will regard instr_addr_o[1] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[20] toplevel port is not placed!
+       Replace will regard instr_addr_o[20] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[21] toplevel port is not placed!
+       Replace will regard instr_addr_o[21] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[22] toplevel port is not placed!
+       Replace will regard instr_addr_o[22] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[23] toplevel port is not placed!
+       Replace will regard instr_addr_o[23] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[24] toplevel port is not placed!
+       Replace will regard instr_addr_o[24] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[25] toplevel port is not placed!
+       Replace will regard instr_addr_o[25] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[26] toplevel port is not placed!
+       Replace will regard instr_addr_o[26] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[27] toplevel port is not placed!
+       Replace will regard instr_addr_o[27] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[28] toplevel port is not placed!
+       Replace will regard instr_addr_o[28] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[29] toplevel port is not placed!
+       Replace will regard instr_addr_o[29] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[2] toplevel port is not placed!
+       Replace will regard instr_addr_o[2] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[30] toplevel port is not placed!
+       Replace will regard instr_addr_o[30] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[31] toplevel port is not placed!
+       Replace will regard instr_addr_o[31] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[3] toplevel port is not placed!
+       Replace will regard instr_addr_o[3] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[4] toplevel port is not placed!
+       Replace will regard instr_addr_o[4] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[5] toplevel port is not placed!
+       Replace will regard instr_addr_o[5] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[6] toplevel port is not placed!
+       Replace will regard instr_addr_o[6] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[7] toplevel port is not placed!
+       Replace will regard instr_addr_o[7] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[8] toplevel port is not placed!
+       Replace will regard instr_addr_o[8] is placed in (0, 0)
+[WARNING GPL-0001] instr_addr_o[9] toplevel port is not placed!
+       Replace will regard instr_addr_o[9] is placed in (0, 0)
+[WARNING GPL-0001] instr_err_i toplevel port is not placed!
+       Replace will regard instr_err_i is placed in (0, 0)
+[WARNING GPL-0001] instr_gnt_i toplevel port is not placed!
+       Replace will regard instr_gnt_i is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[0] toplevel port is not placed!
+       Replace will regard instr_rdata_i[0] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[10] toplevel port is not placed!
+       Replace will regard instr_rdata_i[10] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[11] toplevel port is not placed!
+       Replace will regard instr_rdata_i[11] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[12] toplevel port is not placed!
+       Replace will regard instr_rdata_i[12] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[13] toplevel port is not placed!
+       Replace will regard instr_rdata_i[13] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[14] toplevel port is not placed!
+       Replace will regard instr_rdata_i[14] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[15] toplevel port is not placed!
+       Replace will regard instr_rdata_i[15] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[16] toplevel port is not placed!
+       Replace will regard instr_rdata_i[16] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[17] toplevel port is not placed!
+       Replace will regard instr_rdata_i[17] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[18] toplevel port is not placed!
+       Replace will regard instr_rdata_i[18] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[19] toplevel port is not placed!
+       Replace will regard instr_rdata_i[19] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[1] toplevel port is not placed!
+       Replace will regard instr_rdata_i[1] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[20] toplevel port is not placed!
+       Replace will regard instr_rdata_i[20] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[21] toplevel port is not placed!
+       Replace will regard instr_rdata_i[21] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[22] toplevel port is not placed!
+       Replace will regard instr_rdata_i[22] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[23] toplevel port is not placed!
+       Replace will regard instr_rdata_i[23] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[24] toplevel port is not placed!
+       Replace will regard instr_rdata_i[24] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[25] toplevel port is not placed!
+       Replace will regard instr_rdata_i[25] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[26] toplevel port is not placed!
+       Replace will regard instr_rdata_i[26] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[27] toplevel port is not placed!
+       Replace will regard instr_rdata_i[27] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[28] toplevel port is not placed!
+       Replace will regard instr_rdata_i[28] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[29] toplevel port is not placed!
+       Replace will regard instr_rdata_i[29] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[2] toplevel port is not placed!
+       Replace will regard instr_rdata_i[2] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[30] toplevel port is not placed!
+       Replace will regard instr_rdata_i[30] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[31] toplevel port is not placed!
+       Replace will regard instr_rdata_i[31] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[3] toplevel port is not placed!
+       Replace will regard instr_rdata_i[3] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[4] toplevel port is not placed!
+       Replace will regard instr_rdata_i[4] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[5] toplevel port is not placed!
+       Replace will regard instr_rdata_i[5] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[6] toplevel port is not placed!
+       Replace will regard instr_rdata_i[6] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[7] toplevel port is not placed!
+       Replace will regard instr_rdata_i[7] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[8] toplevel port is not placed!
+       Replace will regard instr_rdata_i[8] is placed in (0, 0)
+[WARNING GPL-0001] instr_rdata_i[9] toplevel port is not placed!
+       Replace will regard instr_rdata_i[9] is placed in (0, 0)
+[WARNING GPL-0001] instr_req_o toplevel port is not placed!
+       Replace will regard instr_req_o is placed in (0, 0)
+[WARNING GPL-0001] instr_rvalid_i toplevel port is not placed!
+       Replace will regard instr_rvalid_i is placed in (0, 0)
+[WARNING GPL-0001] irq_external_i toplevel port is not placed!
+       Replace will regard irq_external_i is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[0] toplevel port is not placed!
+       Replace will regard irq_fast_i[0] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[10] toplevel port is not placed!
+       Replace will regard irq_fast_i[10] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[11] toplevel port is not placed!
+       Replace will regard irq_fast_i[11] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[12] toplevel port is not placed!
+       Replace will regard irq_fast_i[12] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[13] toplevel port is not placed!
+       Replace will regard irq_fast_i[13] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[14] toplevel port is not placed!
+       Replace will regard irq_fast_i[14] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[1] toplevel port is not placed!
+       Replace will regard irq_fast_i[1] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[2] toplevel port is not placed!
+       Replace will regard irq_fast_i[2] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[3] toplevel port is not placed!
+       Replace will regard irq_fast_i[3] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[4] toplevel port is not placed!
+       Replace will regard irq_fast_i[4] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[5] toplevel port is not placed!
+       Replace will regard irq_fast_i[5] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[6] toplevel port is not placed!
+       Replace will regard irq_fast_i[6] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[7] toplevel port is not placed!
+       Replace will regard irq_fast_i[7] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[8] toplevel port is not placed!
+       Replace will regard irq_fast_i[8] is placed in (0, 0)
+[WARNING GPL-0001] irq_fast_i[9] toplevel port is not placed!
+       Replace will regard irq_fast_i[9] is placed in (0, 0)
+[WARNING GPL-0001] irq_nm_i toplevel port is not placed!
+       Replace will regard irq_nm_i is placed in (0, 0)
+[WARNING GPL-0001] irq_software_i toplevel port is not placed!
+       Replace will regard irq_software_i is placed in (0, 0)
+[WARNING GPL-0001] irq_timer_i toplevel port is not placed!
+       Replace will regard irq_timer_i is placed in (0, 0)
+[WARNING GPL-0001] rst_ni toplevel port is not placed!
+       Replace will regard rst_ni is placed in (0, 0)
+[WARNING GPL-0001] test_en_i toplevel port is not placed!
+       Replace will regard test_en_i is placed in (0, 0)
+[INFO GPL-0006] NumInstances:             19507
+[INFO GPL-0007] NumPlaceInstances:        18528
+[INFO GPL-0008] NumFixedInstances:          979
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                  19234
+[INFO GPL-0011] NumPins:                  68651
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 79.538 79.538 ) um
+[INFO GPL-0013] CoreBBox: (  2.052  2.160 ) ( 77.490 77.490 ) um
+[INFO GPL-0016] CoreArea:              5682.745 um^2
+[INFO GPL-0017] NonPlaceInstsArea:       28.548 um^2
+[INFO GPL-0018] PlaceInstsArea:        2282.761 um^2
+[INFO GPL-0019] Util:                    40.373 %
+[INFO GPL-0020] StdInstsArea:          2282.761 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[INFO GPL-0031] FillerInit:NumGCells:     48329
+[INFO GPL-0032] FillerInit:NumGNets:      19234
+[INFO GPL-0033] FillerInit:NumGPins:      68651
+[INFO GPL-0023] TargetDensity:            1.000
+[INFO GPL-0024] AvrgPlaceInstArea:        0.123 um^2
+[INFO GPL-0025] IdealBinArea:             0.123 um^2
+[INFO GPL-0026] IdealBinCnt:              46123
+[INFO GPL-0027] TotalBinArea:          5682.745 um^2
+[INFO GPL-0028] BinCnt:       128    128
+[INFO GPL-0029] BinSize: (  0.590  0.589 )
+[INFO GPL-0030] NumBins: 16384
+Placement density is 0.5329829549789429, computed from PLACE_DENSITY_LB_ADDON 0.20 and lower bound 0.4037286937236786
+global_placement -skip_io -density 0.5329829549789429 -pad_left 0 -pad_right 0
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.054  0.270 ) um
+[INFO GPL-0004] CoreBBox: (  2.052  2.160 ) ( 77.490 77.490 ) um
+[INFO GPL-0006] NumInstances:             19507
+[INFO GPL-0007] NumPlaceInstances:        18528
+[INFO GPL-0008] NumFixedInstances:          979
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                  19234
+[INFO GPL-0011] NumPins:                  68387
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 79.538 79.538 ) um
+[INFO GPL-0013] CoreBBox: (  2.052  2.160 ) ( 77.490 77.490 ) um
+[INFO GPL-0016] CoreArea:              5682.745 um^2
+[INFO GPL-0017] NonPlaceInstsArea:       28.548 um^2
+[INFO GPL-0018] PlaceInstsArea:        2282.761 um^2
+[INFO GPL-0019] Util:                    40.373 %
+[INFO GPL-0020] StdInstsArea:          2282.761 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[INFO GPL-0031] FillerInit:NumGCells:     24988
+[INFO GPL-0032] FillerInit:NumGNets:      19234
+[INFO GPL-0033] FillerInit:NumGPins:      68387
+[INFO GPL-0023] TargetDensity:            0.533
+[INFO GPL-0024] AvrgPlaceInstArea:        0.123 um^2
+[INFO GPL-0025] IdealBinArea:             0.231 um^2
+[INFO GPL-0026] IdealBinCnt:              24583
+[INFO GPL-0027] TotalBinArea:          5682.745 um^2
+[INFO GPL-0028] BinCnt:       128    128
+[INFO GPL-0029] BinSize: (  0.590  0.589 )
+[INFO GPL-0030] NumBins: 16384
+[NesterovSolve] Iter:    1 overflow: 0.996 HPWL: 14275192
+[NesterovSolve] Iter:   10 overflow: 0.998 HPWL: 4562479
+[NesterovSolve] Iter:   20 overflow: 0.998 HPWL: 4298360
+[NesterovSolve] Iter:   30 overflow: 0.998 HPWL: 4253889
+[NesterovSolve] Iter:   40 overflow: 0.998 HPWL: 4233657
+[NesterovSolve] Iter:   50 overflow: 0.998 HPWL: 4221385
+[NesterovSolve] Iter:   60 overflow: 0.998 HPWL: 4213188
+[NesterovSolve] Iter:   70 overflow: 0.997 HPWL: 4212734
+[NesterovSolve] Iter:   80 overflow: 0.997 HPWL: 4231667
+[NesterovSolve] Iter:   90 overflow: 0.997 HPWL: 4301751
+[NesterovSolve] Iter:  100 overflow: 0.997 HPWL: 4494085
+[NesterovSolve] Iter:  110 overflow: 0.997 HPWL: 4857888
+[NesterovSolve] Iter:  120 overflow: 0.996 HPWL: 5413999
+[NesterovSolve] Iter:  130 overflow: 0.995 HPWL: 6267510
+[NesterovSolve] Iter:  140 overflow: 0.992 HPWL: 7708313
+[NesterovSolve] Iter:  150 overflow: 0.986 HPWL: 10449437
+[NesterovSolve] Iter:  160 overflow: 0.975 HPWL: 13735061
+[NesterovSolve] Iter:  170 overflow: 0.965 HPWL: 16656130
+[NesterovSolve] Iter:  180 overflow: 0.956 HPWL: 19757901
+[NesterovSolve] Iter:  190 overflow: 0.940 HPWL: 23597031
+[NesterovSolve] Iter:  200 overflow: 0.921 HPWL: 27967765
+[NesterovSolve] Iter:  210 overflow: 0.896 HPWL: 32606359
+[NesterovSolve] Iter:  220 overflow: 0.868 HPWL: 37404184
+[NesterovSolve] Iter:  230 overflow: 0.836 HPWL: 42525587
+[NesterovSolve] Iter:  240 overflow: 0.800 HPWL: 47439402
+[NesterovSolve] Iter:  250 overflow: 0.762 HPWL: 51902552
+[NesterovSolve] Iter:  260 overflow: 0.720 HPWL: 56654528
+[NesterovSolve] Iter:  270 overflow: 0.676 HPWL: 60964333
+[NesterovSolve] Iter:  280 overflow: 0.629 HPWL: 64801369
+[NesterovSolve] Iter:  290 overflow: 0.577 HPWL: 68121792
+[NesterovSolve] Iter:  300 overflow: 0.522 HPWL: 70958311
+[NesterovSolve] Iter:  310 overflow: 0.466 HPWL: 73243099
+[NesterovSolve] Iter:  320 overflow: 0.413 HPWL: 75037927
+[NesterovSolve] Iter:  330 overflow: 0.364 HPWL: 76510112
+[NesterovSolve] Iter:  340 overflow: 0.325 HPWL: 77519681
+[NesterovSolve] Iter:  350 overflow: 0.291 HPWL: 77995351
+[NesterovSolve] Iter:  360 overflow: 0.255 HPWL: 78579350
+[NesterovSolve] Iter:  370 overflow: 0.225 HPWL: 78965393
+[NesterovSolve] Iter:  380 overflow: 0.196 HPWL: 79263483
+[NesterovSolve] Iter:  390 overflow: 0.172 HPWL: 79489612
+[NesterovSolve] Iter:  400 overflow: 0.148 HPWL: 79650473
+[NesterovSolve] Iter:  410 overflow: 0.128 HPWL: 79792305
+[NesterovSolve] Iter:  420 overflow: 0.111 HPWL: 79904740
+[NesterovSolve] Finished with Overflow: 0.099756
+Took 10 seconds: global_placement -skip_io -density 0.5329829549789429 -pad_left 0 -pad_right 0
+Elapsed time: 0:13.08[h:]min:sec. CPU time: user 171.08 sys 0.28 (1309%). Peak memory: 279036KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_2_place_iop io_placement
+Running io_placement.tcl, stage 3_2_place_iop
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+place_pins -hor_layers M4 -ver_layers M5
+Found 0 macro blocks.
+Using 2 tracks default min distance between IO pins.
+[INFO PPL-0001] Number of available slots 3252
+[INFO PPL-0002] Number of I/O             264
+[INFO PPL-0003] Number of I/O w/sink      256
+[INFO PPL-0004] Number of I/O w/o sink    8
+[INFO PPL-0005] Slots per section         200
+[INFO PPL-0008] Successfully assigned pins to sections.
+[INFO PPL-0012] I/O nets HPWL: 5133.85 um.
+Elapsed time: 0:02.06[h:]min:sec. CPU time: user 1.91 sys 0.14 (99%). Peak memory: 243608KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_3_place_gp global_place
+Running global_place.tcl, stage 3_3_place_gp
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/fastroute.tcl
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.054  0.270 ) um
+[INFO GPL-0004] CoreBBox: (  2.052  2.160 ) ( 77.490 77.490 ) um
+[INFO GPL-0006] NumInstances:             19507
+[INFO GPL-0007] NumPlaceInstances:        18528
+[INFO GPL-0008] NumFixedInstances:          979
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                  19234
+[INFO GPL-0011] NumPins:                  68651
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 79.538 79.538 ) um
+[INFO GPL-0013] CoreBBox: (  2.052  2.160 ) ( 77.490 77.490 ) um
+[INFO GPL-0016] CoreArea:              5682.745 um^2
+[INFO GPL-0017] NonPlaceInstsArea:       28.548 um^2
+[INFO GPL-0018] PlaceInstsArea:        2282.761 um^2
+[INFO GPL-0019] Util:                    40.373 %
+[INFO GPL-0020] StdInstsArea:          2282.761 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[INFO GPL-0031] FillerInit:NumGCells:     48329
+[INFO GPL-0032] FillerInit:NumGNets:      19234
+[INFO GPL-0033] FillerInit:NumGPins:      68651
+[INFO GPL-0023] TargetDensity:            1.000
+[INFO GPL-0024] AvrgPlaceInstArea:        0.123 um^2
+[INFO GPL-0025] IdealBinArea:             0.123 um^2
+[INFO GPL-0026] IdealBinCnt:              46123
+[INFO GPL-0027] TotalBinArea:          5682.745 um^2
+[INFO GPL-0028] BinCnt:       128    128
+[INFO GPL-0029] BinSize: (  0.590  0.589 )
+[INFO GPL-0030] NumBins: 16384
+Placement density is 0.5329829549789429, computed from PLACE_DENSITY_LB_ADDON 0.20 and lower bound 0.4037286937236786
+global_placement -density 0.5329829549789429 -pad_left 0 -pad_right 0 -routability_driven -timing_driven
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.054  0.270 ) um
+[INFO GPL-0004] CoreBBox: (  2.052  2.160 ) ( 77.490 77.490 ) um
+[INFO GPL-0006] NumInstances:             19507
+[INFO GPL-0007] NumPlaceInstances:        18528
+[INFO GPL-0008] NumFixedInstances:          979
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                  19234
+[INFO GPL-0011] NumPins:                  68651
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 79.538 79.538 ) um
+[INFO GPL-0013] CoreBBox: (  2.052  2.160 ) ( 77.490 77.490 ) um
+[INFO GPL-0016] CoreArea:              5682.745 um^2
+[INFO GPL-0017] NonPlaceInstsArea:       28.548 um^2
+[INFO GPL-0018] PlaceInstsArea:        2282.761 um^2
+[INFO GPL-0019] Util:                    40.373 %
+[INFO GPL-0020] StdInstsArea:          2282.761 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[InitialPlace]  Iter: 1 CG residual: 0.00045037 HPWL: 100039661
+[InitialPlace]  Iter: 2 CG residual: 0.00000166 HPWL: 32811745
+[InitialPlace]  Iter: 3 CG residual: 0.00000128 HPWL: 32233925
+[InitialPlace]  Iter: 4 CG residual: 0.00000300 HPWL: 32161259
+[InitialPlace]  Iter: 5 CG residual: 0.00000040 HPWL: 32045356
+[INFO GPL-0031] FillerInit:NumGCells:     24988
+[INFO GPL-0032] FillerInit:NumGNets:      19234
+[INFO GPL-0033] FillerInit:NumGPins:      68651
+[INFO GPL-0023] TargetDensity:            0.533
+[INFO GPL-0024] AvrgPlaceInstArea:        0.123 um^2
+[INFO GPL-0025] IdealBinArea:             0.231 um^2
+[INFO GPL-0026] IdealBinCnt:              24583
+[INFO GPL-0027] TotalBinArea:          5682.745 um^2
+[INFO GPL-0028] BinCnt:       128    128
+[INFO GPL-0029] BinSize: (  0.590  0.589 )
+[INFO GPL-0030] NumBins: 16384
+[NesterovSolve] Iter:    1 overflow: 0.973 HPWL: 27434343
+[NesterovSolve] Iter:   10 overflow: 0.944 HPWL: 25916844
+[NesterovSolve] Iter:   20 overflow: 0.927 HPWL: 29194402
+[NesterovSolve] Iter:   30 overflow: 0.917 HPWL: 30340858
+[NesterovSolve] Iter:   40 overflow: 0.912 HPWL: 30619571
+[NesterovSolve] Iter:   50 overflow: 0.911 HPWL: 30792781
+[NesterovSolve] Iter:   60 overflow: 0.910 HPWL: 30894590
+[NesterovSolve] Iter:   70 overflow: 0.909 HPWL: 30989592
+[NesterovSolve] Iter:   80 overflow: 0.909 HPWL: 31120403
+[NesterovSolve] Iter:   90 overflow: 0.909 HPWL: 31210975
+[NesterovSolve] Iter:  100 overflow: 0.909 HPWL: 31223520
+[NesterovSolve] Iter:  110 overflow: 0.909 HPWL: 31234018
+[NesterovSolve] Iter:  120 overflow: 0.908 HPWL: 31400016
+[NesterovSolve] Iter:  130 overflow: 0.907 HPWL: 31841800
+[NesterovSolve] Iter:  140 overflow: 0.905 HPWL: 32637333
+[NesterovSolve] Iter:  150 overflow: 0.900 HPWL: 33837731
+[NesterovSolve] Iter:  160 overflow: 0.895 HPWL: 35428767
+[NesterovSolve] Iter:  170 overflow: 0.889 HPWL: 37465023
+[NesterovSolve] Iter:  180 overflow: 0.879 HPWL: 40019999
+[NesterovSolve] Iter:  190 overflow: 0.867 HPWL: 43106712
+[NesterovSolve] Iter:  200 overflow: 0.849 HPWL: 46591500
+[NesterovSolve] Iter:  210 overflow: 0.827 HPWL: 50129285
+[NesterovSolve] Iter:  220 overflow: 0.801 HPWL: 53919746
+[INFO GPL-0100] Timing-driven iteration 1/5, virtual: true.
+[INFO GPL-0101]    Iter: 226, overflow: 0.783, keep rsz at: 0.3, HPWL: 56505793
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     19234
+    final |     +5.4% |    3038 |      15 |             3 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 3 slew violations.
+[INFO RSZ-0039] Resized 3038 instances.
+[INFO RSZ-0038] Inserted 15 buffers in 3 nets.
+[INFO GPL-0106] Timing-driven: worst slack -4.63e-11
+[INFO GPL-0103] Timing-driven: weighted 1922 nets.
+[NesterovSolve] Iter:  230 overflow: 0.769 HPWL: 56935704
+[NesterovSolve] Iter:  240 overflow: 0.739 HPWL: 60700642
+[NesterovSolve] Iter:  250 overflow: 0.703 HPWL: 64858408
+[NesterovSolve] Iter:  260 overflow: 0.664 HPWL: 68238200
+[INFO GPL-0100] Timing-driven iteration 2/5, virtual: true.
+[INFO GPL-0101]    Iter: 267, overflow: 0.633, keep rsz at: 0.3, HPWL: 70294859
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     19234
+    final |     +5.9% |    3134 |      17 |             3 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 3 slew violations.
+[INFO RSZ-0039] Resized 3134 instances.
+[INFO RSZ-0038] Inserted 17 buffers in 3 nets.
+[INFO GPL-0106] Timing-driven: worst slack -1.89e-10
+[INFO GPL-0103] Timing-driven: weighted 1918 nets.
+[NesterovSolve] Iter:  270 overflow: 0.620 HPWL: 71098997
+[INFO GPL-0088] Routability snapshot saved at iter = 273
+[NesterovSolve] Iter:  280 overflow: 0.570 HPWL: 74040061
+[NesterovSolve] Iter:  290 overflow: 0.513 HPWL: 76822658
+[NesterovSolve] Iter:  300 overflow: 0.457 HPWL: 78832697
+[NesterovSolve] Iter:  310 overflow: 0.408 HPWL: 80616891
+[NesterovSolve] Iter:  320 overflow: 0.361 HPWL: 81892166
+[NesterovSolve] Iter:  330 overflow: 0.318 HPWL: 82741817
+[INFO GPL-0075] Routability iteration: 1
+[INFO GPL-0036] TileBBox: (    0    0 ) (  540  540 ) DBU
+[INFO GPL-0038] TileCnt:     147  147
+[INFO GPL-0040] NumTiles: 21609
+[INFO GPL-0081] TotalRouteOverflow: 0.7342
+[INFO GPL-0082] OverflowTileCnt: 6
+[INFO GPL-0083] 0.5%RC: 0.9034
+[INFO GPL-0084] 1.0%RC: 0.8693
+[INFO GPL-0085] 2.0%RC: 0.8316
+[INFO GPL-0086] 5.0%RC: 0.7723
+[INFO GPL-0087] FinalRC: 0.8863337
+[INFO GPL-0077] FinalRC lower than targetRC(1.0100), routability not needed.
+[NesterovSolve] Iter:  340 overflow: 0.283 HPWL: 83074897
+[INFO GPL-0100] Timing-driven iteration 3/5, virtual: false.
+[INFO GPL-0101]    Iter: 340, overflow: 0.283, keep rsz at: 0.3, HPWL: 83074897
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     19234
+    final |     +6.9% |    3338 |      25 |             4 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 4 slew violations.
+[INFO RSZ-0037] Found 1 long wires.
+[INFO RSZ-0039] Resized 3338 instances.
+[INFO RSZ-0038] Inserted 25 buffers in 4 nets.
+[INFO GPL-0106] Timing-driven: worst slack -7.47e-11
+[INFO GPL-0103] Timing-driven: weighted 1922 nets.
+[INFO GPL-0107] Timing-driven: repair_design delta area: 157.435 um^2 (+6.90%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl cells created: 25 (+0.00%)
+[INFO GPL-0109] Timing-driven: inserted buffers as reported by repair_design: 25
+[INFO GPL-0110] Timing-driven: new target density: 0.56082684
+[NesterovSolve] Iter:  350 overflow: 0.248 HPWL: 82457319
+[NesterovSolve] Iter:  360 overflow: 0.218 HPWL: 81933352
+[INFO GPL-0100] Timing-driven iteration 4/5, virtual: false.
+[INFO GPL-0101]    Iter: 365, overflow: 0.204, keep rsz at: 0.3, HPWL: 82214443
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     19234
+    final |     +1.4% |     680 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0039] Resized 680 instances.
+[INFO GPL-0106] Timing-driven: worst slack -6.61e-11
+[INFO GPL-0103] Timing-driven: weighted 1922 nets.
+[INFO GPL-0107] Timing-driven: repair_design delta area: 34.555 um^2 (+1.42%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl cells created: 0 (+0.00%)
+[INFO GPL-0109] Timing-driven: inserted buffers as reported by repair_design: 0
+[INFO GPL-0110] Timing-driven: new target density: 0.56693816
+[NesterovSolve] Iter:  370 overflow: 0.191 HPWL: 82746265
+[NesterovSolve] Iter:  380 overflow: 0.165 HPWL: 82518076
+[NesterovSolve] Iter:  390 overflow: 0.144 HPWL: 82598164
+[INFO GPL-0100] Timing-driven iteration 5/5, virtual: false.
+[INFO GPL-0101]    Iter: 390, overflow: 0.144, keep rsz at: 0.3, HPWL: 82598164
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     19234
+    final |     +0.3% |     248 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0039] Resized 248 instances.
+[INFO GPL-0106] Timing-driven: worst slack -6.65e-11
+[INFO GPL-0103] Timing-driven: weighted 1918 nets.
+[INFO GPL-0107] Timing-driven: repair_design delta area: 6.707 um^2 (+0.27%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl cells created: 0 (+0.00%)
+[INFO GPL-0109] Timing-driven: inserted buffers as reported by repair_design: 0
+[INFO GPL-0110] Timing-driven: new target density: 0.56812435
+[NesterovSolve] Iter:  400 overflow: 0.123 HPWL: 82666315
+[NesterovSolve] Iter:  410 overflow: 0.107 HPWL: 82713456
+[NesterovSolve] Finished with Overflow: 0.099788
+Took 53 seconds: global_placement -density 0.5329829549789429 -pad_left 0 -pad_right 0 -routability_driven -timing_driven
+Report metrics stage 3, global place...
+
+==========================================================================
+global place report_design_area
+--------------------------------------------------------------------------
+Design area 2481 u^2 44% utilization.
+Elapsed time: 1:19.64[h:]min:sec. CPU time: user 290.63 sys 54.23 (433%). Peak memory: 746820KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_4_place_resized resize
+Running resize.tcl, stage 3_4_place_resized
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+Perform port buffering...
+[INFO RSZ-0027] Inserted 149 input buffers.
+[INFO RSZ-0028] Inserted 100 output buffers.
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+[INFO RSZ-0058] Using max wire length 121um.
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     19508
+     1000 |     +0.0% |       6 |       0 |             0 |     18508
+     2000 |     +0.0% |      10 |       0 |             0 |     17508
+     3000 |     +0.0% |      17 |       0 |             0 |     16508
+     4000 |     +0.0% |      21 |       0 |             0 |     15508
+     5000 |     +0.0% |      33 |       0 |             0 |     14508
+     6000 |     +0.0% |      37 |       0 |             0 |     13508
+     7000 |     +0.1% |      47 |       0 |             0 |     12508
+     8000 |     +0.1% |      50 |       0 |             0 |     11508
+     9000 |     +0.1% |      55 |       0 |             0 |     10508
+    10000 |     +0.1% |      66 |       0 |             0 |      9508
+    11000 |     +0.1% |      83 |       0 |             0 |      8508
+    12000 |     +0.1% |      88 |       0 |             0 |      7508
+    13000 |     +0.1% |     101 |       0 |             0 |      6508
+    14000 |     +0.1% |     110 |       0 |             0 |      5508
+    15000 |     +0.1% |     120 |       0 |             0 |      4508
+    16000 |     +0.1% |     138 |       0 |             0 |      3508
+    17000 |     +0.1% |     148 |       0 |             0 |      2508
+    18000 |     +0.1% |     149 |       0 |             0 |      1508
+    19000 |     +0.1% |     149 |       0 |             0 |       508
+    final |     +0.1% |     189 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0039] Resized 189 instances.
+Repair tie lo fanout...
+[INFO RSZ-0042] Inserted 6 tie TIELOx1_ASAP7_75t_R instances.
+Repair tie hi fanout...
+[INFO RSZ-0042] Inserted 1658 tie TIEHIx1_ASAP7_75t_R instances.
+Floating nets: 
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 2576 u^2 45% utilization.
+Instance count before 19532, after 21443
+Pin count before 68437, after 70597
+Elapsed time: 0:33.56[h:]min:sec. CPU time: user 48.62 sys 11.56 (179%). Peak memory: 571712KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_5_place_dp detail_place
+Running detail_place.tcl, stage 3_5_place_dp
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+suppress_message STA 1212
+Placement Analysis
+---------------------------------
+total displacement       4646.6 u
+average displacement        0.2 u
+max displacement            2.5 u
+original HPWL           88418.8 u
+legalized HPWL          92269.5 u
+delta HPWL                    4 %
+
+[INFO DPL-0020] Mirrored 8684 instances
+[INFO DPL-0021] HPWL before           92269.5 u
+[INFO DPL-0022] HPWL after            90636.0 u
+[INFO DPL-0023] HPWL delta               -1.8 %
+[INFO FLW-0012] Placement violations .
+Report metrics stage 3, detailed place...
+
+==========================================================================
+detailed place report_design_area
+--------------------------------------------------------------------------
+Design area 2576 u^2 45% utilization.
+Elapsed time: 0:30.49[h:]min:sec. CPU time: user 43.51 sys 9.42 (173%). Peak memory: 379700KB.

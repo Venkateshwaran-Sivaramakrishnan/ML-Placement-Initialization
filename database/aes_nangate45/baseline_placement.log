@@ -1,0 +1,2820 @@
+READY TO RUN!
+rm -f ./results/nangate45/aes/base/3_*place*.odb
+rm -f ./results/nangate45/aes/base/3_place.sdc
+rm -f ./results/nangate45/aes/base/3_*.def ./results/nangate45/aes/base/3_*.v
+rm -f ./reports/nangate45/aes/base/3_*
+rm -f ./logs/nangate45/aes/base/3_*
+/ml_placer/OpenROAD-flow-scripts/flow/util/preprocessLib.py -i /ml_placer/OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib -o objects/nangate45/aes/base/lib/NangateOpenCellLibrary_typical.lib
+Opening file for replace: /ml_placer/OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+Commented 0 lines containing "original_pin"
+Replaced malformed functions 0
+Replaced capacitive_load_unit 0
+Writing replaced file: objects/nangate45/aes/base/lib/NangateOpenCellLibrary_typical.lib
+mkdir -p results/nangate45/aes/base/
+echo 0.82 > results/nangate45/aes/base/clock_period.txt
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/synth.sh /ml_placer/OpenROAD-flow-scripts/flow/scripts/synth_canonicalize.tcl ./logs/nangate45/aes/base/1_1_yosys_canonicalize.log
+Using ABC speed script.
+Extracting clock period from SDC file: ./results/nangate45/aes/base/clock_period.txt
+Setting clock period to 0.82
+1. Executing Liberty frontend: ./objects/nangate45/aes/base/lib/NangateOpenCellLibrary_typical.lib
+2. Executing Liberty frontend: ./objects/nangate45/aes/base/lib/NangateOpenCellLibrary_typical.lib
+3. Executing Verilog-2005 frontend: /ml_placer/OpenROAD-flow-scripts/flow/designs/src/aes/aes_cipher_top.v
+4. Executing Verilog-2005 frontend: /ml_placer/OpenROAD-flow-scripts/flow/designs/src/aes/aes_inv_cipher_top.v
+5. Executing Verilog-2005 frontend: /ml_placer/OpenROAD-flow-scripts/flow/designs/src/aes/aes_inv_sbox.v
+6. Executing Verilog-2005 frontend: /ml_placer/OpenROAD-flow-scripts/flow/designs/src/aes/aes_key_expand_128.v
+7. Executing Verilog-2005 frontend: /ml_placer/OpenROAD-flow-scripts/flow/designs/src/aes/aes_rcon.v
+8. Executing Verilog-2005 frontend: /ml_placer/OpenROAD-flow-scripts/flow/designs/src/aes/aes_sbox.v
+9. Executing Verilog-2005 frontend: /ml_placer/OpenROAD-flow-scripts/flow/designs/src/aes/timescale.v
+10. Executing Verilog-2005 frontend: /ml_placer/OpenROAD-flow-scripts/flow/platforms/nangate45/cells_clkgate.v
+11. Executing HIERARCHY pass (managing design hierarchy).
+12. Executing AST frontend in derive mode using pre-parsed AST for module `\aes_cipher_top'.
+12.1. Analyzing design hierarchy..
+12.2. Executing AST frontend in derive mode using pre-parsed AST for module `\aes_sbox'.
+12.3. Executing AST frontend in derive mode using pre-parsed AST for module `\aes_key_expand_128'.
+Warning: Replacing memory \w with list of registers. See /ml_placer/OpenROAD-flow-scripts/flow/designs/src/aes/aes_key_expand_128.v:73
+12.4. Analyzing design hierarchy..
+12.5. Executing AST frontend in derive mode using pre-parsed AST for module `\aes_rcon'.
+12.6. Analyzing design hierarchy..
+12.7. Analyzing design hierarchy..
+13. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module aes_cipher_top because it contains processes (run 'proc' command first).
+Warning: Ignoring module aes_rcon because it contains processes (run 'proc' command first).
+Warning: Ignoring module aes_key_expand_128 because it contains processes (run 'proc' command first).
+Warning: Ignoring module aes_sbox because it contains processes (run 'proc' command first).
+14. Executing RTLIL backend.
+Warnings: 5 unique messages, 5 total
+End of script. Logfile hash: fccb6b427c, CPU: user 0.25s system 0.02s, MEM: 31.25 MB peak
+Yosys 0.51+85 (git sha1 d3aec12fe, clang++ 18.1.8 -fPIC -O3)
+Time spent: 77% 4x read_liberty (0 sec), 10% 1x hierarchy (0 sec), ...
+Elapsed time: 0:00.37[h:]min:sec. CPU time: user 0.33 sys 0.03 (99%). Peak memory: 33152KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/synth.sh /ml_placer/OpenROAD-flow-scripts/flow/scripts/synth.tcl ./logs/nangate45/aes/base/1_1_yosys.log
+Using ABC speed script.
+Extracting clock period from SDC file: ./results/nangate45/aes/base/clock_period.txt
+Setting clock period to 0.82
+1. Executing RTLIL frontend.
+2. Executing HIERARCHY pass (managing design hierarchy).
+2.1. Analyzing design hierarchy..
+2.2. Analyzing design hierarchy..
+3. Executing SYNTH pass.
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+3.1.1. Analyzing design hierarchy..
+3.1.2. Analyzing design hierarchy..
+3.2. Executing PROC pass (convert processes to netlists).
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+3.3. Executing FLATTEN pass (flatten design).
+3.4. Executing OPT_EXPR pass (perform const folding).
+3.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.6. Executing CHECK pass (checking for obvious problems).
+3.7. Executing OPT pass (performing simple optimizations).
+3.7.1. Executing OPT_EXPR pass (perform const folding).
+3.7.2. Executing OPT_MERGE pass (detect identical cells).
+3.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.7.5. Executing OPT_MERGE pass (detect identical cells).
+3.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.7.8. Executing OPT_EXPR pass (perform const folding).
+3.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+3.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.7.12. Executing OPT_MERGE pass (detect identical cells).
+3.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+3.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.7.15. Executing OPT_EXPR pass (perform const folding).
+3.7.16. Finished OPT passes. (There is nothing left to do.)
+3.8. Executing FSM pass (extract and optimize FSM).
+3.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+3.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+3.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+3.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+3.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+3.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+3.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+3.9. Executing OPT pass (performing simple optimizations).
+3.9.1. Executing OPT_EXPR pass (perform const folding).
+3.9.2. Executing OPT_MERGE pass (detect identical cells).
+3.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.9.5. Executing OPT_MERGE pass (detect identical cells).
+3.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.9.8. Executing OPT_EXPR pass (perform const folding).
+3.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+3.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.9.12. Executing OPT_MERGE pass (detect identical cells).
+3.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+3.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.9.15. Executing OPT_EXPR pass (perform const folding).
+3.9.16. Finished OPT passes. (There is nothing left to do.)
+3.10. Executing WREDUCE pass (reducing word size of cells).
+3.11. Executing PEEPOPT pass (run peephole optimizers).
+3.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.13. Executing ALUMACC pass (create $alu and $macc cells).
+3.14. Executing SHARE pass (SAT-based resource sharing).
+3.15. Executing OPT pass (performing simple optimizations).
+3.15.1. Executing OPT_EXPR pass (perform const folding).
+3.15.2. Executing OPT_MERGE pass (detect identical cells).
+3.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.15.5. Executing OPT_MERGE pass (detect identical cells).
+3.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.15.8. Executing OPT_EXPR pass (perform const folding).
+3.15.9. Finished OPT passes. (There is nothing left to do.)
+3.16. Executing MEMORY pass.
+3.16.1. Executing OPT_MEM pass (optimize memories).
+3.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+3.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+3.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+3.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+3.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+3.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+3.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+3.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+4. Executing SYNTH pass.
+4.1. Executing OPT pass (performing simple optimizations).
+4.1.1. Executing OPT_EXPR pass (perform const folding).
+4.1.2. Executing OPT_MERGE pass (detect identical cells).
+4.1.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.1.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.1.5. Rerunning OPT passes. (Removed registers in this run.)
+4.1.6. Executing OPT_EXPR pass (perform const folding).
+4.1.7. Executing OPT_MERGE pass (detect identical cells).
+4.1.8. Executing OPT_DFF pass (perform DFF optimizations).
+4.1.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.1.10. Finished fast OPT passes.
+4.2. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+4.3. Executing OPT pass (performing simple optimizations).
+4.3.1. Executing OPT_EXPR pass (perform const folding).
+4.3.2. Executing OPT_MERGE pass (detect identical cells).
+4.3.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.5. Executing OPT_MERGE pass (detect identical cells).
+4.3.6. Executing OPT_SHARE pass.
+4.3.7. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.9. Executing OPT_EXPR pass (perform const folding).
+4.3.10. Rerunning OPT passes. (Maybe there is more to do..)
+4.3.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.13. Executing OPT_MERGE pass (detect identical cells).
+4.3.14. Executing OPT_SHARE pass.
+4.3.15. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.17. Executing OPT_EXPR pass (perform const folding).
+4.3.18. Rerunning OPT passes. (Maybe there is more to do..)
+4.3.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.21. Executing OPT_MERGE pass (detect identical cells).
+4.3.22. Executing OPT_SHARE pass.
+4.3.23. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.25. Executing OPT_EXPR pass (perform const folding).
+4.3.26. Finished OPT passes. (There is nothing left to do.)
+4.4. Executing TECHMAP pass (map to technology primitives).
+4.4.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+4.4.2. Executing Verilog-2005 frontend: /ml_placer/OpenROAD-flow-scripts/flow/platforms/common/lcu_kogge_stone.v
+4.4.3. Continuing TECHMAP pass.
+4.5. Executing OPT pass (performing simple optimizations).
+4.5.1. Executing OPT_EXPR pass (perform const folding).
+4.5.2. Executing OPT_MERGE pass (detect identical cells).
+4.5.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.5.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.5.5. Finished fast OPT passes.
+4.6. Executing ABC pass (technology mapping using ABC).
+4.6.1. Extracting gate netlist of module `\aes_cipher_top' to `<abc-temp-dir>/input.blif'..
+4.7. Executing OPT pass (performing simple optimizations).
+4.7.1. Executing OPT_EXPR pass (perform const folding).
+4.7.2. Executing OPT_MERGE pass (detect identical cells).
+4.7.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.7.5. Finished fast OPT passes.
+4.8. Executing HIERARCHY pass (managing design hierarchy).
+4.8.1. Analyzing design hierarchy..
+4.8.2. Analyzing design hierarchy..
+4.9. Printing statistics.
+4.10. Executing CHECK pass (checking for obvious problems).
+5. Executing OPT pass (performing simple optimizations).
+5.1. Executing OPT_EXPR pass (perform const folding).
+5.2. Executing OPT_MERGE pass (detect identical cells).
+5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+5.5. Executing OPT_MERGE pass (detect identical cells).
+5.6. Executing OPT_DFF pass (perform DFF optimizations).
+5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+5.8. Executing OPT_EXPR pass (perform const folding).
+5.9. Rerunning OPT passes. (Maybe there is more to do..)
+5.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+5.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+5.12. Executing OPT_MERGE pass (detect identical cells).
+5.13. Executing OPT_DFF pass (perform DFF optimizations).
+5.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+5.15. Executing OPT_EXPR pass (perform const folding).
+5.16. Finished OPT passes. (There is nothing left to do.)
+6. Executing EXTRACT_FA pass (find and extract full/half adders).
+7. Executing TECHMAP pass (map to technology primitives).
+7.1. Executing Verilog-2005 frontend: /ml_placer/OpenROAD-flow-scripts/flow/platforms/nangate45/cells_adders.v
+7.2. Continuing TECHMAP pass.
+8. Executing TECHMAP pass (map to technology primitives).
+8.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+8.2. Continuing TECHMAP pass.
+9. Executing OPT pass (performing simple optimizations).
+9.1. Executing OPT_EXPR pass (perform const folding).
+9.2. Executing OPT_MERGE pass (detect identical cells).
+9.3. Executing OPT_DFF pass (perform DFF optimizations).
+9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+9.5. Finished fast OPT passes.
+10. Executing TECHMAP pass (map to technology primitives).
+10.1. Executing Verilog-2005 frontend: /ml_placer/OpenROAD-flow-scripts/flow/platforms/nangate45/cells_latch.v
+10.2. Continuing TECHMAP pass.
+11. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+11.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+12. Executing OPT pass (performing simple optimizations).
+12.1. Executing OPT_EXPR pass (perform const folding).
+12.2. Executing OPT_MERGE pass (detect identical cells).
+12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+12.5. Executing OPT_MERGE pass (detect identical cells).
+12.6. Executing OPT_DFF pass (perform DFF optimizations).
+12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+12.8. Executing OPT_EXPR pass (perform const folding).
+12.9. Rerunning OPT passes. (Maybe there is more to do..)
+12.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+12.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+12.12. Executing OPT_MERGE pass (detect identical cells).
+12.13. Executing OPT_DFF pass (perform DFF optimizations).
+12.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+12.15. Executing OPT_EXPR pass (perform const folding).
+12.16. Finished OPT passes. (There is nothing left to do.)
+abc -script /ml_placer/OpenROAD-flow-scripts/flow/scripts/abc_speed.script -liberty ./objects/nangate45/aes/base/lib/NangateOpenCellLibrary_typical.lib -constr ./objects/nangate45/aes/base/abc.constr -dont_use TAPCELL_X1 -dont_use FILLCELL_X1 -dont_use AOI211_X1 -dont_use OAI211_X1 -D 0.82
+13. Executing ABC pass (technology mapping using ABC).
+13.1. Extracting gate netlist of module `\aes_cipher_top' to `<abc-temp-dir>/input.blif'..
+13.1.1. Executing ABC.
+13.1.2. Re-integrating ABC results.
+Took 35 seconds: abc -script /ml_placer/OpenROAD-flow-scripts/flow/scripts/abc_speed.script -liberty ./objects/nangate45/aes/base/lib/NangateOpenCellLibrary_typical.lib -constr ./objects/nangate45/aes/base/abc.constr -dont_use TAPCELL_X1 -dont_use FILLCELL_X1 -dont_use AOI211_X1 -dont_use OAI211_X1 -D 0.82
+14. Executing SETUNDEF pass (replace undef values with defined constants).
+15. Executing SPLITNETS pass (splitting up multi-bit signals).
+16. Executing OPT_CLEAN pass (remove unused cells and wires).
+17. Executing HILOMAP pass (mapping to constant drivers).
+18. Executing INSBUF pass (insert buffer cells for connected wires).
+19. Executing CHECK pass (checking for obvious problems).
+20. Printing statistics.
+21. Executing CHECK pass (checking for obvious problems).
+22. Executing Verilog backend.
+22.1. Executing BMUXMAP pass.
+22.2. Executing DEMUXMAP pass.
+exec cp /ml_placer/OpenROAD-flow-scripts/flow/designs/nangate45/aes/constraint.sdc ./results/nangate45/aes/base/1_synth.sdc
+End of script. Logfile hash: 97f53c9fa0, CPU: user 11.79s system 0.07s, MEM: 69.33 MB peak
+Yosys 0.51+85 (git sha1 d3aec12fe, clang++ 18.1.8 -fPIC -O3)
+Time spent: 76% 2x abc (36 sec), 11% 1x extract_fa (5 sec), ...
+Elapsed time: 0:48.56[h:]min:sec. CPU time: user 48.17 sys 0.24 (99%). Peak memory: 134896KB.
+mkdir -p ./results/nangate45/aes/base ./logs/nangate45/aes/base ./reports/nangate45/aes/base
+cp ./results/nangate45/aes/base/1_1_yosys.v ./results/nangate45/aes/base/1_synth.v
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 16 thread(s).
+mkdir -p ./objects/nangate45/aes/base
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_1_floorplan floorplan
+Running floorplan.tcl, stage 2_1_floorplan
+[INFO ODB-0227] LEF file: /ml_placer/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef, created 22 layers, 27 vias
+[INFO ODB-0227] LEF file: /ml_placer/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef, created 135 library cells
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+number instances in verilog is 15057
+read_def -floorplan_initialize /ml_placer/OpenROAD-flow-scripts/flow/designs/nangate45/aes/aes_ng45_fp.def
+[INFO ODB-0127] Reading DEF file: /ml_placer/OpenROAD-flow-scripts/flow/designs/nangate45/aes/aes_ng45_fp.def
+[INFO ODB-0128] Design: aes_cipher_top
+[INFO ODB-0252]     Updated 388 pins.
+[INFO ODB-0134] Finished DEF file: /ml_placer/OpenROAD-flow-scripts/flow/designs/nangate45/aes/aes_ng45_fp.def
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/nangate45/make_tracks.tcl
+repair_timing -verbose -setup_margin 0 -repair_tns 100
+[WARNING RSZ-0021] no estimated parasitics. Using wire load models.
+[INFO RSZ-0094] Found 160 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 160 out of 160 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   TNS      |  Viol  | Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpt
+--------------------------------------------------------------------------------------------------------------
+        0 |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -0.260 |      -20.5 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+       10 |       0 |       9 |        0 |      0 |     0 |    +0.0% |   -0.185 |      -18.7 |    160 | sa00_sr\[7\]$_DFF_P_/D
+       20 |       0 |      19 |        0 |      0 |     0 |    +0.0% |   -0.167 |      -17.9 |    160 | u0.u3.d\[1\]$_DFF_P_/D
+       30 |       0 |      29 |        0 |      0 |     0 |    +0.1% |   -0.159 |      -17.7 |    160 | u0.u2.d\[0\]$_DFF_P_/D
+       40 |       2 |      37 |        0 |      0 |     0 |    +0.1% |   -0.147 |      -16.8 |    160 | u0.u2.d\[0\]$_DFF_P_/D
+       50 |       4 |      45 |        0 |      0 |     0 |    +0.1% |   -0.144 |      -16.0 |    160 | sa20_sr\[5\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+       60 |       4 |      54 |        2 |      0 |     0 |    +0.1% |   -0.138 |      -15.0 |    160 | sa31_sr\[6\]$_DFF_P_/D
+       70 |       5 |      63 |        2 |      0 |     0 |    +0.1% |   -0.133 |      -14.6 |    160 | sa02_sr\[0\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29598_/CO
+       80 |       5 |      72 |        2 |      0 |     1 |    +0.2% |   -0.125 |      -14.0 |    160 | sa00_sr\[7\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _21196_/ZN
+       90 |       5 |      79 |        2 |      1 |     3 |    +0.2% |   -0.124 |      -13.8 |    160 | sa13_sr\[3\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _21192_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29598_/CO
+      100 |       5 |      89 |        2 |      1 |     3 |    +0.2% |   -0.119 |      -13.4 |    160 | u0.u2.d\[0\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29598_/CO
+      110 |       5 |      99 |        2 |      1 |     3 |    +0.3% |   -0.112 |      -12.9 |    160 | u0.u2.d\[1\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15591_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15590_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _21192_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15591_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15590_/Z
+      120 |       5 |     109 |        2 |      1 |     3 |    +0.3% |   -0.111 |      -12.6 |    160 | sa10_sr\[2\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+      130 |       5 |     119 |        2 |      1 |     3 |    +0.4% |   -0.123 |      -12.3 |    160 | sa31_sr\[2\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29598_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+      140 |       6 |     128 |        2 |      1 |     3 |    +0.4% |   -0.118 |      -12.1 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29598_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _21192_/Z
+      150 |       6 |     138 |        2 |      1 |     3 |    +0.4% |   -0.101 |      -11.7 |    160 | u0.u0.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15591_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15590_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+      160 |       7 |     146 |        2 |      1 |     4 |    +0.4% |   -0.099 |      -11.5 |    160 | sa10_sr\[2\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _21192_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+      170 |       7 |     156 |        2 |      1 |     4 |    +0.5% |   -0.097 |      -11.2 |    160 | sa33_sr\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20460_/ZN
+      180 |       8 |     163 |        2 |      1 |     6 |    +0.5% |   -0.094 |      -11.2 |    160 | sa11_sr\[5\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22547_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22547_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22547_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22543_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+      190 |       8 |     170 |        2 |      1 |     9 |    +0.5% |   -0.093 |      -11.1 |    160 | sa31_sr\[2\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _26586_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _21192_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15591_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15590_/Z
+      200 |       8 |     177 |        2 |      1 |    12 |    +0.6% |   -0.093 |      -10.8 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15591_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15590_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22547_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22543_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22547_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22547_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22543_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22547_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22543_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _19772_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20460_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20450_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _27892_/Z
+      210 |      10 |     183 |        2 |      1 |    14 |    +0.6% |   -0.090 |      -10.6 |    160 | sa20_sr\[3\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15591_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15590_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16638_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15591_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20460_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20450_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20451_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22547_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22543_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _19772_/ZN
+      220 |      11 |     190 |        2 |      3 |    14 |    +0.6% |   -0.089 |      -10.5 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _21192_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20460_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22547_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22543_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _19772_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20460_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20451_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _20450_/Z
+      230 |      14 |     195 |        2 |      5 |    14 |    +0.6% |   -0.086 |      -10.1 |    160 | u0.u3.d\[1\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29645_/S
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29645_/S
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29645_/S
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29645_/S
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29645_/S
+      240 |      15 |     204 |        2 |      5 |    14 |    +0.7% |   -0.085 |      -10.0 |    160 | sa11_sr\[3\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22547_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22543_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _19824_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18278_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17175_/ZN
+      250 |      15 |     213 |        2 |      5 |    15 |    +0.7% |   -0.084 |       -9.7 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _26586_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _26586_/Z
+      260 |      16 |     221 |        2 |      5 |    16 |    +0.7% |   -0.083 |       -9.6 |    160 | sa31_sr\[2\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _26586_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22547_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22543_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _27892_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _27248_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29740_/S
+      270 |      19 |     228 |        2 |      5 |    16 |    +0.8% |   -0.080 |       -9.3 |    160 | u0.u3.d\[3\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18278_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18502_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18278_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _26586_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _26586_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver sa10_sr\[1\]$_DFF_P_/Q
+[WARNING RSZ-0075] makeBufferedNet failed for driver _26586_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver sa10_sr\[1\]$_DFF_P_/Q
+[WARNING RSZ-0075] makeBufferedNet failed for driver _26586_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18271_/ZN
+      280 |      21 |     234 |        2 |      6 |    17 |    +0.8% |   -0.080 |       -9.1 |    160 | sa00_sr\[7\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22547_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22543_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _19824_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _23894_/Z
+      290 |      21 |     242 |        2 |      7 |    18 |    +0.8% |   -0.078 |       -8.9 |    160 | sa13_sr\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _21192_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _21196_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18502_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _21192_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _21196_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+      300 |      22 |     250 |        2 |      7 |    19 |    +0.9% |   -0.079 |       -8.8 |    160 | u0.u2.d\[2\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver sa10_sr\[1\]$_DFF_P_/Q
+[WARNING RSZ-0075] makeBufferedNet failed for driver _26586_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18271_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29619_/S
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18502_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22547_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _22543_/Z
+      310 |      24 |     258 |        2 |      7 |    19 |    +0.9% |   -0.075 |       -8.6 |    160 | sa02_sr\[2\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+      320 |      24 |     268 |        2 |      7 |    19 |    +0.9% |   -0.073 |       -8.0 |    160 | sa00_sr\[7\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18502_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29645_/S
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18502_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18278_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18502_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18502_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18278_/ZN
+      330 |      25 |     277 |        2 |      7 |    19 |    +1.0% |   -0.071 |       -7.8 |    160 | sa31_sr\[1\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _27248_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18502_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18278_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18583_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18502_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18278_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18583_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18529_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18502_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18278_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18583_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18529_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18530_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18502_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18278_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18583_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18529_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18584_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18502_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18583_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18278_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18529_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18584_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18530_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18267_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18502_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18583_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18278_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18529_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18584_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18530_/Z
+      339 |      26 |     280 |        2 |      7 |    19 |    +1.0% |   -0.073 |       -7.6 |    160 | sa00_sr\[7\]$_DFF_P_/D
+      340 |      26 |     280 |        2 |      7 |    19 |    +1.0% |   -0.073 |       -7.6 |    160 | sa00_sr\[7\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16685_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16685_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16633_/Z
+      350 |      26 |     287 |        2 |     10 |    19 |    +1.1% |   -0.076 |       -7.6 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16685_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16685_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16685_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16633_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16685_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16633_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16685_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16685_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16633_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16685_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16633_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15462_/Z
+      360 |      26 |     294 |        2 |     13 |    19 |    +1.4% |   -0.074 |       -7.5 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16685_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16633_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15462_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16719_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16685_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16633_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15462_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+      361 |      26 |     294 |        2 |     12 |    19 |    +1.3% |   -0.074 |       -7.5 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15590_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15590_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+      370 |      27 |     300 |        2 |     12 |    20 |    +1.3% |   -0.074 |       -7.4 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15590_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29570_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15590_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29570_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16685_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16685_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16685_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16706_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16633_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15462_/Z
+      380 |      28 |     306 |        2 |     13 |    22 |    +1.4% |   -0.074 |       -7.4 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16685_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16706_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16633_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15462_/Z
+      380 |      28 |     306 |        2 |     13 |    22 |    +1.4% |   -0.074 |       -7.4 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17786_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+      390 |      28 |     314 |        2 |     13 |    23 |    +1.5% |   -0.074 |       -7.3 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17786_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17735_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17786_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17735_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17786_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17735_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17786_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17735_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15751_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+      400 |      28 |     322 |        2 |     14 |    24 |    +1.6% |   -0.075 |       -7.2 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15751_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15752_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17786_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17735_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15751_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15751_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15752_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15336_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15751_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15752_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15751_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15752_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15753_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15751_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15752_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15753_/Z
+      410 |      28 |     328 |        2 |     18 |    24 |    +1.8% |   -0.077 |       -7.2 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15751_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15752_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15751_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15752_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15362_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15751_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15752_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15753_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15362_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15751_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15752_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15362_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15753_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15751_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15752_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15362_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15753_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29594_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15748_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15750_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17749_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17750_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15751_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15752_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15362_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15753_/Z
+      415 |      28 |     320 |        2 |     13 |    24 |    +1.5% |   -0.074 |       -7.3 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15590_/Z
+      420 |      29 |     323 |        2 |     13 |    24 |    +1.5% |   -0.075 |       -7.3 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29564_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16865_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16865_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16691_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16865_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16866_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16691_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16633_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16865_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16866_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16691_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16633_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15462_/Z
+      426 |      28 |     322 |        2 |     13 |    24 |    +1.5% |   -0.078 |       -7.3 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+      430 |      28 |     325 |        2 |     13 |    24 |    +1.5% |   -0.078 |       -7.2 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17166_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15474_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17166_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15474_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17166_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15474_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17166_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17175_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+      440 |      29 |     330 |        2 |     16 |    25 |    +1.6% |   -0.078 |       -7.2 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15474_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17166_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17175_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17264_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15474_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17166_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17175_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17264_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17247_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15474_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17166_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17175_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17264_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17247_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17170_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17175_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17170_/Z
+      450 |      29 |     338 |        2 |     17 |    26 |    +1.6% |   -0.079 |       -7.1 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17170_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17175_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17264_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17247_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17171_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17170_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17175_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17264_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17247_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17170_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17175_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17264_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17170_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17175_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17264_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17247_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17171_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17170_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17175_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17264_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17247_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17171_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17170_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17175_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17264_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17247_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17171_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17174_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17170_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17175_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17264_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17247_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17171_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+      459 |      29 |     334 |        2 |     16 |    25 |    +1.6% |   -0.078 |       -7.2 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+      460 |      29 |     334 |        2 |     16 |    25 |    +1.6% |   -0.078 |       -7.2 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29564_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16692_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16926_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16691_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16692_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16926_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16684_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15606_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16631_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16632_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16692_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16926_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16691_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _16633_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15462_/Z
+      465 |      29 |     335 |        3 |     16 |    25 |    +1.6% |   -0.078 |       -7.2 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15474_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15474_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17273_/ZN
+      470 |      29 |     338 |        3 |     16 |    26 |    +1.6% |   -0.078 |       -7.2 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17273_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17273_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17273_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15458_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15474_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17273_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17166_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17272_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15474_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17273_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17166_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17272_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15474_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17273_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17166_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17272_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15462_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15473_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15474_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17273_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17166_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17272_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15462_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17273_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15458_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17273_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15458_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15459_/Z
+      480 |      29 |     345 |        3 |     17 |    28 |    +1.6% |   -0.080 |       -7.1 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17273_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15458_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17272_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15459_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15460_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17273_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15458_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15459_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17272_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15460_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17273_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15458_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15459_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17272_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17273_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15458_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15459_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17272_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15460_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15456_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _29580_/CO
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17273_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15458_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15457_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15459_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _17272_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15460_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15341_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15342_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _15332_/Z
+      484 |      29 |     340 |        3 |     16 |    25 |    +1.6% |   -0.078 |       -7.2 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18290_/ZN
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18279_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18268_/Z
+[WARNING RSZ-0075] makeBufferedNet failed for driver _18422_/Z
+[WARNING RSZ-0075] message limit (1000) reached. This message will no longer print.
+      488 |      29 |     340 |        3 |     18 |    25 |    +1.6% |   -0.078 |       -7.2 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+      490 |      29 |     341 |        3 |     18 |    25 |    +1.6% |   -0.078 |       -7.2 |    160 | u0.u1.d\[6\]$_DFF_P_/D
+      493 |      30 |     343 |        3 |     18 |    25 |    +1.6% |   -0.078 |       -7.1 |    158 | u0.u1.d\[6\]$_DFF_P_/D
+      500 |      31 |     346 |        3 |     20 |    25 |    +1.7% |   -0.079 |       -7.1 |    158 | u0.u1.d\[6\]$_DFF_P_/D
+      506 |      30 |     347 |        3 |     19 |    25 |    +1.6% |   -0.078 |       -7.1 |    158 | u0.u1.d\[6\]$_DFF_P_/D
+      510 |      31 |     347 |        3 |     21 |    25 |    +1.6% |   -0.078 |       -7.1 |    158 | u0.u1.d\[6\]$_DFF_P_/D
+      520 |      31 |     353 |        3 |     25 |    25 |    +1.7% |   -0.081 |       -7.1 |    158 | u0.u1.d\[6\]$_DFF_P_/D
+      527 |      31 |     354 |        3 |     21 |    25 |    +1.7% |   -0.078 |       -7.1 |    158 | u0.u1.d\[6\]$_DFF_P_/D
+      530 |      31 |     356 |        3 |     21 |    25 |    +1.7% |   -0.078 |       -7.0 |    158 | u0.u1.d\[6\]$_DFF_P_/D
+      540 |      31 |     363 |        3 |     23 |    26 |    +1.7% |   -0.081 |       -7.0 |    158 | u0.u1.d\[6\]$_DFF_P_/D
+      541 |      31 |     360 |        3 |     22 |    26 |    +1.7% |   -0.078 |       -7.0 |    158 | u0.u1.d\[6\]$_DFF_P_/D
+      550 |      32 |     365 |        3 |     22 |    28 |    +1.7% |   -0.078 |       -7.0 |    158 | u0.u1.d\[6\]$_DFF_P_/D
+      555 |      32 |     369 |        3 |     22 |    29 |    +1.7% |   -0.078 |       -7.0 |    156 | u0.u1.d\[6\]$_DFF_P_/D
+      560 |      32 |     373 |        3 |     22 |    29 |    +1.7% |   -0.078 |       -6.9 |    156 | u0.u1.d\[6\]$_DFF_P_/D
+      570 |      32 |     379 |        3 |     25 |    30 |    +1.8% |   -0.078 |       -6.9 |    156 | u0.u1.d\[6\]$_DFF_P_/D
+      580 |      32 |     385 |        3 |     28 |    31 |    +1.9% |   -0.085 |       -6.9 |    156 | u0.u1.d\[6\]$_DFF_P_/D
+      582 |      32 |     381 |        3 |     23 |    29 |    +1.8% |   -0.078 |       -6.9 |    156 | u0.u1.d\[6\]$_DFF_P_/D
+      590 |      32 |     385 |        3 |     24 |    31 |    +1.8% |   -0.078 |       -6.9 |    156 | u0.u1.d\[6\]$_DFF_P_/D
+      600 |      32 |     392 |        3 |     27 |    31 |    +2.0% |   -0.079 |       -6.9 |    156 | u0.u1.d\[6\]$_DFF_P_/D
+      610 |      32 |     399 |        3 |     30 |    31 |    +2.1% |   -0.085 |       -6.9 |    156 | u0.u1.d\[6\]$_DFF_P_/D
+      610 |      32 |     389 |        3 |     24 |    31 |    +1.8% |   -0.078 |       -6.9 |    156 | u0.u1.d\[6\]$_DFF_P_/D
+      620 |      33 |     393 |        3 |     27 |    32 |    +1.8% |   -0.078 |       -6.8 |    156 | u0.u1.d\[6\]$_DFF_P_/D
+      630 |      34 |     399 |        3 |     30 |    32 |    +1.9% |   -0.085 |       -6.7 |    156 | u0.u1.d\[6\]$_DFF_P_/D
+      632 |      33 |     397 |        3 |     27 |    32 |    +1.8% |   -0.078 |       -6.8 |    156 | u0.u1.d\[6\]$_DFF_P_/D
+      640 |      33 |     402 |        3 |     29 |    32 |    +1.9% |   -0.082 |       -6.7 |    156 | u0.u1.d\[6\]$_DFF_P_/D
+      644 |      33 |     401 |        3 |     27 |    32 |    +1.8% |   -0.078 |       -6.8 |    156 | u0.u1.d\[6\]$_DFF_P_/D
+      647 |      34 |     402 |        3 |     27 |    32 |    +1.8% |   -0.078 |       -6.8 |    154 | u0.u1.d\[6\]$_DFF_P_/D
+      650 |      35 |     403 |        3 |     27 |    32 |    +1.8% |   -0.078 |       -6.8 |    154 | u0.u1.d\[6\]$_DFF_P_/D
+      660 |      35 |     410 |        3 |     30 |    32 |    +1.9% |   -0.085 |       -6.7 |    154 | u0.u1.d\[6\]$_DFF_P_/D
+      661 |      35 |     407 |        3 |     27 |    32 |    +1.8% |   -0.078 |       -6.8 |    154 | u0.u1.d\[6\]$_DFF_P_/D
+      664 |      35 |     409 |        3 |     27 |    32 |    +1.8% |   -0.078 |       -6.7 |    152 | u0.u1.d\[6\]$_DFF_P_/D
+      670 |      35 |     414 |        3 |     27 |    32 |    +1.8% |   -0.078 |       -6.7 |    152 | u0.u1.d\[6\]$_DFF_P_/D
+      675 |      35 |     418 |        3 |     27 |    33 |    +1.8% |   -0.078 |       -6.7 |    150 | u0.u1.d\[6\]$_DFF_P_/D
+      680 |      35 |     421 |        3 |     28 |    33 |    +1.9% |   -0.078 |       -6.7 |    150 | u0.u1.d\[6\]$_DFF_P_/D
+      690 |      35 |     427 |        3 |     29 |    36 |    +1.9% |   -0.081 |       -6.5 |    150 | sa13_sr\[6\]$_DFF_P_/D
+      700 |      35 |     433 |        3 |     30 |    39 |    +2.0% |   -0.083 |       -6.5 |    150 | sa13_sr\[6\]$_DFF_P_/D
+      701 |      35 |     425 |        3 |     28 |    34 |    +1.9% |   -0.078 |       -6.7 |    150 | sa13_sr\[6\]$_DFF_P_/D
+      703 |      35 |     425 |        3 |     28 |    35 |    +1.9% |   -0.078 |       -6.7 |    148 | sa13_sr\[6\]$_DFF_P_/D
+      710 |      35 |     430 |        3 |     28 |    36 |    +1.9% |   -0.078 |       -6.6 |    148 | sa13_sr\[6\]$_DFF_P_/D
+      720 |      35 |     435 |        3 |     31 |    38 |    +2.1% |   -0.078 |       -6.7 |    148 | sa13_sr\[6\]$_DFF_P_/D
+      729 |      35 |     434 |        3 |     28 |    36 |    +1.9% |   -0.078 |       -6.6 |    148 | sa13_sr\[6\]$_DFF_P_/D
+      730 |      35 |     434 |        3 |     28 |    36 |    +1.9% |   -0.078 |       -6.6 |    148 | sa13_sr\[6\]$_DFF_P_/D
+      732 |      35 |     436 |        3 |     28 |    36 |    +1.9% |   -0.078 |       -6.6 |    146 | sa13_sr\[6\]$_DFF_P_/D
+      740 |      36 |     439 |        3 |     28 |    39 |    +1.9% |   -0.078 |       -6.6 |    146 | sa13_sr\[6\]$_DFF_P_/D
+      744 |      36 |     438 |        3 |     28 |    36 |    +1.9% |   -0.078 |       -6.6 |    146 | sa13_sr\[6\]$_DFF_P_/D
+      750 |      36 |     442 |        3 |     28 |    37 |    +1.9% |   -0.078 |       -6.6 |    146 | sa13_sr\[6\]$_DFF_P_/D
+      760 |      36 |     451 |        3 |     29 |    37 |    +2.1% |   -0.078 |       -6.6 |    146 | sa13_sr\[6\]$_DFF_P_/D
+      770 |      36 |     456 |        3 |     33 |    38 |    +2.2% |   -0.078 |       -6.6 |    146 | sa13_sr\[6\]$_DFF_P_/D
+      774 |      36 |     447 |        3 |     28 |    37 |    +1.9% |   -0.078 |       -6.6 |    146 | sa13_sr\[6\]$_DFF_P_/D
+      780 |      36 |     450 |        4 |     28 |    38 |    +2.0% |   -0.078 |       -6.6 |    146 | sa13_sr\[6\]$_DFF_P_/D
+      785 |      36 |     453 |        4 |     28 |    40 |    +2.0% |   -0.078 |       -6.6 |    144 | sa13_sr\[6\]$_DFF_P_/D
+      790 |      36 |     457 |        4 |     28 |    40 |    +2.0% |   -0.078 |       -6.5 |    144 | sa13_sr\[6\]$_DFF_P_/D
+      800 |      36 |     465 |        4 |     28 |    42 |    +2.0% |   -0.078 |       -6.4 |    144 | sa13_sr\[6\]$_DFF_P_/D
+      810 |      38 |     468 |        4 |     29 |    46 |    +2.0% |   -0.078 |       -6.3 |    144 | sa13_sr\[6\]$_DFF_P_/D
+      820 |      39 |     473 |        4 |     30 |    49 |    +2.1% |   -0.078 |       -6.3 |    144 | sa13_sr\[6\]$_DFF_P_/D
+      827 |      39 |     476 |        5 |     31 |    51 |    +2.2% |   -0.078 |       -6.3 |    144 | sa13_sr\[6\]$_DFF_P_/D
+      830 |      39 |     478 |        5 |     31 |    51 |    +2.2% |   -0.078 |       -6.3 |    144 | sa13_sr\[6\]$_DFF_P_/D
+      832 |      39 |     479 |        5 |     31 |    52 |    +2.2% |   -0.078 |       -6.3 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      840 |      39 |     486 |        5 |     31 |    52 |    +2.2% |   -0.078 |       -6.3 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      850 |      39 |     493 |        6 |     32 |    53 |    +2.3% |   -0.078 |       -6.3 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      856 |      39 |     496 |        6 |     32 |    54 |    +2.3% |   -0.078 |       -6.2 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      860 |      39 |     497 |        6 |     32 |    56 |    +2.3% |   -0.078 |       -6.3 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      870 |      40 |     503 |        7 |     33 |    57 |    +2.3% |   -0.078 |       -6.1 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      880 |      40 |     509 |        7 |     35 |    59 |    +2.4% |   -0.078 |       -6.1 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      888 |      40 |     512 |        7 |     35 |    60 |    +2.4% |   -0.078 |       -6.0 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      890 |      40 |     512 |        7 |     35 |    61 |    +2.4% |   -0.078 |       -6.0 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      900 |      41 |     516 |        7 |     36 |    65 |    +2.4% |   -0.078 |       -6.1 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      900 |      41 |     515 |        7 |     36 |    64 |    +2.4% |   -0.078 |       -6.0 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      910 |      42 |     520 |        7 |     36 |    67 |    +2.5% |   -0.078 |       -6.0 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      912 |      42 |     521 |        7 |     36 |    68 |    +2.5% |   -0.078 |       -6.0 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      920 |      42 |     526 |        7 |     37 |    69 |    +2.5% |   -0.078 |       -6.0 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      930 |      43 |     532 |        7 |     38 |    71 |    +2.5% |   -0.078 |       -5.9 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      940 |      43 |     537 |        7 |     38 |    76 |    +2.6% |   -0.078 |       -5.9 |    142 | sa13_sr\[6\]$_DFF_P_/D
+      944 |      43 |     538 |        7 |     39 |    78 |    +2.6% |   -0.078 |       -5.9 |    140 | sa13_sr\[6\]$_DFF_P_/D
+      946 |      43 |     539 |        7 |     39 |    78 |    +2.6% |   -0.078 |       -5.9 |    138 | sa13_sr\[6\]$_DFF_P_/D
+      950 |      43 |     541 |        7 |     39 |    79 |    +2.6% |   -0.078 |       -5.8 |    138 | sa00_sr\[7\]$_DFF_P_/D
+      960 |      45 |     545 |        7 |     40 |    82 |    +2.6% |   -0.078 |       -5.7 |    138 | sa00_sr\[7\]$_DFF_P_/D
+      965 |      45 |     550 |        7 |     40 |    82 |    +2.6% |   -0.078 |       -5.6 |    136 | sa00_sr\[7\]$_DFF_P_/D
+      970 |      45 |     553 |        7 |     40 |    83 |    +2.6% |   -0.078 |       -5.5 |    136 | sa00_sr\[7\]$_DFF_P_/D
+      980 |      45 |     561 |        8 |     41 |    83 |    +2.7% |   -0.078 |       -5.5 |    136 | sa00_sr\[7\]$_DFF_P_/D
+      990 |      45 |     566 |        8 |     44 |    85 |    +2.8% |   -0.078 |       -5.5 |    136 | sa00_sr\[7\]$_DFF_P_/D
+     1000 |      45 |     571 |        8 |     44 |    90 |    +2.8% |   -0.078 |       -5.4 |    136 | sa00_sr\[7\]$_DFF_P_/D
+     1007 |      45 |     571 |        8 |     44 |    89 |    +2.8% |   -0.078 |       -5.4 |    136 | sa00_sr\[7\]$_DFF_P_/D
+     1010 |      45 |     573 |        8 |     44 |    89 |    +2.8% |   -0.078 |       -5.4 |    136 | sa00_sr\[7\]$_DFF_P_/D
+     1020 |      45 |     579 |        8 |     46 |    91 |    +3.0% |   -0.078 |       -5.5 |    136 | sa00_sr\[7\]$_DFF_P_/D
+     1030 |      45 |     586 |        8 |     49 |    91 |    +3.1% |   -0.079 |       -5.4 |    136 | u0.u1.d\[6\]$_DFF_P_/D
+     1033 |      45 |     577 |        8 |     44 |    89 |    +2.8% |   -0.078 |       -5.4 |    136 | sa00_sr\[7\]$_DFF_P_/D
+     1037 |      46 |     578 |        9 |     44 |    89 |    +2.9% |   -0.078 |       -5.4 |    134 | sa00_sr\[7\]$_DFF_P_/D
+     1040 |      46 |     580 |        9 |     44 |    89 |    +2.9% |   -0.078 |       -5.4 |    134 | sa00_sr\[7\]$_DFF_P_/D
+     1046 |      46 |     585 |        9 |     44 |    90 |    +2.9% |   -0.078 |       -5.4 |    132 | sa00_sr\[7\]$_DFF_P_/D
+     1050 |      46 |     588 |        9 |     44 |    90 |    +2.9% |   -0.078 |       -5.4 |    132 | sa00_sr\[7\]$_DFF_P_/D
+     1054 |      46 |     590 |        9 |     46 |    90 |    +2.9% |   -0.076 |       -5.3 |    130 | u0.u1.d\[6\]$_DFF_P_/D
+     1060 |      46 |     594 |        9 |     46 |    91 |    +2.9% |   -0.076 |       -5.3 |    130 | u0.u1.d\[6\]$_DFF_P_/D
+     1070 |      48 |     599 |        9 |     47 |    93 |    +3.0% |   -0.076 |       -5.2 |    130 | u0.u1.d\[6\]$_DFF_P_/D
+     1080 |      49 |     604 |        9 |     48 |    96 |    +3.0% |   -0.076 |       -5.2 |    130 | u0.u1.d\[6\]$_DFF_P_/D
+     1081 |      49 |     605 |        9 |     48 |    96 |    +3.0% |   -0.076 |       -5.2 |    128 | u0.u1.d\[6\]$_DFF_P_/D
+     1082 |      49 |     605 |        9 |     48 |    96 |    +3.0% |   -0.076 |       -5.2 |    127 | u0.u1.d\[6\]$_DFF_P_/D
+     1084 |      49 |     606 |        9 |     48 |    96 |    +3.0% |   -0.076 |       -5.2 |    125 | u0.u1.d\[6\]$_DFF_P_/D
+     1090 |      49 |     608 |        9 |     49 |    98 |    +3.0% |   -0.076 |       -5.2 |    125 | u0.u1.d\[6\]$_DFF_P_/D
+     1100 |      49 |     614 |        9 |     53 |    98 |    +3.2% |   -0.078 |       -5.1 |    125 | u0.u1.d\[6\]$_DFF_P_/D
+     1105 |      49 |     610 |        9 |     48 |    98 |    +3.0% |   -0.076 |       -5.1 |    125 | u0.u1.d\[6\]$_DFF_P_/D
+     1110 |      49 |     612 |        9 |     48 |   100 |    +3.0% |   -0.076 |       -5.1 |    125 | u0.u1.d\[6\]$_DFF_P_/D
+     1120 |      50 |     618 |        9 |     49 |   102 |    +3.0% |   -0.076 |       -5.1 |    125 | u0.u1.d\[6\]$_DFF_P_/D
+     1130 |      50 |     622 |        9 |     53 |   104 |    +3.2% |   -0.076 |       -5.2 |    125 | u0.u1.d\[6\]$_DFF_P_/D
+     1130 |      50 |     620 |        9 |     49 |   103 |    +3.1% |   -0.076 |       -5.1 |    125 | u0.u1.d\[6\]$_DFF_P_/D
+     1140 |      53 |     626 |        9 |     49 |   103 |    +3.1% |   -0.077 |       -5.1 |    125 | sa10_sr\[3\]$_DFF_P_/D
+     1150 |      55 |     631 |       10 |     49 |   105 |    +3.1% |   -0.076 |       -5.1 |    125 | u0.u1.d\[6\]$_DFF_P_/D
+     1160 |      56 |     636 |       10 |     49 |   109 |    +3.1% |   -0.076 |       -5.0 |    125 | u0.u1.d\[6\]$_DFF_P_/D
+     1170 |      57 |     641 |       10 |     51 |   111 |    +3.2% |   -0.076 |       -4.9 |    125 | u0.u1.d\[6\]$_DFF_P_/D
+     1174 |      57 |     643 |       10 |     51 |   113 |    +3.2% |   -0.076 |       -4.8 |    123 | u0.u1.d\[6\]$_DFF_P_/D
+     1180 |      58 |     645 |       10 |     51 |   115 |    +3.2% |   -0.076 |       -4.8 |    123 | u0.u1.d\[6\]$_DFF_P_/D
+     1184 |      58 |     647 |       10 |     51 |   117 |    +3.2% |   -0.076 |       -4.8 |    121 | u0.u1.d\[6\]$_DFF_P_/D
+     1190 |      60 |     649 |       10 |     51 |   118 |    +3.2% |   -0.076 |       -4.8 |    121 | u0.u1.d\[6\]$_DFF_P_/D
+     1198 |      60 |     653 |       10 |     52 |   119 |    +3.2% |   -0.076 |       -4.7 |    121 | u0.u1.d\[6\]$_DFF_P_/D
+     1200 |      60 |     654 |       10 |     52 |   119 |    +3.2% |   -0.076 |       -4.7 |    121 | u0.u1.d\[6\]$_DFF_P_/D
+     1210 |      60 |     659 |       10 |     54 |   122 |    +3.3% |   -0.076 |       -4.6 |    121 | u0.u1.d\[6\]$_DFF_P_/D
+     1220 |      60 |     662 |       10 |     55 |   128 |    +3.3% |   -0.076 |       -4.6 |    121 | u0.u1.d\[6\]$_DFF_P_/D
+     1221 |      60 |     662 |       10 |     55 |   128 |    +3.3% |   -0.076 |       -4.6 |    121 | u0.u1.d\[6\]$_DFF_P_/D
+     1230 |      60 |     667 |       10 |     55 |   131 |    +3.3% |   -0.076 |       -4.5 |    121 | u0.u1.d\[6\]$_DFF_P_/D
+     1240 |      60 |     675 |       10 |     56 |   132 |    +3.4% |   -0.076 |       -4.5 |    121 | u0.u1.d\[6\]$_DFF_P_/D
+     1250 |      61 |     680 |       10 |     58 |   134 |    +3.5% |   -0.076 |       -4.4 |    121 | u0.u1.d\[6\]$_DFF_P_/D
+     1250 |      61 |     677 |       10 |     56 |   133 |    +3.4% |   -0.076 |       -4.4 |    121 | u0.u1.d\[6\]$_DFF_P_/D
+     1260 |      62 |     685 |       10 |     56 |   133 |    +3.4% |   -0.076 |       -4.2 |    121 | u0.u1.d\[6\]$_DFF_P_/D
+     1266 |      62 |     689 |       10 |     57 |   134 |    +3.5% |   -0.076 |       -4.2 |    119 | u0.u1.d\[6\]$_DFF_P_/D
+     1270 |      62 |     692 |       10 |     57 |   134 |    +3.5% |   -0.076 |       -4.2 |    119 | sa00_sr\[7\]$_DFF_P_/D
+     1279 |      62 |     692 |       10 |     57 |   134 |    +3.5% |   -0.076 |       -4.2 |    119 | sa00_sr\[7\]$_DFF_P_/D
+     1280 |      62 |     692 |       10 |     57 |   134 |    +3.5% |   -0.076 |       -4.2 |    119 | sa00_sr\[7\]$_DFF_P_/D
+     1290 |      63 |     699 |       10 |     57 |   136 |    +3.5% |   -0.076 |       -4.0 |    119 | sa00_sr\[7\]$_DFF_P_/D
+     1297 |      64 |     704 |       10 |     57 |   137 |    +3.5% |   -0.076 |       -3.9 |    117 | sa00_sr\[7\]$_DFF_P_/D
+     1300 |      64 |     706 |       10 |     57 |   137 |    +3.5% |   -0.076 |       -3.9 |    117 | sa00_sr\[7\]$_DFF_P_/D
+     1308 |      64 |     712 |       10 |     57 |   139 |    +3.5% |   -0.076 |       -3.9 |    115 | sa00_sr\[7\]$_DFF_P_/D
+     1310 |      64 |     712 |       11 |     57 |   139 |    +3.6% |   -0.076 |       -3.9 |    115 | sa00_sr\[7\]$_DFF_P_/D
+     1320 |      64 |     718 |       11 |     58 |   142 |    +3.6% |   -0.084 |       -3.9 |    115 | sa31_sr\[2\]$_DFF_P_/D
+     1330 |      65 |     723 |       11 |     60 |   144 |    +3.6% |   -0.076 |       -3.8 |    115 | sa00_sr\[7\]$_DFF_P_/D
+     1335 |      65 |     727 |       11 |     60 |   145 |    +3.6% |   -0.076 |       -3.8 |    113 | sa00_sr\[7\]$_DFF_P_/D
+     1340 |      65 |     728 |       11 |     60 |   148 |    +3.6% |   -0.076 |       -3.8 |    113 | sa00_sr\[7\]$_DFF_P_/D
+     1344 |      65 |     731 |       11 |     60 |   149 |    +3.7% |   -0.076 |       -3.8 |    113 | sa00_sr\[7\]$_DFF_P_/D
+     1345 |      65 |     731 |       11 |     60 |   149 |    +3.7% |   -0.076 |       -3.8 |    112 | sa00_sr\[7\]$_DFF_P_/D
+     1349 |      66 |     733 |       11 |     60 |   149 |    +3.7% |   -0.076 |       -3.8 |    110 | sa00_sr\[7\]$_DFF_P_/D
+     1350 |      66 |     733 |       11 |     60 |   149 |    +3.7% |   -0.076 |       -3.8 |    110 | sa00_sr\[7\]$_DFF_P_/D
+     1352 |      66 |     735 |       11 |     60 |   149 |    +3.7% |   -0.076 |       -3.7 |    108 | sa00_sr\[7\]$_DFF_P_/D
+     1360 |      66 |     738 |       11 |     60 |   153 |    +3.7% |   -0.076 |       -3.8 |    108 | sa00_sr\[7\]$_DFF_P_/D
+     1361 |      66 |     736 |       11 |     60 |   152 |    +3.7% |   -0.076 |       -3.7 |    108 | sa00_sr\[7\]$_DFF_P_/D
+     1363 |      66 |     737 |       11 |     60 |   152 |    +3.7% |   -0.076 |       -3.7 |    106 | sa00_sr\[7\]$_DFF_P_/D
+     1370 |      66 |     740 |       11 |     60 |   155 |    +3.7% |   -0.076 |       -3.7 |    106 | sa00_sr\[7\]$_DFF_P_/D
+     1380 |      67 |     748 |       11 |     61 |   155 |    +3.7% |   -0.076 |       -3.7 |    106 | sa00_sr\[7\]$_DFF_P_/D
+     1390 |      68 |     753 |       11 |     63 |   157 |    +3.8% |   -0.076 |       -3.7 |    106 | sa00_sr\[7\]$_DFF_P_/D
+     1390 |      68 |     753 |       11 |     62 |   156 |    +3.8% |   -0.076 |       -3.7 |    106 | sa00_sr\[7\]$_DFF_P_/D
+     1397 |      69 |     758 |       11 |     62 |   156 |    +3.8% |   -0.076 |       -3.6 |    104 | sa00_sr\[7\]$_DFF_P_/D
+     1399 |      70 |     758 |       11 |     62 |   156 |    +3.8% |   -0.076 |       -3.6 |    102 | sa00_sr\[7\]$_DFF_P_/D
+     1400 |      70 |     758 |       11 |     62 |   156 |    +3.8% |   -0.076 |       -3.6 |    102 | sa00_sr\[7\]$_DFF_P_/D
+     1401 |      70 |     759 |       11 |     62 |   156 |    +3.8% |   -0.076 |       -3.6 |    100 | sa00_sr\[7\]$_DFF_P_/D
+     1405 |      70 |     762 |       11 |     62 |   156 |    +3.8% |   -0.076 |       -3.6 |     98 | sa00_sr\[7\]$_DFF_P_/D
+     1410 |      71 |     764 |       11 |     62 |   157 |    +3.8% |   -0.076 |       -3.6 |     98 | sa00_sr\[7\]$_DFF_P_/D
+     1420 |      71 |     773 |       11 |     63 |   157 |    +3.9% |   -0.076 |       -3.6 |     98 | sa00_sr\[7\]$_DFF_P_/D
+     1430 |      72 |     779 |       12 |     63 |   159 |    +3.9% |   -0.076 |       -3.6 |     98 | sa00_sr\[7\]$_DFF_P_/D
+     1436 |      72 |     781 |       12 |     63 |   161 |    +3.9% |   -0.076 |       -3.5 |     98 | sa00_sr\[7\]$_DFF_P_/D
+     1440 |      72 |     783 |       12 |     63 |   162 |    +3.9% |   -0.076 |       -3.5 |     98 | sa00_sr\[7\]$_DFF_P_/D
+     1447 |      72 |     788 |       12 |     63 |   164 |    +4.0% |   -0.076 |       -3.5 |     96 | sa00_sr\[7\]$_DFF_P_/D
+     1450 |      72 |     789 |       12 |     64 |   164 |    +4.0% |   -0.076 |       -3.5 |     96 | sa00_sr\[7\]$_DFF_P_/D
+     1460 |      72 |     794 |       12 |     65 |   168 |    +4.0% |   -0.076 |       -3.5 |     96 | sa00_sr\[7\]$_DFF_P_/D
+     1469 |      72 |     792 |       12 |     65 |   164 |    +4.0% |   -0.076 |       -3.5 |     96 | sa00_sr\[7\]$_DFF_P_/D
+     1470 |      72 |     792 |       12 |     65 |   164 |    +4.0% |   -0.076 |       -3.5 |     96 | sa00_sr\[7\]$_DFF_P_/D
+     1475 |      72 |     793 |       14 |     65 |   166 |    +4.0% |   -0.076 |       -3.5 |     94 | sa00_sr\[7\]$_DFF_P_/D
+     1480 |      73 |     796 |       14 |     65 |   166 |    +4.0% |   -0.077 |       -3.5 |     94 | sa00_sr\[7\]$_DFF_P_/D
+     1483 |      72 |     794 |       14 |     65 |   166 |    +4.0% |   -0.076 |       -3.5 |     93 | sa00_sr\[7\]$_DFF_P_/D
+     1490 |      72 |     797 |       14 |     67 |   167 |    +4.1% |   -0.096 |       -3.7 |     93 | sa03_sr\[6\]$_DFF_P_/D
+     1497 |      72 |     795 |       14 |     65 |   166 |    +4.0% |   -0.076 |       -3.5 |     93 | sa00_sr\[7\]$_DFF_P_/D
+     1500 |      72 |     796 |       14 |     65 |   167 |    +4.0% |   -0.076 |       -3.5 |     93 | sa00_sr\[7\]$_DFF_P_/D
+     1510 |      72 |     802 |       14 |     66 |   170 |    +4.1% |   -0.076 |       -3.4 |     93 | sa00_sr\[7\]$_DFF_P_/D
+     1512 |      72 |     801 |       14 |     66 |   170 |    +4.1% |   -0.076 |       -3.4 |     93 | sa00_sr\[7\]$_DFF_P_/D
+     1520 |      72 |     806 |       14 |     67 |   171 |    +4.1% |   -0.076 |       -3.4 |     93 | sa00_sr\[7\]$_DFF_P_/D
+     1530 |      72 |     812 |       14 |     70 |   172 |    +4.2% |   -0.076 |       -3.3 |     93 | sa00_sr\[7\]$_DFF_P_/D
+     1540 |      73 |     817 |       14 |     72 |   174 |    +4.3% |   -0.076 |       -3.3 |     93 | sa00_sr\[7\]$_DFF_P_/D
+     1543 |      73 |     820 |       14 |     72 |   174 |    +4.3% |   -0.076 |       -3.3 |     91 | sa00_sr\[7\]$_DFF_P_/D
+     1544 |      73 |     820 |       14 |     72 |   174 |    +4.3% |   -0.076 |       -3.3 |     90 | sa00_sr\[7\]$_DFF_P_/D
+     1545 |      73 |     820 |       14 |     72 |   174 |    +4.3% |   -0.076 |       -3.3 |     89 | sa00_sr\[7\]$_DFF_P_/D
+     1550 |      73 |     824 |       14 |     72 |   174 |    +4.3% |   -0.076 |       -3.2 |     88 | sa00_sr\[7\]$_DFF_P_/D
+     1550 |      73 |     824 |       14 |     72 |   174 |    +4.3% |   -0.076 |       -3.2 |     87 | sa00_sr\[7\]$_DFF_P_/D
+     1551 |      73 |     824 |       14 |     72 |   174 |    +4.3% |   -0.076 |       -3.2 |     86 | sa00_sr\[7\]$_DFF_P_/D
+     1552 |      73 |     824 |       14 |     72 |   174 |    +4.3% |   -0.076 |       -3.2 |     85 | sa00_sr\[7\]$_DFF_P_/D
+     1555 |      73 |     826 |       14 |     72 |   174 |    +4.3% |   -0.076 |       -3.2 |     83 | sa00_sr\[7\]$_DFF_P_/D
+     1560 |      73 |     828 |       14 |     72 |   176 |    +4.3% |   -0.076 |       -3.2 |     83 | sa00_sr\[7\]$_DFF_P_/D
+     1567 |      73 |     832 |       14 |     72 |   179 |    +4.3% |   -0.076 |       -3.2 |     83 | sa00_sr\[7\]$_DFF_P_/D
+     1570 |      74 |     833 |       14 |     72 |   179 |    +4.3% |   -0.076 |       -3.1 |     83 | sa00_sr\[7\]$_DFF_P_/D
+     1580 |      74 |     842 |       14 |     72 |   180 |    +4.4% |   -0.077 |       -3.1 |     83 | sa00_sr\[7\]$_DFF_P_/D
+     1589 |      74 |     837 |       14 |     72 |   179 |    +4.3% |   -0.076 |       -3.1 |     82 | sa00_sr\[7\]$_DFF_P_/D
+     1590 |      74 |     837 |       14 |     72 |   179 |    +4.3% |   -0.076 |       -3.1 |     82 | sa00_sr\[7\]$_DFF_P_/D
+     1590 |      74 |     837 |       14 |     72 |   179 |    +4.3% |   -0.076 |       -3.1 |     81 | sa00_sr\[7\]$_DFF_P_/D
+     1591 |      74 |     837 |       14 |     72 |   179 |    +4.3% |   -0.076 |       -3.1 |     80 | sa00_sr\[7\]$_DFF_P_/D
+     1592 |      74 |     837 |       14 |     72 |   179 |    +4.3% |   -0.076 |       -3.1 |     79 | sa00_sr\[7\]$_DFF_P_/D
+     1600 |      74 |     844 |       14 |     72 |   179 |    +4.4% |   -0.077 |       -3.1 |     79 | sa00_sr\[7\]$_DFF_P_/D
+     1610 |      75 |     850 |       14 |     74 |   180 |    +4.4% |   -0.077 |       -3.1 |     79 | sa00_sr\[7\]$_DFF_P_/D
+     1620 |      75 |     855 |       14 |     74 |   185 |    +4.4% |   -0.077 |       -3.1 |     79 | sa00_sr\[7\]$_DFF_P_/D
+     1623 |      74 |     845 |       14 |     72 |   179 |    +4.3% |   -0.076 |       -3.0 |     78 | sa00_sr\[7\]$_DFF_P_/D
+     1628 |      74 |     849 |       14 |     72 |   179 |    +4.4% |   -0.076 |       -3.0 |     76 | sa00_sr\[7\]$_DFF_P_/D
+     1630 |      74 |     850 |       14 |     72 |   179 |    +4.4% |   -0.076 |       -3.0 |     76 | sa00_sr\[7\]$_DFF_P_/D
+     1634 |      74 |     854 |       14 |     72 |   179 |    +4.4% |   -0.076 |       -2.9 |     74 | sa00_sr\[7\]$_DFF_P_/D
+     1640 |      74 |     858 |       14 |     72 |   180 |    +4.4% |   -0.077 |       -2.9 |     74 | sa00_sr\[7\]$_DFF_P_/D
+     1650 |      76 |     863 |       14 |     75 |   180 |    +4.4% |   -0.077 |       -2.9 |     74 | sa00_sr\[7\]$_DFF_P_/D
+     1660 |      76 |     867 |       14 |     75 |   186 |    +4.4% |   -0.077 |       -2.9 |     74 | sa00_sr\[7\]$_DFF_P_/D
+     1662 |      74 |     858 |       14 |     72 |   180 |    +4.4% |   -0.076 |       -2.9 |     74 | sa00_sr\[7\]$_DFF_P_/D
+     1670 |      74 |     864 |       14 |     72 |   181 |    +4.4% |   -0.076 |       -2.8 |     74 | sa00_sr\[7\]$_DFF_P_/D
+     1673 |      74 |     865 |       14 |     72 |   183 |    +4.4% |   -0.076 |       -2.8 |     72 | sa00_sr\[7\]$_DFF_P_/D
+     1675 |      74 |     866 |       14 |     72 |   183 |    +4.4% |   -0.076 |       -2.8 |     70 | sa00_sr\[7\]$_DFF_P_/D
+     1677 |      75 |     866 |       14 |     72 |   183 |    +4.4% |   -0.076 |       -2.8 |     68 | sa00_sr\[7\]$_DFF_P_/D
+     1680 |      75 |     868 |       14 |     72 |   183 |    +4.4% |   -0.076 |       -2.9 |     68 | sa00_sr\[7\]$_DFF_P_/D
+     1684 |      75 |     869 |       14 |     72 |   184 |    +4.4% |   -0.076 |       -2.9 |     68 | sa00_sr\[7\]$_DFF_P_/D
+     1690 |      75 |     872 |       14 |     73 |   185 |    +4.4% |   -0.076 |       -2.9 |     68 | sa00_sr\[7\]$_DFF_P_/D
+     1694 |      75 |     875 |       14 |     73 |   186 |    +4.5% |   -0.076 |       -2.9 |     66 | sa00_sr\[7\]$_DFF_P_/D
+     1697 |      75 |     877 |       14 |     73 |   186 |    +4.5% |   -0.076 |       -2.9 |     64 | sa00_sr\[7\]$_DFF_P_/D
+     1700 |      75 |     877 |       16 |     73 |   186 |    +4.5% |   -0.076 |       -2.8 |     64 | sa00_sr\[7\]$_DFF_P_/D
+     1702 |      75 |     879 |       16 |     73 |   186 |    +4.5% |   -0.076 |       -2.8 |     62 | sa00_sr\[7\]$_DFF_P_/D
+     1703 |      75 |     879 |       16 |     73 |   186 |    +4.5% |   -0.076 |       -2.8 |     61 | sa00_sr\[7\]$_DFF_P_/D
+     1704 |      75 |     879 |       16 |     73 |   186 |    +4.5% |   -0.076 |       -2.8 |     60 | sa00_sr\[7\]$_DFF_P_/D
+     1710 |      75 |     882 |       16 |     73 |   188 |    +4.5% |   -0.076 |       -2.8 |     59 | sa00_sr\[7\]$_DFF_P_/D
+     1710 |      75 |     882 |       16 |     73 |   188 |    +4.5% |   -0.076 |       -2.8 |     58 | sa00_sr\[7\]$_DFF_P_/D
+     1712 |      75 |     883 |       16 |     73 |   188 |    +4.5% |   -0.076 |       -2.8 |     56 | sa00_sr\[7\]$_DFF_P_/D
+     1716 |      75 |     884 |       16 |     73 |   190 |    +4.5% |   -0.076 |       -2.8 |     54 | sa00_sr\[7\]$_DFF_P_/D
+     1720 |      76 |     885 |       16 |     73 |   191 |    +4.5% |   -0.076 |       -2.8 |     54 | sa00_sr\[7\]$_DFF_P_/D
+     1725 |      76 |     888 |       16 |     73 |   193 |    +4.5% |   -0.076 |       -2.7 |     52 | sa00_sr\[7\]$_DFF_P_/D
+     1730 |      76 |     892 |       16 |     73 |   193 |    +4.5% |   -0.077 |       -2.7 |     52 | sa00_sr\[7\]$_DFF_P_/D
+     1740 |      76 |     901 |       16 |     74 |   193 |    +4.6% |   -0.077 |       -2.7 |     52 | sa00_sr\[7\]$_DFF_P_/D
+     1749 |      76 |     891 |       16 |     73 |   193 |    +4.5% |   -0.076 |       -2.7 |     51 | sa00_sr\[7\]$_DFF_P_/D
+     1750 |      76 |     891 |       16 |     73 |   193 |    +4.5% |   -0.076 |       -2.7 |     51 | sa00_sr\[7\]$_DFF_P_/D
+     1760 |      78 |     898 |       16 |     73 |   194 |    +4.6% |   -0.076 |       -2.7 |     51 | sa00_sr\[7\]$_DFF_P_/D
+     1770 |      78 |     904 |       16 |     75 |   196 |    +4.6% |   -0.076 |       -2.7 |     51 | sa00_sr\[7\]$_DFF_P_/D
+     1770 |      78 |     904 |       16 |     73 |   196 |    +4.6% |   -0.076 |       -2.7 |     51 | sa00_sr\[7\]$_DFF_P_/D
+     1776 |      78 |     906 |       16 |     73 |   199 |    +4.6% |   -0.076 |       -2.7 |     51 | sa00_sr\[7\]$_DFF_P_/D
+     1778 |      78 |     907 |       16 |     73 |   199 |    +4.6% |   -0.076 |       -2.7 |     49 | sa00_sr\[7\]$_DFF_P_/D
+     1780 |      78 |     908 |       16 |     73 |   199 |    +4.6% |   -0.076 |       -2.7 |     49 | sa00_sr\[7\]$_DFF_P_/D
+     1790 |      78 |     912 |       16 |     73 |   205 |    +4.6% |   -0.076 |       -2.7 |     49 | sa00_sr\[7\]$_DFF_P_/D
+     1791 |      78 |     912 |       16 |     74 |   205 |    +4.7% |   -0.076 |       -2.7 |     49 | sa00_sr\[7\]$_DFF_P_/D
+     1800 |      78 |     918 |       16 |     75 |   206 |    +4.7% |   -0.076 |       -2.6 |     49 | sa00_sr\[7\]$_DFF_P_/D
+     1802 |      78 |     918 |       16 |     76 |   207 |    +4.7% |   -0.076 |       -2.6 |     49 | sa00_sr\[7\]$_DFF_P_/D
+     1810 |      78 |     922 |       16 |     76 |   210 |    +4.7% |   -0.076 |       -2.5 |     49 | sa00_sr\[7\]$_DFF_P_/D
+     1820 |      78 |     927 |       16 |     76 |   215 |    +4.8% |   -0.076 |       -2.7 |     49 | sa00_sr\[7\]$_DFF_P_/D
+     1828 |      78 |     933 |       16 |     76 |   217 |    +4.8% |   -0.076 |       -2.6 |     49 | sa00_sr\[7\]$_DFF_P_/D
+     1830 |      78 |     934 |       16 |     76 |   217 |    +4.8% |   -0.076 |       -2.6 |     49 | sa00_sr\[7\]$_DFF_P_/D
+     1840 |      79 |     940 |       16 |     76 |   220 |    +4.8% |   -0.090 |       -2.7 |     49 | sa03_sr\[6\]$_DFF_P_/D
+     1841 |      79 |     938 |       16 |     76 |   219 |    +4.8% |   -0.076 |       -2.6 |     49 | sa00_sr\[7\]$_DFF_P_/D
+     1842 |      79 |     938 |       16 |     76 |   219 |    +4.8% |   -0.076 |       -2.6 |     48 | sa00_sr\[7\]$_DFF_P_/D
+     1846 |      79 |     940 |       16 |     76 |   220 |    +4.8% |   -0.076 |       -2.6 |     46 | sa00_sr\[7\]$_DFF_P_/D
+     1850 |      79 |     943 |       16 |     76 |   220 |    +4.8% |   -0.076 |       -2.6 |     46 | sa00_sr\[7\]$_DFF_P_/D
+     1853 |      79 |     943 |       16 |     76 |   223 |    +4.8% |   -0.076 |       -2.6 |     46 | sa00_sr\[7\]$_DFF_P_/D
+     1854 |      79 |     943 |       16 |     76 |   223 |    +4.8% |   -0.076 |       -2.6 |     45 | sa00_sr\[7\]$_DFF_P_/D
+     1860 |      80 |     947 |       16 |     76 |   223 |    +4.8% |   -0.076 |       -2.6 |     44 | sa00_sr\[7\]$_DFF_P_/D
+     1860 |      80 |     947 |       16 |     76 |   223 |    +4.8% |   -0.076 |       -2.6 |     43 | sa00_sr\[7\]$_DFF_P_/D
+     1863 |      80 |     948 |       16 |     76 |   224 |    +4.8% |   -0.076 |       -2.6 |     41 | sa00_sr\[7\]$_DFF_P_/D
+     1864 |      80 |     948 |       16 |     76 |   224 |    +4.8% |   -0.076 |       -2.6 |     40 | sa00_sr\[7\]$_DFF_P_/D
+     1865 |      80 |     948 |       16 |     76 |   224 |    +4.8% |   -0.076 |       -2.6 |     39 | sa00_sr\[7\]$_DFF_P_/D
+     1870 |      80 |     950 |       16 |     76 |   226 |    +4.8% |   -0.076 |       -2.5 |     39 | sa00_sr\[7\]$_DFF_P_/D
+     1877 |      81 |     953 |       16 |     76 |   228 |    +4.8% |   -0.076 |       -2.5 |     39 | sa00_sr\[7\]$_DFF_P_/D
+     1880 |      81 |     955 |       16 |     76 |   228 |    +4.9% |   -0.076 |       -2.5 |     39 | sa00_sr\[7\]$_DFF_P_/D
+     1882 |      81 |     956 |       16 |     76 |   229 |    +4.9% |   -0.076 |       -2.5 |     37 | sa00_sr\[7\]$_DFF_P_/D
+     1890 |      82 |     962 |       16 |     76 |   229 |    +4.9% |   -0.076 |       -2.5 |     37 | sa00_sr\[7\]$_DFF_P_/D
+     1895 |      82 |     967 |       16 |     76 |   229 |    +4.9% |   -0.076 |       -2.2 |     35 | sa00_sr\[7\]$_DFF_P_/D
+     1900 |      82 |     971 |       16 |     76 |   229 |    +4.9% |   -0.077 |       -2.2 |     35 | sa00_sr\[7\]$_DFF_P_/D
+     1902 |      82 |     967 |       16 |     76 |   229 |    +4.9% |   -0.076 |       -2.2 |     34 | sa00_sr\[7\]$_DFF_P_/D
+     1903 |      82 |     967 |       16 |     76 |   229 |    +4.9% |   -0.076 |       -2.2 |     33 | sa00_sr\[7\]$_DFF_P_/D
+     1904 |      82 |     967 |       16 |     76 |   229 |    +4.9% |   -0.076 |       -2.2 |     32 | sa00_sr\[7\]$_DFF_P_/D
+     1910 |      83 |     967 |       16 |     77 |   232 |    +4.9% |   -0.076 |       -2.2 |     32 | sa00_sr\[7\]$_DFF_P_/D
+     1912 |      82 |     967 |       16 |     76 |   229 |    +4.9% |   -0.076 |       -2.2 |     32 | sa00_sr\[7\]$_DFF_P_/D
+     1913 |      82 |     967 |       16 |     76 |   229 |    +4.9% |   -0.076 |       -2.2 |     31 | sa00_sr\[7\]$_DFF_P_/D
+     1919 |      82 |     967 |       16 |     76 |   229 |    +4.9% |   -0.076 |       -2.2 |     30 | sa00_sr\[7\]$_DFF_P_/D
+     1920 |      82 |     967 |       16 |     76 |   229 |    +4.9% |   -0.076 |       -2.2 |     30 | sa00_sr\[7\]$_DFF_P_/D
+     1924 |      82 |     971 |       16 |     76 |   229 |    +4.9% |   -0.076 |       -2.2 |     28 | sa00_sr\[7\]$_DFF_P_/D
+     1930 |      83 |     975 |       16 |     76 |   229 |    +4.9% |   -0.077 |       -2.1 |     28 | sa00_sr\[7\]$_DFF_P_/D
+     1934 |      82 |     972 |       16 |     76 |   229 |    +4.9% |   -0.076 |       -2.1 |     27 | sa00_sr\[7\]$_DFF_P_/D
+     1940 |      82 |     974 |       16 |     76 |   232 |    +4.9% |   -0.076 |       -2.1 |     27 | sa00_sr\[7\]$_DFF_P_/D
+     1945 |      82 |     974 |       16 |     77 |   232 |    +4.9% |   -0.076 |       -2.1 |     27 | sa00_sr\[7\]$_DFF_P_/D
+     1950 |      82 |     978 |       16 |     77 |   232 |    +5.0% |   -0.076 |       -2.2 |     27 | sa03_sr\[6\]$_DFF_P_/D
+     1960 |      82 |     983 |       16 |     78 |   236 |    +5.0% |   -0.095 |       -2.4 |     27 | sa03_sr\[6\]$_DFF_P_/D
+     1960 |      82 |     977 |       16 |     77 |   232 |    +5.0% |   -0.076 |       -2.1 |     27 | sa00_sr\[7\]$_DFF_P_/D
+     1969 |      82 |     977 |       16 |     77 |   232 |    +5.0% |   -0.076 |       -2.1 |     26 | sa00_sr\[7\]$_DFF_P_/D
+     1970 |      82 |     977 |       16 |     77 |   232 |    +5.0% |   -0.076 |       -2.1 |     26 | sa00_sr\[7\]$_DFF_P_/D
+     1971 |      83 |     977 |       16 |     77 |   232 |    +5.0% |   -0.076 |       -2.1 |     24 | sa00_sr\[7\]$_DFF_P_/D
+     1975 |      83 |     978 |       17 |     78 |   232 |    +5.0% |   -0.076 |       -2.0 |     22 | sa00_sr\[7\]$_DFF_P_/D
+     1976 |      83 |     978 |       17 |     78 |   232 |    +5.0% |   -0.076 |       -2.0 |     21 | sa00_sr\[7\]$_DFF_P_/D
+     1977 |      83 |     978 |       17 |     78 |   232 |    +5.0% |   -0.076 |       -2.0 |     20 | sa00_sr\[7\]$_DFF_P_/D
+     1978 |      83 |     978 |       17 |     78 |   232 |    +5.0% |   -0.076 |       -2.0 |     19 | sa00_sr\[7\]$_DFF_P_/D
+     1979 |      83 |     978 |       17 |     78 |   232 |    +5.0% |   -0.076 |       -2.0 |     18 | sa00_sr\[7\]$_DFF_P_/D
+     1980 |      83 |     978 |       17 |     78 |   232 |    +5.0% |   -0.076 |       -2.0 |     18 | sa00_sr\[7\]$_DFF_P_/D
+     1983 |      83 |     980 |       17 |     78 |   232 |    +5.0% |   -0.076 |       -2.0 |     18 | sa00_sr\[7\]$_DFF_P_/D
+     1984 |      83 |     980 |       17 |     78 |   232 |    +5.0% |   -0.076 |       -2.0 |     17 | sa00_sr\[7\]$_DFF_P_/D
+     1986 |      84 |     980 |       17 |     78 |   232 |    +5.0% |   -0.076 |       -2.0 |     15 | sa00_sr\[7\]$_DFF_P_/D
+     1987 |      84 |     980 |       17 |     78 |   232 |    +5.0% |   -0.076 |       -2.0 |     14 | sa00_sr\[7\]$_DFF_P_/D
+     1988 |      84 |     980 |       17 |     78 |   232 |    +5.0% |   -0.076 |       -2.0 |     13 | sa00_sr\[7\]$_DFF_P_/D
+     1990 |      84 |     981 |       17 |     78 |   232 |    +5.0% |   -0.076 |       -2.0 |     13 | sa00_sr\[7\]$_DFF_P_/D
+     2000 |      84 |     988 |       17 |     78 |   235 |    +5.0% |   -0.083 |       -2.1 |     13 | sa03_sr\[6\]$_DFF_P_/D
+     2002 |      84 |     983 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     13 | sa00_sr\[7\]$_DFF_P_/D
+     2003 |      84 |     983 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     12 | sa00_sr\[7\]$_DFF_P_/D
+     2004 |      84 |     983 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     11 | sa00_sr\[7\]$_DFF_P_/D
+     2006 |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |      9 | sa00_sr\[7\]$_DFF_P_/D
+     2007 |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |      8 | sa00_sr\[7\]$_DFF_P_/D
+     2008 |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |      7 | sa00_sr\[7\]$_DFF_P_/D
+     2009 |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |      6 | sa00_sr\[7\]$_DFF_P_/D
+     2010 |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |      6 | sa00_sr\[7\]$_DFF_P_/D
+     2010 |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |      5 | sa00_sr\[7\]$_DFF_P_/D
+     2011 |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |      4 | sa00_sr\[7\]$_DFF_P_/D
+     2012 |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |      3 | sa00_sr\[7\]$_DFF_P_/D
+     2013 |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |      2 | sa00_sr\[7\]$_DFF_P_/D
+     2014 |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |      1 | sa00_sr\[7\]$_DFF_P_/D
+     2015 |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |      0 | sa00_sr\[7\]$_DFF_P_/D
+     2016 |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |      0 | sa00_sr\[7\]$_DFF_P_/D
+    2017* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2018* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2019* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2020* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2020* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2021* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2022* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2023* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2024* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2025* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2026* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2027* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2028* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2029* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2030* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2030* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2031* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2032* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2033* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2034* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2035* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2036* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2037* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2038* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2039* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2040* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2040* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2041* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2042* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2043* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2044* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2045* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2046* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2047* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2048* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2049* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2050* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2050* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2051* |      84 |     984 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2056* |      84 |     988 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2057* |      84 |     988 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2058* |      84 |     988 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2059* |      84 |     988 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2060* |      84 |     988 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2060* |      84 |     988 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2061* |      84 |     988 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2062* |      84 |     988 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2063* |      84 |     988 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2064* |      84 |     988 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2065* |      84 |     988 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2066* |      84 |     988 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2067* |      84 |     988 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2069* |      84 |     989 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2070* |      84 |     989 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2070* |      84 |     989 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2071* |      84 |     989 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2072* |      84 |     989 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2073* |      84 |     989 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -2.0 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2075* |      84 |     990 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2076* |      84 |     990 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2078* |      84 |     991 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2079* |      84 |     991 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2080* |      84 |     991 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2080* |      84 |     991 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2081* |      84 |     991 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2084* |      84 |     993 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2085* |      84 |     993 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2086* |      84 |     993 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2087* |      84 |     993 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2088* |      84 |     993 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2089* |      84 |     993 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2090* |      84 |     993 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2090* |      84 |     993 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     75 | sa00_sr\[7\]$_DFF_P_/D
+    2092* |      84 |     994 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     73 | sa00_sr\[7\]$_DFF_P_/D
+    2093* |      84 |     994 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     73 | sa00_sr\[7\]$_DFF_P_/D
+    2094* |      84 |     994 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     73 | sa00_sr\[7\]$_DFF_P_/D
+    2096* |      84 |     995 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     71 | sa00_sr\[7\]$_DFF_P_/D
+    2097* |      84 |     995 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     71 | sa00_sr\[7\]$_DFF_P_/D
+    2098* |      84 |     995 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     70 | sa00_sr\[7\]$_DFF_P_/D
+    2100* |      84 |     996 |       17 |     78 |   234 |    +5.0% |   -0.076 |       -1.9 |     69 | sa00_sr\[7\]$_DFF_P_/D
+    2102* |      84 |     997 |       17 |     78 |   234 |    +5.1% |   -0.076 |       -1.9 |     67 | sa00_sr\[7\]$_DFF_P_/D
+    2103* |      84 |     997 |       17 |     78 |   234 |    +5.1% |   -0.076 |       -1.9 |     67 | sa00_sr\[7\]$_DFF_P_/D
+    2105* |      84 |     998 |       17 |     78 |   234 |    +5.1% |   -0.076 |       -1.9 |     65 | sa00_sr\[7\]$_DFF_P_/D
+    final |      84 |     998 |       17 |     78 |   234 |    +5.1% |   -0.076 |       -1.9 |     65 | sa00_sr\[7\]$_DFF_P_/D
+--------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0059] Removed 84 buffers.
+[INFO RSZ-0045] Inserted 16 buffers, 1 to split loads.
+[INFO RSZ-0041] Resized 998 instances.
+[INFO RSZ-0043] Swapped pins on 234 instances.
+[INFO RSZ-0049] Cloned 78 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0033] No hold violations found.
+Took 75 seconds: repair_timing -verbose -setup_margin 0 -repair_tns 100
+Default units for flow
+ time 1ns
+ capacitance 1fF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 21470 u^2 41% utilization.
+Elapsed time: 1:20.85[h:]min:sec. CPU time: user 225.16 sys 262.95 (603%). Peak memory: 198076KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_2_floorplan_macro macro_place
+Running macro_place.tcl, stage 2_2_floorplan_macro
+No macros found: Skipping macro_placement
+Elapsed time: 0:00.57[h:]min:sec. CPU time: user 0.48 sys 0.08 (99%). Peak memory: 143868KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_3_floorplan_tapcell tapcell
+Running tapcell.tcl, stage 2_3_floorplan_tapcell
+[INFO TAP-0004] Inserted 328 endcaps.
+[INFO TAP-0005] Inserted 83 tapcells.
+Elapsed time: 0:00.54[h:]min:sec. CPU time: user 0.47 sys 0.06 (99%). Peak memory: 135292KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_4_floorplan_pdn pdn
+Running pdn.tcl, stage 2_4_floorplan_pdn
+[INFO PDN-0001] Inserting grid: grid
+Elapsed time: 0:00.67[h:]min:sec. CPU time: user 0.59 sys 0.08 (99%). Peak memory: 144928KB.
+cp ./results/nangate45/aes/base/2_4_floorplan_pdn.odb ./results/nangate45/aes/base/2_floorplan.odb
+cp ./results/nangate45/aes/base/2_1_floorplan.sdc ./results/nangate45/aes/base/2_floorplan.sdc
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_1_place_gp_skip_io global_place_skip_io
+Running global_place_skip_io.tcl, stage 3_1_place_gp_skip_io
+FLOORPLAN_DEF is set. Skipping global placement without IOs
+Elapsed time: 0:00.54[h:]min:sec. CPU time: user 0.47 sys 0.07 (99%). Peak memory: 135288KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_2_place_iop io_placement
+Running io_placement.tcl, stage 3_2_place_iop
+exec cp ./results/nangate45/aes/base/3_1_place_gp_skip_io.odb ./results/nangate45/aes/base/3_2_place_iop.odb
+Elapsed time: 0:00.20[h:]min:sec. CPU time: user 0.14 sys 0.05 (99%). Peak memory: 99588KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_3_place_gp global_place
+Running global_place.tcl, stage 3_3_place_gp
+source /ml_placer/OpenROAD-flow-scripts/flow/platforms/nangate45/fastroute.tcl
+[INFO GPL-0002] DBU: 2000
+[INFO GPL-0003] SiteSize: (  0.190  1.400 ) um
+[INFO GPL-0004] CoreBBox: ( 10.070 11.200 ) ( 239.970 240.800 ) um
+[INFO GPL-0006] NumInstances:             15478
+[INFO GPL-0007] NumPlaceInstances:        15067
+[INFO GPL-0008] NumFixedInstances:          411
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                  16165
+[INFO GPL-0011] NumPins:                  56154
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 249.850 250.600 ) um
+[INFO GPL-0013] CoreBBox: ( 10.070 11.200 ) ( 239.970 240.800 ) um
+[INFO GPL-0016] CoreArea:             52785.040 um^2
+[INFO GPL-0017] NonPlaceInstsArea:      109.326 um^2
+[INFO GPL-0018] PlaceInstsArea:       21470.456 um^2
+[INFO GPL-0019] Util:                    40.760 %
+[INFO GPL-0020] StdInstsArea:         21470.456 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[INFO GPL-0031] FillerInit:NumGCells:     39255
+[INFO GPL-0032] FillerInit:NumGNets:      16165
+[INFO GPL-0033] FillerInit:NumGPins:      56154
+[INFO GPL-0023] TargetDensity:            1.000
+[INFO GPL-0024] AvrgPlaceInstArea:        1.425 um^2
+[INFO GPL-0025] IdealBinArea:             1.425 um^2
+[INFO GPL-0026] IdealBinCnt:              37042
+[INFO GPL-0027] TotalBinArea:         52785.040 um^2
+[INFO GPL-0028] BinCnt:       128    128
+[INFO GPL-0029] BinSize: (  1.796  1.794 )
+[INFO GPL-0030] NumBins: 16384
+Placement density is 0.5360774850845337, computed from PLACE_DENSITY_LB_ADDON 0.20 and lower bound 0.4075968563556671
+global_placement -density 0.5360774850845337 -pad_left 0 -pad_right 0 -routability_driven -timing_driven
+[INFO GPL-0002] DBU: 2000
+[INFO GPL-0003] SiteSize: (  0.190  1.400 ) um
+[INFO GPL-0004] CoreBBox: ( 10.070 11.200 ) ( 239.970 240.800 ) um
+[INFO GPL-0006] NumInstances:             15478
+[INFO GPL-0007] NumPlaceInstances:        15067
+[INFO GPL-0008] NumFixedInstances:          411
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                  16165
+[INFO GPL-0011] NumPins:                  56154
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 249.850 250.600 ) um
+[INFO GPL-0013] CoreBBox: ( 10.070 11.200 ) ( 239.970 240.800 ) um
+[INFO GPL-0016] CoreArea:             52785.040 um^2
+[INFO GPL-0017] NonPlaceInstsArea:      109.326 um^2
+[INFO GPL-0018] PlaceInstsArea:       21470.456 um^2
+[INFO GPL-0019] Util:                    40.760 %
+[INFO GPL-0020] StdInstsArea:         21470.456 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[InitialPlace]  Iter: 1 CG residual: 0.00002516 HPWL: 298286210
+[InitialPlace]  Iter: 2 CG residual: 0.00001670 HPWL: 206278197
+[InitialPlace]  Iter: 3 CG residual: 0.00000427 HPWL: 205177300
+[InitialPlace]  Iter: 4 CG residual: 0.00000232 HPWL: 205796497
+[InitialPlace]  Iter: 5 CG residual: 0.00000646 HPWL: 205404015
+[INFO GPL-0031] FillerInit:NumGCells:     20312
+[INFO GPL-0032] FillerInit:NumGNets:      16165
+[INFO GPL-0033] FillerInit:NumGPins:      56154
+[INFO GPL-0023] TargetDensity:            0.536
+[INFO GPL-0024] AvrgPlaceInstArea:        1.425 um^2
+[INFO GPL-0025] IdealBinArea:             2.658 um^2
+[INFO GPL-0026] IdealBinCnt:              19857
+[INFO GPL-0027] TotalBinArea:         52785.040 um^2
+[INFO GPL-0028] BinCnt:       128    128
+[INFO GPL-0029] BinSize: (  1.796  1.794 )
+[INFO GPL-0030] NumBins: 16384
+[NesterovSolve] Iter:    1 overflow: 0.975 HPWL: 165765149
+[NesterovSolve] Iter:   10 overflow: 0.857 HPWL: 197892820
+[NesterovSolve] Iter:   20 overflow: 0.841 HPWL: 198199763
+[NesterovSolve] Iter:   30 overflow: 0.843 HPWL: 191592246
+[NesterovSolve] Iter:   40 overflow: 0.837 HPWL: 189687376
+[NesterovSolve] Iter:   50 overflow: 0.832 HPWL: 188011798
+[NesterovSolve] Iter:   60 overflow: 0.828 HPWL: 186500315
+[NesterovSolve] Iter:   70 overflow: 0.824 HPWL: 186054518
+[NesterovSolve] Iter:   80 overflow: 0.821 HPWL: 185914934
+[NesterovSolve] Iter:   90 overflow: 0.820 HPWL: 185825414
+[NesterovSolve] Iter:  100 overflow: 0.820 HPWL: 185911189
+[NesterovSolve] Iter:  110 overflow: 0.820 HPWL: 185994850
+[NesterovSolve] Iter:  120 overflow: 0.820 HPWL: 185858332
+[NesterovSolve] Iter:  130 overflow: 0.821 HPWL: 185683820
+[NesterovSolve] Iter:  140 overflow: 0.822 HPWL: 185593491
+[NesterovSolve] Iter:  150 overflow: 0.822 HPWL: 185576532
+[NesterovSolve] Iter:  160 overflow: 0.822 HPWL: 185757315
+[NesterovSolve] Iter:  170 overflow: 0.821 HPWL: 186265074
+[NesterovSolve] Iter:  180 overflow: 0.818 HPWL: 187170494
+[NesterovSolve] Iter:  190 overflow: 0.813 HPWL: 188819867
+[NesterovSolve] Iter:  200 overflow: 0.806 HPWL: 191774200
+[NesterovSolve] Iter:  210 overflow: 0.795 HPWL: 195998268
+[INFO GPL-0100] Timing-driven iteration 1/5, virtual: true.
+[INFO GPL-0101]    Iter: 219, overflow: 0.784, keep rsz at: 0.3, HPWL: 201844801
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     16165
+    final |     +7.2% |    2735 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0039] Resized 2735 instances.
+[INFO GPL-0106] Timing-driven: worst slack -1.19e-10
+[INFO GPL-0103] Timing-driven: weighted 1616 nets.
+[NesterovSolve] Iter:  220 overflow: 0.782 HPWL: 201638485
+[NesterovSolve] Iter:  230 overflow: 0.772 HPWL: 209813090
+[NesterovSolve] Iter:  240 overflow: 0.756 HPWL: 218387803
+[NesterovSolve] Iter:  250 overflow: 0.737 HPWL: 231133992
+[NesterovSolve] Iter:  260 overflow: 0.715 HPWL: 246294252
+[NesterovSolve] Iter:  270 overflow: 0.692 HPWL: 261206711
+[NesterovSolve] Iter:  280 overflow: 0.671 HPWL: 275632598
+[NesterovSolve] Iter:  290 overflow: 0.646 HPWL: 288519026
+[INFO GPL-0100] Timing-driven iteration 2/5, virtual: true.
+[INFO GPL-0101]    Iter: 295, overflow: 0.633, keep rsz at: 0.3, HPWL: 293744249
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     16165
+    final |    +11.5% |    3541 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0039] Resized 3541 instances.
+[INFO GPL-0106] Timing-driven: worst slack -1.36e-10
+[INFO GPL-0103] Timing-driven: weighted 1614 nets.
+[NesterovSolve] Iter:  300 overflow: 0.620 HPWL: 300281036
+[INFO GPL-0088] Routability snapshot saved at iter = 307
+[NesterovSolve] Iter:  310 overflow: 0.593 HPWL: 312956618
+[NesterovSolve] Iter:  320 overflow: 0.562 HPWL: 327729144
+[NesterovSolve] Iter:  330 overflow: 0.526 HPWL: 343027994
+[NesterovSolve] Iter:  340 overflow: 0.486 HPWL: 358230134
+[NesterovSolve] Iter:  350 overflow: 0.434 HPWL: 373806520
+[NesterovSolve] Iter:  360 overflow: 0.372 HPWL: 392116632
+[NesterovSolve] Iter:  370 overflow: 0.305 HPWL: 411584026
+[INFO GPL-0075] Routability iteration: 1
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 70.4136
+[INFO GPL-0082] OverflowTileCnt: 727
+[INFO GPL-0083] 0.5%RC: 1.2480
+[INFO GPL-0084] 1.0%RC: 1.2098
+[INFO GPL-0085] 2.0%RC: 1.1702
+[INFO GPL-0086] 5.0%RC: 1.1001
+[INFO GPL-0087] FinalRC: 1.2288877
+[INFO GPL-0078] FinalRC lower than minRC (1000000015047466219876688855040.0000), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:     1105.173 um^2 (+5.15%)
+[INFO GPL-0046] TargetDensity:            0.536
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    21470.456 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.810 um^2
+[INFO GPL-0052] TotalGCellsArea:      28238.266 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   29343.440 um^2
+[INFO GPL-0054] NewTargetDensity:         0.557
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          29343.439 um^2
+[INFO GPL-0057] NewNesterovInstArea:  22575.629 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.810 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   29343.439 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  380 overflow: 0.583 HPWL: 327883284
+[NesterovSolve] Iter:  390 overflow: 0.556 HPWL: 341323053
+[NesterovSolve] Iter:  400 overflow: 0.528 HPWL: 353033292
+[NesterovSolve] Iter:  410 overflow: 0.494 HPWL: 364931425
+[NesterovSolve] Iter:  420 overflow: 0.454 HPWL: 377445027
+[NesterovSolve] Iter:  430 overflow: 0.407 HPWL: 391235416
+[NesterovSolve] Iter:  440 overflow: 0.348 HPWL: 407349506
+[INFO GPL-0075] Routability iteration: 2
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 54.8266
+[INFO GPL-0082] OverflowTileCnt: 744
+[INFO GPL-0083] 0.5%RC: 1.1894
+[INFO GPL-0084] 1.0%RC: 1.1631
+[INFO GPL-0085] 2.0%RC: 1.1314
+[INFO GPL-0086] 5.0%RC: 1.0778
+[INFO GPL-0087] FinalRC: 1.1762413
+[INFO GPL-0078] FinalRC lower than minRC (1.2289), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      830.260 um^2 (+3.68%)
+[INFO GPL-0046] TargetDensity:            0.557
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    22575.629 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.810 um^2
+[INFO GPL-0052] TotalGCellsArea:      29343.439 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   30173.699 um^2
+[INFO GPL-0054] NewTargetDensity:         0.573
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          30173.700 um^2
+[INFO GPL-0057] NewNesterovInstArea:  23405.890 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.810 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   30173.700 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  450 overflow: 0.614 HPWL: 311540999
+[NesterovSolve] Iter:  460 overflow: 0.580 HPWL: 337312573
+[NesterovSolve] Iter:  470 overflow: 0.549 HPWL: 351844381
+[NesterovSolve] Iter:  480 overflow: 0.518 HPWL: 363358175
+[NesterovSolve] Iter:  490 overflow: 0.483 HPWL: 375927807
+[NesterovSolve] Iter:  500 overflow: 0.441 HPWL: 388556872
+[NesterovSolve] Iter:  510 overflow: 0.388 HPWL: 403352372
+[NesterovSolve] Iter:  520 overflow: 0.327 HPWL: 420910082
+[INFO GPL-0075] Routability iteration: 3
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 45.5010
+[INFO GPL-0082] OverflowTileCnt: 727
+[INFO GPL-0083] 0.5%RC: 1.1544
+[INFO GPL-0084] 1.0%RC: 1.1334
+[INFO GPL-0085] 2.0%RC: 1.1099
+[INFO GPL-0086] 5.0%RC: 1.0647
+[INFO GPL-0087] FinalRC: 1.1439347
+[INFO GPL-0078] FinalRC lower than minRC (1.1762), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      675.382 um^2 (+2.89%)
+[INFO GPL-0046] TargetDensity:            0.573
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    23405.890 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.810 um^2
+[INFO GPL-0052] TotalGCellsArea:      30173.700 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   30849.082 um^2
+[INFO GPL-0054] NewTargetDensity:         0.586
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          30849.081 um^2
+[INFO GPL-0057] NewNesterovInstArea:  24081.272 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.809 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   30849.081 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  530 overflow: 0.579 HPWL: 345488201
+[NesterovSolve] Iter:  540 overflow: 0.567 HPWL: 350298030
+[NesterovSolve] Iter:  550 overflow: 0.540 HPWL: 360837745
+[NesterovSolve] Iter:  560 overflow: 0.508 HPWL: 373550962
+[NesterovSolve] Iter:  570 overflow: 0.468 HPWL: 386342422
+[NesterovSolve] Iter:  580 overflow: 0.420 HPWL: 400114368
+[NesterovSolve] Iter:  590 overflow: 0.362 HPWL: 416155595
+[NesterovSolve] Iter:  600 overflow: 0.303 HPWL: 433260591
+[INFO GPL-0075] Routability iteration: 4
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 34.7433
+[INFO GPL-0082] OverflowTileCnt: 665
+[INFO GPL-0083] 0.5%RC: 1.1325
+[INFO GPL-0084] 1.0%RC: 1.1130
+[INFO GPL-0085] 2.0%RC: 1.0899
+[INFO GPL-0086] 5.0%RC: 1.0493
+[INFO GPL-0087] FinalRC: 1.122779
+[INFO GPL-0078] FinalRC lower than minRC (1.1439), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      521.685 um^2 (+2.17%)
+[INFO GPL-0046] TargetDensity:            0.586
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    24081.272 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.809 um^2
+[INFO GPL-0052] TotalGCellsArea:      30849.081 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   31370.766 um^2
+[INFO GPL-0054] NewTargetDensity:         0.596
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          31370.768 um^2
+[INFO GPL-0057] NewNesterovInstArea:  24602.957 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.811 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   31370.768 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  610 overflow: 0.593 HPWL: 340013349
+[NesterovSolve] Iter:  620 overflow: 0.558 HPWL: 358425674
+[NesterovSolve] Iter:  630 overflow: 0.529 HPWL: 369887885
+[NesterovSolve] Iter:  640 overflow: 0.493 HPWL: 383046338
+[NesterovSolve] Iter:  650 overflow: 0.450 HPWL: 396300574
+[NesterovSolve] Iter:  660 overflow: 0.396 HPWL: 411032991
+[NesterovSolve] Iter:  670 overflow: 0.334 HPWL: 428148469
+[INFO GPL-0075] Routability iteration: 5
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 30.7902
+[INFO GPL-0082] OverflowTileCnt: 644
+[INFO GPL-0083] 0.5%RC: 1.1284
+[INFO GPL-0084] 1.0%RC: 1.1076
+[INFO GPL-0085] 2.0%RC: 1.0827
+[INFO GPL-0086] 5.0%RC: 1.0435
+[INFO GPL-0087] FinalRC: 1.1180102
+[INFO GPL-0078] FinalRC lower than minRC (1.1228), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      456.167 um^2 (+1.85%)
+[INFO GPL-0046] TargetDensity:            0.596
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    24602.957 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.811 um^2
+[INFO GPL-0052] TotalGCellsArea:      31370.768 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   31826.935 um^2
+[INFO GPL-0054] NewTargetDensity:         0.604
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          31826.938 um^2
+[INFO GPL-0057] NewNesterovInstArea:  25059.124 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.814 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   31826.938 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  680 overflow: 0.594 HPWL: 343194650
+[NesterovSolve] Iter:  690 overflow: 0.573 HPWL: 356358586
+[NesterovSolve] Iter:  700 overflow: 0.548 HPWL: 365885964
+[NesterovSolve] Iter:  710 overflow: 0.515 HPWL: 377904584
+[NesterovSolve] Iter:  720 overflow: 0.475 HPWL: 391351950
+[NesterovSolve] Iter:  730 overflow: 0.429 HPWL: 404870634
+[NesterovSolve] Iter:  740 overflow: 0.368 HPWL: 421320456
+[NesterovSolve] Iter:  750 overflow: 0.310 HPWL: 438259198
+[INFO GPL-0075] Routability iteration: 6
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 30.3420
+[INFO GPL-0082] OverflowTileCnt: 612
+[INFO GPL-0083] 0.5%RC: 1.1300
+[INFO GPL-0084] 1.0%RC: 1.1094
+[INFO GPL-0085] 2.0%RC: 1.0840
+[INFO GPL-0086] 5.0%RC: 1.0425
+[INFO GPL-0087] FinalRC: 1.1197162
+[INFO GPL-0079] MinRC (1.1180102) violation occurred, total count: 1.
+[INFO GPL-0045] InflatedAreaDelta:      480.772 um^2 (+1.92%)
+[INFO GPL-0046] TargetDensity:            0.604
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    25059.124 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.814 um^2
+[INFO GPL-0052] TotalGCellsArea:      31826.938 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   32307.710 um^2
+[INFO GPL-0054] NewTargetDensity:         0.613
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          32307.710 um^2
+[INFO GPL-0057] NewNesterovInstArea:  25539.896 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.814 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   32307.710 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  760 overflow: 0.598 HPWL: 344980730
+[NesterovSolve] Iter:  770 overflow: 0.563 HPWL: 363758560
+[NesterovSolve] Iter:  780 overflow: 0.532 HPWL: 375414241
+[NesterovSolve] Iter:  790 overflow: 0.496 HPWL: 388930481
+[NesterovSolve] Iter:  800 overflow: 0.453 HPWL: 401598190
+[NesterovSolve] Iter:  810 overflow: 0.397 HPWL: 416049877
+[NesterovSolve] Iter:  820 overflow: 0.334 HPWL: 433699856
+[INFO GPL-0075] Routability iteration: 7
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 25.4859
+[INFO GPL-0082] OverflowTileCnt: 562
+[INFO GPL-0083] 0.5%RC: 1.1135
+[INFO GPL-0084] 1.0%RC: 1.0944
+[INFO GPL-0085] 2.0%RC: 1.0727
+[INFO GPL-0086] 5.0%RC: 1.0346
+[INFO GPL-0087] FinalRC: 1.1039233
+[INFO GPL-0078] FinalRC lower than minRC (1.1180), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      382.739 um^2 (+1.50%)
+[INFO GPL-0046] TargetDensity:            0.613
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    25539.896 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.814 um^2
+[INFO GPL-0052] TotalGCellsArea:      32307.710 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   32690.449 um^2
+[INFO GPL-0054] NewTargetDensity:         0.621
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          32690.448 um^2
+[INFO GPL-0057] NewNesterovInstArea:  25922.634 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.814 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   32690.448 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  830 overflow: 0.590 HPWL: 352529911
+[NesterovSolve] Iter:  840 overflow: 0.574 HPWL: 363622111
+[NesterovSolve] Iter:  850 overflow: 0.550 HPWL: 372174574
+[NesterovSolve] Iter:  860 overflow: 0.516 HPWL: 383952588
+[NesterovSolve] Iter:  870 overflow: 0.476 HPWL: 398156258
+[NesterovSolve] Iter:  880 overflow: 0.427 HPWL: 410960470
+[NesterovSolve] Iter:  890 overflow: 0.365 HPWL: 427817351
+[NesterovSolve] Iter:  900 overflow: 0.306 HPWL: 444564619
+[INFO GPL-0075] Routability iteration: 8
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 22.1474
+[INFO GPL-0082] OverflowTileCnt: 505
+[INFO GPL-0083] 0.5%RC: 1.1078
+[INFO GPL-0084] 1.0%RC: 1.0878
+[INFO GPL-0085] 2.0%RC: 1.0661
+[INFO GPL-0086] 5.0%RC: 1.0288
+[INFO GPL-0087] FinalRC: 1.0977746
+[INFO GPL-0078] FinalRC lower than minRC (1.1039), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      338.434 um^2 (+1.31%)
+[INFO GPL-0046] TargetDensity:            0.621
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    25922.634 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.814 um^2
+[INFO GPL-0052] TotalGCellsArea:      32690.448 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   33028.882 um^2
+[INFO GPL-0054] NewTargetDensity:         0.627
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          33028.884 um^2
+[INFO GPL-0057] NewNesterovInstArea:  26261.069 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.816 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   33028.884 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  910 overflow: 0.603 HPWL: 348216636
+[NesterovSolve] Iter:  920 overflow: 0.565 HPWL: 368908036
+[NesterovSolve] Iter:  930 overflow: 0.533 HPWL: 379878284
+[NesterovSolve] Iter:  940 overflow: 0.496 HPWL: 394056441
+[NesterovSolve] Iter:  950 overflow: 0.452 HPWL: 406882896
+[NesterovSolve] Iter:  960 overflow: 0.395 HPWL: 421726356
+[NesterovSolve] Iter:  970 overflow: 0.333 HPWL: 439117684
+[INFO GPL-0075] Routability iteration: 9
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 17.3530
+[INFO GPL-0082] OverflowTileCnt: 456
+[INFO GPL-0083] 0.5%RC: 1.0944
+[INFO GPL-0084] 1.0%RC: 1.0772
+[INFO GPL-0085] 2.0%RC: 1.0556
+[INFO GPL-0086] 5.0%RC: 1.0200
+[INFO GPL-0087] FinalRC: 1.0858175
+[INFO GPL-0078] FinalRC lower than minRC (1.0978), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      272.506 um^2 (+1.04%)
+[INFO GPL-0046] TargetDensity:            0.627
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    26261.069 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.816 um^2
+[INFO GPL-0052] TotalGCellsArea:      33028.884 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   33301.390 um^2
+[INFO GPL-0054] NewTargetDensity:         0.632
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          33301.389 um^2
+[INFO GPL-0057] NewNesterovInstArea:  26533.574 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.815 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   33301.389 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter:  980 overflow: 0.587 HPWL: 359971121
+[NesterovSolve] Iter:  990 overflow: 0.575 HPWL: 368684267
+[NesterovSolve] Iter: 1000 overflow: 0.551 HPWL: 376270216
+[NesterovSolve] Iter: 1010 overflow: 0.516 HPWL: 388611475
+[NesterovSolve] Iter: 1020 overflow: 0.476 HPWL: 402533350
+[NesterovSolve] Iter: 1030 overflow: 0.425 HPWL: 415863813
+[NesterovSolve] Iter: 1040 overflow: 0.364 HPWL: 432571719
+[NesterovSolve] Iter: 1050 overflow: 0.305 HPWL: 449134729
+[INFO GPL-0075] Routability iteration: 10
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 15.8339
+[INFO GPL-0082] OverflowTileCnt: 417
+[INFO GPL-0083] 0.5%RC: 1.0906
+[INFO GPL-0084] 1.0%RC: 1.0718
+[INFO GPL-0085] 2.0%RC: 1.0518
+[INFO GPL-0086] 5.0%RC: 1.0163
+[INFO GPL-0087] FinalRC: 1.0811762
+[INFO GPL-0078] FinalRC lower than minRC (1.0858), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      237.469 um^2 (+0.89%)
+[INFO GPL-0046] TargetDensity:            0.632
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    26533.574 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.815 um^2
+[INFO GPL-0052] TotalGCellsArea:      33301.389 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   33538.858 um^2
+[INFO GPL-0054] NewTargetDensity:         0.637
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          33538.859 um^2
+[INFO GPL-0057] NewNesterovInstArea:  26771.043 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.816 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   33538.859 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1060 overflow: 0.606 HPWL: 351184833
+[NesterovSolve] Iter: 1070 overflow: 0.564 HPWL: 372819743
+[NesterovSolve] Iter: 1080 overflow: 0.533 HPWL: 383243542
+[NesterovSolve] Iter: 1090 overflow: 0.496 HPWL: 397534276
+[NesterovSolve] Iter: 1100 overflow: 0.451 HPWL: 410489581
+[NesterovSolve] Iter: 1110 overflow: 0.393 HPWL: 425547582
+[NesterovSolve] Iter: 1120 overflow: 0.328 HPWL: 442654715
+[INFO GPL-0075] Routability iteration: 11
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 17.7153
+[INFO GPL-0082] OverflowTileCnt: 460
+[INFO GPL-0083] 0.5%RC: 1.1024
+[INFO GPL-0084] 1.0%RC: 1.0804
+[INFO GPL-0085] 2.0%RC: 1.0567
+[INFO GPL-0086] 5.0%RC: 1.0207
+[INFO GPL-0087] FinalRC: 1.0914202
+[INFO GPL-0079] MinRC (1.0811762) violation occurred, total count: 1.
+[INFO GPL-0045] InflatedAreaDelta:      280.025 um^2 (+1.05%)
+[INFO GPL-0046] TargetDensity:            0.637
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    26771.043 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.816 um^2
+[INFO GPL-0052] TotalGCellsArea:      33538.859 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   33818.884 um^2
+[INFO GPL-0054] NewTargetDensity:         0.642
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          33818.884 um^2
+[INFO GPL-0057] NewNesterovInstArea:  27051.068 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.816 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   33818.884 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1130 overflow: 0.563 HPWL: 382820837
+[NesterovSolve] Iter: 1140 overflow: 0.577 HPWL: 371568540
+[NesterovSolve] Iter: 1150 overflow: 0.547 HPWL: 380815634
+[NesterovSolve] Iter: 1160 overflow: 0.513 HPWL: 393672727
+[NesterovSolve] Iter: 1170 overflow: 0.469 HPWL: 407465030
+[NesterovSolve] Iter: 1180 overflow: 0.418 HPWL: 420924409
+[NesterovSolve] Iter: 1190 overflow: 0.354 HPWL: 437998121
+[NesterovSolve] Iter: 1200 overflow: 0.298 HPWL: 454101974
+[INFO GPL-0075] Routability iteration: 12
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 13.5220
+[INFO GPL-0082] OverflowTileCnt: 385
+[INFO GPL-0083] 0.5%RC: 1.0873
+[INFO GPL-0084] 1.0%RC: 1.0675
+[INFO GPL-0085] 2.0%RC: 1.0459
+[INFO GPL-0086] 5.0%RC: 1.0117
+[INFO GPL-0087] FinalRC: 1.0774
+[INFO GPL-0078] FinalRC lower than minRC (1.0812), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      215.490 um^2 (+0.80%)
+[INFO GPL-0046] TargetDensity:            0.642
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    27051.068 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.816 um^2
+[INFO GPL-0052] TotalGCellsArea:      33818.884 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   34034.374 um^2
+[INFO GPL-0054] NewTargetDensity:         0.646
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          34034.375 um^2
+[INFO GPL-0057] NewNesterovInstArea:  27266.559 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.816 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   34034.375 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1210 overflow: 0.590 HPWL: 365463427
+[NesterovSolve] Iter: 1220 overflow: 0.560 HPWL: 378221528
+[NesterovSolve] Iter: 1230 overflow: 0.527 HPWL: 389153665
+[NesterovSolve] Iter: 1240 overflow: 0.489 HPWL: 402870381
+[NesterovSolve] Iter: 1250 overflow: 0.439 HPWL: 416217387
+[NesterovSolve] Iter: 1260 overflow: 0.379 HPWL: 432411146
+[NesterovSolve] Iter: 1270 overflow: 0.317 HPWL: 449323576
+[INFO GPL-0075] Routability iteration: 13
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 12.9450
+[INFO GPL-0082] OverflowTileCnt: 382
+[INFO GPL-0083] 0.5%RC: 1.0777
+[INFO GPL-0084] 1.0%RC: 1.0621
+[INFO GPL-0085] 2.0%RC: 1.0437
+[INFO GPL-0086] 5.0%RC: 1.0106
+[INFO GPL-0087] FinalRC: 1.0699487
+[INFO GPL-0078] FinalRC lower than minRC (1.0774), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      200.700 um^2 (+0.74%)
+[INFO GPL-0046] TargetDensity:            0.646
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    27266.559 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.816 um^2
+[INFO GPL-0052] TotalGCellsArea:      34034.375 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   34235.075 um^2
+[INFO GPL-0054] NewTargetDensity:         0.650
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          34235.075 um^2
+[INFO GPL-0057] NewNesterovInstArea:  27467.259 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.816 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   34235.075 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1280 overflow: 0.597 HPWL: 363649096
+[NesterovSolve] Iter: 1290 overflow: 0.574 HPWL: 374308785
+[NesterovSolve] Iter: 1300 overflow: 0.541 HPWL: 385409623
+[NesterovSolve] Iter: 1310 overflow: 0.504 HPWL: 399686277
+[NesterovSolve] Iter: 1320 overflow: 0.460 HPWL: 412468245
+[NesterovSolve] Iter: 1330 overflow: 0.405 HPWL: 427009041
+[NesterovSolve] Iter: 1340 overflow: 0.340 HPWL: 444505726
+[INFO GPL-0075] Routability iteration: 14
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 12.8695
+[INFO GPL-0082] OverflowTileCnt: 371
+[INFO GPL-0083] 0.5%RC: 1.0840
+[INFO GPL-0084] 1.0%RC: 1.0660
+[INFO GPL-0085] 2.0%RC: 1.0443
+[INFO GPL-0086] 5.0%RC: 1.0103
+[INFO GPL-0087] FinalRC: 1.0750084
+[INFO GPL-0079] MinRC (1.0699487) violation occurred, total count: 1.
+[INFO GPL-0045] InflatedAreaDelta:      189.059 um^2 (+0.69%)
+[INFO GPL-0046] TargetDensity:            0.650
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    27467.259 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.816 um^2
+[INFO GPL-0052] TotalGCellsArea:      34235.075 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   34424.134 um^2
+[INFO GPL-0054] NewTargetDensity:         0.654
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          34424.132 um^2
+[INFO GPL-0057] NewNesterovInstArea:  27656.318 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.814 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   34424.132 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1350 overflow: 0.635 HPWL: 326321827
+[NesterovSolve] Iter: 1360 overflow: 0.579 HPWL: 376569341
+[NesterovSolve] Iter: 1370 overflow: 0.554 HPWL: 382656652
+[NesterovSolve] Iter: 1380 overflow: 0.520 HPWL: 394778937
+[NesterovSolve] Iter: 1390 overflow: 0.479 HPWL: 408626404
+[NesterovSolve] Iter: 1400 overflow: 0.426 HPWL: 421615710
+[NesterovSolve] Iter: 1410 overflow: 0.365 HPWL: 438754440
+[NesterovSolve] Iter: 1420 overflow: 0.308 HPWL: 455216778
+[INFO GPL-0075] Routability iteration: 15
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 12.7098
+[INFO GPL-0082] OverflowTileCnt: 347
+[INFO GPL-0083] 0.5%RC: 1.0891
+[INFO GPL-0084] 1.0%RC: 1.0668
+[INFO GPL-0085] 2.0%RC: 1.0442
+[INFO GPL-0086] 5.0%RC: 1.0082
+[INFO GPL-0087] FinalRC: 1.0779204
+[INFO GPL-0079] MinRC (1.0699487) violation occurred, total count: 2.
+[INFO GPL-0045] InflatedAreaDelta:      214.011 um^2 (+0.77%)
+[INFO GPL-0046] TargetDensity:            0.654
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    27656.318 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.814 um^2
+[INFO GPL-0052] TotalGCellsArea:      34424.132 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   34638.143 um^2
+[INFO GPL-0054] NewTargetDensity:         0.658
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          34638.143 um^2
+[INFO GPL-0057] NewNesterovInstArea:  27870.329 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.814 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   34638.143 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1430 overflow: 0.611 HPWL: 358405007
+[NesterovSolve] Iter: 1440 overflow: 0.565 HPWL: 380205775
+[NesterovSolve] Iter: 1450 overflow: 0.535 HPWL: 389924378
+[NesterovSolve] Iter: 1460 overflow: 0.496 HPWL: 404606292
+[NesterovSolve] Iter: 1470 overflow: 0.448 HPWL: 417224658
+[NesterovSolve] Iter: 1480 overflow: 0.390 HPWL: 432995091
+[NesterovSolve] Iter: 1490 overflow: 0.328 HPWL: 449849296
+[INFO GPL-0075] Routability iteration: 16
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 10.1392
+[INFO GPL-0082] OverflowTileCnt: 294
+[INFO GPL-0083] 0.5%RC: 1.0776
+[INFO GPL-0084] 1.0%RC: 1.0580
+[INFO GPL-0085] 2.0%RC: 1.0360
+[INFO GPL-0086] 5.0%RC: 1.0022
+[INFO GPL-0087] FinalRC: 1.0677847
+[INFO GPL-0078] FinalRC lower than minRC (1.0699), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      189.018 um^2 (+0.68%)
+[INFO GPL-0046] TargetDensity:            0.658
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    27870.329 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.814 um^2
+[INFO GPL-0052] TotalGCellsArea:      34638.143 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   34827.161 um^2
+[INFO GPL-0054] NewTargetDensity:         0.661
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          34827.162 um^2
+[INFO GPL-0057] NewNesterovInstArea:  28059.347 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.814 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   34827.162 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1500 overflow: 0.553 HPWL: 396802675
+[NesterovSolve] Iter: 1510 overflow: 0.579 HPWL: 377170614
+[NesterovSolve] Iter: 1520 overflow: 0.548 HPWL: 386503961
+[NesterovSolve] Iter: 1530 overflow: 0.512 HPWL: 400501788
+[NesterovSolve] Iter: 1540 overflow: 0.469 HPWL: 413432252
+[NesterovSolve] Iter: 1550 overflow: 0.414 HPWL: 427386955
+[NesterovSolve] Iter: 1560 overflow: 0.351 HPWL: 444752360
+[NesterovSolve] Iter: 1570 overflow: 0.296 HPWL: 460735746
+[INFO GPL-0075] Routability iteration: 17
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 10.4952
+[INFO GPL-0082] OverflowTileCnt: 321
+[INFO GPL-0083] 0.5%RC: 1.0724
+[INFO GPL-0084] 1.0%RC: 1.0564
+[INFO GPL-0085] 2.0%RC: 1.0370
+[INFO GPL-0086] 5.0%RC: 1.0042
+[INFO GPL-0087] FinalRC: 1.0643733
+[INFO GPL-0078] FinalRC lower than minRC (1.0678), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      159.158 um^2 (+0.57%)
+[INFO GPL-0046] TargetDensity:            0.661
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    28059.347 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.814 um^2
+[INFO GPL-0052] TotalGCellsArea:      34827.162 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   34986.319 um^2
+[INFO GPL-0054] NewTargetDensity:         0.664
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          34986.320 um^2
+[INFO GPL-0057] NewNesterovInstArea:  28218.505 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.815 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   34986.320 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1580 overflow: 0.587 HPWL: 375019582
+[NesterovSolve] Iter: 1590 overflow: 0.560 HPWL: 384953889
+[NesterovSolve] Iter: 1600 overflow: 0.527 HPWL: 395182199
+[NesterovSolve] Iter: 1610 overflow: 0.487 HPWL: 409488310
+[NesterovSolve] Iter: 1620 overflow: 0.436 HPWL: 422164099
+[NesterovSolve] Iter: 1630 overflow: 0.375 HPWL: 438803544
+[NesterovSolve] Iter: 1640 overflow: 0.317 HPWL: 455757811
+[INFO GPL-0075] Routability iteration: 18
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 7.9091
+[INFO GPL-0082] OverflowTileCnt: 283
+[INFO GPL-0083] 0.5%RC: 1.0607
+[INFO GPL-0084] 1.0%RC: 1.0455
+[INFO GPL-0085] 2.0%RC: 1.0281
+[INFO GPL-0086] 5.0%RC: 0.9984
+[INFO GPL-0087] FinalRC: 1.0531018
+[INFO GPL-0078] FinalRC lower than minRC (1.0644), min RC updated.
+[INFO GPL-0045] InflatedAreaDelta:      120.495 um^2 (+0.43%)
+[INFO GPL-0046] TargetDensity:            0.664
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    28218.505 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.815 um^2
+[INFO GPL-0052] TotalGCellsArea:      34986.320 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   35106.815 um^2
+[INFO GPL-0054] NewTargetDensity:         0.666
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          35106.816 um^2
+[INFO GPL-0057] NewNesterovInstArea:  28339.000 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.816 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   35106.816 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1650 overflow: 0.604 HPWL: 366619785
+[NesterovSolve] Iter: 1660 overflow: 0.575 HPWL: 379820970
+[NesterovSolve] Iter: 1670 overflow: 0.541 HPWL: 390315347
+[NesterovSolve] Iter: 1680 overflow: 0.503 HPWL: 405250693
+[NesterovSolve] Iter: 1690 overflow: 0.458 HPWL: 417723265
+[NesterovSolve] Iter: 1700 overflow: 0.400 HPWL: 432843626
+[NesterovSolve] Iter: 1710 overflow: 0.337 HPWL: 449964908
+[INFO GPL-0075] Routability iteration: 19
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 11.4625
+[INFO GPL-0082] OverflowTileCnt: 350
+[INFO GPL-0083] 0.5%RC: 1.0773
+[INFO GPL-0084] 1.0%RC: 1.0591
+[INFO GPL-0085] 2.0%RC: 1.0397
+[INFO GPL-0086] 5.0%RC: 1.0073
+[INFO GPL-0087] FinalRC: 1.0681994
+[INFO GPL-0079] MinRC (1.0531018) violation occurred, total count: 1.
+[INFO GPL-0045] InflatedAreaDelta:      186.106 um^2 (+0.66%)
+[INFO GPL-0046] TargetDensity:            0.666
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    28339.000 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.816 um^2
+[INFO GPL-0052] TotalGCellsArea:      35106.816 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   35292.922 um^2
+[INFO GPL-0054] NewTargetDensity:         0.670
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          35292.922 um^2
+[INFO GPL-0057] NewNesterovInstArea:  28525.106 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.816 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   35292.922 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1720 overflow: 0.563 HPWL: 390492245
+[NesterovSolve] Iter: 1730 overflow: 0.579 HPWL: 381636428
+[NesterovSolve] Iter: 1740 overflow: 0.552 HPWL: 388181329
+[NesterovSolve] Iter: 1750 overflow: 0.515 HPWL: 401645584
+[NesterovSolve] Iter: 1760 overflow: 0.472 HPWL: 414871657
+[NesterovSolve] Iter: 1770 overflow: 0.417 HPWL: 428366079
+[NesterovSolve] Iter: 1780 overflow: 0.355 HPWL: 445917783
+[NesterovSolve] Iter: 1790 overflow: 0.299 HPWL: 461901243
+[INFO GPL-0075] Routability iteration: 20
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 9.0584
+[INFO GPL-0082] OverflowTileCnt: 302
+[INFO GPL-0083] 0.5%RC: 1.0700
+[INFO GPL-0084] 1.0%RC: 1.0520
+[INFO GPL-0085] 2.0%RC: 1.0322
+[INFO GPL-0086] 5.0%RC: 1.0008
+[INFO GPL-0087] FinalRC: 1.0610284
+[INFO GPL-0079] MinRC (1.0531018) violation occurred, total count: 2.
+[INFO GPL-0045] InflatedAreaDelta:      145.917 um^2 (+0.51%)
+[INFO GPL-0046] TargetDensity:            0.670
+[INFO GPL-0049] WhiteSpaceArea:       52675.714 um^2
+[INFO GPL-0050] NesterovInstsArea:    28525.106 um^2
+[INFO GPL-0051] TotalFillerArea:       6767.816 um^2
+[INFO GPL-0052] TotalGCellsArea:      35292.922 um^2
+[INFO GPL-0053] ExpectedGCellsArea:   35438.839 um^2
+[INFO GPL-0054] NewTargetDensity:         0.673
+[INFO GPL-0055] NewWhiteSpaceArea:    52675.714 um^2
+[INFO GPL-0056] MovableArea:          35438.838 um^2
+[INFO GPL-0057] NewNesterovInstArea:  28671.024 um^2
+[INFO GPL-0058] NewTotalFillerArea:    6767.814 um^2
+[INFO GPL-0059] NewTotalGCellsArea:   35438.838 um^2
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1800 overflow: 0.585 HPWL: 379974063
+[NesterovSolve] Iter: 1810 overflow: 0.560 HPWL: 387430880
+[NesterovSolve] Iter: 1820 overflow: 0.528 HPWL: 398080104
+[NesterovSolve] Iter: 1830 overflow: 0.486 HPWL: 412090792
+[NesterovSolve] Iter: 1840 overflow: 0.435 HPWL: 424992847
+[NesterovSolve] Iter: 1850 overflow: 0.372 HPWL: 442063012
+[NesterovSolve] Iter: 1860 overflow: 0.313 HPWL: 458971568
+[INFO GPL-0075] Routability iteration: 21
+[INFO GPL-0036] TileBBox: (    0    0 ) ( 4200 4200 ) DBU
+[INFO GPL-0038] TileCnt:     118  119
+[INFO GPL-0040] NumTiles: 14042
+[INFO GPL-0081] TotalRouteOverflow: 10.1282
+[INFO GPL-0082] OverflowTileCnt: 288
+[INFO GPL-0083] 0.5%RC: 1.0758
+[INFO GPL-0084] 1.0%RC: 1.0576
+[INFO GPL-0085] 2.0%RC: 1.0360
+[INFO GPL-0086] 5.0%RC: 1.0017
+[INFO GPL-0087] FinalRC: 1.0667173
+[INFO GPL-0079] MinRC (1.0531018) violation occurred, total count: 3.
+[INFO GPL-0045] InflatedAreaDelta:      168.505 um^2 (+0.59%)
+[INFO GPL-0046] TargetDensity:            0.673
+Revert Routability Procedure. Target density higher than max, or minRC max violations.
+[INFO GPL-0080] minRcViolatedCnt: 3
+[INFO GPL-0047] SavedMinRC: 1.0531
+[INFO GPL-0048] SavedTargetDensity: 0.6642
+[INFO GPL-0089] Routability: revert back to snapshot
+[NesterovSolve] Iter: 1870 overflow: 0.606 HPWL: 358906081
+[NesterovSolve] Iter: 1880 overflow: 0.564 HPWL: 379124251
+[NesterovSolve] Iter: 1890 overflow: 0.532 HPWL: 389232555
+[NesterovSolve] Iter: 1900 overflow: 0.494 HPWL: 403840234
+[NesterovSolve] Iter: 1910 overflow: 0.447 HPWL: 416979009
+[NesterovSolve] Iter: 1920 overflow: 0.390 HPWL: 433081769
+[NesterovSolve] Iter: 1930 overflow: 0.328 HPWL: 450508535
+[INFO GPL-0100] Timing-driven iteration 3/5, virtual: false.
+[INFO GPL-0101]    Iter: 1939, overflow: 0.282, keep rsz at: 0.3, HPWL: 463968013
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     16165
+    final |    +15.8% |    4157 |       4 |             4 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0036] Found 4 capacitance violations.
+[INFO RSZ-0039] Resized 4157 instances.
+[INFO RSZ-0038] Inserted 4 buffers in 4 nets.
+[INFO GPL-0106] Timing-driven: worst slack -1.76e-10
+[INFO GPL-0103] Timing-driven: weighted 1615 nets.
+[INFO GPL-0107] Timing-driven: repair_design delta area: 1837.786 um^2 (+6.41%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl cells created: 4 (+0.00%)
+[INFO GPL-0109] Timing-driven: inserted buffers as reported by repair_design: 4
+[INFO GPL-0110] Timing-driven: new target density: 0.7076624
+[NesterovSolve] Iter: 1940 overflow: 0.283 HPWL: 424062685
+[NesterovSolve] Iter: 1950 overflow: 0.232 HPWL: 434461662
+[INFO GPL-0100] Timing-driven iteration 4/5, virtual: false.
+[INFO GPL-0101]    Iter: 1959, overflow: 0.203, keep rsz at: 0.3, HPWL: 437398587
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     16165
+    final |     +1.1% |     911 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0039] Resized 911 instances.
+[INFO GPL-0106] Timing-driven: worst slack -1.75e-10
+[INFO GPL-0103] Timing-driven: weighted 1614 nets.
+[INFO GPL-0107] Timing-driven: repair_design delta area: 153.393 um^2 (+0.51%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl cells created: 0 (+0.00%)
+[INFO GPL-0109] Timing-driven: inserted buffers as reported by repair_design: 0
+[INFO GPL-0110] Timing-driven: new target density: 0.71057445
+[NesterovSolve] Iter: 1960 overflow: 0.200 HPWL: 437706385
+[NesterovSolve] Iter: 1970 overflow: 0.170 HPWL: 439308802
+[NesterovSolve] Iter: 1980 overflow: 0.147 HPWL: 440459792
+[INFO GPL-0100] Timing-driven iteration 5/5, virtual: false.
+[INFO GPL-0101]    Iter: 1981, overflow: 0.145, keep rsz at: 0.3, HPWL: 440514624
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     16165
+    final |     +0.2% |     395 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0039] Resized 395 instances.
+[INFO GPL-0106] Timing-driven: worst slack -1.62e-10
+[INFO GPL-0103] Timing-driven: weighted 1613 nets.
+[INFO GPL-0107] Timing-driven: repair_design delta area: -5.267 um^2 (-0.02%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl cells created: 0 (+0.00%)
+[INFO GPL-0109] Timing-driven: inserted buffers as reported by repair_design: 0
+[INFO GPL-0110] Timing-driven: new target density: 0.7104745
+[NesterovSolve] Iter: 1990 overflow: 0.126 HPWL: 441398479
+[NesterovSolve] Iter: 2000 overflow: 0.110 HPWL: 442496793
+[NesterovSolve] Finished with Overflow: 0.098735
+Took 76 seconds: global_placement -density 0.5360774850845337 -pad_left 0 -pad_right 0 -routability_driven -timing_driven
+Report metrics stage 3, global place...
+
+==========================================================================
+global place report_design_area
+--------------------------------------------------------------------------
+Design area 25194 u^2 48% utilization.
+Elapsed time: 1:23.19[h:]min:sec. CPU time: user 726.67 sys 83.95 (974%). Peak memory: 501844KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_4_place_resized resize
+Running resize.tcl, stage 3_4_place_resized
+Perform port buffering...
+[INFO RSZ-0027] Inserted 257 input buffers.
+[INFO RSZ-0028] Inserted 129 output buffers.
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+[INFO RSZ-0058] Using max wire length 640um.
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     16555
+     1000 |     -0.1% |      25 |       0 |             0 |     15555
+     2000 |     -0.0% |      40 |       0 |             0 |     14555
+     3000 |     -0.0% |      53 |       0 |             0 |     13555
+     4000 |     -0.0% |      73 |       0 |             0 |     12555
+     5000 |     -0.0% |      86 |       0 |             0 |     11555
+     6000 |     +0.0% |     104 |       0 |             0 |     10555
+     7000 |     +0.0% |     116 |       0 |             0 |      9555
+     8000 |     +0.0% |     127 |       0 |             0 |      8555
+     9000 |     +0.1% |     138 |       0 |             0 |      7555
+    10000 |     +0.1% |     160 |       0 |             0 |      6555
+    11000 |     +0.1% |     182 |       0 |             0 |      5555
+    12000 |     +0.1% |     199 |       0 |             0 |      4555
+    13000 |     +0.2% |     212 |       0 |             0 |      3555
+    14000 |     +0.1% |     224 |       0 |             0 |      2555
+    15000 |     +0.1% |     248 |       0 |             0 |      1555
+    16000 |     +0.1% |     255 |       0 |             0 |       555
+    final |     +0.2% |     333 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0039] Resized 333 instances.
+Repair tie lo fanout...
+Repair tie hi fanout...
+Floating nets: 
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 25561 u^2 48% utilization.
+Instance count before 15482, after 15868
+Pin count before 55774, after 56546
+Elapsed time: 0:13.94[h:]min:sec. CPU time: user 25.27 sys 18.54 (314%). Peak memory: 331956KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_5_place_dp detail_place
+Running detail_place.tcl, stage 3_5_place_dp
+Placement Analysis
+---------------------------------
+total displacement      12858.7 u
+average displacement        0.8 u
+max displacement            5.0 u
+original HPWL          255152.6 u
+legalized HPWL         263082.8 u
+delta HPWL                    3 %
+
+Detailed placement improvement.
+Importing netlist into detailed improver.
+[INFO DPO-0100] Creating network with 15868 cells, 388 terminals, 16555 edges, 56934 pins, and 0 blockages.
+[INFO DPO-0109] Network stats: inst 16256, edges 16555, pins 56934
+[INFO DPO-0110] Number of regions is 1
+[INFO DPO-0401] Setting random seed to 1.
+[INFO DPO-0402] Setting maximum displacement 5 1 to 14000 2800 units.
+[INFO DPO-0320] Collected 799 fixed cells.
+[INFO DPO-0318] Collected 15457 single height cells.
+[INFO DPO-0321] Collected 0 wide cells.
+[INFO DPO-0322] Image (20140, 22400) - (479940, 481600)
+[INFO DPO-0310] Assigned 15457 cells into segments.  Movement in X-direction is 0.000000, movement in Y-direction is 0.000000.
+[INFO DPO-0313] Found 0 cells in wrong regions.
+[INFO DPO-0315] Found 0 row alignment problems.
+[INFO DPO-0314] Found 0 site alignment problems.
+[INFO DPO-0311] Found 0 overlaps between adjacent cells.
+[INFO DPO-0312] Found 0 edge spacing violations and 0 padding violations.
+[INFO DPO-0303] Running algorithm for independent set matching.
+[INFO DPO-0300] Set matching objective is wirelength.
+[INFO DPO-0301] Pass   1 of matching; objective is 5.286022e+08.
+[INFO DPO-0302] End of matching; objective is 5.281921e+08, improvement is 0.08 percent.
+[INFO DPO-0303] Running algorithm for global swaps.
+[INFO DPO-0306] Pass   1 of global swaps; hpwl is 5.175030e+08.
+[INFO DPO-0306] Pass   2 of global swaps; hpwl is 5.136247e+08.
+[INFO DPO-0307] End of global swaps; objective is 5.136247e+08, improvement is 2.76 percent.
+[INFO DPO-0303] Running algorithm for vertical swaps.
+[INFO DPO-0308] Pass   1 of vertical swaps; hpwl is 5.116051e+08.
+[INFO DPO-0309] End of vertical swaps; objective is 5.116051e+08, improvement is 0.39 percent.
+[INFO DPO-0303] Running algorithm for reordering.
+[INFO DPO-0304] Pass   1 of reordering; objective is 5.092074e+08.
+[INFO DPO-0305] End of reordering; objective is 5.092074e+08, improvement is 0.47 percent.
+[INFO DPO-0303] Running algorithm for random improvement.
+[INFO DPO-0324] Random improver is using displacement generator.
+[INFO DPO-0325] Random improver is using hpwl objective.
+[INFO DPO-0326] Random improver cost string is (a).
+[INFO DPO-0332] End of pass, Generator displacement called 309140 times.
+[INFO DPO-0335] Generator displacement, Cumulative attempts 309140, swaps 51017, moves 79812 since last reset.
+[INFO DPO-0333] End of pass, Objective hpwl, Initial cost 5.082898e+08, Scratch cost 4.986660e+08, Incremental cost 4.986660e+08, Mismatch? N
+[INFO DPO-0338] End of pass, Total cost is 4.986660e+08.
+[INFO DPO-0327] Pass   1 of random improver; improvement in cost is 1.89 percent.
+[INFO DPO-0332] End of pass, Generator displacement called 309140 times.
+[INFO DPO-0335] Generator displacement, Cumulative attempts 618280, swaps 99986, moves 156909 since last reset.
+[INFO DPO-0333] End of pass, Objective hpwl, Initial cost 4.986660e+08, Scratch cost 4.935682e+08, Incremental cost 4.935682e+08, Mismatch? N
+[INFO DPO-0338] End of pass, Total cost is 4.935682e+08.
+[INFO DPO-0327] Pass   2 of random improver; improvement in cost is 1.02 percent.
+[INFO DPO-0332] End of pass, Generator displacement called 309140 times.
+[INFO DPO-0335] Generator displacement, Cumulative attempts 927420, swaps 147260, moves 231670 since last reset.
+[INFO DPO-0333] End of pass, Objective hpwl, Initial cost 4.935682e+08, Scratch cost 4.901604e+08, Incremental cost 4.901604e+08, Mismatch? N
+[INFO DPO-0338] End of pass, Total cost is 4.901604e+08.
+[INFO DPO-0327] Pass   3 of random improver; improvement in cost is 0.69 percent.
+[INFO DPO-0328] End of random improver; improvement is 3.566743 percent.
+[INFO DPO-0380] Cell flipping.
+[INFO DPO-0382] Changed 7800 cell orientations for row compatibility.
+[INFO DPO-0383] Performed 4846 cell flips.
+[INFO DPO-0384] End of flipping; objective is 4.878481e+08, improvement is 0.66 percent.
+[INFO DPO-0313] Found 0 cells in wrong regions.
+[INFO DPO-0315] Found 0 row alignment problems.
+[INFO DPO-0314] Found 0 site alignment problems.
+[INFO DPO-0311] Found 0 overlaps between adjacent cells.
+[INFO DPO-0312] Found 0 edge spacing violations and 0 padding violations.
+Detailed Improvement Results
+------------------------------------------
+Original HPWL           263082.8 u
+Final HPWL              242334.7 u
+Delta HPWL                  -7.9 %
+
+[INFO DPL-0020] Mirrored 1768 instances
+[INFO DPL-0021] HPWL before          242334.7 u
+[INFO DPL-0022] HPWL after           242176.2 u
+[INFO DPL-0023] HPWL delta               -0.1 %
+[INFO FLW-0012] Placement violations .
+Report metrics stage 3, detailed place...
+
+==========================================================================
+detailed place report_design_area
+--------------------------------------------------------------------------
+Design area 25561 u^2 48% utilization.
+Elapsed time: 0:19.63[h:]min:sec. CPU time: user 28.77 sys 15.25 (224%). Peak memory: 229340KB.

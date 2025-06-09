@@ -1,0 +1,246 @@
+Sun Jun  8 06:39:20 PM PDT 2025
+READY TO RUN!
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_1_place_gp_skip_io global_place_skip_io
+Running global_place_skip_io.tcl, stage 3_1_place_gp_skip_io
+FLOORPLAN_DEF is set. Skipping global placement without IOs
+Elapsed time: 0:00.53[h:]min:sec. CPU time: user 0.46 sys 0.07 (99%). Peak memory: 132868KB.
+/ml_placer/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_2_place_iop io_placement
+Running io_placement.tcl, stage 3_2_place_iop
+exec cp ./results/nangate45/aes/base/3_1_place_gp_skip_io.odb ./results/nangate45/aes/base/3_2_place_iop.odb
+Elapsed time: 0:00.20[h:]min:sec. CPU time: user 0.14 sys 0.05 (99%). Peak memory: 99280KB.
+READY TO RUN!
+OpenROAD v2.0-19576-gec1bf1a13 
+Features included (+) or not (-): +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[WARNING ORD-0039] .openroad ignored with -python
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef, created 22 layers, 27 vias
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/NangateOpenCellLibrary.macro.lef, created 134 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef, created 135 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/NangateOpenCellLibrary.macro.rect.lef, created 134 library cells
+[WARNING ODB-0229] Error: library (NangateOpenCellLibrary.tech) already exists
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_1024x32.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_128x116.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_128x256.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_128x32.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_2048x39.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_256x16.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_256x32.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_256x34.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_256x48.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_256x95.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_256x96.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_32x32.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_32x64.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_512x64.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_64x124.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_64x15.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_64x21.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_64x32.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_64x62.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_64x64.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_64x7.lef, created 1 library cells
+[INFO ODB-0227] LEF file: platforms/nangate45/lef/fakeram45_64x96.lef, created 1 library cells
+Design: aes_cipher_top
+Die size: 499700 x 501200 DBU
+Core size: 459800 x 459200 DBU
+IO Pins: 388 | Instances: 15067 | Nets: 15326
+
+Sample Net 1312: [15282]
+Sample I/O Pin 0: {'name': 'clk', 'type': 'INPUT', 'x': 499630, 'y': 113260}
+[✓] Pickle file saved to /data/cse291/venkat/latest/ML-Based-Placement-Initialization/results/aes_nangate45/aes.pkl
+[✓] Design saved to /data/cse291/venkat/latest/ML-Based-Placement-Initialization/results/aes_nangate45/aes.json
+Processing Cluster Level: 0
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 1
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 1
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 2
+Processing Cluster Level: 3
+Processing Cluster Level: 3
+Processing Cluster Level: 3
+Processing Cluster Level: 3
+Processing Cluster Level: 4
+Processing Cluster Level: 4
+Processing Cluster Level: 4
+Processing Cluster Level: 4
+[i] Writing placement clusters to: /data/cse291/venkat/latest/ML-Based-Placement-Initialization/results/aes_nangate45/aes_placement_clusters.json
+[i] Writing connectivity explanation to: /data/cse291/venkat/latest/ML-Based-Placement-Initialization/results/aes_nangate45/aes_cluster_connectivity_explanation.json
+[i] Writing hierarchy to: /data/cse291/venkat/latest/ML-Based-Placement-Initialization/results/aes_nangate45/aes_hierarchy.json
+[i] Writing flat hierarchy node map to: /data/cse291/venkat/latest/ML-Based-Placement-Initialization/results/aes_nangate45/aes_hierarchy_cluster.json
+Level 0 → 15067 nodes → 2021 clusters
+Level 1 → 2021 nodes → 275 clusters
+Level 2 → 275 nodes → 37 clusters
+Level 3 → 37 nodes → 8 clusters
+[✓] All eligible instances were assigned to clusters.
+Step 1: Compute hierarchy area and cluster maps...
+Cluster area and sorted cluster children computed successfully.
+Step 2: Build cluster netlists...
+✅ Dumped cluster netlists to cluster_netlists.json
+Step 3: Build instance pin boundary and cluster boxes...
+✅ Saved instance-to-pin-boundary mapping to instance_pin_boundary_map.json
+✅ Saved cluster_boxes_map.json
+Step 4: Compute hierarchy connectivity and save .npy...
+✅ Saved connectivity to hierarchy_connectivity.json
+✅ Saved cluster tensor data to cluster_tensor_data.npy
+✅ All steps completed!
